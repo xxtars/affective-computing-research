@@ -12,5 +12,3 @@
 ```bash
 python scripts/generate_teams.py
 ```
-
-生成逻辑会优先使用 `openalex_author_id` 查询 OpenAlex；如果没有 ID，则按 `name` 搜索并选择最佳候选。
