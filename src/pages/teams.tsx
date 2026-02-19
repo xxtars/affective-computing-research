@@ -5,10 +5,34 @@ import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 
 import teamsData from '../data/teams.json';
-import papersData from '../data/papers.json';
+import {getWorksByAuthorId} from '../lib/openalex';
 import styles from './index.module.css';
 
 type TeamItem = (typeof teamsData)[number];
+
+function useRecentPaperCounts(teams: TeamItem[]) {
+  const [counts, setCounts] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    teams.forEach(async (team) => {
+      if (!team.openalex_author_id || counts[team.name] !== undefined) {
+        return;
+      }
+
+      try {
+        const works = await getWorksByAuthorId(team.openalex_author_id, {perPage: 50});
+        const currentYear = new Date().getFullYear();
+        const recentCount = works.filter((w) => w.publication_year >= currentYear - 3).length;
+
+        setCounts((prev) => ({...prev, [team.name]: recentCount}));
+      } catch {
+        setCounts((prev) => ({...prev, [team.name]: -1}));
+      }
+    });
+  }, [teams, counts]);
+
+  return counts;
+}
 
 function getUniqueCountries(teams: TeamItem[]) {
   return Array.from(new Set(teams.map((t) => t.country))).sort();
@@ -18,16 +42,26 @@ function getUniqueDirections(teams: TeamItem[]) {
   return Array.from(new Set(teams.flatMap((t) => t.directions))).sort();
 }
 
-function getPaperUrl(title: string): string | undefined {
-  const paper = papersData.find((p) => p.title === title);
-  return paper?.paperUrl;
+function groupByInstitution(teams: TeamItem[]) {
+  return teams.reduce<Record<string, TeamItem[]>>((acc, team) => {
+    const key = team.institution;
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(team);
+    return acc;
+  }, {});
 }
 
-function TeamCard({team}: {team: TeamItem}) {
+function TeamCard({team, recentCount}: {team: TeamItem; recentCount?: number}) {
+  const researcherLink = team.openalex_author_id
+    ? `/researcher?id=${encodeURIComponent(team.openalex_author_id)}`
+    : `/researcher?name=${encodeURIComponent(team.name)}`;
+
   return (
-    <div className={styles.teamCard}>
+    <article className={styles.teamCard}>
       <Heading as="h3" className={styles.teamName}>
-        {team.name}
+        <Link to={researcherLink}>{team.name}</Link>
       </Heading>
       <p className={styles.teamInstitution}>{team.institution}</p>
 
@@ -40,91 +74,72 @@ function TeamCard({team}: {team: TeamItem}) {
           <span className={styles.metaKey}>Directions</span>
           <div className={styles.directionTags}>
             {team.directions.map((dir) => (
-              <Link
-                key={dir}
-                to={`/directions?direction=${encodeURIComponent(dir)}`}
-                className={styles.directionTag}>
+              <span key={dir} className={styles.directionTag}>
                 {dir}
-              </Link>
+              </span>
             ))}
           </div>
         </div>
+        <div className={styles.teamMetaRow}>
+          <span className={styles.metaKey}>Recent papers (3y)</span>
+          <span>
+            {recentCount === undefined
+              ? 'Loading...'
+              : recentCount >= 0
+                ? `${recentCount}`
+                : 'Unavailable'}
+          </span>
+        </div>
       </div>
 
-      {team.representative_papers.length > 0 && (
-        <div className={styles.teamPapers}>
-          <p className={styles.teamPapersTitle}>Representative Papers</p>
-          {team.representative_papers.map((title) => {
-            const url = getPaperUrl(title);
-            return url ? (
-              <a
-                key={title}
-                href={url}
-                className={styles.paperLink}
-                target="_blank"
-                rel="noreferrer">
-                {title}
-              </a>
-            ) : (
-              <span key={title} className={styles.paperLink}>
-                {title}
-              </span>
-            );
-          })}
-        </div>
-      )}
-
-      <a
-        href={team.website}
-        className={styles.teamWebsite}
-        target="_blank"
-        rel="noreferrer">
-        Visit Website →
-      </a>
-    </div>
+      <div className={styles.teamPapers}>
+        <a href={team.homepage} className={styles.paperLink} target="_blank" rel="noreferrer">
+          Homepage
+        </a>
+        <a href={team.google_scholar} className={styles.paperLink} target="_blank" rel="noreferrer">
+          Google Scholar
+        </a>
+      </div>
+    </article>
   );
 }
 
 export default function Teams(): ReactNode {
   const [countryFilter, setCountryFilter] = useState('All');
   const [directionFilter, setDirectionFilter] = useState('All');
+  const [query, setQuery] = useState('');
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      const team = params.get('team');
-      if (team) {
-        const found = teamsData.find((t) => t.name === team);
-        if (found) {
-          setCountryFilter(found.country);
-        }
-      }
-    }
-  }, []);
-
+  const counts = useRecentPaperCounts(teamsData);
   const countries = useMemo(() => getUniqueCountries(teamsData), []);
   const directions = useMemo(() => getUniqueDirections(teamsData), []);
 
   const filteredTeams = useMemo(() => {
+    const q = query.trim().toLowerCase();
+
     return teamsData.filter((team) => {
       const countryMatch = countryFilter === 'All' || team.country === countryFilter;
       const directionMatch =
         directionFilter === 'All' || team.directions.includes(directionFilter);
-      return countryMatch && directionMatch;
+      const searchMatch =
+        q.length === 0 ||
+        team.name.toLowerCase().includes(q) ||
+        team.institution.toLowerCase().includes(q);
+
+      return countryMatch && directionMatch && searchMatch;
     });
-  }, [countryFilter, directionFilter]);
+  }, [countryFilter, directionFilter, query]);
+
+  const groupedTeams = useMemo(() => groupByInstitution(filteredTeams), [filteredTeams]);
 
   return (
-    <Layout
-      title="Teams"
-      description="Leading affective computing research teams around the world">
+    <Layout title="Teams" description="Follow affective computing researchers by institution">
       <header className={styles.pageHeader}>
         <div className="container">
           <Heading as="h1" className={styles.pageTitle}>
-            Teams
+            Teams & Researchers
           </Heading>
           <p className={styles.pageSubtitle}>
-            {teamsData.length} research groups · filter by country and direction
+            {teamsData.length} researchers · grouped by institution · OpenAlex live paper counts
           </p>
         </div>
       </header>
@@ -156,22 +171,36 @@ export default function Teams(): ReactNode {
                 ))}
               </select>
             </label>
+            <label className={styles.searchInputWrap}>
+              Search researcher / institution
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="e.g. Imperial, Picard"
+              />
+            </label>
           </div>
         </section>
 
         <p className="margin-bottom--md">
-          Showing {filteredTeams.length} of {teamsData.length} teams
+          Showing {filteredTeams.length} of {teamsData.length} researchers
         </p>
 
-        <div className={styles.teamGrid}>
-          {filteredTeams.map((team) => (
-            <TeamCard key={team.name} team={team} />
+        {Object.entries(groupedTeams)
+          .sort(([a], [b]) => a.localeCompare(b))
+          .map(([institution, members]) => (
+            <section key={institution} className="margin-bottom--lg">
+              <Heading as="h2">{institution}</Heading>
+              <div className={styles.teamGrid}>
+                {members.map((team) => (
+                  <TeamCard key={team.name} team={team} recentCount={counts[team.name]} />
+                ))}
+              </div>
+            </section>
           ))}
-        </div>
 
-        {filteredTeams.length === 0 && (
-          <p>No teams matched the current filters.</p>
-        )}
+        {filteredTeams.length === 0 && <p>No researchers matched the current filters.</p>}
       </main>
     </Layout>
   );
