@@ -7,37 +7,5 @@
     "homepage": "https://www.schuller.one/",
     "google_scholar": "https://scholar.google.com/citations?user=QtwxD1AAAAAJ",
     "openalex_author_id": "A5023888391"
-  },
-  {
-    "name": "Rosalind Picard",
-    "institution": "MIT Media Lab",
-    "country": "USA",
-    "directions": ["Affective HCI", "Physiological Signal Sensing"],
-    "homepage": "https://www.media.mit.edu/people/picard/overview/",
-    "google_scholar": "https://scholar.google.com/citations?user=oRRLIVUAAAAJ"
-  },
-  {
-    "name": "Maja Pantic",
-    "institution": "Imperial College London",
-    "country": "UK",
-    "directions": ["Multimodal Emotion Analysis", "Affect Recognition"],
-    "homepage": "https://maja-pantic.github.io/",
-    "google_scholar": "https://scholar.google.com/citations?user=EBxk8aUAAAAJ"
-  },
-  {
-    "name": "Rana el Kaliouby",
-    "institution": "Affectiva",
-    "country": "USA",
-    "directions": ["Affect Recognition", "Affective HCI"],
-    "homepage": "https://www.ranaelkaliouby.com/",
-    "google_scholar": "https://scholar.google.com/citations?user=Q4b4QKIAAAAJ"
-  },
-  {
-    "name": "Louis-Philippe Morency",
-    "institution": "Carnegie Mellon University",
-    "country": "USA",
-    "directions": ["Multimodal Emotion Analysis", "Speech Emotion Recognition"],
-    "homepage": "https://www.cs.cmu.edu/~morency/",
-    "google_scholar": "https://scholar.google.com/citations?user=t4nA4Y8AAAAJ"
   }
 ]
