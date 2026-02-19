@@ -4,9 +4,9 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-import papersData from '../data/papers.json';
 import teamsData from '../data/teams.json';
 import directionsData from '../data/directions.json';
+import researchersData from '../data/researchers.json';
 
 import styles from './index.module.css';
 
@@ -19,7 +19,7 @@ function HeroSection() {
           {siteConfig.title}
         </Heading>
         <p className={styles.heroSubtitle}>
-          A curated collection of affective computing research papers, teams, and directions
+          Minimal researcher follow list + live OpenAlex paper stream
         </p>
       </div>
     </header>
@@ -28,8 +28,8 @@ function HeroSection() {
 
 function StatsSection() {
   const stats = [
-    {label: 'Papers', value: papersData.length},
-    {label: 'Teams', value: teamsData.length},
+    {label: 'Researchers', value: researchersData.length},
+    {label: 'Team cards', value: teamsData.length},
     {label: 'Directions', value: directionsData.length},
   ];
 
@@ -51,24 +51,17 @@ function StatsSection() {
 
 const entryCards = [
   {
-    to: '/papers',
-    title: 'Papers',
-    description:
-      'Browse and filter the full collection of affective computing research papers by team, direction, country, venue, and tags.',
-    icon: '📄',
-  },
-  {
     to: '/teams',
     title: 'Teams',
     description:
-      'Explore leading research groups in affective computing around the world, filter by country and research direction.',
+      'Filter researchers by country and direction, grouped by institution, then jump to live OpenAlex papers.',
     icon: '🏛️',
   },
   {
     to: '/directions',
     title: 'Directions',
     description:
-      'Discover the major research directions in affective computing with curated entry-point papers and related teams.',
+      'Use affective-computing directions as tags for browsing and quick filtering.',
     icon: '🧭',
   },
 ];
@@ -96,9 +89,7 @@ function EntryCards() {
 
 export default function Home(): ReactNode {
   return (
-    <Layout
-      title="Home"
-      description="A curated collection of affective computing research papers, teams, and directions">
+    <Layout title="Home" description="Minimal follow workflow for affective-computing researchers">
       <HeroSection />
       <main>
         <StatsSection />

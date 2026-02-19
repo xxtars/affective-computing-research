@@ -63,7 +63,6 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/papers', label: 'Papers', position: 'left'},
         {to: '/teams', label: 'Teams', position: 'left'},
         {to: '/directions', label: 'Directions', position: 'left'},
         {
@@ -79,7 +78,6 @@ const config: Config = {
         {
           title: 'Browse',
           items: [
-            {label: 'Papers', to: '/papers'},
             {label: 'Teams', to: '/teams'},
             {label: 'Directions', to: '/directions'},
           ],
