@@ -25,6 +25,20 @@
   margin-bottom: 0.8rem;
 }
 
+.yearSection {
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.yearSection + .yearSection {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.yearHeader {
+  font-size: 1.1rem;
+  margin: 0 0 0.7rem;
+}
+
 .grid {
   display: grid;
   gap: 1rem;
@@ -52,11 +66,6 @@
   font-size: 0.8rem;
   font-weight: 700;
   padding: 0.2rem 0.55rem;
-}
-
-.scoreBadge {
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.8rem;
 }
 
 .title {

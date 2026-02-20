@@ -12,6 +12,7 @@ type WorkItem = {
   id: string;
   title: string;
   publication_year: number | null;
+  publication_date?: string | null;
   cited_by_count: number;
   primary_source: string | null;
   source?: {display_name: string | null};
@@ -52,6 +53,15 @@ function normalizeVenueName(name: string | null | undefined) {
   if (!raw) return '-';
   if (raw.toLowerCase().includes('arxiv')) return 'arXiv';
   return raw;
+}
+
+function formatYearMonth(dateText: string | null | undefined, year: number | null) {
+  const raw = String(dateText || '').trim();
+  if (raw) {
+    const m = raw.match(/^(\d{4})-(\d{2})/);
+    if (m) return `${m[1]}-${m[2]}`;
+  }
+  return String(year || '-');
 }
 
 export default function PapersPage(): ReactNode {
@@ -112,6 +122,16 @@ export default function PapersPage(): ReactNode {
     });
   }, [papers, query]);
 
+  const papersByYear = useMemo(() => {
+    const groups = new Map<string, (WorkItem & {researcherName: string; researcherId: string})[]>();
+    for (const paper of filteredPapers) {
+      const key = String(paper.publication_year || 'Unknown');
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key)?.push(paper);
+    }
+    return Array.from(groups.entries()).sort((a, b) => Number(b[0]) - Number(a[0]));
+  }, [filteredPapers]);
+
   return (
     <Layout title="Papers">
       <main className={styles.page}>
@@ -134,45 +154,49 @@ export default function PapersPage(): ReactNode {
           {filteredPapers.length === 0 ? (
             <p>No papers yet. Run `npm run researcher:build` first.</p>
           ) : (
-            <div className={styles.grid}>
-              {filteredPapers.map((paper) => (
-                <article className={styles.card} key={paper.id}>
-                  <div className={styles.cardTop}>
-                    <span className={styles.yearBadge}>{paper.publication_year || '-'}</span>
-                    <span className={styles.scoreBadge}>Score {Number(paper.analysis.relevance_score || 0).toFixed(2)}</span>
-                  </div>
+            papersByYear.map(([year, yearPapers]) => (
+              <section className={styles.yearSection} key={year}>
+                <h2 className={styles.yearHeader}>{year}</h2>
+                <div className={styles.grid}>
+                  {yearPapers.map((paper) => (
+                    <article className={styles.card} key={paper.id}>
+                      <div className={styles.cardTop}>
+                        <span className={styles.yearBadge}>{formatYearMonth(paper.publication_date, paper.publication_year)}</span>
+                      </div>
 
-                  <h2 className={styles.title} title={paper.title}>
-                    {paper.title}
-                  </h2>
+                      <h2 className={styles.title} title={paper.title}>
+                        {paper.title}
+                      </h2>
 
-                  <p className={styles.metaLine}>
-                    Researcher:{' '}
-                    <Link className={styles.researcherLink} to={`/researchers/detail?id=${encodeURIComponent(paper.researcherId)}`}>
-                      {paper.researcherName}
-                    </Link>
-                  </p>
+                      <p className={styles.metaLine}>
+                        Researcher:{' '}
+                        <Link className={styles.researcherLink} to={`/researchers/detail?id=${encodeURIComponent(paper.researcherId)}`}>
+                          {paper.researcherName}
+                        </Link>
+                      </p>
 
-                  <p className={styles.metaLine}>
-                    Venue:{' '}
-                    <a
-                      href={paper.links?.landing_page || paper.links?.openalex || '#'}
-                      rel="noreferrer"
-                      target="_blank">
-                      {normalizeVenueName(paper.source?.display_name || paper.primary_source)}
-                    </a>
-                  </p>
+                      <p className={styles.metaLine}>
+                        Venue:{' '}
+                        <a
+                          href={paper.links?.landing_page || paper.links?.openalex || '#'}
+                          rel="noreferrer"
+                          target="_blank">
+                          {normalizeVenueName(paper.source?.display_name || paper.primary_source)}
+                        </a>
+                      </p>
 
-                  <div className={styles.actions}>
-                    {paper.links?.openalex && (
-                      <a href={paper.links.openalex} rel="noreferrer" target="_blank">
-                        OpenAlex Source
-                      </a>
-                    )}
-                  </div>
-                </article>
-              ))}
-            </div>
+                      <div className={styles.actions}>
+                        {paper.links?.openalex && (
+                          <a href={paper.links.openalex} rel="noreferrer" target="_blank">
+                            OpenAlex Source
+                          </a>
+                        )}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ))
           )}
         </div>
       </main>
