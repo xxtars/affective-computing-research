@@ -1,47 +1,16 @@
 {
-  "generated_at": "2026-02-20T17:53:36.574Z",
+  "generated_at": "2026-02-20T19:01:38.247Z",
   "pipeline_version": "v0.1.0",
   "run_config": {
     "model": "qwen-plus",
     "skip_ai": false,
     "full_refresh": false,
     "max_papers": null,
-    "delay_ms": 200,
+    "delay_ms": 300,
     "concurrency": 32,
     "save_every": 5,
     "researcher_names": [
-      "Sicheng Zhao",
-      "Yue Gao",
-      "Yanyan Zhao",
-      "Guanqun Bi",
-      "Jianhua Tao",
-      "Jia Liu",
-      "Hongxun Yao",
-      "Bing Qin",
-      "Guiguang Ding",
-      "Meng Wang",
-      "Honghai Liu",
-      "Bin Hu",
-      "Xiaolan Fu",
-      "Su-Jing Wang",
-      "Shengping Zhang",
-      "Shiguang Shan",
-      "Dan Guo",
-      "Xiao Sun",
-      "Wenming Zheng",
-      "Tong Zhang",
-      "Qin Jin",
-      "C.L. Philip Chen",
-      "Qunxi Dong",
-      "Jufeng Yang",
-      "Xun Chen",
-      "Weidong Chen",
-      "Peipei Song",
-      "Zheng Lian",
-      "Leida Li",
-      "Dong Zhang",
-      "Kejun Zhang",
-      "Ming Li"
+      "Jia Liu"
     ]
   },
   "researchers": [
@@ -935,6 +904,105 @@
         "summary_recomputed": true
       },
       "profile_path": "data/researchers/profiles/A5023274785.json"
+    },
+    {
+      "identity": {
+        "name": "Jia Liu",
+        "google_scholar": "https://scholar.google.com/citations?user=xPoVpSEAAAAJ",
+        "openalex_author_id": "A5100409741",
+        "openalex_author_url": "https://openalex.org/A5100409741"
+      },
+      "affiliation": {
+        "last_known_institution": "Tsinghua University",
+        "last_known_country": "China",
+        "source": "seed_google_scholar"
+      },
+      "metrics": {
+        "works_count": 1245,
+        "cited_by_count": 36407,
+        "h_index": 71,
+        "i10_index": 391
+      },
+      "topic_summary": {
+        "top_research_directions": [
+          {
+            "name": "Affective neuroscience",
+            "weight": 1
+          },
+          {
+            "name": "Emotion-cognition interactions",
+            "weight": 0.97
+          },
+          {
+            "name": "Individual differences in emotion processing",
+            "weight": 0.94
+          },
+          {
+            "name": "Neural correlates of emotion processing",
+            "weight": 0.91
+          },
+          {
+            "name": "Clinical affective psychology",
+            "weight": 0.88
+          },
+          {
+            "name": "Cross-linguistic and cross-cultural affective semantics",
+            "weight": 0.85
+          },
+          {
+            "name": "Affective mechanisms in real-world contexts (healthcare, education, AI, environment)",
+            "weight": 0.82
+          },
+          {
+            "name": "Computational and translational affective science",
+            "weight": 0.79
+          }
+        ],
+        "trend_summary": "Jia Liu's research centers on the neural, cognitive, and contextual architecture of human emotion—spanning from molecular-level brain mechanisms (e.g., amygdala-insula circuitry, fusiform face area morphometry) to large-scale societal applications (e.g., ESG sentiment, pandemic stress, VR therapy). A defining trend is the integration of affective science with real-world domains: clinical (transplant, renal disease, depression), educational (rural left-behind children, vocational students), technological (AI emotional intelligence, human-AI interaction, affective computing), and environmental (prenatal ozone, built environments). Cross-linguistic (especially Chinese) and cross-cultural rigor is consistently embedded, alongside strong methodological diversity—ERP, fMRI/rs-fMRI, VBM, network analysis, qualitative phenomenology, and computational modeling. The work increasingly bridges basic mechanisms (e.g., trait anxiety → neural dynamics) with translational impact (e.g., mindfulness for athletic fatigue, resilience interventions for AIDS orphans).",
+        "representative_papers": [
+          {
+            "title": "The Effects of Trait Anxiety and Emotional Word Type on the Processing of Chinese Words: An ERP Study",
+            "why": "Exemplifies core integration of individual differences (trait anxiety), cross-linguistic affective semantics (Chinese), and high-temporal-resolution neural mechanisms (ERP) — foundational to Liu’s affective neuroscience approach."
+          },
+          {
+            "title": "Trait motivation is associated with fusiform face area morphometry",
+            "why": "Highlights structural neuro-affective links between stable traits and sensory brain regions — a signature theme bridging personality, perception, and brain anatomy."
+          },
+          {
+            "title": "Emotional intelligence of Large Language Models",
+            "why": "Represents the cutting-edge convergence of affective science and AI, establishing Liu as a leader in computational emotion modeling and human-AI emotional alignment."
+          },
+          {
+            "title": "Combined effects of prenatal ozone exposure and school/neighborhood environments on youth brain, cognition, and psychotic‐like experiences",
+            "why": "Embodies the transdisciplinary, real-world systems perspective — linking environmental exposure, psychosocial context, neural development, and transdiagnostic affective outcomes."
+          },
+          {
+            "title": "Social Support and Depressive Symptoms Among Adolescents During the COVID-19 Pandemic: The Mediating Roles of Loneliness and Meaning in Life",
+            "why": "Captures the applied developmental affective focus — using rigorous mediation modeling to unpack emotion-regulatory pathways in crisis contexts."
+          },
+          {
+            "title": "The neural correlates of perceived social support and its relationship to psychological well-being",
+            "why": "Demonstrates mechanistic affective neuroscience — identifying specific neural substrates (e.g., hippocampus, insula) that biologically anchor social-emotional resilience."
+          },
+          {
+            "title": "Affective Norms for German as a Second Language (ANGL2)",
+            "why": "Illustrates commitment to cross-linguistic standardization and resource-building for emotion science — enabling rigorous comparative studies in bilingual cognition and L2 emotion processing."
+          },
+          {
+            "title": "Evaluation of the impact of landscape zone on driver distraction and visual comfort in road tunnels",
+            "why": "Exemplifies ecological affective science — quantifying how built environments modulate emotion-mediated attention and safety, bridging neuroergonomics and public health design."
+          }
+        ]
+      },
+      "stats": {
+        "analyzed_works_count": 1161,
+        "interesting_works_count": 121,
+        "new_works_count": 1161,
+        "deduped_works_count": 1161,
+        "ai_called_count": 1161,
+        "summary_recomputed": true
+      },
+      "profile_path": "data/researchers/profiles/A5100409741.json"
     },
     {
       "identity": {
