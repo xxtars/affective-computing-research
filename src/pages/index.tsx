@@ -31,7 +31,7 @@ export default function Home(): ReactNode {
           <section className={styles.section}>
             <Heading as="h2">Project Purpose</Heading>
             <p>
-              This project is an AI-assisted personal tracking workspace for affective computing research. It
+              This project is an AI-assisted research landscape tracking workspace for affective computing research. It
               organizes researcher identities, paper-level analysis, and aggregated paper views for continuous
               updates.
             </p>
