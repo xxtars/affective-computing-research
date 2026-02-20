@@ -89,6 +89,20 @@ function normalizeVenueName(name: string | null | undefined) {
   return raw;
 }
 
+function formatInstitutionCountry(value: string | null) {
+  const raw = String(value || '').trim();
+  if (!raw) return '-';
+  if (/^[A-Za-z]{2}$/.test(raw)) {
+    try {
+      const display = new Intl.DisplayNames(['en'], {type: 'region'});
+      return display.of(raw.toUpperCase()) || raw.toUpperCase();
+    } catch {
+      return raw.toUpperCase();
+    }
+  }
+  return raw;
+}
+
 export default function ResearcherDetailPage(): ReactNode {
   const location = useLocation();
   const researcherId = useMemo(() => {
@@ -150,7 +164,7 @@ export default function ResearcherDetailPage(): ReactNode {
             </div>
             <div className={styles.metaCard}>
               <span className={styles.metaLabel}>Institution Country</span>
-              <span className={styles.metaValue}>{researcher.affiliation.last_known_country || '-'}</span>
+              <span className={styles.metaValue}>{formatInstitutionCountry(researcher.affiliation.last_known_country)}</span>
             </div>
             <div className={styles.metaCard}>
               <span className={styles.metaLabel}>Analyzed / Affective-related</span>

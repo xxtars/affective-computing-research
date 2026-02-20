@@ -57,13 +57,30 @@ function uniqueSorted(values: string[]) {
   return Array.from(new Set(values.filter(Boolean))).sort((a, b) => a.localeCompare(b));
 }
 
+function formatInstitutionCountry(value: string | null) {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  if (/^[A-Za-z]{2}$/.test(raw)) {
+    try {
+      const display = new Intl.DisplayNames(['en'], {type: 'region'});
+      return display.of(raw.toUpperCase()) || raw.toUpperCase();
+    } catch {
+      return raw.toUpperCase();
+    }
+  }
+  return raw;
+}
+
 export default function ResearchersPage(): ReactNode {
   const [countryFilter, setCountryFilter] = useState('All');
   const [universityFilter, setUniversityFilter] = useState('All');
   const [query, setQuery] = useState('');
 
   const countryOptions = useMemo(
-    () => uniqueSorted(profile.researchers.map((researcher) => researcher.affiliation.last_known_country || '')),
+    () =>
+      uniqueSorted(
+        profile.researchers.map((researcher) => formatInstitutionCountry(researcher.affiliation.last_known_country)),
+      ),
     [],
   );
   const universityOptions = useMemo(
@@ -76,14 +93,15 @@ export default function ResearchersPage(): ReactNode {
     const keyword = query.trim().toLowerCase();
 
     return profile.researchers.filter((researcher) => {
+      const institutionCountry = formatInstitutionCountry(researcher.affiliation.last_known_country);
       const countryMatch =
-        countryFilter === 'All' || (researcher.affiliation.last_known_country || '') === countryFilter;
+        countryFilter === 'All' || institutionCountry === countryFilter;
       const universityMatch =
         universityFilter === 'All' || (researcher.affiliation.last_known_institution || '') === universityFilter;
       const keywordMatch =
         keyword.length === 0 ||
         researcher.identity.name.toLowerCase().includes(keyword) ||
-        (researcher.affiliation.last_known_country || '').toLowerCase().includes(keyword) ||
+        institutionCountry.toLowerCase().includes(keyword) ||
         (researcher.affiliation.last_known_institution || '').toLowerCase().includes(keyword) ||
         formatTopDirections(researcher).toLowerCase().includes(keyword);
 
@@ -99,7 +117,7 @@ export default function ResearchersPage(): ReactNode {
           <p>Generated at: {formatDateOnly(profile.generated_at)}</p>
           <p className={styles.note}>
             Institution is shown by priority rule: seed (with Scholar) first, otherwise OpenAlex first institution.
-            Country follows OpenAlex institution country code. Real-time correctness is not guaranteed.
+            Country is resolved from institution name (geocoding lookup) and displayed as full country name.
           </p>
 
           {profile.researchers.length === 0 ? (
@@ -159,7 +177,7 @@ export default function ResearchersPage(): ReactNode {
                     <p className={styles.meta}>
                       {researcher.affiliation.last_known_institution || '-'}
                       {' | '}
-                      {researcher.affiliation.last_known_country || '-'}
+                      {formatInstitutionCountry(researcher.affiliation.last_known_country) || '-'}
                     </p>
 
                     <p className={styles.meta}>

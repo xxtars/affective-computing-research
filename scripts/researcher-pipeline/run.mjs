@@ -4,6 +4,7 @@ import crypto from "node:crypto";
 
 const OPENALEX_BASE_URL = "https://api.openalex.org";
 const DEFAULT_QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1";
+const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org";
 const DEFAULT_INTEREST_TOPICS = ["emotion"];
 
 function parseArgs(argv) {
@@ -107,6 +108,70 @@ async function fetchJson(url) {
     throw new Error(`HTTP ${res.status} ${res.statusText}: ${text}`);
   }
   return res.json();
+}
+
+function normalizeInstitutionKey(name) {
+  return String(name || "").toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function countryNameFromCode(code) {
+  const normalized = String(code || "").trim().toUpperCase();
+  if (!normalized || normalized.length !== 2) return null;
+  try {
+    const display = new Intl.DisplayNames(["en"], { type: "region" });
+    const name = display.of(normalized);
+    return name || null;
+  } catch {
+    return null;
+  }
+}
+
+async function lookupCountryByInstitutionName(institutionName) {
+  const query = String(institutionName || "").trim();
+  if (!query) return null;
+
+  const url = new URL(`${NOMINATIM_BASE_URL}/search`);
+  url.searchParams.set("format", "jsonv2");
+  url.searchParams.set("addressdetails", "1");
+  url.searchParams.set("limit", "1");
+  url.searchParams.set("q", query);
+
+  const res = await fetch(url.toString(), {
+    headers: {
+      "User-Agent": "awesome-affective-computing-researcher-pipeline/1.0",
+    },
+  });
+  if (!res.ok) return null;
+  const payload = await res.json();
+  const first = Array.isArray(payload) ? payload[0] : null;
+  const country = first?.address?.country;
+  return typeof country === "string" && country.trim() ? country.trim() : null;
+}
+
+async function resolveInstitutionCountryName({
+  institutionName,
+  institutionCountryCache,
+  institutionCountryCachePath,
+}) {
+  const key = normalizeInstitutionKey(institutionName);
+  if (!key) return null;
+  if (Object.prototype.hasOwnProperty.call(institutionCountryCache, key)) {
+    return institutionCountryCache[key] || null;
+  }
+
+  let resolved = null;
+  try {
+    // Query country from institution name (independent from OpenAlex author country).
+    resolved = await lookupCountryByInstitutionName(institutionName);
+    // Keep a small delay for public geocoding endpoint etiquette.
+    await sleep(1000);
+  } catch {
+    resolved = null;
+  }
+
+  institutionCountryCache[key] = resolved;
+  await saveJson(institutionCountryCachePath, institutionCountryCache);
+  return resolved;
 }
 
 async function fetchAuthorProfile(authorId) {
@@ -569,6 +634,8 @@ async function run() {
   const qwenBaseUrl = process.env.QWEN_BASE_URL || DEFAULT_QWEN_BASE_URL;
 
   const previousOutput = (await loadJson(args.out, null)) || null;
+  const institutionCountryCachePath = path.join(args.cache, "institution-country-cache.json");
+  const institutionCountryCache = (await loadJson(institutionCountryCachePath, {})) || {};
   const previousResearchers = Array.isArray(previousOutput?.researchers) ? previousOutput.researchers : [];
   const outputResearchers = [...previousResearchers];
   const generatedAt = new Date().toISOString();
@@ -723,11 +790,8 @@ async function run() {
         openalex_author_url: `https://openalex.org/${authorId}`,
       },
       affiliation: {
-        last_known_institution:
-          (researcher.google_scholar && researcher.affiliation) ||
-          authorProfile.last_known_institutions?.[0]?.display_name ||
-          null,
-        last_known_country: authorProfile.last_known_institutions?.[0]?.country_code || null,
+        last_known_institution: null,
+        last_known_country: null,
         source:
           researcher.google_scholar && researcher.affiliation
             ? "seed_google_scholar"
@@ -750,6 +814,21 @@ async function run() {
       },
       works: dedupedMergedWorks,
     };
+    const selectedInstitution =
+      (researcher.google_scholar && researcher.affiliation) ||
+      authorProfile.last_known_institutions?.[0]?.display_name ||
+      null;
+    const countryFromInstitution = await resolveInstitutionCountryName({
+      institutionName: selectedInstitution,
+      institutionCountryCache,
+      institutionCountryCachePath,
+    });
+    nextResearcherProfile.affiliation.last_known_institution = selectedInstitution;
+    nextResearcherProfile.affiliation.last_known_country =
+      countryFromInstitution ||
+      countryNameFromCode(authorProfile.last_known_institutions?.[0]?.country_code) ||
+      null;
+
     const existingIndex = output.researchers.findIndex(
       (item) => item?.identity?.openalex_author_id === authorId
     );
