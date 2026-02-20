@@ -7,6 +7,18 @@ on:
         description: "Max new papers"
         required: false
         default: "20"
+      concurrency:
+        description: "Parallel workers"
+        required: false
+        default: "4"
+      save_every:
+        description: "Save cache every N papers"
+        required: false
+        default: "1"
+      researcher_name:
+        description: "Researcher name(s), comma-separated"
+        required: false
+        default: ""
       full_refresh:
         description: "Full refresh"
         required: false
@@ -38,11 +50,23 @@ jobs:
 
       - name: Run researcher pipeline
         run: |
+          cmd=(
+            node scripts/researcher-pipeline/run.mjs
+            --max-papers "${{ inputs.max_papers }}"
+            --delay-ms 300
+            --concurrency "${{ inputs.concurrency }}"
+            --save-every "${{ inputs.save_every }}"
+          )
+
           if [ "${{ inputs.full_refresh }}" = "true" ]; then
-            node scripts/researcher-pipeline/run.mjs --full-refresh --max-papers "${{ inputs.max_papers }}" --delay-ms 300
-          else
-            node scripts/researcher-pipeline/run.mjs --max-papers "${{ inputs.max_papers }}" --delay-ms 300
+            cmd+=(--full-refresh)
           fi
+
+          if [ -n "${{ inputs.researcher_name }}" ]; then
+            cmd+=(--researcher-name "${{ inputs.researcher_name }}")
+          fi
+
+          "${cmd[@]}"
 
       - name: Commit and push updated data
         run: |
