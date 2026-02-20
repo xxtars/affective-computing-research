@@ -73,7 +73,7 @@ function formatYearMonth(dateText: string | null | undefined, year: number | nul
 
 export default function PapersPage(): ReactNode {
   const baseUrlRoot = useBaseUrl('/');
-  const indexUrl = useBaseUrl('/data/researchers/researchers.index.json');
+  const indexUrl = useBaseUrl('data/researchers/researchers.index.json');
   const [query, setQuery] = useState('');
   const [profiles, setProfiles] = useState<ResearcherProfile[]>([]);
   const [loading, setLoading] = useState(true);

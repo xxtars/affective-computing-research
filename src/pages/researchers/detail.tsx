@@ -121,7 +121,7 @@ function formatInstitutionCountry(value: string | null) {
 export default function ResearcherDetailPage(): ReactNode {
   const location = useLocation();
   const baseUrlRoot = useBaseUrl('/');
-  const indexUrl = useBaseUrl('/data/researchers/researchers.index.json');
+  const indexUrl = useBaseUrl('data/researchers/researchers.index.json');
   const researcherId = useMemo(() => {
     const search = location.search || '';
     return new URLSearchParams(search).get('id') || '';
