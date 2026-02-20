@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // GitHub Pages deployment settings
 const organizationName = 'xxtars';
-const projectName = 'awesome-affective-computing';
+const projectName = 'affective-computing-research';
 
 const config: Config = {
   title: 'Affective Computing Research',
