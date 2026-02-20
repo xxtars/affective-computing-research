@@ -1,0 +1,58 @@
+name: Researcher Seed Upsert
+
+on:
+  workflow_dispatch:
+    inputs:
+      seed_name:
+        description: "Researcher name"
+        required: true
+      seed_google_scholar:
+        description: "Google Scholar URL (optional)"
+        required: false
+        default: ""
+      seed_openalex_author_id:
+        description: "OpenAlex author id (A...)"
+        required: true
+      seed_affiliation:
+        description: "Affiliation"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  upsert-seed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Upsert researcher into seed
+        run: |
+          node scripts/researcher-pipeline/upsert-seed-researcher.mjs \
+            --seed data/researchers/researcher.seed.json \
+            --name "${{ inputs.seed_name }}" \
+            --google-scholar "${{ inputs.seed_google_scholar }}" \
+            --openalex-author-id "${{ inputs.seed_openalex_author_id }}" \
+            --affiliation "${{ inputs.seed_affiliation }}"
+
+      - name: Commit and push updated seed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/researchers/researcher.seed.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update researcher seed"
+          git push
