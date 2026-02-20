@@ -92,6 +92,23 @@ const config: Config = {
       style: 'dark',
       links: [
         {
+          title: 'Disclaimer',
+          items: [
+            {
+              html: 'Most content is AI-assisted collection/analysis with personal summary and curation.',
+            },
+            {
+              html: 'The researcher list is continuously updated and is not a ranking or complete coverage.',
+            },
+            {
+              html: 'Outputs may contain mistakes, outdated information, omissions, or interpretation bias.',
+            },
+            {
+              html: 'Please verify critical details with official paper pages, publisher records, Google Scholar, and OpenAlex.',
+            },
+          ],
+        },
+        {
           title: 'Browse',
           items: [
             {

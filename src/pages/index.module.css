@@ -51,22 +51,6 @@
   margin-bottom: 0.45rem;
 }
 
-.disclaimer {
-  border-top: 1px solid var(--ifm-color-emphasis-200);
-  margin-top: 2rem;
-  padding: 1.5rem 0 2rem;
-}
-
-.disclaimer h3 {
-  color: var(--ifm-color-emphasis-700);
-  margin-bottom: 0.45rem;
-}
-
-.disclaimer p {
-  color: var(--ifm-color-emphasis-700);
-  margin-bottom: 0;
-}
-
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;

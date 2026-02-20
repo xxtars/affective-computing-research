@@ -73,27 +73,6 @@ export default function Home(): ReactNode {
           </section>
         </div>
 
-        <section className={styles.disclaimer}>
-          <div className="container">
-            <Heading as="h3">Disclaimer</Heading>
-            <p>
-              Most content in this project is generated through AI-assisted collection and analysis, together with
-              personal summary and curation.
-            </p>
-            <p>
-              Researchers are continuously being added. The current list is not a filtered shortlist, ranking, or
-              complete coverage of the field.
-            </p>
-            <p>
-              Outputs may contain mistakes, outdated information, omissions, or interpretation bias. This site
-              should be treated as a personal tracking reference, not an authoritative source.
-            </p>
-            <p>
-              Please verify critical details with official paper pages, publisher records, Google Scholar, and
-              OpenAlex.
-            </p>
-          </div>
-        </section>
       </main>
     </Layout>
   );
