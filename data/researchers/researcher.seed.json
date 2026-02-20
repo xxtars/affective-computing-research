@@ -1,27 +1,63 @@
 {
   "researchers": [
     {
-      "name": "Sicheng Zhao",
-      "google_scholar": "https://scholar.google.com/citations?user=LJiQRJIAAAAJ",
-      "openalex_author_id": "a5051149140",
-      "affiliation": "Tsinghua University"
+      "name": "Bin Hu",
+      "google_scholar": "https://scholar.google.com/citations?user=5kcgY8MAAAAJ",
+      "openalex_author_id": "a5100380066",
+      "affiliation": "Beijing Institute of Technology"
     },
     {
-      "name": "Yue Gao",
-      "google_scholar": "https://scholar.google.com/citations?user=UTDfWocAAAAJ",
-      "openalex_author_id": "a5100602494",
-      "affiliation": "Tsinghua University"
-    },
-    {
-      "name": "Yanyan Zhao",
-      "google_scholar": "https://scholar.google.com/citations?user=mEdfAYoAAAAJ",
-      "openalex_author_id": "a5031911989",
+      "name": "Bing Qin",
+      "google_scholar": "https://scholar.google.com/citations?user=LKnCub0AAAAJ",
+      "openalex_author_id": "a5017671620",
       "affiliation": "Harbin Institute of Technology"
+    },
+    {
+      "name": "C.L. Philip Chen",
+      "google_scholar": "https://scholar.google.com/citations?user=Q5248zwAAAAJ",
+      "openalex_author_id": "a5100643265",
+      "affiliation": "South China University of Technology"
+    },
+    {
+      "name": "Dan Guo",
+      "google_scholar": "",
+      "openalex_author_id": "a5059530979",
+      "affiliation": "Hefei University of Technology"
+    },
+    {
+      "name": "Dong Zhang",
+      "google_scholar": "https://scholar.google.com/citations?user=1E_WmCUAAAAJ",
+      "openalex_author_id": "a5100366067",
+      "affiliation": "Sun Yat-sen University"
     },
     {
       "name": "Guanqun Bi",
       "google_scholar": "https://scholar.google.com/citations?user=cTMKxukAAAAJ",
       "openalex_author_id": "a5016119118",
+      "affiliation": "Tsinghua University"
+    },
+    {
+      "name": "Guiguang Ding",
+      "google_scholar": "https://scholar.google.com/citations?user=6cYECZAAAAAJ",
+      "openalex_author_id": "a5057732142",
+      "affiliation": "Tsinghua University"
+    },
+    {
+      "name": "Honghai Liu",
+      "google_scholar": "https://scholar.google.com/citations?user=bsabUhgAAAAJ",
+      "openalex_author_id": "a5085867312",
+      "affiliation": "Portsmouth University"
+    },
+    {
+      "name": "Hongxun Yao",
+      "google_scholar": "https://scholar.google.com/citations?user=aOMFNFsAAAAJ",
+      "openalex_author_id": "a5023274785",
+      "affiliation": "Harbin Institute of Technology"
+    },
+    {
+      "name": "Jia Liu",
+      "google_scholar": "https://scholar.google.com/citations?user=xPoVpSEAAAAJ",
+      "openalex_author_id": "A5100409741",
       "affiliation": "Tsinghua University"
     },
     {
@@ -31,28 +67,22 @@
       "affiliation": "Tsinghua University"
     },
     {
-      "name": "Jia Liu",
-      "google_scholar": "https://scholar.google.com/citations?user=xPoVpSEAAAAJ",
-      "openalex_author_id": "a5005829172",
-      "affiliation": "Tsinghua University"
+      "name": "Jufeng Yang",
+      "google_scholar": "https://scholar.google.com/citations?user=c5vDJv0AAAAJ",
+      "openalex_author_id": "a5089409678",
+      "affiliation": "Nankai University"
     },
     {
-      "name": "Hongxun Yao",
-      "google_scholar": "https://scholar.google.com/citations?user=aOMFNFsAAAAJ",
-      "openalex_author_id": "a5023274785",
-      "affiliation": "Harbin Institute of Technology"
+      "name": "Kejun Zhang",
+      "google_scholar": "https://scholar.google.com/citations?user=0t1B3vMAAAAJ",
+      "openalex_author_id": "a5101577175",
+      "affiliation": "Zhejiang University"
     },
     {
-      "name": "Bing Qin",
-      "google_scholar": "https://scholar.google.com/citations?user=LKnCub0AAAAJ",
-      "openalex_author_id": "a5017671620",
-      "affiliation": "Harbin Institute of Technology"
-    },
-    {
-      "name": "Guiguang Ding",
-      "google_scholar": "https://scholar.google.com/citations?user=6cYECZAAAAAJ",
-      "openalex_author_id": "a5057732142",
-      "affiliation": "Tsinghua University"
+      "name": "Leida Li",
+      "google_scholar": "https://scholar.google.com/citations?user=xMvuFI8AAAAJ",
+      "openalex_author_id": "a5033615240",
+      "affiliation": "Xidian University"
     },
     {
       "name": "Meng Wang",
@@ -61,28 +91,28 @@
       "affiliation": "Hefei University of Technology"
     },
     {
-      "name": "Honghai Liu",
-      "google_scholar": "https://scholar.google.com/citations?user=bsabUhgAAAAJ",
-      "openalex_author_id": "a5085867312",
-      "affiliation": "Portsmouth University"
+      "name": "Ming Li",
+      "google_scholar": "https://scholar.google.com/citations?user=zp2Kz44AAAAJ",
+      "openalex_author_id": "a5100351449",
+      "affiliation": "The Chinese University of Hong Kong, Shenzhen"
     },
     {
-      "name": "Bin Hu",
-      "google_scholar": "https://scholar.google.com/citations?user=5kcgY8MAAAAJ",
-      "openalex_author_id": "a5100380066",
+      "name": "Peipei Song",
+      "google_scholar": "https://scholar.google.com/citations?user=aiIZ_MYAAAAJ",
+      "openalex_author_id": "a5015177224",
+      "affiliation": "University of Science and Technology of China"
+    },
+    {
+      "name": "Qin Jin",
+      "google_scholar": "https://scholar.google.com/citations?user=8UkYbCMAAAAJ",
+      "openalex_author_id": "a5009985839",
+      "affiliation": "Renmin University of China"
+    },
+    {
+      "name": "Qunxi Dong",
+      "google_scholar": "https://scholar.google.com/citations?user=ocu6_PMAAAAJ",
+      "openalex_author_id": "a5057680942",
       "affiliation": "Beijing Institute of Technology"
-    },
-    {
-      "name": "Xiaolan Fu",
-      "google_scholar": "https://scholar.google.com/citations?user=tM8ln5IAAAAJ",
-      "openalex_author_id": "a5015329251",
-      "affiliation": "Institute of Psychology, CAS; Shanghai Jiao Tong University"
-    },
-    {
-      "name": "Su-Jing Wang",
-      "google_scholar": "https://scholar.google.com/citations?user=BW-_LKsAAAAJ",
-      "openalex_author_id": "a5066403927",
-      "affiliation": "Institute of Psychology, CAS"
     },
     {
       "name": "Shengping Zhang",
@@ -97,22 +127,16 @@
       "affiliation": "Institute of Computing Technology, CAS"
     },
     {
-      "name": "Dan Guo",
-      "google_scholar": "",
-      "openalex_author_id": "a5059530979",
-      "affiliation": "Hefei University of Technology"
+      "name": "Sicheng Zhao",
+      "google_scholar": "https://scholar.google.com/citations?user=LJiQRJIAAAAJ",
+      "openalex_author_id": "a5051149140",
+      "affiliation": "Tsinghua University"
     },
     {
-      "name": "Xiao Sun",
-      "google_scholar": null,
-      "openalex_author_id": "a5088062069",
-      "affiliation": "Hefei University of Technology"
-    },
-    {
-      "name": "Wenming Zheng",
-      "google_scholar": "https://scholar.google.com/citations?user=k5fqIogAAAAJ",
-      "openalex_author_id": "a5029771864",
-      "affiliation": "Southeast University"
+      "name": "Su-Jing Wang",
+      "google_scholar": "https://scholar.google.com/citations?user=BW-_LKsAAAAJ",
+      "openalex_author_id": "a5066403927",
+      "affiliation": "Institute of Psychology, CAS"
     },
     {
       "name": "Tong Zhang",
@@ -121,28 +145,28 @@
       "affiliation": "South China University of Technology"
     },
     {
-      "name": "Qin Jin",
-      "google_scholar": "https://scholar.google.com/citations?user=8UkYbCMAAAAJ",
-      "openalex_author_id": "a5009985839",
-      "affiliation": "Renmin University of China"
+      "name": "Weidong Chen",
+      "google_scholar": "https://scholar.google.com/citations?user=Z-vKGdoAAAAJ",
+      "openalex_author_id": "a5100357376",
+      "affiliation": "University of Science and Technology of China"
     },
     {
-      "name": "C.L. Philip Chen",
-      "google_scholar": "https://scholar.google.com/citations?user=Q5248zwAAAAJ",
-      "openalex_author_id": "a5100643265",
-      "affiliation": "South China University of Technology"
+      "name": "Wenming Zheng",
+      "google_scholar": "https://scholar.google.com/citations?user=k5fqIogAAAAJ",
+      "openalex_author_id": "a5029771864",
+      "affiliation": "Southeast University"
     },
     {
-      "name": "Qunxi Dong",
-      "google_scholar": "https://scholar.google.com/citations?user=ocu6_PMAAAAJ",
-      "openalex_author_id": "a5057680942",
-      "affiliation": "Beijing Institute of Technology"
+      "name": "Xiao Sun",
+      "google_scholar": null,
+      "openalex_author_id": "a5088062069",
+      "affiliation": "Hefei University of Technology"
     },
     {
-      "name": "Jufeng Yang",
-      "google_scholar": "https://scholar.google.com/citations?user=c5vDJv0AAAAJ",
-      "openalex_author_id": "a5089409678",
-      "affiliation": "Nankai University"
+      "name": "Xiaolan Fu",
+      "google_scholar": "https://scholar.google.com/citations?user=tM8ln5IAAAAJ",
+      "openalex_author_id": "a5015329251",
+      "affiliation": "Institute of Psychology, CAS; Shanghai Jiao Tong University"
     },
     {
       "name": "Xun Chen",
@@ -151,46 +175,22 @@
       "affiliation": "University of Science and Technology of China"
     },
     {
-      "name": "Weidong Chen",
-      "google_scholar": "https://scholar.google.com/citations?user=Z-vKGdoAAAAJ",
-      "openalex_author_id": "a5100357376",
-      "affiliation": "University of Science and Technology of China"
+      "name": "Yanyan Zhao",
+      "google_scholar": "https://scholar.google.com/citations?user=mEdfAYoAAAAJ",
+      "openalex_author_id": "a5031911989",
+      "affiliation": "Harbin Institute of Technology"
     },
     {
-      "name": "Peipei Song",
-      "google_scholar": "https://scholar.google.com/citations?user=aiIZ_MYAAAAJ",
-      "openalex_author_id": "a5015177224",
-      "affiliation": "University of Science and Technology of China"
+      "name": "Yue Gao",
+      "google_scholar": "https://scholar.google.com/citations?user=UTDfWocAAAAJ",
+      "openalex_author_id": "a5100602494",
+      "affiliation": "Tsinghua University"
     },
     {
       "name": "Zheng Lian",
       "google_scholar": "https://scholar.google.com/citations?user=S34nWz0AAAAJ",
       "openalex_author_id": "a5001973434",
       "affiliation": "Tongji University"
-    },
-    {
-      "name": "Leida Li",
-      "google_scholar": "https://scholar.google.com/citations?user=xMvuFI8AAAAJ",
-      "openalex_author_id": "a5033615240",
-      "affiliation": "Xidian University"
-    },
-    {
-      "name": "Dong Zhang",
-      "google_scholar": "https://scholar.google.com/citations?user=1E_WmCUAAAAJ",
-      "openalex_author_id": "a5100366067",
-      "affiliation": "Sun Yat-sen University"
-    },
-    {
-      "name": "Kejun Zhang",
-      "google_scholar": "https://scholar.google.com/citations?user=0t1B3vMAAAAJ",
-      "openalex_author_id": "a5101577175",
-      "affiliation": "Zhejiang University"
-    },
-    {
-      "name": "Ming Li",
-      "google_scholar": "https://scholar.google.com/citations?user=zp2Kz44AAAAJ",
-      "openalex_author_id": "a5100351449",
-      "affiliation": "The Chinese University of Hong Kong, Shenzhen"
     }
   ]
 }

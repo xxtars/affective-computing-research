@@ -938,39 +938,6 @@
     },
     {
       "identity": {
-        "name": "Jia Liu",
-        "google_scholar": "https://scholar.google.com/citations?user=xPoVpSEAAAAJ",
-        "openalex_author_id": "A5005829172",
-        "openalex_author_url": "https://openalex.org/A5005829172"
-      },
-      "affiliation": {
-        "last_known_institution": "Tsinghua University",
-        "last_known_country": "China",
-        "source": "seed_google_scholar"
-      },
-      "metrics": {
-        "works_count": 370,
-        "cited_by_count": 6804,
-        "h_index": 40,
-        "i10_index": 128
-      },
-      "topic_summary": {
-        "top_research_directions": [],
-        "trend_summary": "No papers provided; insufficient data to determine research directions.",
-        "representative_papers": []
-      },
-      "stats": {
-        "analyzed_works_count": 368,
-        "interesting_works_count": 0,
-        "new_works_count": 319,
-        "deduped_works_count": 368,
-        "ai_called_count": 319,
-        "summary_recomputed": true
-      },
-      "profile_path": "data/researchers/profiles/A5005829172.json"
-    },
-    {
-      "identity": {
         "name": "Jianhua Tao",
         "google_scholar": null,
         "openalex_author_id": "A5112613657",
