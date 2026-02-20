@@ -57,6 +57,27 @@ function uniqueSorted(values: string[]) {
   return Array.from(new Set(values.filter(Boolean))).sort((a, b) => a.localeCompare(b));
 }
 
+function splitNameParts(fullName: string) {
+  const parts = String(fullName || '')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+  if (parts.length === 0) return {familyName: '', givenName: ''};
+  if (parts.length === 1) return {familyName: parts[0], givenName: ''};
+  return {
+    familyName: parts[parts.length - 1],
+    givenName: parts.slice(0, -1).join(' '),
+  };
+}
+
+function getNameInitial(text: string) {
+  const normalized = String(text || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+  const match = normalized.match(/[A-Za-z]/);
+  return match ? match[0].toUpperCase() : '#';
+}
+
 function formatInstitutionCountry(value: string | null) {
   const raw = String(value || '').trim();
   if (!raw) return '';
@@ -82,6 +103,8 @@ function formatInstitutionCountry(value: string | null) {
 export default function ResearchersPage(): ReactNode {
   const [countryFilter, setCountryFilter] = useState('All');
   const [universityFilter, setUniversityFilter] = useState('All');
+  const [familyInitialFilter, setFamilyInitialFilter] = useState('All');
+  const [givenInitialFilter, setGivenInitialFilter] = useState('All');
   const [query, setQuery] = useState('');
 
   const countryOptions = useMemo(
@@ -96,16 +119,35 @@ export default function ResearchersPage(): ReactNode {
       uniqueSorted(profile.researchers.map((researcher) => researcher.affiliation.last_known_institution || '')),
     [],
   );
+  const familyInitialOptions = useMemo(
+    () =>
+      uniqueSorted(
+        profile.researchers.map((researcher) => getNameInitial(splitNameParts(researcher.identity.name).familyName)),
+      ),
+    [],
+  );
+  const givenInitialOptions = useMemo(
+    () =>
+      uniqueSorted(
+        profile.researchers.map((researcher) => getNameInitial(splitNameParts(researcher.identity.name).givenName)),
+      ),
+    [],
+  );
 
   const filteredResearchers = useMemo(() => {
     const keyword = query.trim().toLowerCase();
 
-    return profile.researchers.filter((researcher) => {
+    const matched = profile.researchers.filter((researcher) => {
+      const nameParts = splitNameParts(researcher.identity.name);
+      const familyInitial = getNameInitial(nameParts.familyName);
+      const givenInitial = getNameInitial(nameParts.givenName);
       const institutionCountry = formatInstitutionCountry(researcher.affiliation.last_known_country);
       const countryMatch =
         countryFilter === 'All' || institutionCountry === countryFilter;
       const universityMatch =
         universityFilter === 'All' || (researcher.affiliation.last_known_institution || '') === universityFilter;
+      const familyInitialMatch = familyInitialFilter === 'All' || familyInitial === familyInitialFilter;
+      const givenInitialMatch = givenInitialFilter === 'All' || givenInitial === givenInitialFilter;
       const keywordMatch =
         keyword.length === 0 ||
         researcher.identity.name.toLowerCase().includes(keyword) ||
@@ -113,9 +155,19 @@ export default function ResearchersPage(): ReactNode {
         (researcher.affiliation.last_known_institution || '').toLowerCase().includes(keyword) ||
         formatTopDirections(researcher).toLowerCase().includes(keyword);
 
-      return countryMatch && universityMatch && keywordMatch;
+      return countryMatch && universityMatch && familyInitialMatch && givenInitialMatch && keywordMatch;
     });
-  }, [countryFilter, query, universityFilter]);
+
+    return matched.sort((a, b) => {
+      const aName = splitNameParts(a.identity.name);
+      const bName = splitNameParts(b.identity.name);
+      const familyCmp = aName.familyName.localeCompare(bName.familyName, 'en', {sensitivity: 'base'});
+      if (familyCmp !== 0) return familyCmp;
+      const givenCmp = aName.givenName.localeCompare(bName.givenName, 'en', {sensitivity: 'base'});
+      if (givenCmp !== 0) return givenCmp;
+      return a.identity.name.localeCompare(b.identity.name, 'en', {sensitivity: 'base'});
+    });
+  }, [countryFilter, familyInitialFilter, givenInitialFilter, query, universityFilter]);
 
   return (
     <Layout title="Researchers">
@@ -157,6 +209,30 @@ export default function ResearchersPage(): ReactNode {
                     {universityOptions.map((university) => (
                       <option key={university} value={university}>
                         {university}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                <label>
+                  Family Initial
+                  <select value={familyInitialFilter} onChange={(event) => setFamilyInitialFilter(event.target.value)}>
+                    <option value="All">All</option>
+                    {familyInitialOptions.map((initial) => (
+                      <option key={initial} value={initial}>
+                        {initial}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                <label>
+                  Given Initial
+                  <select value={givenInitialFilter} onChange={(event) => setGivenInitialFilter(event.target.value)}>
+                    <option value="All">All</option>
+                    {givenInitialOptions.map((initial) => (
+                      <option key={initial} value={initial}>
+                        {initial}
                       </option>
                     ))}
                   </select>
