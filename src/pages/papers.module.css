@@ -75,6 +75,7 @@
   font-size: 1.02rem;
   line-height: 1.35;
   margin: 0;
+  min-height: calc(1.35em * 3);
   overflow: hidden;
   text-overflow: ellipsis;
 }
