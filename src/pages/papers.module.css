@@ -25,19 +25,60 @@
   margin-bottom: 0.8rem;
 }
 
-.tableWrap {
-  overflow-x: auto;
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
-.tableWrap table {
-  border-collapse: collapse;
-  width: 100%;
+.card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.95rem;
 }
 
-.tableWrap th,
-.tableWrap td {
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-  padding: 0.7rem;
-  text-align: left;
-  vertical-align: top;
+.cardTop {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.yearBadge {
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+}
+
+.scoreBadge {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.8rem;
+}
+
+.title {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.metaLine {
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+.researcherLink {
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: auto;
 }

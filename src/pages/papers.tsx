@@ -134,47 +134,44 @@ export default function PapersPage(): ReactNode {
           {filteredPapers.length === 0 ? (
             <p>No papers yet. Run `npm run researcher:build` first.</p>
           ) : (
-            <div className={styles.tableWrap}>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Year</th>
-                    <th>Title</th>
-                    <th>Researcher</th>
-                    <th>Venue</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredPapers.map((paper) => (
-                    <tr key={paper.id}>
-                      <td>{paper.publication_year || '-'}</td>
-                      <td>{paper.title}</td>
-                      <td>
-                        <Link to={`/researchers/detail?id=${encodeURIComponent(paper.researcherId)}`}>
-                          {paper.researcherName}
-                        </Link>
-                      </td>
-                      <td>
-                        <a
-                          href={paper.links?.landing_page || paper.links?.openalex || '#'}
-                          rel="noreferrer"
-                          target="_blank">
-                          {normalizeVenueName(paper.source?.display_name || paper.primary_source)}
-                        </a>
-                        {paper.links?.openalex && (
-                          <>
-                            {' '}
-                            |{' '}
-                            <a href={paper.links.openalex} rel="noreferrer" target="_blank">
-                              Source(OpenAlex)
-                            </a>
-                          </>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className={styles.grid}>
+              {filteredPapers.map((paper) => (
+                <article className={styles.card} key={paper.id}>
+                  <div className={styles.cardTop}>
+                    <span className={styles.yearBadge}>{paper.publication_year || '-'}</span>
+                    <span className={styles.scoreBadge}>Score {Number(paper.analysis.relevance_score || 0).toFixed(2)}</span>
+                  </div>
+
+                  <h2 className={styles.title} title={paper.title}>
+                    {paper.title}
+                  </h2>
+
+                  <p className={styles.metaLine}>
+                    Researcher:{' '}
+                    <Link className={styles.researcherLink} to={`/researchers/detail?id=${encodeURIComponent(paper.researcherId)}`}>
+                      {paper.researcherName}
+                    </Link>
+                  </p>
+
+                  <p className={styles.metaLine}>
+                    Venue:{' '}
+                    <a
+                      href={paper.links?.landing_page || paper.links?.openalex || '#'}
+                      rel="noreferrer"
+                      target="_blank">
+                      {normalizeVenueName(paper.source?.display_name || paper.primary_source)}
+                    </a>
+                  </p>
+
+                  <div className={styles.actions}>
+                    {paper.links?.openalex && (
+                      <a href={paper.links.openalex} rel="noreferrer" target="_blank">
+                        OpenAlex Source
+                      </a>
+                    )}
+                  </div>
+                </article>
+              ))}
             </div>
           )}
         </div>
