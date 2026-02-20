@@ -67,10 +67,16 @@
 }
 
 .paperTitle {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
   font-size: 1.02rem;
   line-height: 1.35;
   margin: 0.1rem 0 0.25rem;
+  min-height: calc(1.35em * 3);
+  overflow: hidden;
   overflow-wrap: anywhere;
+  text-overflow: ellipsis;
   word-break: break-word;
 }
 
