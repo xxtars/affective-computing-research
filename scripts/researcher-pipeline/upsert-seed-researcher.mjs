@@ -4,17 +4,23 @@ import path from "node:path";
 function parseArgs(argv) {
   const args = {
     seed: "data/researchers/researcher.seed.json",
+    out: "data/researchers/researchers.index.json",
+    cache: "data/researchers/cache",
     name: "",
     googleScholar: "",
     openalexAuthorId: "",
+    removeAuthorId: "",
     affiliation: "",
   };
   for (let i = 0; i < argv.length; i += 1) {
     const token = argv[i];
     if (token === "--seed") args.seed = argv[++i];
+    else if (token === "--out") args.out = argv[++i];
+    else if (token === "--cache") args.cache = argv[++i];
     else if (token === "--name") args.name = argv[++i] || "";
     else if (token === "--google-scholar") args.googleScholar = argv[++i] || "";
     else if (token === "--openalex-author-id") args.openalexAuthorId = argv[++i] || "";
+    else if (token === "--remove-author-id") args.removeAuthorId = argv[++i] || "";
     else if (token === "--affiliation") args.affiliation = argv[++i] || "";
   }
   return args;
@@ -33,8 +39,13 @@ function normalizeScholar(value) {
 }
 
 async function loadJson(filePath) {
-  const content = await fs.readFile(filePath, "utf8");
-  return JSON.parse(content);
+  try {
+    const content = await fs.readFile(filePath, "utf8");
+    return JSON.parse(content);
+  } catch (error) {
+    if (error?.code === "ENOENT") return null;
+    throw error;
+  }
 }
 
 async function saveJson(filePath, data) {
@@ -42,10 +53,59 @@ async function saveJson(filePath, data) {
   await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
+async function removeIfExists(filePath) {
+  await fs.rm(filePath, {force: true, recursive: true});
+}
+
+async function cleanupOldAuthorData({oldAuthorId, outPath, cacheRoot}) {
+  if (!oldAuthorId) return;
+
+  const oldUpper = String(oldAuthorId).toUpperCase();
+  const oldLower = String(oldAuthorId).toLowerCase();
+  const root = process.cwd();
+
+  const profilePath = path.join(path.dirname(outPath), "profiles", `${oldUpper}.json`);
+  const staticRoot = path.join(root, "static", "data", "researchers");
+  const staticProfilePath = path.join(staticRoot, "profiles", `${oldUpper}.json`);
+  const staticIndexPath = path.join(staticRoot, path.basename(outPath));
+
+  await removeIfExists(profilePath);
+  await removeIfExists(staticProfilePath);
+
+  const indexJson = await loadJson(outPath);
+  if (indexJson && Array.isArray(indexJson.researchers)) {
+    indexJson.researchers = indexJson.researchers.filter(
+      (item) => normalizeAuthorId(item?.identity?.openalex_author_id) !== oldUpper,
+    );
+    await saveJson(outPath, indexJson);
+  }
+
+  const staticIndexJson = await loadJson(staticIndexPath);
+  if (staticIndexJson && Array.isArray(staticIndexJson.researchers)) {
+    staticIndexJson.researchers = staticIndexJson.researchers.filter(
+      (item) => normalizeAuthorId(item?.identity?.openalex_author_id) !== oldUpper,
+    );
+    await saveJson(staticIndexPath, staticIndexJson);
+  }
+
+  const cacheAbs = path.resolve(root, cacheRoot);
+  const dirs = await fs.readdir(cacheAbs, {withFileTypes: true}).catch(() => []);
+  for (const dir of dirs) {
+    if (!dir.isDirectory()) continue;
+    if (dir.name.endsWith(`__${oldLower}`)) {
+      await removeIfExists(path.join(cacheAbs, dir.name));
+    }
+  }
+
+  console.log(`Cleaned old author data: ${oldUpper}`);
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const seedPath = path.resolve(process.cwd(), args.seed);
+  const outPath = path.resolve(process.cwd(), args.out);
   const authorId = normalizeAuthorId(args.openalexAuthorId);
+  const removeAuthorId = normalizeAuthorId(args.removeAuthorId);
   const name = String(args.name || "").trim();
   const affiliation = String(args.affiliation || "").trim();
   const googleScholar = normalizeScholar(args.googleScholar);
@@ -80,7 +140,26 @@ async function main() {
   }
 
   seed.researchers.sort((a, b) => String(a?.name || "").localeCompare(String(b?.name || ""), "en"));
+
+  if (removeAuthorId && removeAuthorId !== authorId) {
+    const before = seed.researchers.length;
+    seed.researchers = seed.researchers.filter(
+      (item) => normalizeAuthorId(item?.openalex_author_id) !== removeAuthorId,
+    );
+    if (seed.researchers.length !== before) {
+      console.log(`Removed old seed record: ${removeAuthorId}`);
+    }
+  }
+
   await saveJson(seedPath, seed);
+
+  if (removeAuthorId && removeAuthorId !== authorId) {
+    await cleanupOldAuthorData({
+      oldAuthorId: removeAuthorId,
+      outPath,
+      cacheRoot: args.cache,
+    });
+  }
 }
 
 main().catch((error) => {

@@ -13,6 +13,10 @@ on:
       seed_openalex_author_id:
         description: "OpenAlex author id (A...)"
         required: true
+      seed_old_openalex_author_id:
+        description: "Old wrong OpenAlex author id to remove (optional)"
+        required: false
+        default: ""
       seed_affiliation:
         description: "Affiliation"
         required: true
@@ -40,19 +44,22 @@ jobs:
         run: |
           node scripts/researcher-pipeline/upsert-seed-researcher.mjs \
             --seed data/researchers/researcher.seed.json \
+            --out data/researchers/researchers.index.json \
+            --cache data/researchers/cache \
             --name "${{ inputs.seed_name }}" \
             --google-scholar "${{ inputs.seed_google_scholar }}" \
             --openalex-author-id "${{ inputs.seed_openalex_author_id }}" \
+            --remove-author-id "${{ inputs.seed_old_openalex_author_id }}" \
             --affiliation "${{ inputs.seed_affiliation }}"
 
       - name: Commit and push updated seed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/researchers/researcher.seed.json
+          git add data/researchers/researcher.seed.json data/researchers/researchers.index.json data/researchers/profiles data/researchers/cache static/data/researchers
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "chore: update researcher seed"
+          git commit -m "chore: update researcher seed and cleanup old author data"
           git push
