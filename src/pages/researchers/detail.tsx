@@ -213,49 +213,41 @@ export default function ResearcherDetailPage(): ReactNode {
           <Heading as="h2" className="margin-top--md">
             Affective-related Papers ({interestingWorks.length})
           </Heading>
-          <div className={styles.tableWrap}>
-            <table>
-              <thead>
-                <tr>
-                  <th>Year-Month</th>
-                  <th>Title</th>
-                  <th>Venue</th>
-                  <th>Directions</th>
-                  <th>Keywords</th>
-                </tr>
-              </thead>
-              <tbody>
-                {interestingWorks.map((work) => (
-                  <tr key={work.id}>
-                    <td>{formatYearMonth(work.publication_date, work.publication_year)}</td>
-                    <td>{work.title}</td>
-                    <td>
-                      {work.source?.display_name || work.primary_source ? (
-                        <a
-                          href={
-                            work.links?.landing_page || work.links?.openalex || work.links?.source_openalex || '#'
-                          }
-                          rel="noreferrer"
-                          target="_blank">
-                          {normalizeVenueName(work.source?.display_name || work.primary_source)}
-                        </a>
-                      ) : (
-                        '-'
-                      )}
-                      <div>
-                        {work.links?.openalex && (
-                          <a href={work.links.openalex} rel="noreferrer" target="_blank">
-                            Source(OpenAlex)
-                          </a>
-                        )}
-                      </div>
-                    </td>
-                    <td>{formatList(work.analysis.research_directions)}</td>
-                    <td>{formatList(work.analysis.keywords)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className={styles.paperGrid}>
+            {interestingWorks.map((work) => (
+              <article className={styles.paperCard} key={work.id}>
+                <div className={styles.paperTop}>
+                  <span className={styles.paperDate}>{formatYearMonth(work.publication_date, work.publication_year)}</span>
+                </div>
+                <h3 className={styles.paperTitle} title={work.title}>
+                  {work.title}
+                </h3>
+                <p className={styles.paperMeta}>
+                  Venue:{' '}
+                  {work.source?.display_name || work.primary_source ? (
+                    <a
+                      href={work.links?.landing_page || work.links?.openalex || work.links?.source_openalex || '#'}
+                      rel="noreferrer"
+                      target="_blank">
+                      {normalizeVenueName(work.source?.display_name || work.primary_source)}
+                    </a>
+                  ) : (
+                    '-'
+                  )}
+                </p>
+                {work.links?.openalex && (
+                  <p className={styles.paperMeta}>
+                    <a href={work.links.openalex} rel="noreferrer" target="_blank">
+                      Source(OpenAlex)
+                    </a>
+                  </p>
+                )}
+                <p className={styles.paperMeta}>Directions</p>
+                <p className={styles.paperText}>{formatList(work.analysis.research_directions)}</p>
+                <p className={styles.paperMeta}>Keywords</p>
+                <p className={styles.paperText}>{formatList(work.analysis.keywords)}</p>
+              </article>
+            ))}
           </div>
         </div>
       </main>
