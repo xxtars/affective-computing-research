@@ -1,0 +1,56 @@
+.page {
+  padding: 2.5rem 0;
+}
+
+.metaGrid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.metaCard {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+
+.metaLabel {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.metaValue {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.directionList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.directionTag {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.88rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.tableWrap table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableWrap th,
+.tableWrap td {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}

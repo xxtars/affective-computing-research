@@ -1,0 +1,2048 @@
+{
+  "generated_at": "2026-02-20T09:40:58.251Z",
+  "pipeline_version": "v0.1.0",
+  "run_config": {
+    "model": "qwen-plus",
+    "skip_ai": false,
+    "full_refresh": false,
+    "max_papers": 10,
+    "delay_ms": 300
+  },
+  "researchers": [
+    {
+      "identity": {
+        "name": "Jufeng Yang",
+        "google_scholar": "https://scholar.google.com/citations?user=c5vDJv0AAAAJ",
+        "openalex_author_id": "A5089409678",
+        "openalex_author_url": "https://openalex.org/A5089409678",
+        "interest_topics": [
+          "emotion"
+        ]
+      },
+      "affiliation": {
+        "last_known_institution": "Nankai University",
+        "last_known_country": "CN"
+      },
+      "metrics": {
+        "works_count": 147,
+        "cited_by_count": 5714,
+        "h_index": 33,
+        "i10_index": 76
+      },
+      "topic_summary": {
+        "top_research_directions": [
+          {
+            "name": "multimodal emotion recognition",
+            "weight": 1
+          },
+          {
+            "name": "affective computing",
+            "weight": 0.95
+          },
+          {
+            "name": "emotion recognition from images",
+            "weight": 0.9
+          },
+          {
+            "name": "attention mechanisms for affective computing",
+            "weight": 0.85
+          },
+          {
+            "name": "fairness-aware affective models",
+            "weight": 0.8
+          },
+          {
+            "name": "clinical AI with emotion-aware representation learning",
+            "weight": 0.75
+          },
+          {
+            "name": "object-centric emotion understanding",
+            "weight": 0.7
+          },
+          {
+            "name": "affective signal processing",
+            "weight": 0.65
+          }
+        ],
+        "trend_summary": "Jufeng Yang's recent work centers on advancing emotion-aware AI through multimodal, modular, and fairness-conscious architectures—spanning audio-visual depression detection, bias-mitigated visual emotion analysis, and duplex attention for joint perception-cognition-emotion modeling. A unifying theme is resolving emotional ambiguity via adaptive, interpretable, and clinically or socially grounded representations.",
+        "representative_papers": [
+          {
+            "title": "READ-Net: Clarifying Emotional Ambiguity via Adaptive Feature Recalibration for Audio-Visual Depression Detection",
+            "why": "Exemplifies clinical translation of affective computing by integrating audio-visual signals with adaptive recalibration to address emotional ambiguity in depression screening."
+          },
+          {
+            "title": "BOVIS: Bias-Mitigated Object-Enhanced Visual Emotion Analysis",
+            "why": "Represents the intersection of fairness-aware modeling and object-centric affective reasoning, directly tackling dataset and model biases in visual emotion classification."
+          },
+          {
+            "title": "MODA: MOdular Duplex Attention for Multimodal Perception, Cognition, and Emotion Understanding",
+            "why": "Captures the core architectural innovation trend—modular, cross-modal attention—to jointly model perception, cognition, and emotion in unified affective frameworks."
+          }
+        ]
+      },
+      "stats": {
+        "analyzed_works_count": 10,
+        "interesting_works_count": 3,
+        "new_works_count": 10,
+        "deduped_works_count": 10
+      },
+      "works": [
+        {
+          "id": "https://openalex.org/W7125459357",
+          "openalex_url": "https://openalex.org/W7125459357",
+          "title": "READ-Net: Clarifying Emotional Ambiguity via Adaptive Feature Recalibration for Audio-Visual Depression Detection",
+          "publication_year": 2026,
+          "publication_date": "2026-01-21",
+          "doi": null,
+          "doi_url": null,
+          "type": "article",
+          "type_crossref": null,
+          "language": null,
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 0,
+          "primary_source": "ArXiv.org",
+          "source": {
+            "id": "https://openalex.org/S4393918464",
+            "display_name": "ArXiv.org",
+            "type": "repository",
+            "issn_l": "2331-8422",
+            "is_in_doaj": false,
+            "host_organization_name": null,
+            "host_organization_lineage_names": []
+          },
+          "links": {
+            "openalex": "https://openalex.org/W7125459357",
+            "landing_page": "http://arxiv.org/abs/2601.14651",
+            "pdf": "https://arxiv.org/pdf/2601.14651",
+            "primary_topic_openalex": "https://openalex.org/T10667",
+            "source_openalex": "https://openalex.org/S4393918464"
+          },
+          "concepts": [
+            "Ambiguity",
+            "Psychology",
+            "Feature (linguistics)",
+            "Cognitive psychology",
+            "Robustness (evolution)",
+            "Computer science",
+            "Depression (economics)",
+            "Artificial intelligence"
+          ],
+          "abstract": "Depression is a severe global mental health issue that impairs daily functioning and overall quality of life. Although recent audio-visual approaches have improved automatic depression detection, methods that ignore emotional cues often fail to capture subtle depressive signals hidden within emotional expressions. Conversely, those incorporating emotions frequently confuse transient emotional expressions with stable depressive symptoms in feature representations, a phenomenon termed \\emph{Emotional Ambiguity}, thereby leading to detection errors. To address this critical issue, we propose READ-Net, the first audio-visual depression detection framework explicitly designed to resolve Emotional Ambiguity through Adaptive Feature Recalibration (AFR). The core insight of AFR is to dynamically adjust the weights of emotional features to enhance depression-related signals. Rather than merely overlooking or naively combining emotional information, READ-Net innovatively identifies and preserves depressive-relevant cues within emotional features, while adaptively filtering out irrelevant emotional noise. This recalibration strategy significantly clarifies feature representations, and effectively mitigates the persistent challenge of emotional interference. Additionally, READ-Net can be easily integrated into existing frameworks for improved performance. Extensive evaluations on three publicly available datasets show that READ-Net outperforms state-of-the-art methods, with average gains of 4.55\\% in accuracy and 1.26\\% in F1-score, demonstrating its robustness to emotional disturbances and improving audio-visual depression detection.",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T10667",
+              "name": "Emotion and Mood Recognition",
+              "score": 0.9390000104904175,
+              "subfield": "Experimental and Cognitive Psychology",
+              "field": "Psychology",
+              "domain": "Social Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T10667",
+                "name": "Emotion and Mood Recognition",
+                "score": 0.9390000104904175,
+                "subfield": "Experimental and Cognitive Psychology",
+                "field": "Psychology",
+                "domain": "Social Sciences"
+              },
+              {
+                "id": "https://openalex.org/T12488",
+                "name": "Mental Health via Writing",
+                "score": 0.02239999920129776,
+                "subfield": "Social Psychology",
+                "field": "Psychology",
+                "domain": "Social Sciences"
+              },
+              {
+                "id": "https://openalex.org/T11519",
+                "name": "Digital Mental Health Interventions",
+                "score": 0.015599999576807022,
+                "subfield": "Applied Psychology",
+                "field": "Psychology",
+                "domain": "Social Sciences"
+              }
+            ],
+            "concepts": [
+              {
+                "id": "https://openalex.org/C2780522230",
+                "name": "Ambiguity",
+                "score": 0.6600000262260437,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C15744967",
+                "name": "Psychology",
+                "score": 0.6100000143051147,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C2776401178",
+                "name": "Feature (linguistics)",
+                "score": 0.5924999713897705,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C180747234",
+                "name": "Cognitive psychology",
+                "score": 0.5485000014305115,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C63479239",
+                "name": "Robustness (evolution)",
+                "score": 0.49619999527931213,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C41008148",
+                "name": "Computer science",
+                "score": 0.40450000762939453,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C2776867660",
+                "name": "Depression (economics)",
+                "score": 0.3828999996185303,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C154945302",
+                "name": "Artificial intelligence",
+                "score": 0.3617999851703644,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C2779530757",
+                "name": "Quality (philosophy)",
+                "score": 0.3271999955177307,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C52622490",
+                "name": "Feature extraction",
+                "score": 0.31369999051094055,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C134362201",
+                "name": "Mental health",
+                "score": 0.3043999969959259,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C2776035688",
+                "name": "Affect (linguistics)",
+                "score": 0.2924000024795532,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C3019858935",
+                "name": "Depressive symptoms",
+                "score": 0.28630000352859497,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C143110190",
+                "name": "Emotional expression",
+                "score": 0.2824000120162964,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C138496976",
+                "name": "Developmental psychology",
+                "score": 0.2531000077724457,
+                "level": 1
+              }
+            ],
+            "keywords": [
+              {
+                "id": "https://openalex.org/keywords/ambiguity",
+                "name": "Ambiguity",
+                "score": 0.6600000262260437
+              },
+              {
+                "id": "https://openalex.org/keywords/feature",
+                "name": "Feature (linguistics)",
+                "score": 0.5924999713897705
+              },
+              {
+                "id": "https://openalex.org/keywords/robustness",
+                "name": "Robustness (evolution)",
+                "score": 0.49619999527931213
+              },
+              {
+                "id": "https://openalex.org/keywords/depression",
+                "name": "Depression (economics)",
+                "score": 0.3828999996185303
+              },
+              {
+                "id": "https://openalex.org/keywords/quality",
+                "name": "Quality (philosophy)",
+                "score": 0.3271999955177307
+              },
+              {
+                "id": "https://openalex.org/keywords/feature-extraction",
+                "name": "Feature extraction",
+                "score": 0.31369999051094055
+              }
+            ],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": true,
+              "oa_status": "green",
+              "oa_url": "https://arxiv.org/pdf/2601.14651",
+              "any_repository_has_fulltext": true
+            },
+            "citation_normalized_percentile": {
+              "value": 0.41929035,
+              "is_in_top_1_percent": false,
+              "is_in_top_10_percent": false
+            },
+            "fwci": null,
+            "counts_by_year": [],
+            "institutions_distinct_count": 8,
+            "countries_distinct_count": 0,
+            "referenced_works_count": 0
+          },
+          "analysis": {
+            "is_interesting": true,
+            "relevance_score": 0.96,
+            "confidence": 0.98,
+            "reason": "The paper directly addresses emotion-related challenges—specifically 'Emotional Ambiguity'—in the context of depression detection, aligning precisely with the researcher's interest in 'emotion'. It proposes a novel method (Adaptive Feature Recalibration) to disentangle transient emotional expressions from stable depressive signals, making emotion central to its technical and psychological contribution.",
+            "evidence": [
+              "Introduces and formalizes 'Emotional Ambiguity' as a core problem",
+              "Uses adaptive recalibration of emotional features to enhance depression-relevant signals",
+              "Explicitly distinguishes transient emotions from clinical symptoms in feature representations"
+            ],
+            "keywords": [
+              "emotion",
+              "emotional ambiguity",
+              "affective computing",
+              "depression detection",
+              "feature recalibration"
+            ],
+            "research_directions": [
+              "Affective signal processing",
+              "Emotion-cognition boundary modeling",
+              "Clinical AI with emotion-aware representation learning"
+            ]
+          }
+        },
+        {
+          "id": "https://openalex.org/W7125494083",
+          "openalex_url": "https://openalex.org/W7125494083",
+          "title": "MusoMamba: Mamba-Based Multimodal Ultrasound Image Mutual Learning for Breast Tumor Segmentation",
+          "publication_year": 2026,
+          "publication_date": "2026-01-01",
+          "doi": "https://doi.org/10.1007/978-981-95-5764-6_34",
+          "doi_url": "https://doi.org/10.1007/978-981-95-5764-6_34",
+          "type": "book-chapter",
+          "type_crossref": null,
+          "language": "en",
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 0,
+          "primary_source": "Lecture notes in computer science",
+          "source": {
+            "id": "https://openalex.org/S106296714",
+            "display_name": "Lecture notes in computer science",
+            "type": "book series",
+            "issn_l": "0302-9743",
+            "is_in_doaj": false,
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ]
+          },
+          "links": {
+            "openalex": "https://openalex.org/W7125494083",
+            "landing_page": "https://doi.org/10.1007/978-981-95-5764-6_34",
+            "pdf": null,
+            "primary_topic_openalex": "https://openalex.org/T10862",
+            "source_openalex": "https://openalex.org/S106296714"
+          },
+          "concepts": [
+            "Computer science",
+            "Artificial intelligence",
+            "Mutual information",
+            "Segmentation",
+            "Computer vision",
+            "Breast tumor",
+            "Image segmentation",
+            "Pattern recognition (psychology)"
+          ],
+          "abstract": "",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T10862",
+              "name": "AI in cancer detection",
+              "score": 0.7113000154495239,
+              "subfield": "Artificial Intelligence",
+              "field": "Computer Science",
+              "domain": "Physical Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T10862",
+                "name": "AI in cancer detection",
+                "score": 0.7113000154495239,
+                "subfield": "Artificial Intelligence",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T10727",
+                "name": "Ultrasound Imaging and Elastography",
+                "score": 0.050200000405311584,
+                "subfield": "Radiology, Nuclear Medicine and Imaging",
+                "field": "Medicine",
+                "domain": "Health Sciences"
+              },
+              {
+                "id": "https://openalex.org/T10036",
+                "name": "Advanced Neural Network Applications",
+                "score": 0.02879999950528145,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              }
+            ],
+            "concepts": [
+              {
+                "id": "https://openalex.org/C41008148",
+                "name": "Computer science",
+                "score": 0.8287000060081482,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C154945302",
+                "name": "Artificial intelligence",
+                "score": 0.6546000242233276,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C152139883",
+                "name": "Mutual information",
+                "score": 0.6480000019073486,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C89600930",
+                "name": "Segmentation",
+                "score": 0.5490999817848206,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C31972630",
+                "name": "Computer vision",
+                "score": 0.5360999703407288,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C2986637895",
+                "name": "Breast tumor",
+                "score": 0.5339000225067139,
+                "level": 4
+              },
+              {
+                "id": "https://openalex.org/C124504099",
+                "name": "Image segmentation",
+                "score": 0.4359999895095825,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C153180895",
+                "name": "Pattern recognition (psychology)",
+                "score": 0.4011000096797943,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C115961682",
+                "name": "Image (mathematics)",
+                "score": 0.3799000084400177,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C9417928",
+                "name": "Image processing",
+                "score": 0.334199994802475,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C143753070",
+                "name": "Ultrasound",
+                "score": 0.32179999351501465,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C2780226545",
+                "name": "Modality (human–computer interaction)",
+                "score": 0.2773999869823456,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C31601959",
+                "name": "Medical imaging",
+                "score": 0.2702000141143799,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C166704113",
+                "name": "Image registration",
+                "score": 0.2694999873638153,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C2777423100",
+                "name": "Breast ultrasound",
+                "score": 0.2572999894618988,
+                "level": 5
+              },
+              {
+                "id": "https://openalex.org/C28490314",
+                "name": "Speech recognition",
+                "score": 0.2540000081062317,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C2986892559",
+                "name": "Ultrasound imaging",
+                "score": 0.2531000077724457,
+                "level": 3
+              }
+            ],
+            "keywords": [
+              {
+                "id": "https://openalex.org/keywords/mutual-information",
+                "name": "Mutual information",
+                "score": 0.6480000019073486
+              },
+              {
+                "id": "https://openalex.org/keywords/segmentation",
+                "name": "Segmentation",
+                "score": 0.5490999817848206
+              },
+              {
+                "id": "https://openalex.org/keywords/breast-tumor",
+                "name": "Breast tumor",
+                "score": 0.5339000225067139
+              },
+              {
+                "id": "https://openalex.org/keywords/image-segmentation",
+                "name": "Image segmentation",
+                "score": 0.4359999895095825
+              },
+              {
+                "id": "https://openalex.org/keywords/pattern-recognition",
+                "name": "Pattern recognition (psychology)",
+                "score": 0.4011000096797943
+              },
+              {
+                "id": "https://openalex.org/keywords/image",
+                "name": "Image (mathematics)",
+                "score": 0.3799000084400177
+              },
+              {
+                "id": "https://openalex.org/keywords/image-processing",
+                "name": "Image processing",
+                "score": 0.334199994802475
+              }
+            ],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": false,
+              "oa_status": "closed",
+              "oa_url": null,
+              "any_repository_has_fulltext": false
+            },
+            "citation_normalized_percentile": {
+              "value": 0.7940613,
+              "is_in_top_1_percent": false,
+              "is_in_top_10_percent": false
+            },
+            "fwci": null,
+            "counts_by_year": [],
+            "institutions_distinct_count": 8,
+            "countries_distinct_count": 2,
+            "referenced_works_count": 24
+          },
+          "analysis": {
+            "is_interesting": false,
+            "relevance_score": 0.1,
+            "confidence": 0.95,
+            "reason": "The paper focuses on multimodal ultrasound image segmentation for breast tumors using a Mamba-based architecture; no explicit connection to emotion, affective computing, or psychological emotion processing is indicated in the title, venue, concepts, or available metadata.",
+            "evidence": [
+              "Title centers on breast tumor segmentation",
+              "Concepts include computer vision, segmentation, and medical imaging",
+              "No emotion-related terms appear in listed concepts or title"
+            ],
+            "keywords": [],
+            "research_directions": []
+          }
+        },
+        {
+          "id": "https://openalex.org/W4416017464",
+          "openalex_url": "https://openalex.org/W4416017464",
+          "title": "BOVIS: Bias-Mitigated Object-Enhanced Visual Emotion Analysis",
+          "publication_year": 2025,
+          "publication_date": "2025-11-08",
+          "doi": "https://doi.org/10.1145/3746252.3761180",
+          "doi_url": "https://doi.org/10.1145/3746252.3761180",
+          "type": "article",
+          "type_crossref": null,
+          "language": null,
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 0,
+          "primary_source": null,
+          "source": {
+            "id": null,
+            "display_name": null,
+            "type": null,
+            "issn_l": null,
+            "is_in_doaj": null,
+            "host_organization_name": null,
+            "host_organization_lineage_names": []
+          },
+          "links": {
+            "openalex": "https://openalex.org/W4416017464",
+            "landing_page": "https://doi.org/10.1145/3746252.3761180",
+            "pdf": null,
+            "primary_topic_openalex": null,
+            "source_openalex": null
+          },
+          "concepts": [],
+          "abstract": "",
+          "openalex_analysis": {
+            "primary_topic": null,
+            "topics": [],
+            "concepts": [],
+            "keywords": [],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": true,
+              "oa_status": "gold",
+              "oa_url": "https://doi.org/10.1145/3746252.3761180",
+              "any_repository_has_fulltext": null
+            },
+            "citation_normalized_percentile": null,
+            "fwci": null,
+            "counts_by_year": [],
+            "institutions_distinct_count": 5,
+            "countries_distinct_count": 2,
+            "referenced_works_count": 39
+          },
+          "analysis": {
+            "is_interesting": true,
+            "relevance_score": 0.95,
+            "confidence": 0.92,
+            "reason": "The paper title explicitly includes 'Visual Emotion Analysis', directly aligning with the researcher's interest in 'emotion'. The method name 'BOVIS' incorporates 'Bias-Mitigated' and 'Object-Enhanced', suggesting a focused, contemporary approach to emotion modeling in visual data — a core subfield of affective computing.",
+            "evidence": [
+              "Title contains 'Visual Emotion Analysis'",
+              "Term 'Emotion' appears verbatim in title",
+              "Method design ('Object-Enhanced', 'Bias-Mitigated') implies applied emotion modeling"
+            ],
+            "keywords": [
+              "visual emotion analysis",
+              "affective computing",
+              "bias mitigation",
+              "object recognition",
+              "emotion classification"
+            ],
+            "research_directions": [
+              "emotion recognition from images",
+              "fairness-aware affective models",
+              "object-centric emotion understanding"
+            ]
+          }
+        },
+        {
+          "id": "https://openalex.org/W4415057111",
+          "openalex_url": "https://openalex.org/W4415057111",
+          "title": "AIM 2025 Challenge on High FPS Motion Deblurring: Methods and Results",
+          "publication_year": 2025,
+          "publication_date": "2025-09-08",
+          "doi": "https://doi.org/10.48550/arxiv.2509.06793",
+          "doi_url": "https://doi.org/10.48550/arxiv.2509.06793",
+          "type": "preprint",
+          "type_crossref": null,
+          "language": "en",
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 0,
+          "primary_source": "arXiv (Cornell University)",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "type": "repository",
+            "issn_l": null,
+            "is_in_doaj": false,
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage_names": []
+          },
+          "links": {
+            "openalex": "https://openalex.org/W4415057111",
+            "landing_page": "http://arxiv.org/abs/2509.06793",
+            "pdf": "https://arxiv.org/pdf/2509.06793",
+            "primary_topic_openalex": "https://openalex.org/T11105",
+            "source_openalex": "https://openalex.org/S4306400194"
+          },
+          "concepts": [],
+          "abstract": "This paper presents a comprehensive review of the AIM 2025 High FPS Non-Uniform Motion Deblurring Challenge, highlighting the proposed solutions and final results. The objective of this challenge is to identify effective networks capable of producing clearer and visually compelling images in diverse and challenging conditions, by learning representative visual cues for complex aggregations of motion types. A total of 68 participants registered for the competition, and 9 teams ultimately submitted valid entries. This paper thoroughly evaluates the state-of-the-art advances in high-FPS single image motion deblurring, showcasing the significant progress in the field, while leveraging samples of the novel dataset, MIORe, that introduces challenging examples of movement patterns.",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T11105",
+              "name": "Advanced Image Processing Techniques",
+              "score": 0.9940999746322632,
+              "subfield": "Computer Vision and Pattern Recognition",
+              "field": "Computer Science",
+              "domain": "Physical Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T11105",
+                "name": "Advanced Image Processing Techniques",
+                "score": 0.9940999746322632,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T12357",
+                "name": "Digital Media Forensic Detection",
+                "score": 0.9779000282287598,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T10384",
+                "name": "Laser-Plasma Interactions and Diagnostics",
+                "score": 0.9631999731063843,
+                "subfield": "Nuclear and High Energy Physics",
+                "field": "Physics and Astronomy",
+                "domain": "Physical Sciences"
+              }
+            ],
+            "concepts": [],
+            "keywords": [],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": true,
+              "oa_status": "green",
+              "oa_url": "https://arxiv.org/pdf/2509.06793",
+              "any_repository_has_fulltext": true
+            },
+            "citation_normalized_percentile": null,
+            "fwci": null,
+            "counts_by_year": [],
+            "institutions_distinct_count": 47,
+            "countries_distinct_count": 0,
+            "referenced_works_count": 0
+          },
+          "analysis": {
+            "is_interesting": false,
+            "relevance_score": 0.05,
+            "confidence": 0.95,
+            "reason": "The paper focuses exclusively on motion deblurring in high-FPS imaging, a computer vision task with no mention or conceptual link to emotion, affective computing, psychology, or related domains.",
+            "evidence": [
+              "Title centers on 'High FPS Motion Deblurring'",
+              "Abstract emphasizes 'visual cues for complex aggregations of motion types' and 'image clarity'",
+              "No emotion-related terms (e.g., affect, valence, arousal, expression, sentiment) appear in title, abstract, or metadata"
+            ],
+            "keywords": [],
+            "research_directions": []
+          }
+        },
+        {
+          "id": "https://openalex.org/W4412837262",
+          "openalex_url": "https://openalex.org/W4412837262",
+          "title": "Learning an Adaptive Sparse Transformer for Efficient Image Restoration",
+          "publication_year": 2025,
+          "publication_date": "2025-08-01",
+          "doi": "https://doi.org/10.1109/tpami.2025.3594910",
+          "doi_url": "https://doi.org/10.1109/tpami.2025.3594910",
+          "type": "article",
+          "type_crossref": null,
+          "language": "en",
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 3,
+          "primary_source": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+          "source": {
+            "id": "https://openalex.org/S199944782",
+            "display_name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+            "type": "journal",
+            "issn_l": "0162-8828",
+            "is_in_doaj": false,
+            "host_organization_name": "IEEE Computer Society",
+            "host_organization_lineage_names": [
+              "IEEE Computer Society",
+              "Institute of Electrical and Electronics Engineers"
+            ]
+          },
+          "links": {
+            "openalex": "https://openalex.org/W4412837262",
+            "landing_page": "https://doi.org/10.1109/tpami.2025.3594910",
+            "pdf": null,
+            "primary_topic_openalex": "https://openalex.org/T10688",
+            "source_openalex": "https://openalex.org/S199944782"
+          },
+          "concepts": [
+            "Artificial intelligence",
+            "Computer science",
+            "Image restoration",
+            "Computer vision",
+            "Transformer",
+            "Pattern recognition (psychology)",
+            "Image processing",
+            "Image (mathematics)"
+          ],
+          "abstract": "Transformer-based approaches have shown promising performance in image restoration tasks due to their ability to model long-range dependencies, which are essential for recovering clear images. Although various efficient attention mechanisms have been proposed to address the intensive computational loads of transformers, they often suffer from redundant information and noisy interactions from irrelevant regions, as they consider all available tokens. In this work, we propose an Adaptive Sparse Transformer (AST-v2) to mitigate these issues by reducing noisy interactions in irrelevant areas and removing feature redundancy along channel dimension. AST-v2 incorporates two core components: an Adaptive Sparse Self-Attention (ASSA) block and a Feature Refinement Feed-forward Network (FRFN). ASSA adopts a dual-branch design, where the sparse branch guides the modulation of standard dense attention weights. This paradigm reduces the negative impact of irrelevant token interactions while preserving the important ones. Meanwhile, FRFN utilizes an enhance-and-ease scheme to eliminate feature redundancy across channels, enhancing the restoration of clear images. Experimental results on commonly used benchmarks show the competitive performance of our method for 6 restoration tasks, including rain streak removal, haze removal, shadow removal, snow removal, blur removal, and low-light enhancement. The code is available in the supplementary materials.",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T10688",
+              "name": "Image and Signal Denoising Methods",
+              "score": 0.9919000267982483,
+              "subfield": "Computer Vision and Pattern Recognition",
+              "field": "Computer Science",
+              "domain": "Physical Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T10688",
+                "name": "Image and Signal Denoising Methods",
+                "score": 0.9919000267982483,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T11659",
+                "name": "Advanced Image Fusion Techniques",
+                "score": 0.9817000031471252,
+                "subfield": "Media Technology",
+                "field": "Engineering",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T11105",
+                "name": "Advanced Image Processing Techniques",
+                "score": 0.9750999808311462,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              }
+            ],
+            "concepts": [
+              {
+                "id": "https://openalex.org/C154945302",
+                "name": "Artificial intelligence",
+                "score": 0.6499937772750854,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C41008148",
+                "name": "Computer science",
+                "score": 0.6241565942764282,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C106430172",
+                "name": "Image restoration",
+                "score": 0.5631597638130188,
+                "level": 4
+              },
+              {
+                "id": "https://openalex.org/C31972630",
+                "name": "Computer vision",
+                "score": 0.4929320812225342,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C66322947",
+                "name": "Transformer",
+                "score": 0.4838627576828003,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C153180895",
+                "name": "Pattern recognition (psychology)",
+                "score": 0.4529884159564972,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C9417928",
+                "name": "Image processing",
+                "score": 0.395863801240921,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C115961682",
+                "name": "Image (mathematics)",
+                "score": 0.3329370617866516,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C127413603",
+                "name": "Engineering",
+                "score": 0.16965344548225403,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C165801399",
+                "name": "Voltage",
+                "score": 0,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C119599485",
+                "name": "Electrical engineering",
+                "score": 0,
+                "level": 1
+              }
+            ],
+            "keywords": [
+              {
+                "id": "https://openalex.org/keywords/artificial-intelligence",
+                "name": "Artificial intelligence",
+                "score": 0.6499937772750854
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-science",
+                "name": "Computer science",
+                "score": 0.6241565942764282
+              },
+              {
+                "id": "https://openalex.org/keywords/image-restoration",
+                "name": "Image restoration",
+                "score": 0.5631597638130188
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-vision",
+                "name": "Computer vision",
+                "score": 0.4929320812225342
+              },
+              {
+                "id": "https://openalex.org/keywords/transformer",
+                "name": "Transformer",
+                "score": 0.4838627576828003
+              },
+              {
+                "id": "https://openalex.org/keywords/pattern-recognition",
+                "name": "Pattern recognition (psychology)",
+                "score": 0.4529884159564972
+              },
+              {
+                "id": "https://openalex.org/keywords/image-processing",
+                "name": "Image processing",
+                "score": 0.395863801240921
+              },
+              {
+                "id": "https://openalex.org/keywords/image",
+                "name": "Image (mathematics)",
+                "score": 0.3329370617866516
+              },
+              {
+                "id": "https://openalex.org/keywords/engineering",
+                "name": "Engineering",
+                "score": 0.16965344548225403
+              }
+            ],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": false,
+              "oa_status": "closed",
+              "oa_url": null,
+              "any_repository_has_fulltext": false
+            },
+            "citation_normalized_percentile": {
+              "value": 0.94780827,
+              "is_in_top_1_percent": false,
+              "is_in_top_10_percent": true
+            },
+            "fwci": 14.32022193,
+            "counts_by_year": [
+              {
+                "year": 2026,
+                "cited_by_count": 1
+              },
+              {
+                "year": 2025,
+                "cited_by_count": 2
+              }
+            ],
+            "institutions_distinct_count": 3,
+            "countries_distinct_count": 1,
+            "referenced_works_count": 110
+          },
+          "analysis": {
+            "is_interesting": false,
+            "relevance_score": 0.1,
+            "confidence": 0.95,
+            "reason": "The paper focuses on image restoration using adaptive sparse transformers, with no mention of emotion, affective computing, psychological states, or any emotion-related constructs. None of the concepts, abstract content, or tasks (e.g., rain streak removal, low-light enhancement) relate to emotion analysis, recognition, or modeling.",
+            "evidence": [
+              "Abstract contains no emotion-related terms",
+              "Concepts list includes 'Pattern recognition (psychology)' but in a non-affective, perceptual context",
+              "All six restoration tasks are low-level visual processing problems, not emotion-oriented"
+            ],
+            "keywords": [],
+            "research_directions": []
+          }
+        },
+        {
+          "id": "https://openalex.org/W4415347972",
+          "openalex_url": "https://openalex.org/W4415347972",
+          "title": "MODA: MOdular Duplex Attention for Multimodal Perception, Cognition, and Emotion Understanding",
+          "publication_year": 2025,
+          "publication_date": "2025-07-07",
+          "doi": null,
+          "doi_url": null,
+          "type": "article",
+          "type_crossref": null,
+          "language": "en",
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 0,
+          "primary_source": "ArXiv.org",
+          "source": {
+            "id": "https://openalex.org/S4393918464",
+            "display_name": "ArXiv.org",
+            "type": "repository",
+            "issn_l": "2331-8422",
+            "is_in_doaj": false,
+            "host_organization_name": null,
+            "host_organization_lineage_names": []
+          },
+          "links": {
+            "openalex": "https://openalex.org/W4415347972",
+            "landing_page": "http://arxiv.org/abs/2507.04635",
+            "pdf": "https://arxiv.org/pdf/2507.04635",
+            "primary_topic_openalex": "https://openalex.org/T13382",
+            "source_openalex": "https://openalex.org/S4393918464"
+          },
+          "concepts": [],
+          "abstract": "Multimodal large language models (MLLMs) recently showed strong capacity in integrating data among multiple modalities, empowered by a generalizable attention architecture. Advanced methods predominantly focus on language-centric tuning while less exploring multimodal tokens mixed through attention, posing challenges in high-level tasks that require fine-grained cognition and emotion understanding. In this work, we identify the attention deficit disorder problem in multimodal learning, caused by inconsistent cross-modal attention and layer-by-layer decayed attention activation. To address this, we propose a novel attention mechanism, termed MOdular Duplex Attention (MODA), simultaneously conducting the inner-modal refinement and inter-modal interaction. MODA employs a correct-after-align strategy to effectively decouple modality alignment from cross-layer token mixing. In the alignment phase, tokens are mapped to duplex modality spaces based on the basis vectors, enabling the interaction between visual and language modality. Further, the correctness of attention scores is ensured through adaptive masked attention, which enhances the model's flexibility by allowing customizable masking patterns for different modalities. Extensive experiments on 21 benchmark datasets verify the effectiveness of MODA in perception, cognition, and emotion tasks. Source code and demo are available in https://zzcheng.top/MODA.",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T13382",
+              "name": "Robotics and Automated Systems",
+              "score": 0.7239999771118164,
+              "subfield": "Control and Systems Engineering",
+              "field": "Engineering",
+              "domain": "Physical Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T13382",
+                "name": "Robotics and Automated Systems",
+                "score": 0.7239999771118164,
+                "subfield": "Control and Systems Engineering",
+                "field": "Engineering",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T14394",
+                "name": "Cognitive Science and Education Research",
+                "score": 0.7131999731063843,
+                "subfield": "Cognitive Neuroscience",
+                "field": "Neuroscience",
+                "domain": "Life Sciences"
+              }
+            ],
+            "concepts": [],
+            "keywords": [],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": true,
+              "oa_status": "green",
+              "oa_url": "https://arxiv.org/pdf/2507.04635",
+              "any_repository_has_fulltext": true
+            },
+            "citation_normalized_percentile": {
+              "value": 0.49377324,
+              "is_in_top_1_percent": false,
+              "is_in_top_10_percent": false
+            },
+            "fwci": 0,
+            "counts_by_year": [],
+            "institutions_distinct_count": 10,
+            "countries_distinct_count": 0,
+            "referenced_works_count": 0
+          },
+          "analysis": {
+            "is_interesting": true,
+            "relevance_score": 0.95,
+            "confidence": 0.98,
+            "reason": "The paper explicitly targets emotion understanding as a core objective, is authored by Jufeng Yang (matching the researcher), and introduces MODA—a novel attention mechanism validated on emotion tasks across multiple benchmarks.",
+            "evidence": [
+              "Title includes 'Emotion Understanding'",
+              "Abstract states: 'Extensive experiments on 21 benchmark datasets verify the effectiveness of MODA in perception, cognition, and emotion tasks'",
+              "Abstract identifies 'emotion understanding' as a high-level task requiring fine-grained multimodal modeling"
+            ],
+            "keywords": [
+              "emotion understanding",
+              "multimodal attention",
+              "MODA",
+              "cross-modal alignment"
+            ],
+            "research_directions": [
+              "multimodal emotion recognition",
+              "attention mechanisms for affective computing",
+              "modular neural architectures for affect"
+            ]
+          }
+        },
+        {
+          "id": "https://openalex.org/W4411669099",
+          "openalex_url": "https://openalex.org/W4411669099",
+          "title": "Rethinking deep learning in bioimaging through a data centric lens",
+          "publication_year": 2025,
+          "publication_date": "2025-06-26",
+          "doi": "https://doi.org/10.1038/s44303-025-00092-0",
+          "doi_url": "https://doi.org/10.1038/s44303-025-00092-0",
+          "type": "letter",
+          "type_crossref": null,
+          "language": "en",
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 5,
+          "primary_source": "npj Imaging",
+          "source": {
+            "id": "https://openalex.org/S4389158273",
+            "display_name": "npj Imaging",
+            "type": "journal",
+            "issn_l": "2948-197X",
+            "is_in_doaj": true,
+            "host_organization_name": null,
+            "host_organization_lineage_names": []
+          },
+          "links": {
+            "openalex": "https://openalex.org/W4411669099",
+            "landing_page": "https://doi.org/10.1038/s44303-025-00092-0",
+            "pdf": "https://www.nature.com/articles/s44303-025-00092-0.pdf",
+            "primary_topic_openalex": "https://openalex.org/T12859",
+            "source_openalex": "https://openalex.org/S4389158273"
+          },
+          "concepts": [
+            "Lens (geology)",
+            "Deep learning",
+            "Data science",
+            "Nanotechnology",
+            "Psychology",
+            "Computer science",
+            "Artificial intelligence",
+            "Materials science"
+          ],
+          "abstract": "",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T12859",
+              "name": "Cell Image Analysis Techniques",
+              "score": 0.9994000196456909,
+              "subfield": "Biophysics",
+              "field": "Biochemistry, Genetics and Molecular Biology",
+              "domain": "Life Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T12859",
+                "name": "Cell Image Analysis Techniques",
+                "score": 0.9994000196456909,
+                "subfield": "Biophysics",
+                "field": "Biochemistry, Genetics and Molecular Biology",
+                "domain": "Life Sciences"
+              },
+              {
+                "id": "https://openalex.org/T10862",
+                "name": "AI in cancer detection",
+                "score": 0.9973000288009644,
+                "subfield": "Artificial Intelligence",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T11307",
+                "name": "Domain Adaptation and Few-Shot Learning",
+                "score": 0.9958999752998352,
+                "subfield": "Artificial Intelligence",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              }
+            ],
+            "concepts": [
+              {
+                "id": "https://openalex.org/C15336307",
+                "name": "Lens (geology)",
+                "score": 0.6066962480545044,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C108583219",
+                "name": "Deep learning",
+                "score": 0.48397374153137207,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C2522767166",
+                "name": "Data science",
+                "score": 0.38608986139297485,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C171250308",
+                "name": "Nanotechnology",
+                "score": 0.3422586917877197,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C15744967",
+                "name": "Psychology",
+                "score": 0.34085237979888916,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C41008148",
+                "name": "Computer science",
+                "score": 0.3341025710105896,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C154945302",
+                "name": "Artificial intelligence",
+                "score": 0.33169832825660706,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C192562407",
+                "name": "Materials science",
+                "score": 0.24967852234840393,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C120665830",
+                "name": "Optics",
+                "score": 0.18646761775016785,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C121332964",
+                "name": "Physics",
+                "score": 0.12597084045410156,
+                "level": 0
+              }
+            ],
+            "keywords": [
+              {
+                "id": "https://openalex.org/keywords/lens",
+                "name": "Lens (geology)",
+                "score": 0.6066962480545044
+              },
+              {
+                "id": "https://openalex.org/keywords/deep-learning",
+                "name": "Deep learning",
+                "score": 0.48397374153137207
+              },
+              {
+                "id": "https://openalex.org/keywords/data-science",
+                "name": "Data science",
+                "score": 0.38608986139297485
+              },
+              {
+                "id": "https://openalex.org/keywords/nanotechnology",
+                "name": "Nanotechnology",
+                "score": 0.3422586917877197
+              },
+              {
+                "id": "https://openalex.org/keywords/psychology",
+                "name": "Psychology",
+                "score": 0.34085237979888916
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-science",
+                "name": "Computer science",
+                "score": 0.3341025710105896
+              },
+              {
+                "id": "https://openalex.org/keywords/artificial-intelligence",
+                "name": "Artificial intelligence",
+                "score": 0.33169832825660706
+              },
+              {
+                "id": "https://openalex.org/keywords/materials-science",
+                "name": "Materials science",
+                "score": 0.24967852234840393
+              },
+              {
+                "id": "https://openalex.org/keywords/optics",
+                "name": "Optics",
+                "score": 0.18646761775016785
+              },
+              {
+                "id": "https://openalex.org/keywords/physics",
+                "name": "Physics",
+                "score": 0.12597084045410156
+              }
+            ],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": true,
+              "oa_status": "diamond",
+              "oa_url": "https://www.nature.com/articles/s44303-025-00092-0.pdf",
+              "any_repository_has_fulltext": true
+            },
+            "citation_normalized_percentile": {
+              "value": 0.97930671,
+              "is_in_top_1_percent": false,
+              "is_in_top_10_percent": true
+            },
+            "fwci": 17.988346,
+            "counts_by_year": [
+              {
+                "year": 2026,
+                "cited_by_count": 1
+              },
+              {
+                "year": 2025,
+                "cited_by_count": 4
+              }
+            ],
+            "institutions_distinct_count": 14,
+            "countries_distinct_count": 3,
+            "referenced_works_count": 51
+          },
+          "analysis": {
+            "is_interesting": false,
+            "relevance_score": 0.15,
+            "confidence": 0.85,
+            "reason": "The paper focuses on bioimaging, data-centric deep learning, and interdisciplinary domains like nanotechnology and materials science; 'emotion' is not indicated in title, venue, concepts, or abstract (which is empty). Psychology appears as a broad concept but lacks specificity to emotion research.",
+            "evidence": [
+              "Title mentions 'bioimaging' and 'data centric lens', not emotion",
+              "Concepts include 'Psychology' but without emotional context or subdomain specification",
+              "Venue 'npj Imaging' is imaging-focused, not affective science or emotion AI"
+            ],
+            "keywords": [],
+            "research_directions": []
+          }
+        },
+        {
+          "id": "https://openalex.org/W4413144385",
+          "openalex_url": "https://openalex.org/W4413144385",
+          "title": "A Polarization-Aided Transformer for Image Deblurring via Motion Vector Decomposition",
+          "publication_year": 2025,
+          "publication_date": "2025-06-10",
+          "doi": "https://doi.org/10.1109/cvpr52734.2025.02613",
+          "doi_url": "https://doi.org/10.1109/cvpr52734.2025.02613",
+          "type": "article",
+          "type_crossref": null,
+          "language": "en",
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 1,
+          "primary_source": null,
+          "source": {
+            "id": null,
+            "display_name": null,
+            "type": null,
+            "issn_l": null,
+            "is_in_doaj": null,
+            "host_organization_name": null,
+            "host_organization_lineage_names": []
+          },
+          "links": {
+            "openalex": "https://openalex.org/W4413144385",
+            "landing_page": "https://doi.org/10.1109/cvpr52734.2025.02613",
+            "pdf": null,
+            "primary_topic_openalex": "https://openalex.org/T10688",
+            "source_openalex": null
+          },
+          "concepts": [
+            "Deblurring",
+            "Computer vision",
+            "Artificial intelligence",
+            "Computer science",
+            "Transformer",
+            "Motion vector",
+            "Image restoration",
+            "Image processing"
+          ],
+          "abstract": "",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T10688",
+              "name": "Image and Signal Denoising Methods",
+              "score": 0.9955999851226807,
+              "subfield": "Computer Vision and Pattern Recognition",
+              "field": "Computer Science",
+              "domain": "Physical Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T10688",
+                "name": "Image and Signal Denoising Methods",
+                "score": 0.9955999851226807,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T11659",
+                "name": "Advanced Image Fusion Techniques",
+                "score": 0.9950000047683716,
+                "subfield": "Media Technology",
+                "field": "Engineering",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T11105",
+                "name": "Advanced Image Processing Techniques",
+                "score": 0.9878000020980835,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              }
+            ],
+            "concepts": [
+              {
+                "id": "https://openalex.org/C2777693668",
+                "name": "Deblurring",
+                "score": 0.8379077911376953,
+                "level": 5
+              },
+              {
+                "id": "https://openalex.org/C31972630",
+                "name": "Computer vision",
+                "score": 0.6271371841430664,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C154945302",
+                "name": "Artificial intelligence",
+                "score": 0.6068859696388245,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C41008148",
+                "name": "Computer science",
+                "score": 0.5766329765319824,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C66322947",
+                "name": "Transformer",
+                "score": 0.4875182807445526,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C2779020251",
+                "name": "Motion vector",
+                "score": 0.41036510467529297,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C106430172",
+                "name": "Image restoration",
+                "score": 0.3733312785625458,
+                "level": 4
+              },
+              {
+                "id": "https://openalex.org/C9417928",
+                "name": "Image processing",
+                "score": 0.23778849840164185,
+                "level": 3
+              },
+              {
+                "id": "https://openalex.org/C115961682",
+                "name": "Image (mathematics)",
+                "score": 0.2049601972103119,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C127413603",
+                "name": "Engineering",
+                "score": 0.12872952222824097,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C119599485",
+                "name": "Electrical engineering",
+                "score": 0.09712806344032288,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C165801399",
+                "name": "Voltage",
+                "score": 0.0956290066242218,
+                "level": 2
+              }
+            ],
+            "keywords": [
+              {
+                "id": "https://openalex.org/keywords/deblurring",
+                "name": "Deblurring",
+                "score": 0.8379077911376953
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-vision",
+                "name": "Computer vision",
+                "score": 0.6271371841430664
+              },
+              {
+                "id": "https://openalex.org/keywords/artificial-intelligence",
+                "name": "Artificial intelligence",
+                "score": 0.6068859696388245
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-science",
+                "name": "Computer science",
+                "score": 0.5766329765319824
+              },
+              {
+                "id": "https://openalex.org/keywords/transformer",
+                "name": "Transformer",
+                "score": 0.4875182807445526
+              },
+              {
+                "id": "https://openalex.org/keywords/motion-vector",
+                "name": "Motion vector",
+                "score": 0.41036510467529297
+              },
+              {
+                "id": "https://openalex.org/keywords/image-restoration",
+                "name": "Image restoration",
+                "score": 0.3733312785625458
+              },
+              {
+                "id": "https://openalex.org/keywords/image-processing",
+                "name": "Image processing",
+                "score": 0.23778849840164185
+              },
+              {
+                "id": "https://openalex.org/keywords/image",
+                "name": "Image (mathematics)",
+                "score": 0.2049601972103119
+              },
+              {
+                "id": "https://openalex.org/keywords/engineering",
+                "name": "Engineering",
+                "score": 0.12872952222824097
+              },
+              {
+                "id": "https://openalex.org/keywords/electrical-engineering",
+                "name": "Electrical engineering",
+                "score": 0.09712806344032288
+              },
+              {
+                "id": "https://openalex.org/keywords/voltage",
+                "name": "Voltage",
+                "score": 0.0956290066242218
+              }
+            ],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": false,
+              "oa_status": "closed",
+              "oa_url": null,
+              "any_repository_has_fulltext": false
+            },
+            "citation_normalized_percentile": {
+              "value": 0.85658153,
+              "is_in_top_1_percent": false,
+              "is_in_top_10_percent": false
+            },
+            "fwci": 4.77340731,
+            "counts_by_year": [
+              {
+                "year": 2026,
+                "cited_by_count": 1
+              }
+            ],
+            "institutions_distinct_count": 6,
+            "countries_distinct_count": 1,
+            "referenced_works_count": 0
+          },
+          "analysis": {
+            "is_interesting": false,
+            "relevance_score": 0.05,
+            "confidence": 0.95,
+            "reason": "The paper focuses on low-level computer vision tasks—specifically image deblurring using motion vector decomposition and transformer architectures—with no indication of emotion-related content in title, concepts, or available metadata.",
+            "evidence": [
+              "Title mentions 'Image Deblurring' and 'Motion Vector Decomposition'",
+              "Concepts list includes 'Deblurring', 'Transformer', 'Image restoration'",
+              "No emotion-related terms appear in any provided metadata field"
+            ],
+            "keywords": [],
+            "research_directions": []
+          }
+        },
+        {
+          "id": "https://openalex.org/W4413147767",
+          "openalex_url": "https://openalex.org/W4413147767",
+          "title": "Boosting the Dual-Stream Architecture in Ultra-High Resolution Segmentation with Resolution-Biased Uncertainty Estimation",
+          "publication_year": 2025,
+          "publication_date": "2025-06-10",
+          "doi": "https://doi.org/10.1109/cvpr52734.2025.02418",
+          "doi_url": "https://doi.org/10.1109/cvpr52734.2025.02418",
+          "type": "article",
+          "type_crossref": null,
+          "language": "en",
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 1,
+          "primary_source": null,
+          "source": {
+            "id": null,
+            "display_name": null,
+            "type": null,
+            "issn_l": null,
+            "is_in_doaj": null,
+            "host_organization_name": null,
+            "host_organization_lineage_names": []
+          },
+          "links": {
+            "openalex": "https://openalex.org/W4413147767",
+            "landing_page": "https://doi.org/10.1109/cvpr52734.2025.02418",
+            "pdf": null,
+            "primary_topic_openalex": "https://openalex.org/T13114",
+            "source_openalex": null
+          },
+          "concepts": [
+            "Boosting (machine learning)",
+            "Computer science",
+            "Dual (grammatical number)",
+            "Architecture",
+            "Resolution (logic)",
+            "Artificial intelligence",
+            "Segmentation",
+            "Image resolution"
+          ],
+          "abstract": "",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T13114",
+              "name": "Image Processing Techniques and Applications",
+              "score": 0.982699990272522,
+              "subfield": "Media Technology",
+              "field": "Engineering",
+              "domain": "Physical Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T13114",
+                "name": "Image Processing Techniques and Applications",
+                "score": 0.982699990272522,
+                "subfield": "Media Technology",
+                "field": "Engineering",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T11105",
+                "name": "Advanced Image Processing Techniques",
+                "score": 0.980400025844574,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T10522",
+                "name": "Medical Imaging Techniques and Applications",
+                "score": 0.9787999987602234,
+                "subfield": "Radiology, Nuclear Medicine and Imaging",
+                "field": "Medicine",
+                "domain": "Health Sciences"
+              }
+            ],
+            "concepts": [
+              {
+                "id": "https://openalex.org/C46686674",
+                "name": "Boosting (machine learning)",
+                "score": 0.7290164828300476,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C41008148",
+                "name": "Computer science",
+                "score": 0.6591243147850037,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C2780980858",
+                "name": "Dual (grammatical number)",
+                "score": 0.5808666348457336,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C123657996",
+                "name": "Architecture",
+                "score": 0.5489181280136108,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C138268822",
+                "name": "Resolution (logic)",
+                "score": 0.5290340781211853,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C154945302",
+                "name": "Artificial intelligence",
+                "score": 0.5241496562957764,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C89600930",
+                "name": "Segmentation",
+                "score": 0.5133808851242065,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C205372480",
+                "name": "Image resolution",
+                "score": 0.43904003500938416,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C153180895",
+                "name": "Pattern recognition (psychology)",
+                "score": 0.3517400026321411,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C31972630",
+                "name": "Computer vision",
+                "score": 0.32056140899658203,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C205649164",
+                "name": "Geography",
+                "score": 0.07903072237968445,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C166957645",
+                "name": "Archaeology",
+                "score": 0,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C142362112",
+                "name": "Art",
+                "score": 0,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C124952713",
+                "name": "Literature",
+                "score": 0,
+                "level": 1
+              }
+            ],
+            "keywords": [
+              {
+                "id": "https://openalex.org/keywords/boosting",
+                "name": "Boosting (machine learning)",
+                "score": 0.7290164828300476
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-science",
+                "name": "Computer science",
+                "score": 0.6591243147850037
+              },
+              {
+                "id": "https://openalex.org/keywords/dual",
+                "name": "Dual (grammatical number)",
+                "score": 0.5808666348457336
+              },
+              {
+                "id": "https://openalex.org/keywords/architecture",
+                "name": "Architecture",
+                "score": 0.5489181280136108
+              },
+              {
+                "id": "https://openalex.org/keywords/resolution",
+                "name": "Resolution (logic)",
+                "score": 0.5290340781211853
+              },
+              {
+                "id": "https://openalex.org/keywords/artificial-intelligence",
+                "name": "Artificial intelligence",
+                "score": 0.5241496562957764
+              },
+              {
+                "id": "https://openalex.org/keywords/segmentation",
+                "name": "Segmentation",
+                "score": 0.5133808851242065
+              },
+              {
+                "id": "https://openalex.org/keywords/image-resolution",
+                "name": "Image resolution",
+                "score": 0.43904003500938416
+              },
+              {
+                "id": "https://openalex.org/keywords/pattern-recognition",
+                "name": "Pattern recognition (psychology)",
+                "score": 0.3517400026321411
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-vision",
+                "name": "Computer vision",
+                "score": 0.32056140899658203
+              },
+              {
+                "id": "https://openalex.org/keywords/geography",
+                "name": "Geography",
+                "score": 0.07903072237968445
+              }
+            ],
+            "sustainable_development_goals": [],
+            "open_access": {
+              "is_oa": false,
+              "oa_status": "closed",
+              "oa_url": null,
+              "any_repository_has_fulltext": false
+            },
+            "citation_normalized_percentile": {
+              "value": 0.86042759,
+              "is_in_top_1_percent": false,
+              "is_in_top_10_percent": false
+            },
+            "fwci": 3.5169719,
+            "counts_by_year": [
+              {
+                "year": 2025,
+                "cited_by_count": 1
+              }
+            ],
+            "institutions_distinct_count": 5,
+            "countries_distinct_count": 1,
+            "referenced_works_count": 0
+          },
+          "analysis": {
+            "is_interesting": false,
+            "relevance_score": 0.05,
+            "confidence": 0.95,
+            "reason": "The paper focuses on ultra-high resolution image segmentation and uncertainty estimation in dual-stream architectures, with no apparent connection to emotion, affective computing, or psychological/behavioral modeling of emotions.",
+            "evidence": [
+              "Title mentions 'segmentation', 'resolution', and 'uncertainty estimation'",
+              "Concepts list includes 'Segmentation', 'Image resolution', 'Architecture', 'Artificial intelligence'",
+              "No emotion-related terms appear in title, concepts, or available metadata"
+            ],
+            "keywords": [],
+            "research_directions": []
+          }
+        },
+        {
+          "id": "https://openalex.org/W4413144406",
+          "openalex_url": "https://openalex.org/W4413144406",
+          "title": "No Pains, More Gains: Recycling Sub-Salient Patches for Efficient High-Resolution Image Recognition",
+          "publication_year": 2025,
+          "publication_date": "2025-06-10",
+          "doi": "https://doi.org/10.1109/cvpr52734.2025.01394",
+          "doi_url": "https://doi.org/10.1109/cvpr52734.2025.01394",
+          "type": "article",
+          "type_crossref": null,
+          "language": "en",
+          "is_retracted": false,
+          "is_paratext": false,
+          "cited_by_count": 0,
+          "primary_source": null,
+          "source": {
+            "id": null,
+            "display_name": null,
+            "type": null,
+            "issn_l": null,
+            "is_in_doaj": null,
+            "host_organization_name": null,
+            "host_organization_lineage_names": []
+          },
+          "links": {
+            "openalex": "https://openalex.org/W4413144406",
+            "landing_page": "https://doi.org/10.1109/cvpr52734.2025.01394",
+            "pdf": null,
+            "primary_topic_openalex": "https://openalex.org/T10627",
+            "source_openalex": null
+          },
+          "concepts": [
+            "Salient",
+            "Computer science",
+            "Artificial intelligence",
+            "Computer vision",
+            "Image (mathematics)",
+            "Image resolution",
+            "Resolution (logic)",
+            "Pattern recognition (psychology)"
+          ],
+          "abstract": "",
+          "openalex_analysis": {
+            "primary_topic": {
+              "id": "https://openalex.org/T10627",
+              "name": "Advanced Image and Video Retrieval Techniques",
+              "score": 0.7339000105857849,
+              "subfield": "Computer Vision and Pattern Recognition",
+              "field": "Computer Science",
+              "domain": "Physical Sciences"
+            },
+            "topics": [
+              {
+                "id": "https://openalex.org/T10627",
+                "name": "Advanced Image and Video Retrieval Techniques",
+                "score": 0.7339000105857849,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T12111",
+                "name": "Industrial Vision Systems and Defect Detection",
+                "score": 0.6789000034332275,
+                "subfield": "Industrial and Manufacturing Engineering",
+                "field": "Engineering",
+                "domain": "Physical Sciences"
+              },
+              {
+                "id": "https://openalex.org/T10036",
+                "name": "Advanced Neural Network Applications",
+                "score": 0.6348999738693237,
+                "subfield": "Computer Vision and Pattern Recognition",
+                "field": "Computer Science",
+                "domain": "Physical Sciences"
+              }
+            ],
+            "concepts": [
+              {
+                "id": "https://openalex.org/C2780719617",
+                "name": "Salient",
+                "score": 0.7110961675643921,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C41008148",
+                "name": "Computer science",
+                "score": 0.6453423500061035,
+                "level": 0
+              },
+              {
+                "id": "https://openalex.org/C154945302",
+                "name": "Artificial intelligence",
+                "score": 0.5725210905075073,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C31972630",
+                "name": "Computer vision",
+                "score": 0.5460701584815979,
+                "level": 1
+              },
+              {
+                "id": "https://openalex.org/C115961682",
+                "name": "Image (mathematics)",
+                "score": 0.5006358623504639,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C205372480",
+                "name": "Image resolution",
+                "score": 0.48433148860931396,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C138268822",
+                "name": "Resolution (logic)",
+                "score": 0.44616031646728516,
+                "level": 2
+              },
+              {
+                "id": "https://openalex.org/C153180895",
+                "name": "Pattern recognition (psychology)",
+                "score": 0.4202954173088074,
+                "level": 2
+              }
+            ],
+            "keywords": [
+              {
+                "id": "https://openalex.org/keywords/salient",
+                "name": "Salient",
+                "score": 0.7110961675643921
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-science",
+                "name": "Computer science",
+                "score": 0.6453423500061035
+              },
+              {
+                "id": "https://openalex.org/keywords/artificial-intelligence",
+                "name": "Artificial intelligence",
+                "score": 0.5725210905075073
+              },
+              {
+                "id": "https://openalex.org/keywords/computer-vision",
+                "name": "Computer vision",
+                "score": 0.5460701584815979
+              },
+              {
+                "id": "https://openalex.org/keywords/image",
+                "name": "Image (mathematics)",
+                "score": 0.5006358623504639
+              },
+              {
+                "id": "https://openalex.org/keywords/image-resolution",
+                "name": "Image resolution",
+                "score": 0.48433148860931396
+              },
+              {
+                "id": "https://openalex.org/keywords/resolution",
+                "name": "Resolution (logic)",
+                "score": 0.44616031646728516
+              },
+              {
+                "id": "https://openalex.org/keywords/pattern-recognition",
+                "name": "Pattern recognition (psychology)",
+                "score": 0.4202954173088074
+              }
+            ],
+            "sustainable_development_goals": [
+              {
+                "id": "https://metadata.un.org/sdg/13",
+                "display_name": "Climate action",
+                "score": 0.5099999904632568
+              }
+            ],
+            "open_access": {
+              "is_oa": false,
+              "oa_status": "closed",
+              "oa_url": null,
+              "any_repository_has_fulltext": false
+            },
+            "citation_normalized_percentile": {
+              "value": 0.26231067,
+              "is_in_top_1_percent": false,
+              "is_in_top_10_percent": false
+            },
+            "fwci": 0,
+            "counts_by_year": [],
+            "institutions_distinct_count": 7,
+            "countries_distinct_count": 1,
+            "referenced_works_count": 0
+          },
+          "analysis": {
+            "is_interesting": false,
+            "relevance_score": 0.1,
+            "confidence": 0.95,
+            "reason": "The paper focuses on efficient high-resolution image recognition via patch recycling and saliency-based methods; none of the provided concepts, title, or metadata indicate any connection to emotion, affective computing, or psychological emotion modeling.",
+            "evidence": [
+              "Title mentions 'Salient', 'Image Recognition', 'Resolution'",
+              "Concepts include 'Computer vision', 'Pattern recognition (psychology)' — but this refers to perceptual pattern recognition, not emotion",
+              "Abstract is empty and no emotion-related terms appear in metadata"
+            ],
+            "keywords": [],
+            "research_directions": []
+          }
+        }
+      ]
+    }
+  ]
+}

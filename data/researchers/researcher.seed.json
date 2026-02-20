@@ -1,0 +1,12 @@
+{
+  "researchers": [
+    {
+      "name": "Jufeng Yang",
+      "google_scholar": "https://scholar.google.com/citations?user=c5vDJv0AAAAJ",
+      "openalex_author_id": "a5089409678",
+      "interest_topics": [
+        "emotion"
+      ]
+    }
+  ]
+}

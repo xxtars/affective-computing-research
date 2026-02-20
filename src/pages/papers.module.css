@@ -1,0 +1,43 @@
+.page {
+  padding: 2.5rem 0;
+}
+
+.searchSection {
+  margin-bottom: 0.75rem;
+}
+
+.searchSection label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  gap: 0.35rem;
+}
+
+.searchSection input {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.resultCount {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.8rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.tableWrap table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableWrap th,
+.tableWrap td {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}

@@ -1,0 +1,161 @@
+{
+  "4ab90a5f8c64f2b9ad8374d9d26381d136483f1e6edc779777c1e4057b2184b4": {
+    "is_interesting": true,
+    "relevance_score": 0.96,
+    "confidence": 0.98,
+    "reason": "The paper directly addresses emotion-related challenges—specifically 'Emotional Ambiguity'—in the context of depression detection, aligning precisely with the researcher's interest in 'emotion'. It proposes a novel method (Adaptive Feature Recalibration) to disentangle transient emotional expressions from stable depressive signals, making emotion central to its technical and psychological contribution.",
+    "evidence": [
+      "Introduces and formalizes 'Emotional Ambiguity' as a core problem",
+      "Uses adaptive recalibration of emotional features to enhance depression-relevant signals",
+      "Explicitly distinguishes transient emotions from clinical symptoms in feature representations"
+    ],
+    "keywords": [
+      "emotion",
+      "emotional ambiguity",
+      "affective computing",
+      "depression detection",
+      "feature recalibration"
+    ],
+    "research_directions": [
+      "Affective signal processing",
+      "Emotion-cognition boundary modeling",
+      "Clinical AI with emotion-aware representation learning"
+    ]
+  },
+  "ac9aaec3289904f662377b84dd4d81fd01e6ea82ad3e4849f8a41485b9c036a7": {
+    "is_interesting": false,
+    "relevance_score": 0.1,
+    "confidence": 0.95,
+    "reason": "The paper focuses on multimodal ultrasound image segmentation for breast tumors using a Mamba-based architecture; no explicit connection to emotion, affective computing, or psychological emotion processing is indicated in the title, venue, concepts, or available metadata.",
+    "evidence": [
+      "Title centers on breast tumor segmentation",
+      "Concepts include computer vision, segmentation, and medical imaging",
+      "No emotion-related terms appear in listed concepts or title"
+    ],
+    "keywords": [],
+    "research_directions": []
+  },
+  "d89892993ba6a753585f24e0d376432fae2015d405cdf8b3cbd2fce1db6f7537": {
+    "is_interesting": true,
+    "relevance_score": 0.95,
+    "confidence": 0.92,
+    "reason": "The paper title explicitly includes 'Visual Emotion Analysis', directly aligning with the researcher's interest in 'emotion'. The method name 'BOVIS' incorporates 'Bias-Mitigated' and 'Object-Enhanced', suggesting a focused, contemporary approach to emotion modeling in visual data — a core subfield of affective computing.",
+    "evidence": [
+      "Title contains 'Visual Emotion Analysis'",
+      "Term 'Emotion' appears verbatim in title",
+      "Method design ('Object-Enhanced', 'Bias-Mitigated') implies applied emotion modeling"
+    ],
+    "keywords": [
+      "visual emotion analysis",
+      "affective computing",
+      "bias mitigation",
+      "object recognition",
+      "emotion classification"
+    ],
+    "research_directions": [
+      "emotion recognition from images",
+      "fairness-aware affective models",
+      "object-centric emotion understanding"
+    ]
+  },
+  "0c27c867afb024474024aca24d22b11d9db60f5584012ceffeecf1819ac93c1f": {
+    "is_interesting": false,
+    "relevance_score": 0.05,
+    "confidence": 0.95,
+    "reason": "The paper focuses exclusively on motion deblurring in high-FPS imaging, a computer vision task with no mention or conceptual link to emotion, affective computing, psychology, or related domains.",
+    "evidence": [
+      "Title centers on 'High FPS Motion Deblurring'",
+      "Abstract emphasizes 'visual cues for complex aggregations of motion types' and 'image clarity'",
+      "No emotion-related terms (e.g., affect, valence, arousal, expression, sentiment) appear in title, abstract, or metadata"
+    ],
+    "keywords": [],
+    "research_directions": []
+  },
+  "a0dace0a8b6936a33fe2624a45584388d07ded2f320f8a9c197b8e691f82f0dc": {
+    "is_interesting": false,
+    "relevance_score": 0.1,
+    "confidence": 0.95,
+    "reason": "The paper focuses on image restoration using adaptive sparse transformers, with no mention of emotion, affective computing, psychological states, or any emotion-related constructs. None of the concepts, abstract content, or tasks (e.g., rain streak removal, low-light enhancement) relate to emotion analysis, recognition, or modeling.",
+    "evidence": [
+      "Abstract contains no emotion-related terms",
+      "Concepts list includes 'Pattern recognition (psychology)' but in a non-affective, perceptual context",
+      "All six restoration tasks are low-level visual processing problems, not emotion-oriented"
+    ],
+    "keywords": [],
+    "research_directions": []
+  },
+  "37e7a79a6e7e682a62e994cf846323bd32158f9610c334e3919a449b1a77b292": {
+    "is_interesting": true,
+    "relevance_score": 0.95,
+    "confidence": 0.98,
+    "reason": "The paper explicitly targets emotion understanding as a core objective, is authored by Jufeng Yang (matching the researcher), and introduces MODA—a novel attention mechanism validated on emotion tasks across multiple benchmarks.",
+    "evidence": [
+      "Title includes 'Emotion Understanding'",
+      "Abstract states: 'Extensive experiments on 21 benchmark datasets verify the effectiveness of MODA in perception, cognition, and emotion tasks'",
+      "Abstract identifies 'emotion understanding' as a high-level task requiring fine-grained multimodal modeling"
+    ],
+    "keywords": [
+      "emotion understanding",
+      "multimodal attention",
+      "MODA",
+      "cross-modal alignment"
+    ],
+    "research_directions": [
+      "multimodal emotion recognition",
+      "attention mechanisms for affective computing",
+      "modular neural architectures for affect"
+    ]
+  },
+  "44bab197bd7ea96590cb338a04b3af349dc78fd9e4fa9039f133bd075f4dcd8e": {
+    "is_interesting": false,
+    "relevance_score": 0.15,
+    "confidence": 0.85,
+    "reason": "The paper focuses on bioimaging, data-centric deep learning, and interdisciplinary domains like nanotechnology and materials science; 'emotion' is not indicated in title, venue, concepts, or abstract (which is empty). Psychology appears as a broad concept but lacks specificity to emotion research.",
+    "evidence": [
+      "Title mentions 'bioimaging' and 'data centric lens', not emotion",
+      "Concepts include 'Psychology' but without emotional context or subdomain specification",
+      "Venue 'npj Imaging' is imaging-focused, not affective science or emotion AI"
+    ],
+    "keywords": [],
+    "research_directions": []
+  },
+  "e3df10e74a1625012839af28b65209db43b60f9790bfd125d691f66a35ec713a": {
+    "is_interesting": false,
+    "relevance_score": 0.05,
+    "confidence": 0.95,
+    "reason": "The paper focuses on low-level computer vision tasks—specifically image deblurring using motion vector decomposition and transformer architectures—with no indication of emotion-related content in title, concepts, or available metadata.",
+    "evidence": [
+      "Title mentions 'Image Deblurring' and 'Motion Vector Decomposition'",
+      "Concepts list includes 'Deblurring', 'Transformer', 'Image restoration'",
+      "No emotion-related terms appear in any provided metadata field"
+    ],
+    "keywords": [],
+    "research_directions": []
+  },
+  "267a016d5736e3c767b4b2f81eec0ac50344a1643e9fe9c745b87393a6a30c7d": {
+    "is_interesting": false,
+    "relevance_score": 0.05,
+    "confidence": 0.95,
+    "reason": "The paper focuses on ultra-high resolution image segmentation and uncertainty estimation in dual-stream architectures, with no apparent connection to emotion, affective computing, or psychological/behavioral modeling of emotions.",
+    "evidence": [
+      "Title mentions 'segmentation', 'resolution', and 'uncertainty estimation'",
+      "Concepts list includes 'Segmentation', 'Image resolution', 'Architecture', 'Artificial intelligence'",
+      "No emotion-related terms appear in title, concepts, or available metadata"
+    ],
+    "keywords": [],
+    "research_directions": []
+  },
+  "cea2b77bf5c5ffc51122375c7beda10984834d6f7c1af14d4f138f14b5d0569d": {
+    "is_interesting": false,
+    "relevance_score": 0.1,
+    "confidence": 0.95,
+    "reason": "The paper focuses on efficient high-resolution image recognition via patch recycling and saliency-based methods; none of the provided concepts, title, or metadata indicate any connection to emotion, affective computing, or psychological emotion modeling.",
+    "evidence": [
+      "Title mentions 'Salient', 'Image Recognition', 'Resolution'",
+      "Concepts include 'Computer vision', 'Pattern recognition (psychology)' — but this refers to perceptual pattern recognition, not emotion",
+      "Abstract is empty and no emotion-related terms appear in metadata"
+    ],
+    "keywords": [],
+    "research_directions": []
+  }
+}

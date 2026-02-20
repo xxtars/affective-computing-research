@@ -8,7 +8,7 @@ const projectName = 'awesome-affective-computing';
 
 const config: Config = {
   title: 'Awesome Affective Computing',
-  tagline: 'Teams × Directions × Papers — a structured collection',
+  tagline: 'Researchers × Papers — a structured collection',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -79,13 +79,8 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Team',
-        },
-        {to: '/blog', label: 'Direction', position: 'left'},
+        {to: '/researchers', label: 'Researchers', position: 'left'},
+        {to: '/papers', label: 'Papers', position: 'left'},
         {
           href: `https://github.com/${organizationName}/${projectName}`,
           label: 'GitHub',
@@ -97,21 +92,21 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Browse',
           items: [
             {
-              label: 'Intro',
-              to: '/docs/intro',
+              label: 'Researchers',
+              to: '/researchers',
+            },
+            {
+              label: 'Papers',
+              to: '/papers',
             },
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: `https://github.com/${organizationName}/${projectName}`,
