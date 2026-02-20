@@ -1,0 +1,431 @@
+{
+  "725bc28b82b074b9e1fcf0186c248a318caefaa42fe68f4f5f72dd8395706e44": {
+    "paper_id": "https://openalex.org/W4417200807",
+    "title": "Simulation research on battery heat dissipation performance based on coupling cooling of PCM and heat pipes",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:25.607Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on thermal management of batteries using PCM and heat pipes, which is unrelated to emotion or affective science.",
+      "evidence": [
+        "Title explicitly concerns battery heat dissipation and coupling cooling techniques"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a1ed199923deda4bc8e100e7ecce6f533c06d30768ff874d3f5ad98b8a04a0fa": {
+    "paper_id": "https://openalex.org/W4413325384",
+    "title": "Heat dissipation efficiency of battery module using liquid-cooled plate",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:27.528Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on thermal management and heat dissipation in battery modules, with no mention of emotion, affective states, psychological constructs, or related methodologies.",
+      "evidence": [
+        "All concepts and the abstract pertain to engineering thermodynamics and battery cooling design."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bae95fd9515e0891eb9d2f4456984c9d7204731f8ae6abf30d8fa9284dc16ec4": {
+    "paper_id": "https://openalex.org/W4413277808",
+    "title": "Broad Metric Learning: A Fast and Efficient Discriminative Metric Learning Model",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:27.554Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on metric learning for classification and clustering, with no mention of emotion, affect, psychological states, or related constructs.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; all keywords are technical ML/metric learning terms."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "06b1458a6a95e2c4fead1c27712c309a0a3d674b1673779f98f27acde8dcb9d9": {
+    "paper_id": "https://openalex.org/W4415337847",
+    "title": "VideoAnchor: Reinforcing Subspace-Structured Visual Cues for Coherent Visual-Spatial Reasoning",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:27.711Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on visual-spatial reasoning and attention mechanism optimization in multimodal models, with no mention or conceptual link to emotion, affective computing, or related psychological/linguistic constructs.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper abstract contains zero emotion-related terms or concepts"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "691a39931fc430ffde49bdc12b08ad1774720759c278c7c79ffc32e903af12c2": {
+    "paper_id": "https://openalex.org/W4415653839",
+    "title": "Collaborative multi-view fuzzy clustering based on Gaussian mixture model",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:27.726Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on multi-view fuzzy clustering and Gaussian mixture models, which are technical machine learning methods with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; venue (Neurocomputing) is broad but the title indicates computational clustering, not affective modeling"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b1d25e2c18bf642be495dd0c3f86f0c3ecc1714c3059205724c875c787db5617": {
+    "paper_id": "https://openalex.org/W4417200919",
+    "title": "Finite-element simulation analysis of new energy vehicle battery pack housing based on ANSYS",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:27.848Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on finite-element simulation of battery pack housing for new energy vehicles, which is a mechanical/structural engineering topic with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions 'battery pack housing' and 'ANSYS', indicating computational mechanics, not affective/emotion research."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "80137768aaa0c2f3c6a78fa20dfeab889935380b48ae3eaa0b8a482447923c22": {
+    "paper_id": "https://openalex.org/W4415709543",
+    "title": "DMDM: Photorealistic Face Age Transformation by Dual-Modal Collaborative Attention using Diffusion Models",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:27.892Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on photorealistic face age transformation using diffusion models and attention mechanisms, with no mention of emotion, affect, sentiment, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Title and abstract exclusively discuss age transformation, visual fidelity, attention mechanisms, and diffusion models—no emotion-related terms or goals."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c9bde7fe7ee292db2d72b0235671c8f3bd05e04b71b62ff7937cd0b658d4b268": {
+    "paper_id": "https://openalex.org/W4413392204",
+    "title": "Prompts Libra: Enhanced Image Outpainting Diffusion Model With Balanced Bimodal Guidance",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:27.912Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical improvements in image outpainting diffusion models, with no mention of emotion, affect, sentiment, or any psychological/behavioral constructs related to human emotion.",
+      "evidence": [
+        "Abstract and concepts contain only computer vision, diffusion models, and image generation terms; 'emotion' does not appear anywhere in the metadata."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c89fbbc47aebc41fd834176b2e1358949488d9c31ca2538463508761017a343c": {
+    "paper_id": "https://openalex.org/W4417078017",
+    "title": "Generalizable Geometric Image Caption Synthesis",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:28.021Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on geometric reasoning, multimodal LLMs, and dataset synthesis for mathematical tasks; no mention of emotion, affect, sentiment, or psychological constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are geometric, mathematical, or technical (e.g., 'geometric relations', 'MathVista', 'RLVR')."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ca1c98746e173cfd6db815582a07972dee8a0760cede77c0f29cb2d136cc921d": {
+    "paper_id": "https://openalex.org/W4412107129",
+    "title": "Social Power Evolution of Multiple DeGroot Individuals With Centralized Media",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:28.071Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on social power dynamics and opinion evolution in computational social systems, with no mention of emotion, affect, or related psychological constructs.",
+      "evidence": [
+        "Interest topics are 'emotion', but paper concepts include 'Social power', 'Economics', 'Computer science', 'Politics' — no emotion-related terms in title, abstract, or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8525e60853d5d6619569df89f96df15a0a07a3e4c57400b10db239df82d6f6f7": {
+    "paper_id": "https://openalex.org/W4415937574",
+    "title": "Leveraging Hierarchical Image-Text Misalignment for Universal Fake Image Detection",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:28.208Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on fake image detection using image-text misalignment in multimodal vision-language models, with no connection to emotion, affective computing, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, mood, or related constructs; core concepts are 'fake image detection', 'CLIP', 'misalignment', and 'generative models'."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "4d802cae58f6c76af046e8bc922da2306fa5ab1b45455d1563b62cfc6547f38a": {
+    "paper_id": "https://openalex.org/W4416023448",
+    "title": "From Minutes to Seconds: Redefining the Five-Minute Rule for AI-Era Memory Hierarchies",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:28.270Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a systems/architecture study on memory hierarchy economics and AI-era hardware-software co-design, with no conceptual, methodological, or empirical connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract focus exclusively on DRAM/SSD caching thresholds, memory hierarchy modeling, and AI-system performance; 'emotion' does not appear and is semantically unrelated to all technical content."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6c1af1d18bc5738e3f63fd7036f8a404a8b2de6fca00c89a575562f0e0917886": {
+    "paper_id": "https://openalex.org/W4416261860",
+    "title": "Adapt Your Body: Mitigating Proprioception Shifts in Imitation Learning",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:28.951Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on proprioception shift mitigation in robotic imitation learning, with no mention of emotion, affect, sentiment, or any psychological/behavioral constructs related to affective science.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; concepts field is 'none'; title and venue are technical/robotics-focused."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a2d0b19d98d012e6197993914a32af2815a9f528e7e30ebd897bda82c80a05b1": {
+    "paper_id": "https://openalex.org/W4417138440",
+    "title": "IDFG: Information-Regularized Diversity-Fidelity Graph for EEG emotion recognition",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:28.986Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper title explicitly references 'EEG emotion recognition', directly aligning with the researcher's interest topic 'emotion'. The method (IDFG) is framed for emotion recognition, a core affective computing task.",
+      "evidence": [
+        "Title: 'IDFG: Information-Regularized Diversity-Fidelity Graph for EEG emotion recognition'"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "EEG",
+        "affective computing",
+        "graph neural networks",
+        "biosignal processing"
+      ],
+      "research_directions": [
+        "Affective neuroscience",
+        "Machine learning for emotion classification",
+        "Multimodal emotion sensing",
+        "Interpretable AI in affective computing"
+      ]
+    }
+  },
+  "cf9a14c6ea875ed51bc5c1d9994efd53a349b57351f33bac5a870bab0260cb4b": {
+    "paper_id": "https://openalex.org/W4414359256",
+    "title": "DFMU: Distribution-based Framework for Modeling Aleatoric Uncertainty in Multimodal Sentiment Analysis",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:29.948Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper focuses on multimodal sentiment analysis, which is intrinsically tied to human affective states; it explicitly addresses emotion-laden constructs (sentiment, subjective bias in annotation, sentiment words) and targets uncertainty arising from emotional subjectivity — a core challenge in affective computing.",
+      "evidence": [
+        "Title includes 'Multimodal Sentiment Analysis'",
+        "Abstract states 'subjective bias in the annotation process' — a hallmark of emotion/sentiment labeling",
+        "Uses 'sentiment words replacement' and evaluates on MOSI/MOSEI/SIMS — standard affective computing benchmarks"
+      ],
+      "keywords": [
+        "sentiment analysis",
+        "affective computing",
+        "aleatoric uncertainty",
+        "multimodal emotion recognition",
+        "subjective bias"
+      ],
+      "research_directions": [
+        "uncertainty modeling in affective AI",
+        "robust sentiment analysis under annotation noise",
+        "distribution-based emotion representation",
+        "contrastive learning for affective features"
+      ]
+    }
+  },
+  "84e0e58df7aad657105cebf429cb3cdf7b84c91b878a3e451d126934af4c9598": {
+    "paper_id": "https://openalex.org/W4413678022",
+    "title": "DGC-Link: Dual-Gate Chebyshev Linkage Network on EEG Emotion Recognition",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:30.072Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.98,
+      "confidence": 0.99,
+      "reason": "The paper is explicitly focused on EEG-based emotion recognition, aligns with the researcher's interest topic 'emotion', and is published in a top-tier affective computing venue.",
+      "evidence": [
+        "Title contains 'EEG Emotion Recognition'",
+        "Published in IEEE Transactions on Affective Computing",
+        "Abstract centers on recognizing valence, arousal, and dominance — core affective dimensions"
+      ],
+      "keywords": [
+        "EEG",
+        "emotion recognition",
+        "affective computing",
+        "valence",
+        "arousal",
+        "dominance",
+        "Chebyshev filter",
+        "DGC-Link"
+      ],
+      "research_directions": [
+        "Affective brain-computer interfaces",
+        "Deep learning for emotion decoding",
+        "Multimodal affective signal processing",
+        "Interpretability of emotion models"
+      ]
+    }
+  },
+  "58814582edb9ddc42ea367b336cf48f70914dae138215bcc409823588d272502": {
+    "paper_id": "https://openalex.org/W4412972406",
+    "title": "ACM-GNN: Adaptive Cluster-Oriented Modularity Graph Neural Network for EEG Depression Detection",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:30.727Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper focuses on EEG-based depression detection, and depression is a core clinical affective/emotional disorder; the methodology explicitly engages with emotion-related neurophysiological dynamics (e.g., topological brain modularity changes linked to MDD), and 'emotion' is listed as a primary interest topic of the researcher.",
+      "evidence": [
+        "Title includes 'EEG Depression Detection'",
+        "Abstract states 'Major depressive disorder (MDD) is typically accompanied by varying topological dynamics across brain network modularity due to the influence of time-variant and subject-specific factors'",
+        "Researcher's interest topic is 'emotion', and MDD is a canonical affective disorder"
+      ],
+      "keywords": [
+        "depression",
+        "affective disorder",
+        "EEG",
+        "emotion recognition",
+        "brain modularity",
+        "graph neural network"
+      ],
+      "research_directions": [
+        "affective computing",
+        "clinical emotion AI",
+        "neuro-affective biomarkers",
+        "mental health monitoring",
+        "interpretable GNNs for psychology"
+      ]
+    }
+  },
+  "b014b54506b2e40df8a725aebc0dd212469f541742770bd54f81da4f017dd14e": {
+    "paper_id": "https://openalex.org/W4411358856",
+    "title": "LLM40FD: Unlocking the Potential of LLM for Anonymous Zero-Shot Fraud Detection",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:30.968Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on fraud detection using LLMs and cryptographic techniques, with no mention of emotion, affective computing, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; all topics are technical/computational (e.g., zero-knowledge proof, fraud detection, cryptography)."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "fc3daa27e9afc5ec7438592ab9174fa78b279936afd966da3c45d6f7225f4bbc": {
+    "paper_id": "https://openalex.org/W4410153034",
+    "title": "Dynamic Spatial-Temporal Imputation Network With Missing Features for Traffic Data Imputation",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:31.077Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on traffic data imputation using spatial-temporal modeling and machine learning; no connection to emotion, affective computing, or psychological/behavioral affective phenomena.",
+      "evidence": [
+        "All concepts and the abstract pertain to statistical imputation, graph neural networks, and intelligent transportation systems."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b7c54c9df836a71de7513ee2237582cedf8f739a734df649e42c393efe866be0": {
+    "paper_id": "https://openalex.org/W4411575323",
+    "title": "EEG Emotion Recognition with Broad Learning System: A Graph Convolutional Residual Framework",
+    "researcher_name": "Tong Zhang",
+    "researcher_openalex_author_id": "A5100378800",
+    "updated_at": "2026-02-20T14:38:32.598Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on EEG-based emotion recognition, directly aligning with the researcher's interest topic 'emotion'. The title and concepts confirm affective computing and neuro-affective modeling.",
+      "evidence": [
+        "Title contains 'EEG Emotion Recognition'",
+        "Concepts include 'Electroencephalography' and 'Psychology'",
+        "Methodology involves affective state decoding via brain signals"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "EEG",
+        "graph convolutional network",
+        "broad learning system",
+        "affective computing",
+        "residual learning"
+      ],
+      "research_directions": [
+        "affective brain-computer interfaces",
+        "deep learning for emotion classification",
+        "graph-based neural modeling of affective states",
+        "physiological signal processing for psychology"
+      ]
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "4df4f17bc4e63b03ecf340a8f34eef049edfb8ebef7319c49885300d65eef57f": {
+    "paper_id": "https://openalex.org/W4415603556",
+    "title": "Organic Waste Recycling by Black Soldier Fly Larvae: Environmental Benefits Beyond Waste Minimization",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:41:58.914Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on organic waste recycling using black soldier fly larvae, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title explicitly concerns environmental waste management, not emotion or psychological constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ecb51984a8b89e0849c5b9374cebebe178bfb6afda11592ae0290ff2389f3862": {
+    "paper_id": "https://openalex.org/W4416427581",
+    "title": "Research on the optimal design of anti-collision heat pipe radiator for nuclear powered spacecraft",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:41:59.134Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on thermal engineering and spacecraft hardware design, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions 'anti-collision heat pipe radiator for nuclear powered spacecraft' — a domain-specific mechanical/thermal engineering topic."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "43edd93497a1a095ef828bbba4590143a31dcf5459a7c7b231dcfbf23f2f02c4": {
+    "paper_id": "https://openalex.org/W4412472352",
+    "title": "Study on the Solidification and Heat Release Characteristics of Flexible Heat Storage Filled with PCM Composite",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:41:59.426Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is entirely focused on thermal energy storage, phase-change materials, and solidification physics; no content relates to human emotion, affective computing, or psychological/emotional processes.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, behavior, cognition, or any psychophysiological constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bd9cb2b2849ff93a281daa094acac7a5aad157fa793adeb7e6afee0ee01cb446": {
+    "paper_id": "https://openalex.org/W4414691940",
+    "title": "ZipVoice-Dialog: Non-Autoregressive Spoken Dialogue Generation with Flow Matching",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:41:59.438Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on non-autoregressive spoken dialogue generation, flow matching, and dataset curation; no mention of emotion, affect, sentiment, or related psychological/linguistic constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core contributions are in speech synthesis efficiency, turn-taking modeling, and dataset creation."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "4169920888d36fbc148e740902e5218a91ab0c733493e874377a23b0ed0b0bc3": {
+    "paper_id": "https://openalex.org/W4404838573",
+    "title": "Hierarchical candidate recursive network for highlight restoration in endoscopic videos",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:00.717Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical video restoration in endoscopic imaging, with no apparent connection to emotion or affective computing.",
+      "evidence": [
+        "Title mentions 'highlight restoration in endoscopic videos', indicating a computer vision/medical imaging application"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "43e92943162cbd9441af8b02944447455ed0d2adaedfb04db2489fe754292110": {
+    "paper_id": "https://openalex.org/W4414008654",
+    "title": "High-Sensitivity Optical Fiber Temperature Sensor Based on Vernier Effect",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:00.948Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a technical engineering study on optical fiber temperature sensing with no conceptual, methodological, or applied connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and the abstract focus exclusively on optical sensing physics, materials, and instrumentation for temperature measurement."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "22a4b35ce7bcb9d7fe17ff42d9631f1d44f8e10807b01de4ab550c1ce9c1a02e": {
+    "paper_id": "https://openalex.org/W4408321325",
+    "title": "Design and Analysis of Spaceborne Hyperspectral Imaging System for Coastal Studies",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.004Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on optical engineering and remote sensing for coastal environmental monitoring, with no conceptual, methodological, or application-level connection to emotion or affective science.",
+      "evidence": [
+        "Abstract and concepts exclusively concern hyperspectral imaging, SNR simulation, optical distortion correction, and coastal water monitoring"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9ee197834ec42c73931538c6242cf9d39dd8511041effde29e4bccc99172a89e": {
+    "paper_id": "https://openalex.org/W4411113010",
+    "title": "UnifiedMLLM: Enabling Unified Representation for Multi-modal Multi-tasks With Large Language Model",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.104Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on unified multimodal representation and large language models, with no explicit connection to emotion or affective science in title, concepts, or available metadata.",
+      "evidence": [
+        "Concepts include 'Computer science', 'Natural language processing', 'Modal', but no emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f37f01d975e641454c6ccfc8c3ec7ef0d479a3d3fc95660e8d4b9bab0c9c2722": {
+    "paper_id": "https://openalex.org/W4416120162",
+    "title": "End-to-End Dialog Neural Coreference Resolution: Balancing Efficiency and Accuracy in Large-Scale Systems",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.143Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on neural coreference resolution, a technical NLP task with no mention of emotion, affect, sentiment, or related psychological or affective constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are efficiency, accuracy, coreference links, contextual embeddings, and inference speed."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0c3b9c54f1a64a455d61e6f1e9387ce21a7fcb567db4fc7ea1a6d1bd3f48d793": {
+    "paper_id": "https://openalex.org/W4404911613",
+    "title": "Short-Term Metro Power Load Prediction Based on PSO-VMD-LightGBM-LSTM",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.153Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on metro power load prediction using optimization and hybrid ML models; no connection to emotion or affective science is indicated by title, venue, concepts, or available metadata.",
+      "evidence": [
+        "Title: 'Short-Term Metro Power Load Prediction Based on PSO-VMD-LightGBM-LSTM'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c64152e0a356eefa86c36c1a5f4f05ac90ad3d0b5bc3fca269c8448d7f02d468": {
+    "paper_id": "https://openalex.org/W4408802103",
+    "title": "Development and Empirical Research of the Scale for Work-Related Electronic Communication during Non-working Time",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.389Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper focuses on scale development and empirical research for work-related electronic communication outside working hours; no explicit mention of emotion, affect, or related psychological constructs in title, venue, or listed concepts.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper concepts include 'Psychology' but no emotion-specific terms (e.g., affect, mood, stress, well-being)"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0f5234fd0cf96184f33d449b8783b2b205dc5d2a17eb443f24616d38445e089a": {
+    "paper_id": "https://openalex.org/W4407403775",
+    "title": "Improved A* Algorithm and Dynamic Obstacle Avoidance Method for Path Planning and Self- Positioning of Autonomous Guided Vehicles",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.409Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on algorithmic improvements for AGV path planning and obstacle avoidance, with no mention of emotion, affective states, human emotion modeling, or any affective computing concepts.",
+      "evidence": [
+        "All concepts and abstract content relate to motion planning, robotics, and computer science; 'emotion' does not appear in title, abstract, or listed concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "14f207347934752980938391191b1a11336fe360e67dde875677848a0f6b56c4": {
+    "paper_id": "https://openalex.org/W4408354714",
+    "title": "Pathological Section Staining Transferring with Tailored Metric-based Model Selection",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.497Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computational pathology, image style transfer, and metric-based model selection for staining generation; no connection to emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "Concepts include 'Metric', 'Computer science', 'Artificial intelligence', 'Section (typography)' — all technical/computational; no emotion-related terms in title, abstract, or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bcb15390f842a5c465b80b81dba0c79831c804fdf48a00a9d02666b4e5a2e565": {
+    "paper_id": "https://openalex.org/W4405321687",
+    "title": "Semi-supervised medical image segmentation with diverse views via cross-pseudo supervision",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.505Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on semi-supervised medical image segmentation using cross-pseudo supervision, with no indication of emotion or affective computing in title, venue, concepts, or metadata.",
+      "evidence": [
+        "Concepts include Segmentation, Computer science, Artificial intelligence, Pattern recognition (psychology), but 'Pattern recognition (psychology)' here refers to perceptual/cognitive pattern recognition, not emotion modeling."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "33f7a5c77c337ea2345640b3db391bfe3e82cc844f6ae3bf6637d2fd86032423": {
+    "paper_id": "https://openalex.org/W4414197490",
+    "title": "APSQ: Additive Partial Sum Quantization with Algorithm-Hardware Co-Design",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:01.655Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on hardware-aware quantization for DNN accelerators, specifically partial sum compression; no connection to emotion, affective computing, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Title and abstract exclusively discuss APSQ, PSUM quantization, energy efficiency, and model compression for BERT, Segformer, EfficientViT, and LLaMA2—no emotion-related terms or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f37df7cf997ad71398b7224456b6b64462cbccf6a807389e51e4de44a0f4e7f9": {
+    "paper_id": "https://openalex.org/W4402400968",
+    "title": "Maritime image deraining algorithm based on improved MPRNet",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:02.094Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on maritime image deraining using an improved MPRNet, which is a computer vision and image restoration task with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title: 'Maritime image deraining algorithm based on improved MPRNet'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "42a16afb41a36dae5c41d897ebb5770b7856c22de3f2ff46c5cb5f869201656d": {
+    "paper_id": "https://openalex.org/W4401738819",
+    "title": "Visual simulation of UAV mission planning schemes",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:02.362Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on UAV mission planning, sensor coverage, and communication link simulation using STK software; no mention of emotion, affective computing, or human emotional states.",
+      "evidence": [
+        "Abstract contains no emotion-related terms or concepts; all concepts are technical/engineering-focused."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "52ff6a3ff9985e002147a586c76e61657e99e1a344aca48dc9fa2946694fec08": {
+    "paper_id": "https://openalex.org/W4396641116",
+    "title": "Intelligent pest forecasting with meteorological data: An explainable deep learning approach",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:02.535Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on pest forecasting using meteorological data and explainable deep learning, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title explicitly mentions 'pest forecasting' and 'meteorological data', not emotion or affective concepts"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c3a33df7274468825a8d49e69f6d8d755ad806ca339852c06573149704e0b60d": {
+    "paper_id": "https://openalex.org/W4395064759",
+    "title": "On the Temperature of Machine Learning Systems",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:02.987Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper uses 'temperature' as a thermodynamic metaphor for ML system behavior, not as a measure or model of human emotion or affective states.",
+      "evidence": [
+        "The paper's focus is on thermodynamic analogies (energy, entropy, temperature) in machine learning systems, with no mention of emotion, affect, sentiment, or psychological constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8d9b7047390568d80c919c33c0d719bfd4c3e170626c3bd6a0b9429caa8bdb69": {
+    "paper_id": "https://openalex.org/W4405933480",
+    "title": "Psychological Poverty Traps in Rural Farm Households: Implications for Sustainable Agricultural Development and Rural Revitalization in China",
+    "researcher_name": "Dong Zhang",
+    "researcher_openalex_author_id": "A5100366067",
+    "updated_at": "2026-02-20T14:42:03.003Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper explicitly examines 'psychological poverty traps' with direct reference to 'negative emotions' as a mediating mechanism between material poverty and behavioral outcomes, aligning with affective/emotion-related research.",
+      "evidence": [
+        "psychological resource depletion (negative emotions 1.5%, psychological stress 1.27%)",
+        "poverty mindset",
+        "aspiration levels"
+      ],
+      "keywords": [
+        "negative emotions",
+        "psychological stress",
+        "poverty mindset",
+        "emotional depletion",
+        "stigma",
+        "aspirations",
+        "behavioral capabilities"
+      ],
+      "research_directions": [
+        "emotion and economic decision-making",
+        "affective mechanisms in poverty persistence",
+        "stress and agricultural productivity",
+        "emotion-mediated behavioral traps in rural development"
+      ]
+    }
+  }
+}

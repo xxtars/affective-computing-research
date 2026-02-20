@@ -1,0 +1,362 @@
+{
+  "0c534734f684b763a0d17a02a7a5437d53bbc72d3f89a6db3eceed7d4c618a1b": {
+    "paper_id": "https://openalex.org/W7118606603",
+    "title": "3D Semantic Gaussian via Geometric-Semantic Hypergraph Computation",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:14.508Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on 3D semantic reconstruction, Gaussian splatting, hypergraph neural networks, and RGB rendering—none of which involve emotion modeling, affective computing, or psychological/affective dimensions.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, valence, arousal, or related constructs; all concepts are technical/computer vision-oriented."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "596f5adfbb1f1d3451f1abbf1cc7a071c0178e4a3f733700ba3ede143c9f0c11": {
+    "paper_id": "https://openalex.org/W4415224806",
+    "title": "Changes in keystone species attenuate the complexity and stability of soil microbial networks during alpine meadow degradation",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:14.613Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on soil microbial networks and alpine meadow degradation, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions keystone species, soil microbial networks, and ecological degradation — all unrelated to emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c9010afe54c495f2a28a61ca60975c01f334452092ff345ab065d219be108909": {
+    "paper_id": "https://openalex.org/W4414396364",
+    "title": "Scattering of partially coherent Gaussian pulses from a random medium with semi-hard boundary",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:14.839Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper is a theoretical optics study on pulse scattering in random media, with no conceptual or methodological connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract focus exclusively on optical coherence, scattering theory, and physical parameters like pulse width and correlation length."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "4d83a174636c788b4831b02057b52d12bbd4059f53db475d37d34bc4f5625815": {
+    "paper_id": "https://openalex.org/W4416018012",
+    "title": "A Tutorial on Hypergraph Neural Networks: An In-Depth and Step-By-Step Guide",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.084Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper is a technical tutorial on hypergraph neural networks with no mention of emotion or affective concepts in title, abstract, or metadata.",
+      "evidence": [
+        "Title: 'A Tutorial on Hypergraph Neural Networks: An In-Depth and Step-By-Step Guide'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e170840a85c48c570805eed625e7c37a53d3515fe9ac8778dfc64e7c4dbce01c": {
+    "paper_id": "https://openalex.org/W4416749731",
+    "title": "Robust Deep Reinforcement Learning in Robotics via Adaptive Gradient-Masked Adversarial Attacks",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.093Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on adversarial attacks and robustness in deep reinforcement learning for robotics, with no mention or conceptual link to emotion, affective computing, or human emotional states.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; core concepts are AGMR Attack, DRL robustness, adversarial perturbations, robotic control."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d780a22113085681f76df2ad85eed7b30267082b73ee287803d1e3a6d9c4ac9e": {
+    "paper_id": "https://openalex.org/W4417524234",
+    "title": "The nature and interpretation of BOLD signals in white matter - A review",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.518Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on BOLD signal interpretation in white matter, a technical neuroimaging topic with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title: 'The nature and interpretation of BOLD signals in white matter - A review'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "dc6790577bc64387cfcf26d2a93b4e61647c88d9e76737c929394e6118163904": {
+    "paper_id": "https://openalex.org/W4416851089",
+    "title": "Integration of X-Ray and γ-Ray technologies in lattice radiotherapy: a novel approach for optimizing dose delivery in large-volume non-small cell lung cancer",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.560Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on radiation oncology technology integration for dose optimization in lung cancer treatment, with no mention of emotion, affective processes, or psychological constructs.",
+      "evidence": [
+        "Abstract and title contain only technical radiotherapy terms; no emotion-related terminology or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "aa1f125e3a76122ebf291effa514682631a3674c06c8857c0a5913f2162ebb7f": {
+    "paper_id": "https://openalex.org/W4414414128",
+    "title": "Topology-aware multi-view hypergraph computation-based cross-modal brain network fusion for brain disease diagnosis",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.614Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on topology-aware hypergraph computation and cross-modal brain network fusion for disease diagnosis, with no explicit or implicit connection to emotion or affective processes.",
+      "evidence": [
+        "Title contains no emotion-related terms; abstract is empty and venue (Information Fusion) is technical/computational"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "cd516e4680c85577fba73bff4e8d6655695f79e7aa03f296b88761371706e0c3": {
+    "paper_id": "https://openalex.org/W4414452283",
+    "title": "Arbitrary Large-Scale Scene Reconstruction without Annotated Block Partitions",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.632Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on large-scale scene reconstruction using NeRF and visibility-based decomposition, with no mention of emotion, affect, psychological states, or related constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are computer vision, 3D reconstruction, and neural rendering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "745e298967c49e6e2afc6393d1e9914a6bc4db5d2e6f1c7d21e07f5550f79e56": {
+    "paper_id": "https://openalex.org/W4415272268",
+    "title": "Large language models management of medications: three performance analyses",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.723Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on clinical medication management tasks using LLMs and contains no mention of emotion, affect, or related psychological, behavioral, or computational affective science concepts.",
+      "evidence": [
+        "Abstract and metadata contain no emotion-related terms, concepts, or methodologies; topics are strictly clinical pharmacology and LLM evaluation."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "5958550cf75cc5879f746e7079b0b7b8f156ae58bfe88be50656865fd55d3c1a": {
+    "paper_id": "https://openalex.org/W4416238753",
+    "title": "FineSkiing: A Fine-grained Benchmark for Skiing Action Quality Assessment",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.725Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on action quality assessment in skiing, using computer vision and sports analytics techniques; no mention of emotion, affective states, or psychological constructs related to emotion.",
+      "evidence": [
+        "Title and abstract exclusively discuss skiing action scoring, referee simulation, stage segmentation, and deduction items—no emotional or affective terminology."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "512cdd7d13476968d53eb542dc470135ffe448252aa96e1b8f98cf3719c4f64c": {
+    "paper_id": "https://openalex.org/W7117603230",
+    "title": "Impact of Digital Economy on Natural Resources Utilization Efficiency and Its Spillover Effect in the Belt and Road Initiative Countries",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.729Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on digital economy impacts on natural resource utilization efficiency and spillover effects in BRI countries; no mention of emotion, affective processes, psychological states, or related constructs.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper concepts and abstract contain zero emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d304ba3e1fc6df51d09f4cdbd3a382a9b688fac940a1c624fd346cfb5a9807f4": {
+    "paper_id": "https://openalex.org/W4416374961",
+    "title": "AS-0265 ACOX1 Suppression Promotes Cardiac Repair After Myocardial Infarction via Fatty Acid Metabolic Reprogramming and Activation of Beta-Catenin Signaling",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.779Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on cardiac repair, fatty acid metabolism, and beta-catenin signaling after myocardial infarction—topics in cardiovascular molecular biology, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; domain is cardiology and metabolic reprogramming"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e2170abc9938f8ce9a9032ab059ed9830beac16ef8bc8e42d4ceb12ccf43634a": {
+    "paper_id": "https://openalex.org/W4414382468",
+    "title": "Dosimetric advantages of a novel X-Ray/γ-Ray integrated radiotherapy platform in cervical carcinoma: A comparative treatment planning study",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.838Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on radiotherapy dosimetry for cervical carcinoma, which is a medical physics/oncology topic with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions 'X-Ray/γ-Ray integrated radiotherapy platform' and 'cervical carcinoma' — clinical oncology/medical physics context"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d16209f859dd4d5dd203191aa36430e2dd83a54834e1701988266d8561953e50": {
+    "paper_id": "https://openalex.org/W4416945929",
+    "title": "A Novel Strategy for Soft Tissue Sarcoma Lattice Radiotherapy: Integrating X-Ray andγ-Ray Technologies to Optimize Dose Delivery",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:15.959Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper is a technical radiotherapy study focused on dosimetry and radiation physics for soft tissue sarcoma; no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract exclusively discuss lattice radiotherapy, X-ray/γ-ray integration, dose delivery metrics, and organ-at-risk sparing—no emotional, psychological, or affective constructs mentioned."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "4495f4c72807886a55abc61e0b8e8f46ffb79dffbc5e866e0cd317b7f94d1302": {
+    "paper_id": "https://openalex.org/W7117783816",
+    "title": "Automated Federated Pipeline for Parameter-Efficient Fine-Tuning of Large Language Models",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:16.094Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on federated learning, parameter-efficient fine-tuning, and edge computing for LLMs, with no mention of emotion, affective computing, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are technical/computational (e.g., adapter, quantization, edge server, federated pipeline)."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "da9319e1862d4ed94cc76394be948118dd1c4d5618ca3e5278d110758efd86e1": {
+    "paper_id": "https://openalex.org/W4414316870",
+    "title": "DHGFormer: Dynamic Hierarchical Graph Transformer for Disorder Brain Disease Diagnosis",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:17.572Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on brain disorder diagnosis using a graph transformer model; no explicit connection to emotion or affective science is indicated in the title or available metadata.",
+      "evidence": [
+        "Title mentions 'Disorder Brain Disease Diagnosis', not emotion-related constructs"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ef8451c1c4340aaba54bafe2d158b36bbd1b926274fb700bfe5182412705bd82": {
+    "paper_id": "https://openalex.org/W4414535806",
+    "title": "Adaptive Embedding for Long-Range High-Order Dependencies via Time-Varying Transformer on fMRI",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:18.081Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.85,
+      "reason": "The paper focuses on fMRI modeling and time-varying transformer architecture for long-range dependencies; no explicit connection to emotion or affective science is indicated in title or available metadata.",
+      "evidence": [
+        "Title contains no emotion-related terms; abstract is empty; 'emotion' is not reflected in venue, concepts, or methodology hints."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "3a3a13868f4535b4fb039431f8bb924ba8a2301aa4d4048dc1c9c74a22d05a3c": {
+    "paper_id": "https://openalex.org/W4414211396",
+    "title": "Vacancy-Driven Sizable Shift Current in Centrosymmetric Materials",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:18.303Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper is a condensed matter physics study on defect-induced shift current in centrosymmetric materials; it contains no emotion-related content or methodology.",
+      "evidence": [
+        "Title and abstract focus exclusively on vacancy-driven photovoltaic effects, symmetry breaking, and charge transport in TMDs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "15d17b3a42b4d5b0cd992e9586142195568428ff55d56805a9f1d4cd8fb71a58": {
+    "paper_id": "https://openalex.org/W4414123464",
+    "title": "Reinterpreting Hypergraph Kernels: Insights Through Homomorphism Analysis",
+    "researcher_name": "Yue Gao",
+    "researcher_openalex_author_id": "A5100602494",
+    "updated_at": "2026-02-20T14:31:18.429Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on hypergraph kernels, homomorphism theory, and structural expressiveness in machine learning—no connection to emotion, affect, or psychological/behavioral modeling.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; all concepts are mathematical/computational (e.g., 'homomorphisms', 'hypergraph kernels', 'subtree-cycle')."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  }
+}

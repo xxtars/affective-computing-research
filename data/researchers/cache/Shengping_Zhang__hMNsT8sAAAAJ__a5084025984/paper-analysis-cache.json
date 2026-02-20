@@ -1,0 +1,389 @@
+{
+  "f6638a63f76fc6e8996ad766b4c47943abeb2141893f9a0a1eb2354ce70f9817": {
+    "paper_id": "https://openalex.org/W7127957716",
+    "title": "Thermodynamic study of a wind-photovoltaic-coal complementary flexible power generation system enhanced by coal pyrolysis",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:27.933Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on thermodynamic analysis of a hybrid power generation system involving coal pyrolysis and renewable energy integration, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Concepts are all engineering/environmental: Process engineering, Coal, Electricity generation, Pyrolysis"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7eb036c34da7f495f149b5ccb6d217f4bb4ca9ee2b4a097ec99ea7337a01c755": {
+    "paper_id": "https://openalex.org/W4407614565",
+    "title": "AN ARTIFICIAL INTELLIGENCE MODEL FOR IDENTIFYING RIVER ENVIRONMENT IMPROVEMENT MEASURES",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.481Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on environmental AI modeling for river improvement, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title explicitly concerns river environment improvement measures using AI, unrelated to emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "442a377b5e0d1060a313adf47ea8381ea2f5e6a4b046d0b798a13b0e9f8910cd": {
+    "paper_id": "https://openalex.org/W4407501037",
+    "title": "An efficient low-carbon hydrogen production system based on novel staged gasification coupling with chemical looping technology",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.556Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on low-carbon hydrogen production and chemical looping technology, with no conceptual or terminological overlap with emotion or affective science.",
+      "evidence": [
+        "Title and concepts are exclusively energy/process engineering focused"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "047a8f46b2a63863ce7b62a7d9c825eb386e1cf521da4d302c50528a12c22b74": {
+    "paper_id": "https://openalex.org/W4414197802",
+    "title": "Raw Image Reconstruction From Rgb on Smartphones. Ntire 2025 Challenge Report",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.719Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper addresses low-level computer vision and image processing (RAW reconstruction from sRGB), with no connection to emotion, affective computing, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Title and abstract focus exclusively on ISP reversal and sensor image reconstruction."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bfe98562ab368c2d1ad13f02a00f64954a66f67933fcc9e661d40d6371687b97": {
+    "paper_id": "https://openalex.org/W4409328941",
+    "title": "Coal char-CO2 gasification reactivity and kinetics characteristics for varying char particle sizes",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.746Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper concerns coal char gasification kinetics and particle size effects in chemical engineering and environmental protection — unrelated to psychological or affective emotion research.",
+      "evidence": [
+        "Concepts include 'Char', 'Coal', 'Kinetics', 'Chemical engineering'; no emotion-related terms present"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "70a6a2324496da212bb62781ad64647144d23f1056ed2345a3bea321e892cc25": {
+    "paper_id": "https://openalex.org/W4414350471",
+    "title": "LVPNet: A Latent-Variable-Based Prediction-Driven End-to-End Framework for Lossless Compression of Medical Images",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.772Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on lossless medical image compression using a latent-variable prediction framework, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions 'Lossless Compression of Medical Images' and 'LVPNet', indicating technical computer vision/compression focus"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "5ef573bdab6059f83a4eef7e6602a0e9e9d8893fdd7453de9f170a34c0de84a1": {
+    "paper_id": "https://openalex.org/W4411921440",
+    "title": "Thermodynamic analysis of an efficient power generation system based on a novel coal cascade gasification method",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.818Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on thermodynamic and engineering aspects of coal gasification for power generation, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Concepts include 'Coal gasification', 'Electricity generation', 'Thermodynamic analysis' — all domain-specific to energy engineering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "228c88e264e0c539f789865106c2b3b2b8e51869bd7c18dba99d8363290dda71": {
+    "paper_id": "https://openalex.org/W4414197607",
+    "title": "NTIRE 2025 Challenge on Event-Based Image Deblurring: Methods and Results",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.905Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on event-based image deblurring, a computer vision task with no mention or conceptual link to emotion, affective computing, or psychological/affective processes.",
+      "evidence": [
+        "Title and abstract exclusively discuss event-based vision, image deblurring, PSNR evaluation, and challenge methodology."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0a615a0e0c2716fbe7068335a07948a4ad3b95efafe0a1fb9cd1e8c674beaab9": {
+    "paper_id": "https://openalex.org/W4411453729",
+    "title": "Moderate-Temperature Pyrolysis Characteristics of Lump Coal Under Varying Coal Particle Sizes",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.915Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on coal pyrolysis engineering parameters and material characterization; no mention or conceptual link to emotion, affective science, psychology, neuroscience, or human-centered affective computing.",
+      "evidence": [
+        "All concepts and methods are from chemical engineering, materials science, and energy research."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d1ecb1f14d648eb81120b0fb34990cbff68c08bf65f8fc009e19b4ec355bdab6": {
+    "paper_id": "https://openalex.org/W4415037727",
+    "title": "Generalizable and Relightable Gaussian Splatting for Human Novel View Synthesis",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.966Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on 3D human reconstruction, relighting, and Gaussian splatting—technical computer graphics/vision topics with no mention of emotion, affect, or psychological constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are geometric, photorealistic rendering, and lighting modeling."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ad19ba5bc27d88e74ad8976ab0ac27436d9d324314ccc942d3a4c126622cce9e": {
+    "paper_id": "https://openalex.org/W4409367789",
+    "title": "Path-Adaptive Matting for Efficient Inference Under Various Computational Cost Constraints",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:29.981Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on computational efficiency and architecture adaptation for image matting, with no mention of emotion, affect, psychological states, or related constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are technical/computational (e.g., FLOP, bilevel optimization, path selection layers)."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b501402d1cf79ed84674fbf81993b3eaddea15dedfede726d63bdc4ab607001c": {
+    "paper_id": "https://openalex.org/W4412722584",
+    "title": "Towards Universal Modal Tracking With Online Dense Temporal Token Learning",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:30.029Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on multi-modal video tracking and temporal token learning in computer vision; no mention of emotion, affective computing, or psychological/behavioral modeling.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are technical (e.g., 'tracking', 'modal', 'token association', 'computer vision')"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b8ea4e7ee8376a64fc8dff6a0ccbde9ba8f691d30298795b5b00db14ab968b93": {
+    "paper_id": "https://openalex.org/W4415995480",
+    "title": "Dual Alignment-enhanced Fashion Vision-Language Pre-training",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:30.056Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on fashion vision-language pre-training with technical alignment mechanisms; no mention of emotion, affect, sentiment, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are technical (e.g., 'multi-view images', 'joint embedding', 'cross-modal retrieval')."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6f14cc1f89adf30a73ab5e9ba9d3119037976c5b26a8a0f9aad135fbf21679b7": {
+    "paper_id": "https://openalex.org/W4409366836",
+    "title": "Multi-view Consistent 3D Panoptic Scene Understanding",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:30.287Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on 3D panoptic scene understanding, geometric consistency, and multi-view computer vision—no mention or conceptual link to emotion, affective computing, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; all concepts are technical/computer vision-oriented (e.g., 'panopticon', 'computer vision', 'depth consistency')."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6a7ebb0d01bf9f1c41393b01a529ceb75e87c440d058fdfb7691e6dd7cd8865e": {
+    "paper_id": "https://openalex.org/W4409367465",
+    "title": "ProsodyTalker: 3D Visual Speech Animation via Prosody Decomposition",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:31.071Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.92,
+      "reason": "The paper focuses on prosody-driven 3D visual speech animation, specifically decomposing speech into F0 (for head pose) and linguistic content (for lip motion); 'emotion' is not mentioned in title, abstract, or concepts, and prosody here serves a technical, articulatory/paralinguistic function—not affective modeling.",
+      "evidence": [
+        "Abstract makes no reference to emotion, affect, valence, arousal, or related psychological constructs; 'prosody' is used strictly in the phonetic/acoustic sense for animation control."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bba0b7630f78db2c37539d38955103a6be70b436735d849307998e36cc788d95": {
+    "paper_id": "https://openalex.org/W4406207632",
+    "title": "Patch-Based Spatio-Temporal Deformable Attention BiRNN for Video Deblurring",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:31.113Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on video deblurring using attention mechanisms and BiRNNs; no mention of emotion, affective computing, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract and metadata contain only computer vision and image restoration concepts"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8cede438c5b39a7ef4590814993a48f5fac67f275ced85d271d972b31f266680": {
+    "paper_id": "https://openalex.org/W4415536330",
+    "title": "REA-Listener: Real-Time Listening Head Generation with Dynamic Emotion Modeling and Flexible Modality Adaptation",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:32.124Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on dynamic emotion modeling as a core technical contribution, aligning directly with the researcher's stated interest in 'emotion'. Emotion is not peripheral but central to the architecture (e.g., multi-modal emotion predictor, temporal emotion consistency, emotion-driven head dynamics).",
+      "evidence": [
+        "propose a lightweight emotional head dynamics generator with a multi-modal emotion predictor, which infers listener emotions dynamically from speaker context",
+        "to further enhance the temporal consistency of listener emotion",
+        "dynamic emotion modeling"
+      ],
+      "keywords": [
+        "emotion modeling",
+        "affective computing",
+        "non-verbal behavior",
+        "listener response",
+        "real-time affective interaction"
+      ],
+      "research_directions": [
+        "affective human-computer interaction",
+        "emotion-aware generative models",
+        "multimodal emotion recognition and synthesis",
+        "real-time affective animation"
+      ]
+    }
+  },
+  "ff1cdc65c800ac9ad434137455e2e8adfb2e307952ebcca9df47356424a41c04": {
+    "paper_id": "https://openalex.org/W4406857571",
+    "title": "Uncertainty-Guided Diffusion Model for Camouflaged Object Detection",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:32.777Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on camouflaged object detection using uncertainty-guided diffusion models in computer vision; no connection to emotion, affective computing, or psychological/affective phenomena.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; all topics are technical/computer vision focused."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7452aeb920d162caebb13bb3181678f29914d7f6c1d4498d4dfc87b263cb40b2": {
+    "paper_id": "https://openalex.org/W4409474127",
+    "title": "GPS-Gaussian+: Generalizable Pixel-wise 3D Gaussian Splatting for Real-Time Human-Scene Rendering from Sparse Views",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:32.795Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on real-time 3D human-scene rendering using Gaussian splatting and computer vision techniques, with no mention of emotion, affective computing, or psychological/behavioral modeling.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are technical/computer graphics-oriented"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "5df1381f0b34b233052650c32744c1f90b52324575fee3a1f7c6ecf5479caa17": {
+    "paper_id": "https://openalex.org/W4408349673",
+    "title": "Research advancements on emotionally and intellectually integrated digital humans and robotics",
+    "researcher_name": "Shengping Zhang",
+    "researcher_openalex_author_id": "A5084025984",
+    "updated_at": "2026-02-20T14:36:35.580Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on emotion-integrated digital humans and robotics, with core themes including emotional understanding, personalized emotional response, affective mechanisms, and emotion generation—directly aligning with the researcher's interest in 'emotion'.",
+      "evidence": [
+        "Title contains 'emotionally and intellectually integrated digital humans and robotics'",
+        "Abstract emphasizes 'emotional understanding', 'personalized response', 'brain-cognition-driven emotional mechanisms', and 'interactive emotional content generation'",
+        "Concepts include Psychology and Cognitive science — disciplines central to affective science"
+      ],
+      "keywords": [
+        "emotion",
+        "affective computing",
+        "emotional intelligence",
+        "digital human",
+        "affective robotics",
+        "multimodal emotion modeling"
+      ],
+      "research_directions": [
+        "Affective human-computer interaction",
+        "Emotion-aware AI systems",
+        "Clinical applications of emotion AI (e.g., mental health support)",
+        "Cognitive-affective modeling in robotics"
+      ]
+    }
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "1d718151f8e1d011255b1a2784eaf7673fd4ab727e45da3cd02eeaaff8211613": {
+    "paper_id": "https://openalex.org/W4416035189",
+    "title": "Enhancing Partially Relevant Video Retrieval with Robust Alignment Learning",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.341Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.85,
+      "reason": "Title and metadata show no explicit connection to emotion or affective science; focus is on video retrieval and alignment learning.",
+      "evidence": [
+        "Title: 'Enhancing Partially Relevant Video Retrieval with Robust Alignment Learning'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f6216911debfb174912d1a788844443b7e24341a5a07478d1598a1519709cb7c": {
+    "paper_id": "https://openalex.org/W4412536423",
+    "title": "Towards Efficient Partially Relevant Video Retrieval With Active Moment Discovering",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.487Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on video retrieval efficiency and moment localization using AI techniques; no mention of emotion, affective states, or psychological constructs.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; all keywords are technical/computer vision oriented."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f67df805e746a10e36c0ca857e6f585ed0ae1d4ce04bfaa9313c020c8f05bd93": {
+    "paper_id": "https://openalex.org/W4408724581",
+    "title": "Brain-inspired memory network for visual tracking with recurrent meta-learning updater",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.487Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on brain-inspired AI architectures for visual tracking, with no explicit connection to emotion or affective processes.",
+      "evidence": [
+        "Title and venue indicate technical computer vision/AI focus; 'emotion' is absent from all provided metadata fields."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "baddd02b4d454639a735f64f514567247212e566085e5e13cb55d4d6be274646": {
+    "paper_id": "https://openalex.org/W4410198834",
+    "title": "Can the herpes zoster vaccination be a strategy against dementia?",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.708Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on neuroimmunology, dementia prevention, and vaccination efficacy; 'emotion' is not mentioned or implied in title, abstract, concepts, or methodology.",
+      "evidence": [
+        "Abstract contains no reference to emotion, affect, mood, psychological states, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "06629b7fbb5cf647a96e24622b0c9a7b9cbfd3055f4ae37da22cbbe1fdc5ddf0": {
+    "paper_id": "https://openalex.org/W4409973943",
+    "title": "Decoding Alzheimer’s Disease: Single-Cell Sequencing Uncovers Brain Cell Heterogeneity and Pathogenesis",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.771Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on neurodegenerative mechanisms, single-cell genomics, and Alzheimer's pathogenesis with no mention of emotion, affective processing, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; all keywords are biomedical/neuroscientific."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "53b167bbaa188fa53fec26acd0db1d59a3f593f024f3669f7d5d70ecd4f9088c": {
+    "paper_id": "https://openalex.org/W4415849421",
+    "title": "TRIM21 and OTUD6A orchestrate AKT K27-linked atypical ubiquitination to modulate cancer chemoresistance",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.800Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on molecular mechanisms of cancer chemoresistance involving ubiquitination and AKT signaling, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions TRIM21, OTUD6A, AKT ubiquitination, and cancer chemoresistance — all molecular/cancer biology concepts"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "35f156b98882b079fb7ecdd3c84a292a09d5a7a5ed1495a25b9d7a29d365b69b": {
+    "paper_id": "https://openalex.org/W4408354023",
+    "title": "Linguistics-Vision Monotonic Consistent Network for Sign Language Production",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.849Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on sign language production, cross-modal alignment, and monotonic consistency in AI-driven linguistics-vision mapping; no mention of emotion, affect, sentiment, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Interest topics are 'emotion', but paper concepts and abstract contain zero emotion-related terms or objectives."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "221622fffd2a2c924b228dfc65579046a197beaa6a1b62c919157a0d23745aaf": {
+    "paper_id": "https://openalex.org/W7123343752",
+    "title": "Subjective-Objective Emotion-Correlated Generation Network for Subjective Video Captioning",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.889Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses emotion modeling in video captioning, explicitly distinguishing and correlating subjective (affective) and objective emotions — aligning precisely with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title contains 'Subjective-Objective Emotion-Correlated Generation Network'",
+        "Abstract defines SVC as generating 'emotional captions by incorporating viewers' personalized emotional reactions'",
+        "Core modules include 'subjective-objective emotions correlation module' and 'emotion-correlated decoder'"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "subjective emotion",
+        "affective computing",
+        "emotional video captioning",
+        "emotion polarity",
+        "emotion intensity"
+      ],
+      "research_directions": [
+        "affective multimodal generation",
+        "personalized emotion modeling",
+        "subjective-objective emotion alignment",
+        "emotion-aware AI for perception tasks"
+      ]
+    }
+  },
+  "242692aad43d3e3493b985e81d740d9de8c70e58bcbccdd416eacd4386437188": {
+    "paper_id": "https://openalex.org/W4411874760",
+    "title": "Genome-Wide Analysis of the Typical Thioredoxin Gene Family in Hexaploid Oil-Camellia: Identification, Phylogenetic Analysis, and Gene Expression Patterns",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.914Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper is a molecular genetics study focused on thioredoxin gene family analysis in plants; no connection to human emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "All concepts and methods are rooted in plant genomics, redox biology, and flowering regulation—no mention of emotion, affect, behavior, neuroscience, or psychology."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "80d142faee1a98e855084cb2d25242f59aacbf2b59bb80951860dc654e817df5": {
+    "paper_id": "https://openalex.org/W4415549654",
+    "title": "Deciphering the nexus of aging and pan-cancer: Single-cell sequencing reveals microenvironmental remodeling and cellular drivers",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:54.918Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on aging, cancer biology, and single-cell genomics; no mention of emotion, affective processes, or psychological/behavioral dimensions of emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are biomedical: senescence, TME, scRNA-seq, SASP, immunosenescence."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "01f76a5c72ecc2eac8d564d8346560c5c7b7e47b88940ad941c49eb865309ad6": {
+    "paper_id": "https://openalex.org/W7128399794",
+    "title": "Protein persulfidation: The missing link in Alzheimer's disease defense mechanisms",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:55.609Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on molecular neurobiology and redox signaling in Alzheimer's disease, with no mention or conceptual link to emotion, affective processes, or psychological constructs.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper concepts: Endogeny, Biology, Neuroscience, Signal transduction, Disease, Mechanism (biology), Hyperphosphorylation, GSK-3; abstract discusses H2S signaling, Tau pathology, and precision medicine — all mechanistic/biomedical, not affective."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "61e379d408cdf1a0ab48b32389c833d5c4bfbe7712786ebd7765b13d5e0e0dd6": {
+    "paper_id": "https://openalex.org/W4408302655",
+    "title": "Alleviating Confirmation Bias in Learning with Noisy Labels via Two-Network Collaboration",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:56.758Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.75,
+      "confidence": 0.85,
+      "reason": "The paper includes facial expression recognition (FER) as a key evaluation task (RAF-DB dataset), which is a canonical affective computing application directly tied to emotion recognition; though the core method targets noisy label learning, its validation on emotion-laden data and explicit use of RAF-DB—a standard benchmark for emotion classification—establishes substantive affective relevance.",
+      "evidence": [
+        "evaluates on RAF-DB dataset",
+        "lists 'facial expression recognition' as a primary task",
+        "interest topic is 'emotion'"
+      ],
+      "keywords": [
+        "facial expression recognition",
+        "emotion recognition",
+        "affective computing",
+        "noisy labels",
+        "deep learning"
+      ],
+      "research_directions": [
+        "affective machine learning",
+        "robust emotion classification under label noise",
+        "cross-task transfer between general vision and affective perception"
+      ]
+    }
+  },
+  "efbd97ba03a9a0926cdfe140f1f851ce2d8407baf5991913fc4a02b041268054": {
+    "paper_id": "https://openalex.org/W4415538383",
+    "title": "Benchmarking and Bridging Emotion Conflicts for Multimodal Emotion Reasoning",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:56.870Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is centrally focused on emotion reasoning, explicitly addresses emotion conflicts across modalities, and aligns directly with the researcher's stated interest in 'emotion'.",
+      "evidence": [
+        "Title contains 'Emotion Conflicts' and 'Multimodal Emotion Reasoning'",
+        "Abstract repeatedly uses 'emotion' (12+ occurrences) and defines benchmarks/frameworks specifically for emotion modeling (CA-MER, MoSEAR)",
+        "Core problem: bias in multimodal emotion inference under conflicting emotional cues"
+      ],
+      "keywords": [
+        "emotion conflict",
+        "multimodal emotion reasoning",
+        "affective computing",
+        "emotion benchmark",
+        "modality bias",
+        "emotion MLLMs"
+      ],
+      "research_directions": [
+        "affective multimodal AI",
+        "emotion representation learning",
+        "bias mitigation in affective models",
+        "cross-modal emotion integration"
+      ]
+    }
+  },
+  "4215b0c20fb424c27a40d1ad4f771be376633001aa2a9c1ab4dc9dcb09e697a0": {
+    "paper_id": "https://openalex.org/W4415537840",
+    "title": "Beyond Emotion Recognition: A Multi-Turn Multimodal Emotion Understanding and Reasoning Benchmark",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:57.032Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is explicitly centered on emotion understanding and reasoning, directly aligning with the researcher's interest topic 'emotion'. It introduces a benchmark and framework specifically designed for multimodal emotion reasoning beyond recognition.",
+      "evidence": [
+        "Title contains 'Multimodal Emotion Understanding and Reasoning'",
+        "Abstract states 'focuses on enhancing emotion recognition abilities' and emphasizes 'emotion reasoning, which is crucial for improving human-machine interactions'",
+        "Benchmark name MTMEUR stands for 'Multi-Turn Multimodal Emotion Understanding and Reasoning'"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "emotion reasoning",
+        "multimodal learning",
+        "affective computing",
+        "human-machine interaction"
+      ],
+      "research_directions": [
+        "affective AI",
+        "multimodal emotion modeling",
+        "psychologically grounded AI evaluation",
+        "emotion cause analysis",
+        "future emotional behavior prediction"
+      ]
+    }
+  },
+  "562efc427ac166ee4550937951302cd2330dd9a92d7c9dc051b5c676ce08bf00": {
+    "paper_id": "https://openalex.org/W4409491119",
+    "title": "Integrative neurorehabilitation using brain-computer interface: From motor function to mental health after stroke",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:57.218Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.92,
+      "confidence": 0.98,
+      "reason": "The paper explicitly addresses emotional regulation and post-stroke emotional disorders as a core domain of BCI-based neurorehabilitation, aligning directly with the researcher's interest in 'emotion'.",
+      "evidence": [
+        "This review systematically explores the use of BCI systems in post-stroke rehabilitation, focusing on three core domains: motor function, cognitive capacity, and emotional regulation.",
+        "It discusses the role of BCI in monitoring and regulating post-stroke emotional disorders via closed-loop systems."
+      ],
+      "keywords": [
+        "emotional regulation",
+        "post-stroke emotional disorders",
+        "closed-loop neurofeedback",
+        "affective neuroscience",
+        "BCI for mental health"
+      ],
+      "research_directions": [
+        "BCI-driven affective neurofeedback for depression/anxiety post-stroke",
+        "Multimodal emotion decoding using EEG/fNIRS in rehabilitation settings",
+        "AI-personalized emotion regulation protocols in real-time BCI systems"
+      ]
+    }
+  },
+  "1fe5f7d4de55d6ad7eddc474f28951301251208407152d63a26d88640c3d5218": {
+    "paper_id": "https://openalex.org/W4415536800",
+    "title": "Multi-round Mutual Emotion-Cause Pair Extraction for Emotion-Attributed Video Captioning",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:57.666Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.98,
+      "confidence": 0.99,
+      "reason": "The paper is centrally focused on emotion perception, emotion-cause pairing, and emotion-attributed language generation—directly aligning with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title explicitly contains 'Mutual Emotion-Cause Pair Extraction' and 'Emotion-Attributed Video Captioning'",
+        "Abstract defines 'Emotional Video Captioning (EVC)' as describing factual content with 'intrinsic emotions expressed in videos'",
+        "Proposes MM-ECPE network for 'joint extraction of emotional cues and visual causes'"
+      ],
+      "keywords": [
+        "emotion",
+        "emotion-cause pairing",
+        "emotional video captioning",
+        "emotion perception",
+        "affective computing",
+        "multimodal emotion analysis"
+      ],
+      "research_directions": [
+        "affective multimodal understanding",
+        "emotion cause inference",
+        "emotion-aware generation",
+        "video-based affective computing"
+      ]
+    }
+  },
+  "3fdb4113287a53c2b8287c966d99d02e5600e7f1d12890d7d714708d868afd08": {
+    "paper_id": "https://openalex.org/W4416286447",
+    "title": "PEMF-VTO: Point-Enhanced Video Virtual Try-on via Mask-free Paradigm",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:57.866Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computer vision and video synthesis for virtual try-on, with no mention of emotion, affective states, psychological constructs, or human emotional response.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all technical content pertains to spatial-temporal modeling, point alignment, and garment transfer."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "372e921302227133ad14fed072629df70f0d1a2d55324271c400d58039808a84": {
+    "paper_id": "https://openalex.org/W4406457620",
+    "title": "Video Corpus Moment Retrieval With Query-Specific Context Learning and Progressive Localization",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:57.961Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on video moment retrieval using multimodal context learning and progressive localization; 'emotion' is not mentioned in title, abstract, or concepts, and no affective/emotion-related methodology or application is present.",
+      "evidence": [
+        "Interest topics: emotion",
+        "Abstract contains no mention of emotion, affect, sentiment, or related constructs"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "66f5a90da651c09ebceb5fd2e016beddacb063c0ff49ca54d3ba032671a30992": {
+    "paper_id": "https://openalex.org/W4417131421",
+    "title": "Scene-Text Grounding for Text-Based Video Question Answering",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:57.962Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on scene-text grounding and interpretable text-based video question answering, with no mention or conceptual link to emotion, affect, or related psychological, linguistic, or computational affective phenomena.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper abstract contains no emotion-related terms or constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b5d03f740f4bea7d64c48deea847af6294290950384f398fc4290288874a6fe2": {
+    "paper_id": "https://openalex.org/W4406919537",
+    "title": "Cognitive control in individuals with heroin use disorder after prolonged methadone maintenance treatment",
+    "researcher_name": "Peipei Song",
+    "researcher_openalex_author_id": "A5015177224",
+    "updated_at": "2026-02-20T14:40:58.196Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper focuses on cognitive control in heroin use disorder under methadone treatment, with no explicit mention of emotion or affective processes in the title, venue, or listed concepts.",
+      "evidence": [
+        "Concepts include 'Cognition', 'Psychiatry', 'Heroin dependence', but no emotion-related terms such as 'affect', 'emotion regulation', 'mood', or 'valence'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  }
+}

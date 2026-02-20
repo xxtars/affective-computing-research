@@ -1,0 +1,558 @@
+{
+  "a5b6f8ca716c88485cdaea7d93f8e75b0a19242878c28f7162f5f02b9d56abf1": {
+    "paper_id": "https://openalex.org/W4416093741",
+    "title": "Vaccination Recommendation Patterns and Associated Factors Among Children with Special Health Care Needs: A Cross-Sectional Study in District-Level Immunization Services in China",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:23.232Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on clinical vaccination decision-making for children with special health care needs, with no mention of emotion, affective processes, or psychological states.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, mood, sentiment, or psychological response."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "3083ae2ed0102379cc3adb8df8e9cfa1663b87b4b319b1fbeb58ae159a5c3e0f": {
+    "paper_id": "https://openalex.org/W4414346893",
+    "title": "Chinese Face and Body Dataset (CFBD): Lab and personal photos of the same individuals",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:23.648Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper describes a face and body image dataset; no explicit connection to emotion processing, affective science, or emotion-related methodology is indicated in the metadata.",
+      "evidence": [
+        "Title mentions 'Face and Body Dataset' with no emotion-related terms; abstract is empty; venue is methodological (Behavior Research Methods), not affective science-focused."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "dcaaf61c32c1e016d0275911d3160c3d1d66ef3b3817a852835d794f27b42263": {
+    "paper_id": "https://openalex.org/W4410890098",
+    "title": "Task difficulty modulates the effect of mind wandering on phase dynamics",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:23.792Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.92,
+      "reason": "The paper focuses on mind wandering, phase coherence, and task difficulty in cognitive neuroscience, with no direct reference to emotion, affective states, or emotion-related constructs.",
+      "evidence": [
+        "Concepts list contains no emotion-related terms; abstract discusses cognition, entrainment, and attentional states but never mentions emotion, affect, valence, arousal, or related psychological constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ca30a1c20a987c6ddfc6b6d7da66fef2225beac157607c712865ba3989e6814a": {
+    "paper_id": "https://openalex.org/W4416731200",
+    "title": "Enactment and bizarreness modulate familiarity and recollection in associative recognition: Evidence from FN400 and LPC",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:24.358Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper investigates how emotion-adjacent experimental manipulations—enactment and bizarreness—affect memory processes (familiarity and recollection), which are well-established in affective neuroscience as modulated by emotional valence and arousal; FN400 and LPC are ERP components sensitive to emotional and mnemonic processing.",
+      "evidence": [
+        "Title explicitly references 'enactment and bizarreness', known emotion-eliciting manipulations in memory research",
+        "Uses FN400 and LPC—ERP components empirically linked to affective modulation of recognition memory"
+      ],
+      "keywords": [
+        "emotion",
+        "memory",
+        "familiarity",
+        "recollection",
+        "FN400",
+        "LPC",
+        "ERP",
+        "bizarreness",
+        "enactment"
+      ],
+      "research_directions": [
+        "Affective modulation of associative memory",
+        "Neural correlates of emotion-enhanced memory",
+        "ERP signatures of emotional encoding effects"
+      ]
+    }
+  },
+  "813f086dfe85048374e263e528541b68b4eb6ca2a376b99739b376ef59797f23": {
+    "paper_id": "https://openalex.org/W4408542742",
+    "title": "Parallel Spatiotemporal Network to recognize micro-expression",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:24.532Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper focuses on recognizing micro-expressions, which are brief, involuntary facial expressions directly linked to underlying emotions; 'emotion' is explicitly listed as the researcher's interest topic.",
+      "evidence": [
+        "Title: 'Parallel Spatiotemporal Network to recognize micro-expression'",
+        "Researcher's interest topics: 'emotion'"
+      ],
+      "keywords": [
+        "micro-expression",
+        "emotion recognition",
+        "facial expression analysis",
+        "spatiotemporal modeling"
+      ],
+      "research_directions": [
+        "Affective computing",
+        "Emotion-aware AI",
+        "Nonverbal behavior analysis",
+        "Pattern recognition in affective science"
+      ]
+    }
+  },
+  "85a2ba056d2649314669cbbfd77fe4e9f95efcefe5c25e368d80b0601fbf246c": {
+    "paper_id": "https://openalex.org/W4415537280",
+    "title": "Action Unit Enhance Dynamic Facial Expression Recognition",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:24.580Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.9,
+      "reason": "The paper's title explicitly references 'Dynamic Facial Expression Recognition', which is a core subfield of affective computing and emotion recognition; 'Action Unit' refers to the Facial Action Coding System (FACS), a standard tool for emotion-related facial behavior analysis.",
+      "evidence": [
+        "Title: 'Action Unit Enhance Dynamic Facial Expression Recognition'"
+      ],
+      "keywords": [
+        "facial expression recognition",
+        "action units",
+        "emotion recognition",
+        "affective computing",
+        "dynamic facial analysis"
+      ],
+      "research_directions": [
+        "computer vision for emotion analysis",
+        "FACS-based modeling",
+        "temporal modeling of emotional expressions"
+      ]
+    }
+  },
+  "d04c86bf755775dab565ec6098eb8a6c4843ff883f338851ff35ceaa29f6d123": {
+    "paper_id": "https://openalex.org/W4405034611",
+    "title": "Human emotion and StO2: Dataset, pattern, and recognition of basic emotions",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:24.970Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on human emotion, StO2-based emotion recognition, and basic emotions—directly aligning with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title: 'Human emotion and StO2: Dataset, pattern, and recognition of basic emotions'",
+        "Concepts include 'Emotion recognition', 'Emotion classification', 'Cognitive psychology', 'Psychology'"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "basic emotions",
+        "StO2",
+        "physiological signals",
+        "affective computing"
+      ],
+      "research_directions": [
+        "Affective computing",
+        "Multimodal emotion recognition",
+        "Physiological basis of emotion",
+        "Pattern recognition in affective science"
+      ]
+    }
+  },
+  "3bd6d79c33252f531dfefbbc112ae18b4206163f42419ad1843aafe19b654c16": {
+    "paper_id": "https://openalex.org/W4411520351",
+    "title": "Psychology and neuroscience interactions: Roles, challenges, and breakthroughs",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:25.158Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper explicitly addresses depression—a core affective disorder—and discusses psychology's central role in interdisciplinary work with neuroscience to understand and treat mental diseases, directly engaging emotion-related mechanisms, diagnosis, and intervention.",
+      "evidence": [
+        "uses a community-based population-based cohort study of depression as an example",
+        "discusses the neural mechanisms of psychological processes",
+        "aims to promote precise diagnosis and treatment of mental diseases"
+      ],
+      "keywords": [
+        "depression",
+        "emotion",
+        "affective disorders",
+        "psychology",
+        "neuroscience",
+        "mental health"
+      ],
+      "research_directions": [
+        "affective neuroscience",
+        "clinical psychology of mood disorders",
+        "interdisciplinary mental health research",
+        "neural correlates of emotion",
+        "translational psychiatry"
+      ]
+    }
+  },
+  "435858fdcb8bee357338ba374c2560cbf5ebcdcd38a17c40b703d1ea1eaa218a": {
+    "paper_id": "https://openalex.org/W4407966006",
+    "title": "Expectation violations signal goals in novel human communication",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:25.241Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper's title and concepts explicitly involve 'Surprise'—a core emotion—and intersect with psychology and human communication, aligning directly with the researcher's interest in 'emotion'. Expectation violations are well-established antecedents of emotional responses, especially surprise and related affective states.",
+      "evidence": [
+        "Title: 'Expectation violations signal goals in novel human communication'",
+        "Concepts include: 'Surprise', 'Psychology', 'Human communication'"
+      ],
+      "keywords": [
+        "surprise",
+        "expectation violation",
+        "emotion",
+        "human communication",
+        "affective signaling"
+      ],
+      "research_directions": [
+        "Affective mechanisms in nonverbal/implicit communication",
+        "Emotion as cognitive signal in goal inference",
+        "Psychological foundations of surprise in social interaction"
+      ]
+    }
+  },
+  "e56b7f1a39d6ff440842fae24399ba474f94a46c9cee6bca719e309cd4cd1650": {
+    "paper_id": "https://openalex.org/W4408691829",
+    "title": "Moral conscience matters on trust violation and its repair strategies in virtual and real-world settings",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:25.420Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.75,
+      "confidence": 0.85,
+      "reason": "The paper addresses moral conscience in the context of trust violation and repair, which inherently involves emotional responses (e.g., guilt, remorse, betrayal, empathy) and affective regulation—core components of emotion research in psychology.",
+      "evidence": [
+        "Title explicitly links 'moral conscience' with 'trust violation and its repair strategies', both of which are well-established emotion-laden constructs in affective science and social-emotional psychology."
+      ],
+      "keywords": [
+        "moral conscience",
+        "trust violation",
+        "emotion regulation",
+        "guilt",
+        "empathy",
+        "affective repair"
+      ],
+      "research_directions": [
+        "Affective mechanisms underlying moral judgment and conscience",
+        "Emotion-driven trust repair in human-computer and interpersonal contexts",
+        "Cross-setting (virtual/real-world) affective responses to betrayal"
+      ]
+    }
+  },
+  "c805a7827a2ec1d8356a8e5d37615fd04efc55fe5ed70d3b16698d8f7e88cd7a": {
+    "paper_id": "https://openalex.org/W4417094364",
+    "title": "EmotionHallucer: Evaluating Emotion Hallucinations in Multimodal Large Language Models",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:25.455Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.98,
+      "confidence": 0.99,
+      "reason": "The paper is explicitly focused on emotion understanding, hallucinations in emotion perception, and grounded in emotion psychology — directly aligning with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title contains 'EmotionHallucer' and 'Evaluating Emotion Hallucinations'",
+        "Abstract states: 'Emotion understanding is a critical yet challenging task'",
+        "Abstract emphasizes evaluation 'from two dimensions: emotion psychology knowledge and real-world multimodal perception'"
+      ],
+      "keywords": [
+        "emotion hallucination",
+        "multimodal emotion understanding",
+        "emotion psychology",
+        "LLM evaluation",
+        "affective computing"
+      ],
+      "research_directions": [
+        "Affective AI evaluation",
+        "Emotion grounding in foundation models",
+        "Psychology-informed benchmark design",
+        "Multimodal affective reasoning"
+      ]
+    }
+  },
+  "1637766c0015a85f457d7993af733348cda8c9e2f7a9202e5b48266063ae759a": {
+    "paper_id": "https://openalex.org/W4413365876",
+    "title": "Active positive searching versus passive negative avoidance: A comparative investigation of large-scale offline attention bias modification training in nonclinical adolescents",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:25.819Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly investigates attention bias modification related to emotional valence (positive searching vs. negative avoidance) in adolescents, directly aligning with 'emotion' as a core interest topic; the venue (Behaviour Research and Therapy) and concepts (Psychology, Clinical psychology, Cognitive psychology) further support affective science relevance.",
+      "evidence": [
+        "Title contains 'Active positive searching versus passive negative avoidance'",
+        "Focus on attention bias modification — a well-established paradigm in emotion-cognition research",
+        "Target population: nonclinical adolescents — common cohort in developmental affective science"
+      ],
+      "keywords": [
+        "attention bias modification",
+        "emotion regulation",
+        "affective bias",
+        "adolescent development",
+        "cognitive-affective interaction"
+      ],
+      "research_directions": [
+        "Affective neuroscience",
+        "Clinical interventions for emotional vulnerability",
+        "Developmental psychopathology",
+        "Cognitive bias modification for emotion"
+      ]
+    }
+  },
+  "5ec699b1c5d81bef98ed7bfc7ca11e2da4b8e8a64ac8a01aacf109bf4f9d2cf9": {
+    "paper_id": "https://openalex.org/W4408254236",
+    "title": "Micro-Expression Key Frame Inference",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:26.312Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses micro-expressions—a core affective/emotion-related phenomenon—with explicit focus on emotion inference, psychological grounding, and publication in IEEE TAC—a premier venue for affective computing. The problem (ME-KFI) and method (MECIA) are designed to support reliable emotion annotation from behavioral cues.",
+      "evidence": [
+        "Title contains 'Micro-Expression'",
+        "Venue: IEEE Transactions on Affective Computing",
+        "Abstract states 'micro-expressions are brief, involuntary facial movements critical for detecting lies' and cites 'psychological research'"
+      ],
+      "keywords": [
+        "micro-expression",
+        "affective computing",
+        "emotion recognition",
+        "facial expression",
+        "key frame inference",
+        "psychological annotation"
+      ],
+      "research_directions": [
+        "affective signal processing",
+        "automated emotion annotation",
+        "human-centered AI for psychology",
+        "contrastive learning for affective behavior analysis"
+      ]
+    }
+  },
+  "1d7b4db8788f0b9c36609fe490ec6bb1c8ad039e86f0a066e4e13b175641546c": {
+    "paper_id": "https://openalex.org/W4400381788",
+    "title": "Common intentional binding effects across diverse sensory modalities in touch-free voluntary actions",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:26.696Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper focuses on intentional binding in voluntary actions across sensory modalities, which is a cognitive neuroscience topic related to agency and perception—not emotion or affective processes.",
+      "evidence": [
+        "Concepts include 'Voluntary action', 'Cognitive psychology', 'Neuroscience', 'Sensory system'—no emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b9e8c99fea3010f67ea3868998c224eb1453d82a72418b66b15a945e40839ccf": {
+    "paper_id": "https://openalex.org/W4402912084",
+    "title": "Personality trait inferences from three-dimensional bodies in American versus Chinese individuals",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:27.118Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.75,
+      "confidence": 0.88,
+      "reason": "The paper investigates personality trait inferences—including Neuroticism, a core Big Five dimension strongly linked to emotional reactivity and regulation—and examines cross-cultural differences in how body shape cues evoke affect-laden judgments (e.g., valence, Extraversion), directly engaging emotion-related social perception mechanisms.",
+      "evidence": [
+        "Neuroticism is explicitly included as one of the 30 rated personality traits and is among the best-predicted traits for Chinese participants",
+        "Valence dimension (positive vs. negative) is central to the trait space analysis and is a fundamental affective dimension in emotion science",
+        "The abstract emphasizes spontaneous, impression-based judgments that carry affective weight (e.g., 'lazy', 'extraverted') and cultural variation in emotion-linked trait attributions"
+      ],
+      "keywords": [
+        "Neuroticism",
+        "valence",
+        "emotion perception",
+        "personality inference",
+        "cross-cultural affect"
+      ],
+      "research_directions": [
+        "Affective basis of first impressions from physical appearance",
+        "Cultural modulation of emotion-linked trait attribution",
+        "Neuroticism as an emotion-relevant trait in non-face cue processing"
+      ]
+    }
+  },
+  "b2e79fc014d5d8469fc11d94c41cd478275839f696ca239a4e90f32297e09387": {
+    "paper_id": "https://openalex.org/W4410950005",
+    "title": "Could Micro-Expressions Be Quantified? Electromyography Gives Affirmative Evidence",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:27.161Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly investigates micro-expressions as objective physiological indicators of concealed emotions using electromyography, aligning precisely with the researcher's interest in 'emotion'. It is published in IEEE Transactions on Affective Computing and explicitly addresses affective mechanisms, quantification of emotional leakage, and psychophysiological correlates of emotion.",
+      "evidence": [
+        "Title explicitly references 'Micro-Expressions' as behavioral cues for 'concealed emotions'",
+        "Abstract states MEs 'reveal concealed emotions' and focuses on 'objective, quantitative indicators' of emotion expression",
+        "Venue: IEEE Transactions on Affective Computing — a top-tier journal dedicated to emotion- and affect-related computing"
+      ],
+      "keywords": [
+        "micro-expressions",
+        "electromyography",
+        "emotion quantification",
+        "affective computing",
+        "facial expression",
+        "physiological signals",
+        "emotion recognition"
+      ],
+      "research_directions": [
+        "Affective signal processing",
+        "Physiological basis of emotion expression",
+        "Objective measurement of covert affect",
+        "Micro-expression detection and analysis",
+        "EMG-based affective computing"
+      ]
+    }
+  },
+  "2fe167ff16f3b3ecaf64b3d0c923abe54809e6de1c0311fc0490ba4c8d29a23f": {
+    "paper_id": "https://openalex.org/W4400261139",
+    "title": "The neural network of sensory attenuation: A neuroimaging meta-analysis",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:27.173Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper focuses on sensory attenuation and its neural correlates via neuroimaging meta-analysis, with no explicit connection to emotion or affective processes in the available metadata.",
+      "evidence": [
+        "Interest topic is 'emotion', but all listed concepts (e.g., sensory system, cognitive psychology, neuroimaging) are perceptual/cognitive, not affective."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "866c7bd90713b29e5f041701949db0af36263a4bf4ade3e94c41505fc688b018": {
+    "paper_id": "https://openalex.org/W4412459318",
+    "title": "Enhancing Face Perception Research with the Chinese Face and Body Dataset (CFBD)",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:27.402Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper explicitly includes 'facial expressions' as a manually annotated attribute and examines perception of social traits (attractiveness, trustworthiness, distinctiveness) that are tightly linked to affective processing and emotion perception; trustworthiness in particular is a well-established emotion-adjacent social judgment with affective valence.",
+      "evidence": [
+        "Each image was manually annotated for eight objective attributes: facial expressions, face views, body views, postures, photo types, environments, image quality, and accessories.",
+        "Participants rated cropped face images from the CFBD for two social traits (attractiveness, trustworthiness) and one identity-relevant trait (distinctiveness).",
+        "These findings suggest that perceived attractiveness and distinctiveness are more dependent on cues that vary across images, whereas trustworthiness is relatively dependent on cues that remain consistent."
+      ],
+      "keywords": [
+        "facial expressions",
+        "trustworthiness",
+        "attractiveness",
+        "emotion perception",
+        "social cognition",
+        "affective traits"
+      ],
+      "research_directions": [
+        "Affective face perception",
+        "Cross-cultural emotion expression and judgment",
+        "Role of context and image variability in emotional trait attribution",
+        "Computational modeling of affective social traits from facial images"
+      ]
+    }
+  },
+  "7e9e66d8c77a7778539e5558a44679f018976e373fc3b7f3033b4937d041ae82": {
+    "paper_id": "https://openalex.org/W4399619448",
+    "title": "Seeing Through the Mask: Recognition of Genuine Emotion Through Masked Facial Expression",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:28.990Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly investigates the recognition of genuine underlying emotions from masked facial expressions, explicitly linking facial action unit dynamics to emotional states — aligning precisely with 'emotion' as a core interest topic.",
+      "evidence": [
+        "Title explicitly references 'Recognition of Genuine Emotion'",
+        "Abstract states 'The purpose of facial expression recognition is to recognize the corresponding emotions'",
+        "Focus on uncovering 'hidden emotions within an MFE' and using AU movement patterns as emotion proxies"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "masked facial expressions",
+        "facial action units",
+        "dynamic AU intensity",
+        "affective computing"
+      ],
+      "research_directions": [
+        "affective computing",
+        "emotion-aware AI",
+        "nonverbal emotion inference",
+        "computational psychology",
+        "human-centered affective interfaces"
+      ]
+    }
+  },
+  "2d7ca1fa45fbb8b8e28edd146b0417feaaa6f97539126aece0ba02510c5c700d": {
+    "paper_id": "https://openalex.org/W4399325562",
+    "title": "Sense of Self-Agency and Other-Agency Under Social Interaction Contexts",
+    "researcher_name": "Xiaolan Fu",
+    "researcher_openalex_author_id": "A5015329251",
+    "updated_at": "2026-02-20T14:35:31.236Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.75,
+      "confidence": 0.9,
+      "reason": "The paper investigates sense of agency — particularly self-agency and other-agency — in social contexts, which is deeply intertwined with affective and emotional processing (e.g., attribution of intent, mentalizing, social emotion regulation). Though 'emotion' is not explicitly named in the abstract or concepts, agency perception is a core construct in affective science, especially in embodied cognition and social emotion research.",
+      "evidence": [
+        "Sense of agency refers to the subjective perception of initiating and controlling one's actions and their consequences within both individual and social contexts",
+        "Other-agency involves comprehension of others' control through mentalizing — a process tightly linked to empathy and emotional inference",
+        "The study contrasts human-human vs. human-robot interactions, probing socially embedded affective-cognitive mechanisms"
+      ],
+      "keywords": [
+        "sense of agency",
+        "self-agency",
+        "other-agency",
+        "social interaction",
+        "mentalizing",
+        "temporal binding",
+        "affective cognition"
+      ],
+      "research_directions": [
+        "Affective neuroscience of agency",
+        "Emotion and social cognition in HRI",
+        "Embodied emotion and action ownership",
+        "Cross-personal affective alignment in interaction"
+      ]
+    }
+  }
+}

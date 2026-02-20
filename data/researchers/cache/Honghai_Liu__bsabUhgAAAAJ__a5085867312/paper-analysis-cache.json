@@ -1,0 +1,391 @@
+{
+  "54a018b24612bd10f7c738d888d7b3bdcf364f40a155eabc28d035161ff8149b": {
+    "paper_id": "https://openalex.org/W4417528124",
+    "title": "Enhancing the properties of <i>Eucalyptus urophylla</i> wood through low-temperature thermal modification and the synergistic effect of thermal modification and impregnation techniques",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:28.441Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on wood material science and thermal modification techniques, with no apparent connection to emotion or affective computing.",
+      "evidence": [
+        "Title mentions only wood modification and engineering, no emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ecfcbb75b5457c4994324f2efb4c269458ad98ed0f44aa3503bcee3cc4b874a1": {
+    "paper_id": "https://openalex.org/W4414150294",
+    "title": "Reductive O-formylation of carbon dioxide and alcohols over porous phenanthroline-based polymer supported single iridium atom catalyst",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:30.696Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a catalysis/chemical synthesis study focused on CO2 utilization and single-atom catalyst design; no connection to emotion, affective science, or human affective processes.",
+      "evidence": [
+        "Title and abstract exclusively discuss iridium-catalyzed O-formylation of alcohols using CO2 — a topic in green chemistry and heterogeneous catalysis."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c5e9216b7d711db2c514250c8385e7dab9291e12da9474031c72bc34211d53e6": {
+    "paper_id": "https://openalex.org/W4413294739",
+    "title": "A unified framework for dynamic parameter identification of elastic joint robots with hysteresis and friction nonlinearities",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:30.701Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on mechanical modeling and parameter identification for robotic joints, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Concepts include hysteresis, robot, control engineering, structural engineering — all unrelated to emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f2c0b213a51895c98bf7715c1ec99759febdb8ecc81fe33564fdb3aa501d86d1": {
+    "paper_id": "https://openalex.org/W4416186892",
+    "title": "COMPARATIVE STUDY ON THE HEAT TREATMENT OF DALBERGIA LATIFOLIA ROXB. WOOD UNDER ATMOSPHERIC PRESSURE AND VACUUM CONDITIONS",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:30.753Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a materials science study on wood heat treatment; no connection to emotion, affective computing, or human affective states.",
+      "evidence": [
+        "Title and abstract focus exclusively on thermal processing of Dalbergia wood, dimensional stability, chemical degradation, and mechanical properties."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b36549024178c6ff337147cef85de6251a30c0fabda1e0489b7cd76730a4e4a3": {
+    "paper_id": "https://openalex.org/W4413583943",
+    "title": "Organic-Free Preparation of Beta with Hierarchical Pores via a Potassium Carbonate-Assisted Method",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:30.810Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a materials chemistry study on zeolite synthesis and catalysis, with no connection to emotion, affective science, or human affective processes.",
+      "evidence": [
+        "Title and abstract focus exclusively on inorganic synthesis of Beta zeolite for catalytic cracking of heavy oil"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "afa9fc73bd1808174fc81e4de43544efc73e5edb51220d824991e24b339f4262": {
+    "paper_id": "https://openalex.org/W4416169537",
+    "title": "Benchmarking sEMG Decomposition: A Comprehensive Assessment of KmCKC and SL Across Synchrony, Duration, MVC, and Firing Rate",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:30.811Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on sEMG decomposition methods and neuromuscular signal metrics (synchrony, MVC, firing rate), with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; domain is biomedical engineering/signal processing"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d9f8d54961890cc4731b47a53e3ae5891c3d959833f0eb571107fcc477711b4d": {
+    "paper_id": "https://openalex.org/W4415473487",
+    "title": "Efficient Skeleton-Based Action Segmentation via Multi-granularity Perception",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:30.836Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "Title focuses on skeleton-based action segmentation and multi-granularity perception, with no explicit or implied connection to emotion or affective computing.",
+      "evidence": [
+        "Title contains no emotion-related terms; 'action segmentation' is typically associated with computer vision and activity recognition, not affective science."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "10963f698887cd3066b99a70a3a0bd946d42f3ca7edbb583db8ebc162d70d81d": {
+    "paper_id": "https://openalex.org/W4417125063",
+    "title": "Crystal-facet-dependent piezo-phototronic effect steering reaction pathway switching for efficient H2O2 production from pure water",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:30.840Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on piezo-phototronic effects and H2O2 production from water, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; venue is materials/physical chemistry; abstract is empty and title indicates physical catalysis"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e633b3ed4f7573fdc6b136a5d4f09ab1bc9e0e99b19bbca096a7e7870757f494": {
+    "paper_id": "https://openalex.org/W4416176222",
+    "title": "THE STUDY OF SURFACE DENSIFICATION AND TEMPERATE SUPERHEATED STEAM MODIFICATION FOR RUBBERWOOD",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:30.975Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on wood material engineering, specifically surface densification and superheated steam modification of rubberwood; no content relates to emotion, affective computing, or psychological/physiological emotion modeling.",
+      "evidence": [
+        "Title and abstract exclusively discuss physical/mechanical properties, dimensional stability, and durability of treated wood."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "4975a46c37c4c043232925caa4d3888569127052c82aaf8f5f34c434004e5813": {
+    "paper_id": "https://openalex.org/W4415473524",
+    "title": "Estimation of Human Lower Limb Kinematic Parameters Based on A-Mode Ultrasound Sensing",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:31.010Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on biomechanical sensing using A-mode ultrasound for lower limb kinematics, with no apparent connection to emotion or affective computing.",
+      "evidence": [
+        "Title explicitly mentions 'Human Lower Limb Kinematic Parameters' and 'A-Mode Ultrasound Sensing' — technical domains unrelated to emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b8348c767521b067e77c691912d437539b9e54c833069b7a22f021664bc7a46a": {
+    "paper_id": "https://openalex.org/W4415455779",
+    "title": "Muscle synergy-guided optimization of FES based on real-time vEMG feedback for personalized neuromodulation",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:31.057Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on muscle synergy, FES optimization, and real-time vEMG feedback for neuromodulation—topics in biomedical engineering and neuroprosthetics, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; abstract is empty and venue is technical/engineering-focused"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "34138f2cd0e2ef4e975aaf503e69655890ea4ee3ae07a5a2d438a89975ed9531": {
+    "paper_id": "https://openalex.org/W4414196200",
+    "title": "Unsupervised Cross-Domain 3D Human Pose Estimation via Pseudo-Label-Guided Global Transforms",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:31.059Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on unsupervised cross-domain 3D human pose estimation using geometric transformations and pseudo-labeling; no mention of emotion, affect, sentiment, or any affective computing concepts.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all technical content pertains to pose geometry, domain adaptation, and camera coordinate systems."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e2e40bea9987628899943a8ce6779142a71e301b763ea9e69163efb7a83b0377": {
+    "paper_id": "https://openalex.org/W4414759623",
+    "title": "Natural Spectral Fusion: p-Exponent Cyclic Scheduling and Early Decision-Boundary Alignment in First-Order Optimization",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:31.113Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on spectral properties of first-order optimizers in machine learning, with no mention of emotion, affect, affective computing, or related psychological or neuroscientific constructs.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; core concepts are spectral bias, p-exponent scheduling, decision-boundary alignment, and optimization theory."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "5867541317520c2174e8b8aed30a73b6c128a2b1925eacdae0d034d2c6389360": {
+    "paper_id": "https://openalex.org/W4416396847",
+    "title": "Organic acid-functionalized transition metal-free layered CaO-based dual-function materials for enhanced integrated CO2 capture and utilization",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:31.193Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on materials science and chemical engineering for CO2 capture and utilization; no connection to emotion, affective computing, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Title and abstract exclusively discuss CaO-based dual-function materials, organic acid functionalization, CO2 adsorption, catalytic CO yield, and techno-economic analysis."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c238ca35c51e07a8183c2ed799fec45f1c9a4b94550323ff7488b8a3e427808e": {
+    "paper_id": "https://openalex.org/W4417452876",
+    "title": "Integration of two single-pixel imaging schemes via holographic projection in ghost imaging systems",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:31.406Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on ghost imaging, computational holography, and single-pixel imaging—topics in optical physics and computational imaging—with no mention or conceptual link to emotion, affective science, or human affective processes.",
+      "evidence": [
+        "Title and abstract contain only technical terms from optical imaging and holography; 'emotion' does not appear and is conceptually unrelated to the methodology or goals."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e51888a13d2d200ec4f8e3100f633dbb305c116114dfa8e1d4df96280d980e94": {
+    "paper_id": "https://openalex.org/W4412670452",
+    "title": "Wheat3D PartNet: Annotated dataset for 3D wheat part segmentation",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:31.880Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on 3D wheat part segmentation for agricultural phenotyping and contains no content related to emotion, affective computing, or human emotional processes.",
+      "evidence": [
+        "Title and abstract exclusively concern plant 3D point cloud segmentation, drought stress detection in wheat, and agricultural AI applications."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "90b4171bbab14c2a6a2b298eca5556237c832fb35cbf2808a28a8ff2301828bc": {
+    "paper_id": "https://openalex.org/W4413462533",
+    "title": "Text Prompt Region Decomposition for Effective Facial Expression Recognition",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:33.648Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses facial expression recognition as a core method for inferring human emotion, is published in IEEE Transactions on Affective Computing, and explicitly references 'emotion recognition' as a concept; the proposed TPRD framework is designed to improve affective state inference from visual cues.",
+      "evidence": [
+        "Venue: IEEE Transactions on Affective Computing",
+        "Concepts include 'Emotion recognition' and 'Facial expression recognition'",
+        "Abstract states facial expressions are 'conveyed through semantically distinct visual cues' for FER — a canonical affective computing task"
+      ],
+      "keywords": [
+        "facial expression recognition",
+        "emotion recognition",
+        "affective computing",
+        "text prompt guidance",
+        "region decomposition",
+        "CLIP",
+        "interpretability"
+      ],
+      "research_directions": [
+        "multimodal affective sensing",
+        "vision-language models for emotion analysis",
+        "interpretable region-aware feature learning",
+        "robust affect recognition under occlusion/pose variation"
+      ]
+    }
+  },
+  "1765f4fee4805bde3db22095e93d6052481a6e3c442449663546419d63b72e21": {
+    "paper_id": "https://openalex.org/W4412623552",
+    "title": "Interaction-Aware Transformer Network for Human-Object Interaction Detection",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:33.862Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on human-object interaction detection using transformer architectures and graph-based modeling; 'emotion' is not mentioned or implied in title, abstract, concepts, or methodology.",
+      "evidence": [
+        "Abstract contains no reference to emotion, affect, sentiment, or related psychological constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "29462fbc0ff1e3f9baf57f5087471afa7fe3d52f05d44f6a191be33b68dc9333": {
+    "paper_id": "https://openalex.org/W4414731645",
+    "title": "Author response for \"Seed crystal/&lt;scp&gt;MgCl&lt;/scp&gt;&lt;sub&gt;2&lt;/sub&gt;‐assisting synthesis hierarchical zeolite &lt;scp&gt;ZSM&lt;/scp&gt;‐5 in the absence of organic templates\"",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:33.886Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper concerns materials chemistry synthesis of hierarchical zeolite ZSM-5 using MgCl2-assisted methods; no connection to emotion, affective computing, or human affective states.",
+      "evidence": [
+        "Title contains only technical terms from inorganic chemistry and catalysis"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "139cf2c9a854cc134d885be1fa804b51345154f55f2e98dc707a74dbc8a210e5": {
+    "paper_id": "https://openalex.org/W4413383216",
+    "title": "Associations between social support types and parenting stress in parents of autistic children and adolescents: Variations by child age group",
+    "researcher_name": "Honghai Liu",
+    "researcher_openalex_author_id": "A5085867312",
+    "updated_at": "2026-02-20T14:34:36.498Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper explicitly examines parenting stress in relation to social support types among parents of autistic children, and 'stress' is a core affective/emotional construct closely tied to emotion research; the researcher's stated interest is 'emotion', and stress falls within affective science.",
+      "evidence": [
+        "Interest topics: emotion",
+        "Concepts: Stress (linguistics), Clinical psychology, Psychology, Developmental psychology",
+        "Title includes 'parenting stress' — a well-established affective/emotional outcome variable"
+      ],
+      "keywords": [
+        "parenting stress",
+        "emotion",
+        "affective response",
+        "social support",
+        "autism spectrum disorder",
+        "emotional regulation"
+      ],
+      "research_directions": [
+        "Affective mechanisms underlying caregiver stress",
+        "Emotion-social support interactions in neurodevelopmental contexts",
+        "Stress as an emotion-related biomarker in family systems",
+        "Cross-sectional affective phenotyping in autism caregiving"
+      ]
+    }
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "0103d7afaca0e98b79a56a67d7b7f7e0ed2a8ba89fd276cbda3c2a816cf9d8fd": {
+    "paper_id": "https://openalex.org/W4412054188",
+    "title": "Visual-like 2D Geometric Template Diffusion for Boosting Single-Sequence Protein Structure Prediction",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:55.265Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on protein structure prediction using geometric diffusion and AI methods; no connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and abstract content pertain to computational biology, AI, and structural bioinformatics."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9c8451586d6244fadb84120637e93517e7a4fea354dac6cafb986689f62b3f6d": {
+    "paper_id": "https://openalex.org/W4416373380",
+    "title": "A secreted glycoside hydrolase of Puccinia triticina modulates fungal pathogenesis and host immunity",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:55.395Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on plant pathology and fungal enzymology, with no apparent connection to human emotion or affective science.",
+      "evidence": [
+        "Title concerns a glycoside hydrolase in Puccinia triticina affecting pathogenesis and immunity in wheat"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0cfe3679d01f93ba0dad0e7a2740230615dc1ad9d1f319da285ddce631a8bca1": {
+    "paper_id": "https://openalex.org/W4408395413",
+    "title": "Enhancing bone-conducted speech with spectrum similarity metric in adversarial learning",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:55.444Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on bone-conducted speech enhancement using adversarial learning and spectrum similarity metrics, with no apparent connection to emotion or affective computing.",
+      "evidence": [
+        "Title contains no emotion-related terms; concepts are technical signal processing/AI topics unrelated to affect."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "909d0325e8a8482fcb0437bc83e352eb460b115922b20ae5ffac551835f73b82": {
+    "paper_id": "https://openalex.org/W4412995577",
+    "title": "Visual-like Template Diffusion: Boosting Single-Sequence Protein Structure Prediction by Adapting Image Diffusion Models",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:55.528Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on protein structure prediction using diffusion models adapted from computer vision; no connection to emotion, affective science, or psychological affective processes.",
+      "evidence": [
+        "Concepts include Diffusion, Sequence (biology), Computer vision, Chemistry — none relate to emotion or affective science."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "99b8c08d7e3bb0ca33b5dc4bab8811f046668f2ffe53f30bfdae8c0cb2805d98": {
+    "paper_id": "https://openalex.org/W4410248341",
+    "title": "AEP: An adaptive ensemble P300-BCI classifier based on user-feedback and knowledge-transfer",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:55.584Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper focuses on P300-BCI classification using adaptive ensembles and knowledge transfer, with no explicit connection to emotion or affective computing in the metadata.",
+      "evidence": [
+        "Interest topics are 'emotion', but concepts listed are technical BCI/ML topics without affective terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "411d1e47e193e2dd374b7bffe87ffc332cc98817b3a52d7d73713b3d28e3b7c7": {
+    "paper_id": "https://openalex.org/W4413354595",
+    "title": "Spurious eigenfrequencies of coupled boundary integral equation systems for biharmonic wave scattering problems with clamped obstacles",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:55.609Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper concerns mathematical analysis of biharmonic wave scattering and spurious eigenfrequencies in boundary integral equations, with no conceptual or methodological connection to emotion or affective science.",
+      "evidence": [
+        "Concepts: Biharmonic equation, Spurious relationship, Mathematical analysis, Integral equation, Scattering"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "872c7d28653c77188cc2123a6e7b6ece9557f96d8db72cb115d42982e599cc69": {
+    "paper_id": "https://openalex.org/W4408884609",
+    "title": "LightRoseTTA: High‐Efficient and Accurate Protein Structure Prediction Using a Light‐Weight Deep Graph Model",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:55.831Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on protein structure prediction using lightweight deep learning models and has no conceptual, methodological, or application-level connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and the abstract exclusively concern computational biology, graph neural networks, and AI for structural bioinformatics; 'emotion' does not appear anywhere in the metadata or abstract."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "548f8bc20d09ab94a3efd7c12ae4333e68b83390ddc12d25932bda8feb7fb5a1": {
+    "paper_id": "https://openalex.org/W4416582953",
+    "title": "Generalizable Dynamic Domain Adaptation for Speaker-Independent Speech Emotion Recognition",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:56.034Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on speech emotion recognition (SER), directly aligning with the researcher's interest topic 'emotion'. It addresses core affective computing challenges—speaker-invariant emotional feature learning, domain adaptation for emotional robustness, and generalization across speakers—within an emotion-specific context.",
+      "evidence": [
+        "Title contains 'Speech Emotion Recognition'",
+        "Abstract states 'speech emotion recognition (SER)' as the primary task",
+        "Problem formulation centers on disentangling speaker attributes from emotional cues"
+      ],
+      "keywords": [
+        "speech emotion recognition",
+        "domain adaptation",
+        "speaker independence",
+        "affective computing",
+        "emotion representation"
+      ],
+      "research_directions": [
+        "affective signal processing",
+        "cross-speaker emotion generalization",
+        "robust affective feature learning",
+        "dynamic domain adaptation for emotion"
+      ]
+    }
+  },
+  "d3e6a54ae848ea605b5a72e17980681b514a9cce0d41b14b83c175c33eb1fd0c": {
+    "paper_id": "https://openalex.org/W4409095614",
+    "title": "An Empirical Study of Super-Resolution on Low-Resolution Micro-Expression Recognition",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:56.750Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper focuses on micro-expression recognition—a core affective computing task—and is published in IEEE Transactions on Affective Computing, with 'emotion' explicitly listed as the researcher's interest topic.",
+      "evidence": [
+        "Title contains 'Micro-Expression Recognition'",
+        "Venue: IEEE Transactions on Affective Computing",
+        "Researcher's interest topic: 'emotion'"
+      ],
+      "keywords": [
+        "micro-expression",
+        "emotion recognition",
+        "affective computing",
+        "super-resolution",
+        "low-resolution analysis"
+      ],
+      "research_directions": [
+        "Affective signal processing",
+        "Facial expression analysis",
+        "Emotion-aware AI",
+        "Resolution enhancement for affective cues"
+      ]
+    }
+  },
+  "4fcf05ec69391958f1d39884a099885ee555683ca369db9697eb722e45e9a37a": {
+    "paper_id": "https://openalex.org/W4415537470",
+    "title": "Multi-Level Segment Fusion Based on Adaptive Time-Window Selection for Multimodal Personality-Aware Elderly Depression Detection",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:57.600Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.92,
+      "confidence": 0.95,
+      "reason": "The paper focuses on depression detection—a core affective/emotion-related disorder—and employs multimodal analysis of behavioral cues linked to emotional states; it aligns directly with 'emotion' as a stated interest topic.",
+      "evidence": [
+        "Title explicitly references 'Elderly Depression Detection'",
+        "Abstract states the goal is detecting Major Depressive Disorder (MDD), a clinical affective disorder",
+        "Method targets 'sparse and transient depressive symptoms', which are emotion-expression manifestations"
+      ],
+      "keywords": [
+        "depression detection",
+        "affective computing",
+        "multimodal emotion analysis",
+        "mental health monitoring",
+        "personality-aware modeling"
+      ],
+      "research_directions": [
+        "affective computing",
+        "clinical emotion recognition",
+        "multimodal mental health assessment",
+        "gerontechnology and affective sensing"
+      ]
+    }
+  },
+  "7580a66cb806f4fd3c7ded18af3917e0f16016f966e9a1bbeb04a8e9998c7975": {
+    "paper_id": "https://openalex.org/W4416251733",
+    "title": "A Hybrid Graph Neural Network for Enhanced EEG-Based Depression Detection",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:57.691Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper focuses on EEG-based depression detection, and depression is a clinical affective disorder directly tied to emotion regulation, dysregulation, and emotional valence — core topics within affective/emotion research.",
+      "evidence": [
+        "Title explicitly mentions 'depression detection'",
+        "Abstract states the method targets 'brain abnormalities' associated with depression, which are well-established in affective neuroscience",
+        "Researcher's interest topic is 'emotion', and clinical depression is a canonical emotion-related disorder"
+      ],
+      "keywords": [
+        "depression",
+        "affective disorder",
+        "EEG",
+        "emotion recognition",
+        "affective computing",
+        "graph neural networks"
+      ],
+      "research_directions": [
+        "affective brain-computer interfaces",
+        "clinical affective neuroscience",
+        "emotion-based mental health assessment",
+        "machine learning for mood disorders"
+      ]
+    }
+  },
+  "79080d47e00e68fc951ea3ce4ebc22a86bda29660fa984377d91ba77173c0008": {
+    "paper_id": "https://openalex.org/W4415537982",
+    "title": "Assessing Personality Traits and Interview Performance from Asynchronous Video Interviews",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:57.706Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.75,
+      "confidence": 0.85,
+      "reason": "The paper focuses on assessing personality traits from video interviews, and personality traits are closely linked to emotion expression, regulation, and perception—core components of affective science; the methodology (Trait Activation Theory) explicitly involves emotional and behavioral responses to situational cues.",
+      "evidence": [
+        "Interview questions were carefully designed to reflect real-world selection contexts and elicit personality expressions grounded in Trait Activation Theory.",
+        "Personality traits and job competencies were annotated by trained evaluators and professional recruiters."
+      ],
+      "keywords": [
+        "personality traits",
+        "asynchronous video interviews",
+        "trait activation theory",
+        "affective behavior",
+        "emotion expression"
+      ],
+      "research_directions": [
+        "Affective computing in hiring systems",
+        "Emotion-aware AI for behavioral assessment",
+        "Multimodal emotion and personality recognition from video"
+      ]
+    }
+  },
+  "9ba6271c31124cd2645e7dbbe8c6c08467c353f5a144f355248477a726cb127a": {
+    "paper_id": "https://openalex.org/W4415536259",
+    "title": "NaME: A Natural Micro-expression Dataset for Micro-expression Recognition in the Wild",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:57.734Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses emotion recognition through micro-expressions—brief, involuntary facial expressions that reveal genuine underlying emotions—aligning precisely with the researcher's stated interest in 'emotion'.",
+      "evidence": [
+        "Micro-expressions (MEs) are involuntary facial expressions that reveal genuine emotions",
+        "significant applications in fields such as psychology, security, and human-computer interaction",
+        "pave the way for future research in MER beyond controlled settings, facilitating deployment in practical applications"
+      ],
+      "keywords": [
+        "micro-expression",
+        "emotion recognition",
+        "facial expression",
+        "affective computing",
+        "naturalistic dataset"
+      ],
+      "research_directions": [
+        "affective computing",
+        "emotion recognition in the wild",
+        "naturalistic affective datasets",
+        "context-aware emotion modeling",
+        "sparse attention for subtle affective cues"
+      ]
+    }
+  },
+  "8a60973e69ce340dc5997f540d7836138f1cffb1e6fd12f744057b10848df4ac": {
+    "paper_id": "https://openalex.org/W4411600807",
+    "title": "Dynamical Causal Graph Neural Network for EEG Emotion Recognition",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:57.789Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on EEG-based emotion recognition, is published in IEEE Transactions on Affective Computing, and uses affective computing–core methodologies (causal brain connectivity modeling, domain adaptation for emotion labels), directly aligning with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title contains 'EEG Emotion Recognition'",
+        "Venue: IEEE Transactions on Affective Computing",
+        "Abstract emphasizes 'emotion recognition', 'emotion labels', and 'subject-independent validation' for affective states"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "EEG",
+        "affective computing",
+        "causal connectivity",
+        "graph neural network",
+        "domain adaptation"
+      ],
+      "research_directions": [
+        "Affective brain-computer interfaces",
+        "Causal modeling of emotional states from neurophysiological signals",
+        "Deep learning for multimodal affect recognition",
+        "Subject-independent affective modeling"
+      ]
+    }
+  },
+  "5ae0a35b1053fbea859ba39adf4c2482a285d354165cefb789c9ebef59e624fd": {
+    "paper_id": "https://openalex.org/W4409917107",
+    "title": "Towards Federated Learning Driving Technology for Privacy-Preserving Micro-Expression Recognition",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:58.423Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.92,
+      "confidence": 0.97,
+      "reason": "The paper directly addresses micro-expression recognition—a core affective computing task explicitly tied to emotion inference—and aligns with the researcher's stated interest in 'emotion'. Federated learning is applied specifically to preserve privacy in this emotion-sensitive domain.",
+      "evidence": [
+        "Title includes 'Micro-Expression Recognition'",
+        "Abstract states: 'Micro-expression recognition, an invaluable non-verbal communication method, has been extensively studied in human-computer interaction, sentiment analysis, and security fields'",
+        "Abstract links micro-expressions to 'sentiment analysis' and emphasizes their role in 'non-verbal communication'—a canonical emotion-related modality"
+      ],
+      "keywords": [
+        "micro-expression",
+        "emotion recognition",
+        "sentiment analysis",
+        "affective computing",
+        "privacy-preserving AI"
+      ],
+      "research_directions": [
+        "affective computing",
+        "emotion-aware human-computer interaction",
+        "privacy-preserving affective AI",
+        "federated learning for behavioral biometrics"
+      ]
+    }
+  },
+  "4b4f87c97a2741bc53c29cb49012f29478aa7d9ee51f9ba31867931a8a40a684": {
+    "paper_id": "https://openalex.org/W4410027616",
+    "title": "Learning to Rank Onset-Occurring-Offset Representations for Micro-Expression Recognition",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:58.425Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses micro-expression recognition—a core affective computing task focused on inferring underlying emotions from subtle, involuntary facial expressions; it explicitly targets 'emotional expressiveness' calibration and is published in IEEE Transactions on Affective Computing.",
+      "evidence": [
+        "Title includes 'Micro-Expression Recognition', a canonical emotion-related affective computing problem",
+        "Abstract states the method 'calibrates their emotional expressiveness' and 'amplifies the originally narrow emotional expressiveness gap'",
+        "Published in IEEE Transactions on Affective Computing"
+      ],
+      "keywords": [
+        "micro-expression",
+        "emotional expressiveness",
+        "affective computing",
+        "facial expression analysis",
+        "onset-occurring-offset",
+        "learning to rank"
+      ],
+      "research_directions": [
+        "affective signal processing",
+        "nonverbal emotion recognition",
+        "subtle emotion detection",
+        "deep learning for affective behavior analysis"
+      ]
+    }
+  },
+  "563c36910bcab6588c1de9439f94fd998776da15e5ae0bf3af47d4d18d3f4180": {
+    "paper_id": "https://openalex.org/W4407188998",
+    "title": "Essential anchor graph learning for incomplete multi-view clustering",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:37:58.699Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on multi-view clustering and anchor graph learning, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Concepts include cluster analysis, graph, machine learning, and artificial intelligence—none relate to emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "546638f1651cb0a6d70d191bd472116e8665437878f272b3d0b697ddfd53f276": {
+    "paper_id": "https://openalex.org/W4408345780",
+    "title": "Enhancing Zero-Shot Emotional Voice Conversion via Speaker Adaptation and Duration Prediction",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:38:01.039Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses emotional voice conversion — a core affective computing task — with explicit focus on modeling, transferring, and enhancing emotional expression in speech, aligning precisely with 'emotion' as the researcher's interest topic.",
+      "evidence": [
+        "Title contains 'Emotional Voice Conversion'",
+        "Abstract states goal is to 'transform a speaker’s emotional state to match a target emotion'",
+        "Methods include 'hierarchical emotion fusion' and 'residual speaker-emotion fusion' targeting emotional expressiveness"
+      ],
+      "keywords": [
+        "emotional voice conversion",
+        "zero-shot learning",
+        "emotion fusion",
+        "speech prosody",
+        "affective speech synthesis"
+      ],
+      "research_directions": [
+        "affective computing",
+        "speech emotion recognition and synthesis",
+        "zero-shot cross-emotion transfer",
+        "speaker-adaptive emotional prosody modeling"
+      ]
+    }
+  },
+  "05db7cc6f6f6fc4e372cc563c5b61ed9cbc36a5e6b0583455180a7b7b0adb56a": {
+    "paper_id": "https://openalex.org/W4408353278",
+    "title": "Heterogeneous Graph Convolutional Neural Networks for EEG-fNIRS Bimodal Emotion Recognition",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:38:01.293Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on emotion recognition using multimodal neurophysiological signals (EEG and fNIRS), aligns directly with the researcher's interest topic 'emotion', and contributes to affective computing and affective brain-computer interfaces.",
+      "evidence": [
+        "Title contains 'Emotion Recognition'",
+        "Abstract states 'objective detection of brain activity [...] for affective brain-computer interface'",
+        "Concepts include 'Emotion recognition' and 'Pattern recognition (psychology)'"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "affective computing",
+        "EEG-fNIRS fusion",
+        "graph neural networks",
+        "affective BCI",
+        "multimodal brain signals"
+      ],
+      "research_directions": [
+        "affective neuroscience",
+        "multimodal affective signal processing",
+        "graph-based emotion modeling",
+        "bimodal brain-computer interfaces"
+      ]
+    }
+  },
+  "5cd3e013be470d33d0e034476e3b1d1764b530151f2df5f976aaafd0f1198b0e": {
+    "paper_id": "https://openalex.org/W4408254227",
+    "title": "Towards a Robust Group-Level Emotion Recognition via Uncertainty-Aware Learning",
+    "researcher_name": "Wenming Zheng",
+    "researcher_openalex_author_id": "A5029771864",
+    "updated_at": "2026-02-20T14:38:01.525Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.98,
+      "confidence": 0.99,
+      "reason": "The paper is explicitly focused on group-level emotion recognition, directly aligning with the researcher's interest topic 'emotion'; it is published in IEEE Transactions on Affective Computing—a premier venue for affective/emotion-related computing—and employs uncertainty-aware modeling specifically to improve robustness in emotion inference.",
+      "evidence": [
+        "Title contains 'Group-Level Emotion Recognition'",
+        "Venue: IEEE Transactions on Affective Computing",
+        "Abstract centers on modeling emotion uncertainty and robust emotion representation"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "uncertainty-aware learning",
+        "group-level emotion",
+        "affective computing",
+        "stochastic embedding",
+        "robust emotion modeling"
+      ],
+      "research_directions": [
+        "Affective computing",
+        "Emotion recognition under uncertainty",
+        "Group behavior analysis",
+        "Uncertainty quantification in AI for affect",
+        "Multimodal affective perception (face/object/scene)"
+      ]
+    }
+  }
+}

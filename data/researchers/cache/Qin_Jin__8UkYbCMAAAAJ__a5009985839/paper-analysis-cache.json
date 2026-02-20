@@ -1,0 +1,377 @@
+{
+  "fae0047485f4559e955d816194978ae7a4f85b08152d03878c1d1a3785c66bee": {
+    "paper_id": "https://openalex.org/W4417469659",
+    "title": "Robust and efficient image transmission in power-constrained underwater visible light communication systems using neural architecture search",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:49.674Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on underwater visible light communication, neural architecture search, and image compression/reconstruction—none of which relate to emotion or affective science.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c4bf2fffba280f4a796d513f7b9f793f903aa66934a06ad7825411f5c10a57b5": {
+    "paper_id": "https://openalex.org/W4416250195",
+    "title": "DSE-YOLO: An Improved Road Damage Detection Model Based on YOLOv8",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:50.797Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computer vision for road damage detection using YOLOv8 enhancements; no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract exclusively discuss technical components: C2f-DWR, SNI, EMA, Ins-IoU loss, mAP, road infrastructure."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "26b26d6550f90110eeb069280ffdd2bafdbd9fcf0985c4fbaa39aa241bba7b4e": {
+    "paper_id": "https://openalex.org/W4415395871",
+    "title": "From Memory to Alignment: A Comprehensive Review of Large Language Model Optimization",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.268Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on LLM optimization and alignment, with no mention of emotion, affect, or related psychological or computational affective constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are memory-augmented models and human preference alignment"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d27b990274e41f630b2dd7f1fb26f47688f21a76aee85a12ffcea1d3ae4e76a9": {
+    "paper_id": "https://openalex.org/W4415141081",
+    "title": "POLYCHARTQA: Benchmarking Large Vision-Language Models with Multilingual Chart Question Answering",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.293Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on multilingual chart understanding and vision-language model evaluation, with no connection to emotion or affective science.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, psychology, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "65cc886d909b94ad4513fdc5d2b48b4e39abb7f1a254e24b371d7a770ab800fc": {
+    "paper_id": "https://openalex.org/W4413104845",
+    "title": "OPDoctorNet: Deep Learning Revolutionizes Opportunistic Screening of Osteoporosis Based on Clinical Data",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.543Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on deep learning for osteoporosis screening using clinical data; no mention of emotion, affective computing, or psychological/behavioral affective constructs.",
+      "evidence": [
+        "Abstract and metadata contain only biomedical, AI, and clinical decision-making terms; 'emotion' does not appear anywhere."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "1114d96fed535ac6ef60e5cc0009de58316cf4089b9bed43f8918ea56afaa226": {
+    "paper_id": "https://openalex.org/W4417492598",
+    "title": "Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.576Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on vision-language-action modeling, robotic manipulation, and hand motion generation; no mention of emotion, affective states, or psychological constructs related to emotion.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, sentiment, mood, or human emotional response."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "08b82abedc764e50e0196e60a2b44037ba13acdceabf406cfd2af7852b45cab9": {
+    "paper_id": "https://openalex.org/W4415538010",
+    "title": "ChartM <sup>3</sup> : Benchmarking Chart Editing with Multimodal Instructions",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.586Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on multimodal chart editing, benchmarking, and MLLM fine-tuning; no connection to emotion, affective computing, or psychological/affective phenomena.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, mood, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0d8a4d50cc6fe3f65fe657f8121a18f354c3c0a0f4c1b3c8a9cc49374af80b29": {
+    "paper_id": "https://openalex.org/W4415350470",
+    "title": "The Evolution of Multimodal Embodied Intelligence: Cutting-Edge Exploration in Empowering Soft Robotics",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.601Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on multimodal embodied intelligence, soft robotics, and AI system architecture—no mention of emotion, affective computing, sentiment, or psychological constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are technical: multimodal inference, embodied perception, path planning, soft robot control."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8664e9089067d27a03e890767c9238a952c621bf0d1e54363c3734ddd8e576e6": {
+    "paper_id": "https://openalex.org/W4416746494",
+    "title": "ML-aided robust transmission and reconstruction of sensor images in challenging water-to-air visible light communication systems",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.612Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on visible light communication systems for sensor image transmission in underwater-to-air environments, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions 'robust transmission and reconstruction of sensor images' and 'water-to-air visible light communication', which are technical communication engineering topics."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "da1241e3acb794bfcc53aeaf5427089f7031a6025e86b315c52c23ff94fb0008": {
+    "paper_id": "https://openalex.org/W4407722891",
+    "title": "Weighted Bayesian uncertainty quantification for the high explosive reactants using limited data",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.688Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on Bayesian uncertainty quantification for explosive materials using limited experimental data; no connection to emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "Concepts include 'Explosive material', 'Bayesian probability', 'Uncertainty quantification'; no emotion-related terms in title, abstract, or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "316e235c3a2e03b8b0d78dc8d395477b7226b22bd9b8002813a48fe4b352fc79": {
+    "paper_id": "https://openalex.org/W4413559181",
+    "title": "SPAFormer: Sequential 3D Part Assembly with Transformers",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.703Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on 3D part assembly using transformers and has no conceptual, methodological, or application-level connection to emotion or affective science.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper concepts: 'Transformer', 'Computer science', 'Voltage', 'Engineering'; abstract contains zero emotion-related terms or constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "3ae08fc6c0e4ed1ac7fe0fe1977203d68dc9ba517f2fe42154261952c20568e4": {
+    "paper_id": "https://openalex.org/W4414989690",
+    "title": "Multimodal Representation Learning and Fusion",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.735Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper discusses multimodal representation learning and fusion broadly, with no mention of emotion, affect, sentiment, or any affective/emotion-related constructs in title, abstract, or metadata.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; focuses on technical aspects like alignment, fusion, robustness, and evaluation metrics."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ad8c671cd99da9c681c39b5f8eb6d24b83c5b411307795663334b6500aa20f3f": {
+    "paper_id": "https://openalex.org/W4415900650",
+    "title": "Radiomics-Based Machine Learning in the Diagnosis of Type-B Aortic Dissection on Computed Tomography Images",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.898Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on radiomics and machine learning for medical image diagnosis of aortic dissection, with no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; all concepts are clinical, radiological, and computational."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d998fb321ad6c5e2d8986345ea59353e162dbfcf9205fcb25b80a54d3a2dae62": {
+    "paper_id": "https://openalex.org/W4416550867",
+    "title": "TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:51.942Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on architectural innovations for long video understanding using hybrid Mamba-Transformer models and token compression; no mention of emotion, affect, sentiment, or related psychological or behavioral constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms or concepts; all technical focus is on efficiency, vision-language alignment, token transfer, and model interpretability in video processing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a61bb9d7218adcd4724db8642f96565d0f95e8a067e449aba95123b01d1d4418": {
+    "paper_id": "https://openalex.org/W4416242958",
+    "title": "Being-M0.5: A Real-Time Controllable Vision-Language-Motion Model",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:52.073Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on real-time controllable vision-language-motion modeling and human motion generation, with no mention of emotion, affect, sentiment, or related psychological or affective constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, feeling, sentiment, mood, or behavioral states; all technical content centers on motion tokenization, controllability, datasets, and real-time inference."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "fffbea7ff2821127dc428401f399bf7369a6e6e18b6fb16a8deb7a3227caaf74": {
+    "paper_id": "https://openalex.org/W4410529978",
+    "title": "Feature-Guided Deep Unfolding Network with State Space Models for MRI Reconstruction",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:52.761Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on MRI reconstruction using deep learning and state space models, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title and concepts are technical/computational; 'emotion' does not appear in metadata or concepts"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0cf13e80107ae20aecf1fcaf7f152f5dd9c842d12f081c9d01de6d2285ed5782": {
+    "paper_id": "https://openalex.org/W4410915173",
+    "title": "Unveiling Visual Biases in Audio-Visual Localization Benchmarks",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:54.286Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on visual biases in audio-visual localization benchmarks, which falls under computer vision and multimedia AI, with no indication of emotion or affective content in title, venue, or listed concepts.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper concepts: 'Computer science, Audio visual, Computer vision, ...' — no emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8202bf7564f546d785b2595ad042601d99d7c68cbfcf31d9d544f3f76c5e9b8e": {
+    "paper_id": "https://openalex.org/W4412945050",
+    "title": "Movie101v2: Improved Movie Narration Benchmark",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:54.354Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on automatic movie narration, benchmarking, and vision-language modeling; 'emotion' is not mentioned in title, abstract, or concepts.",
+      "evidence": [
+        "Interest topics: emotion; paper concepts and abstract contain no emotion-related terms or affective constructs"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a91b9dc963359f3c73310c98549ca9e380908f791e61edc923a542300c4af9fc": {
+    "paper_id": "https://openalex.org/W4416037265",
+    "title": "VC4VG: Optimizing Video Captions for Text-to-Video Generation",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:54.385Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on video caption optimization for text-to-video generation, with no indication of emotion or affective content in title or available metadata.",
+      "evidence": [
+        "Title: 'VC4VG: Optimizing Video Captions for Text-to-Video Generation'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a95d1de1493fc1cfdbf747ae04c9b70b6f94b9a2c1be5670299e522fcfdc14f0": {
+    "paper_id": "https://openalex.org/W4408361561",
+    "title": "Exploring Interpretability in Deep Learning for Affective Computing: A Comprehensive Review",
+    "researcher_name": "Qin Jin",
+    "researcher_openalex_author_id": "A5009985839",
+    "updated_at": "2026-02-20T14:38:54.684Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is explicitly focused on affective computing with emphasis on emotion perception, interpretability of deep learning models in emotional contexts, and integration of emotional psychology and physiology — directly aligning with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title contains 'Affective Computing' and 'Emotion'",
+        "Abstract states 'emotion perception as a high-level cognition is more subjective, making it particularly important to enhance the interpretability of deep learning in affective computing'",
+        "Explicitly reviews 'emotion-specific interpretability research that combines emotional psychology theories, physiological studies, and human cognition'"
+      ],
+      "keywords": [
+        "affective computing",
+        "emotion interpretability",
+        "explainable AI",
+        "emotional psychology",
+        "multimodal emotion modeling",
+        "LLM for emotion"
+      ],
+      "research_directions": [
+        "Explainable deep learning for emotion recognition",
+        "Integration of cognitive and physiological models in emotion AI",
+        "Interpretability in multimodal affective systems",
+        "Large language models for affective understanding",
+        "Human-centered evaluation of emotion model explanations"
+      ]
+    }
+  }
+}

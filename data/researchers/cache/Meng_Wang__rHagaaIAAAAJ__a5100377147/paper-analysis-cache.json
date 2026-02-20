@@ -24890,5 +24890,405 @@
       "keywords": [],
       "research_directions": []
     }
+  },
+  "a8fe93de83ce703534ac14850f22807472a8a0061b79817a6bce57e9ca202b9a": {
+    "paper_id": "https://openalex.org/W4416378545",
+    "title": "Mitigating Recommendation Biases via Group-Alignment and Global-Uniformity in Representation Learning",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:57.961Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on debiasing recommender systems through representation learning; no mention of emotion, affect, sentiment, or any psychological/behavioral constructs related to affective science.",
+      "evidence": [
+        "Interest topics are 'emotion', but the paper's abstract contains zero affective/emotion-related terms or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "433d9c60f9c9bea782a7298fe2514f8f5765e8d1c30d92771482c54620413328": {
+    "paper_id": "https://openalex.org/W4404652741",
+    "title": "Compact Visual Data Representation for Green Multimedia -- A Human Visual System Perspective",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:58.711Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on visual data compression and green multimedia from a human visual system perspective, with no mention of emotion, affect, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; 'emotion' does not appear in title, abstract, or listed concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "caa121347dedec08fc3bb2c58f59f19933fdbbbf3b75eef2cff314ca658fd018": {
+    "paper_id": "https://openalex.org/W4416052292",
+    "title": "Towards Efficient Partially Relevant Video Retrieval with Active Moment Discovering",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.360Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on text-to-video retrieval, moment localization, and model efficiency—no mention of emotion, affect, sentiment, or any affective constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are video retrieval, attention mechanisms, and loss design for partial relevance."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ab9866f89e3546da74ccc23813cb0c0f8e312c3d42e00205ab0f44f0879e6aa3": {
+    "paper_id": "https://openalex.org/W4406580495",
+    "title": "Deciphering and Enhancing Rate‐Determining Step of Sodium Deposition towards Ultralow‐Temperature Sodium Metal Batteries",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.378Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a materials chemistry study on sodium-metal batteries, with no conceptual, methodological, or lexical connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and abstract content pertain to electrochemistry, low-temperature battery performance, and solvation dynamics."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "96b8215e39bf589405c36133a5570cfd0c1b8120bd656158f0db465c5e23fd1f": {
+    "paper_id": "https://openalex.org/W4416517576",
+    "title": "Revisiting Audio-Visual Segmentation with Vision-Centric Transformer",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.463Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on audio-visual segmentation using vision-centric transformer architecture, with no mention of emotion, affect, sentiment, or any psychological/behavioral constructs related to emotion.",
+      "evidence": [
+        "Abstract and title contain no emotion-related terms; core concepts are computer vision, audio signal processing, and segmentation."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "58567b63dddc4a17682bf92c612bc0ff03aed9602d835532636d62586d97389d": {
+    "paper_id": "https://openalex.org/W4404570773",
+    "title": "Towards Open-Vocabulary Audio-Visual Event Localization",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.519Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on audio-visual event localization and open-vocabulary recognition in computer vision and multimodal AI, with no mention of emotion, affect, sentiment, or psychological constructs.",
+      "evidence": [
+        "Concepts list contains no emotion-related terms; abstract discusses event localization, vocabulary, and multimodal alignment—not affective states."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9a418519cb8dcd476e210e26b01a6e10d5119b966a9a792cdae9ef3642c0ac81": {
+    "paper_id": "https://openalex.org/W4415339058",
+    "title": "A Lightweight Deep Exclusion Unfolding Network for Single Image Reflection Removal",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.541Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper addresses single image reflection removal, a computer vision and image processing problem with no conceptual, methodological, or application-level connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract exclusively discuss deep learning for reflection removal; no mention of emotion, affect, psychology, human behavior, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8bc4c2d6a7041271472192243a1e8d48dc525aa3447d19630bfe3dc856b7b62d": {
+    "paper_id": "https://openalex.org/W4416117032",
+    "title": "Domain Generalization for Face Anti-spoofing via Content-aware Composite Prompt Engineering",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.623Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on domain generalization in face anti-spoofing using prompt engineering and multimodal fusion; no conceptual, methodological, or empirical connection to emotion or affective science is present.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, arousal, valence, or related psychological/physiological constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "62cf9f26dac1691656eac454362f64c80925faabdee1917f029e0f90e7d77837": {
+    "paper_id": "https://openalex.org/W4416424622",
+    "title": "Graph-Structured Driven Dual Adaptation for Mitigating Popularity Bias",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.745Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on mitigating popularity bias in recommender systems using graph neural networks and has no conceptual, methodological, or empirical connection to emotion or affective science.",
+      "evidence": [
+        "Interest topic is 'emotion'; paper's abstract contains zero emotion-related terms or constructs (e.g., affect, sentiment, valence, arousal, mood, empathy, emotion regulation)."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "66aa96784e9c8e7de89de398eba779b08fd775ea654aff0668e1cada5c756f14": {
+    "paper_id": "https://openalex.org/W4416872094",
+    "title": "Invariance Matters: Empowering Social Recommendation via Graph Invariant Learning",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.754Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on graph invariant learning for robust social recommendation, with no mention of emotion, affect, sentiment, or any psychological/behavioral constructs related to affective science.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core concepts are 'graph invariance', 'social denoising', 'GNNs', and 'recommendation robustness'."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "fd14f318609ac1e99b64d1deb3a4a0064476b5a07643a1a433fdba31e36a6d9d": {
+    "paper_id": "https://openalex.org/W4404346299",
+    "title": "TV-3DG: Mastering Text-to-3D Customized Generation with Visual Prompt",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.844Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on text-to-3D generation, visual prompting, and optimization algorithms in computer graphics; no mention of emotion, affective computing, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; concepts are 'Computer science' and 'Computer graphics (images)'; interest topic 'emotion' is not reflected in title, abstract, or metadata."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f4a4aa13b68aeded64e3cbaac69b8238085e14ff62c1da1504ac9da123bdd862": {
+    "paper_id": "https://openalex.org/W4416038279",
+    "title": "CPLOYO: A Pulmonary Nodule Detection Model with Multi-Scale Feature Fusion and Nonlinear Feature Learning",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.886Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a technical computer vision study focused on pulmonary nodule detection using modified YOLO architecture and nonlinear feature learning; no content relates to emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "Title and abstract exclusively discuss medical image analysis, model architecture (YOLOv8, KAN, C2f_RepViTCAMF), and lung cancer detection metrics."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "2996b284dd1cc0ae5b6a27c12251716f1319bb5adaa86c8110a99773ff78b2a6": {
+    "paper_id": "https://openalex.org/W4409707999",
+    "title": "Geometrically Aware Transformer for Point Cloud Analysis",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:33:59.898Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on geometric modeling and Transformer architecture for point cloud analysis in computer vision and AI systems; no mention of emotion, affective computing, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are technical/computational (e.g., 'geometric perception', 'self-attention', 'point cloud', 'ScanObjectNN')"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "38850c63a6677f33bb482c45277dac182b2bdb8a2e4973adfc79e746de610086": {
+    "paper_id": "https://openalex.org/W4403303365",
+    "title": "n‐ZrS<sub>3</sub>/p‐ZrOS Photoanodes with NiOOH/FeOOH Oxygen Evolution Catalysts for Photoelectrochemical Water Oxidation",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:34:01.054Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in materials chemistry and photoelectrochemistry, with no conceptual or methodological connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and the abstract focus on photoanodes, water splitting, catalysis, and materials engineering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b1afb850550bfa5b8a73612fe883b3ea261a6d698bd4013590db0e6d3ba9aea1": {
+    "paper_id": "https://openalex.org/W4405627878",
+    "title": "Prototypical Calibrating Ambiguous Samples for Micro-Action Recognition",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:34:01.080Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.75,
+      "confidence": 0.92,
+      "reason": "The paper explicitly links micro-action recognition to emotion analysis as a core application domain, and the researcher's stated interest is 'emotion', making this highly relevant despite the primary focus being on computer vision and AI methods.",
+      "evidence": [
+        "Abstract states MAR has 'promising potential for applications in human communication and emotion analysis'",
+        "Researcher's interest topic is 'emotion'"
+      ],
+      "keywords": [
+        "micro-action recognition",
+        "non-verbal communication",
+        "emotion analysis",
+        "ambiguous sample calibration",
+        "prototypical learning"
+      ],
+      "research_directions": [
+        "affective computing",
+        "emotion recognition from behavior",
+        "interpretable action modeling for affective states",
+        "psychologically-informed computer vision"
+      ]
+    }
+  },
+  "9f2e5fea58625b4e5e4dbd5c78ab6933646f58cacf97949f061c60f568da39cc": {
+    "paper_id": "https://openalex.org/W4415306903",
+    "title": "PhysioSync: Temporal and Cross-Modal Contrastive Learning Inspired by Physiological Synchronization for EEG-Based Emotion Recognition",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:34:02.218Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on EEG-based emotion recognition, directly aligning with the researcher's interest topic 'emotion'. It introduces a novel framework (PhysioSync) designed specifically for modeling physiological synchronization to improve emotion classification.",
+      "evidence": [
+        "Title contains 'EEG-Based Emotion Recognition'",
+        "Abstract states 'offering significant advantages over behavioral cues like facial expressions' for emotional states",
+        "Methodology centers on 'emotion-related synchronizations across modalities' and 'emotional synchronization at different temporal resolutions'"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "EEG",
+        "physiological synchronization",
+        "contrastive learning",
+        "multimodal learning",
+        "affective computing"
+      ],
+      "research_directions": [
+        "affective neuroscience",
+        "biometric emotion sensing",
+        "cross-modal representation learning",
+        "pre-training for affective signals",
+        "temporal modeling of emotions"
+      ]
+    }
+  },
+  "c41f361ec521a870b18142bbb6edda754b78385eaad2e3ba705aac1df7d2a672": {
+    "paper_id": "https://openalex.org/W4403782831",
+    "title": "Thinking in Granularity: Dynamic Quantization for Image Super-Resolution by Intriguing Multi-Granularity Clues",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:34:02.227Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on dynamic quantization and multi-granularity analysis for image super-resolution, with no conceptual, methodological, or empirical connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and the abstract exclusively concern signal processing, computer vision, and AI model optimization; 'emotion' does not appear in title, abstract, or listed concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "56e24ce1539a05596bb97c4d253e58c279e2e2ca173303662676b7e14ca59fcb": {
+    "paper_id": "https://openalex.org/W4403444174",
+    "title": "DAT: Dialogue-Aware Transformer with Modality-Group Fusion for Human Engagement Estimation",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:34:02.399Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.92,
+      "confidence": 0.95,
+      "reason": "The paper directly addresses human engagement estimation—a core affective/emotion-related construct in affective computing—using audio-visual cues and dialogue-aware modeling, aligning precisely with 'emotion' as a stated interest topic.",
+      "evidence": [
+        "Abstract states: 'Engagement estimation plays a crucial role in understanding human social behaviors, attracting increasing research interests in fields such as affective computing and human-computer interaction.'",
+        "Method explicitly targets 'human engagement in conversations', a well-established proxy and component of affective state inference.",
+        "Venue context (arXiv) and concepts include 'Psychology' and 'Affective computing' (implied via domain description)."
+      ],
+      "keywords": [
+        "engagement",
+        "affective computing",
+        "emotion recognition",
+        "multimodal fusion",
+        "dialogue-aware modeling",
+        "human-computer interaction"
+      ],
+      "research_directions": [
+        "Affective state estimation from multimodal behavioral cues",
+        "Dialogue-contextualized emotion modeling",
+        "Language-independent affective computing"
+      ]
+    }
+  },
+  "3f32cfe3b19ebae294930a2e07464a925be92be2dcdf42b3d8800071384fa191": {
+    "paper_id": "https://openalex.org/W4399657536",
+    "title": "Graph Bottlenecked Social Recommendation",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:34:02.605Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on graph-based social recommendation and information bottleneck techniques for denoising social networks; no mention of emotion, affect, sentiment, or psychological constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; concepts are purely technical: Graph, Computer science, Mathematics, Theoretical computer science"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7fd4d62d69ea8a874b32a454718d4a392db9a3d269e69b090b2d2282892f1857": {
+    "paper_id": "https://openalex.org/W4400611433",
+    "title": "Label-anticipated Event Disentanglement for Audio-Visual Video Parsing",
+    "researcher_name": "Meng Wang",
+    "researcher_openalex_author_id": "A5100377147",
+    "updated_at": "2026-02-20T14:34:02.913Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on audio-visual event parsing and decoding architecture, with no mention of emotion, affect, sentiment, or any psychological/behavioral constructs related to emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; concepts list includes 'Audio visual', 'Multimedia', 'Speech recognition', but not emotion, affect, sentiment, or related domains."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
   }
 }

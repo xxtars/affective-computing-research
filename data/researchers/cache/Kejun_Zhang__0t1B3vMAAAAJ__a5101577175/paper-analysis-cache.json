@@ -1,0 +1,402 @@
+{
+  "0e6a78c1a51e015b522ead6b465ed1d3497f85cf65a4edbf664b9c67abbbe10f": {
+    "paper_id": "https://openalex.org/W4417146524",
+    "title": "Dual-Functional Lanthanum Doping: Stabilizing Cathodes by Simultaneously Mitigating Na <sup>+</sup> /Vacancy Ordering and Oxygen Release",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:14.194Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in materials science/electrochemistry, focusing on lanthanum doping in battery cathodes; no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract exclusively discuss sodium-ion battery cathode stabilization, oxygen release suppression, and electrochemical performance."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "df870e0d12b5b8568a534ffb0e8d4ab42b0405d7c2ce35e0e11495d92c923de0": {
+    "paper_id": "https://openalex.org/W4414465942",
+    "title": "A fine-grained bilateral access control scheme under policy and attribute hiding for cloud-fog-assisted IoT",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:15.287Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on access control, policy hiding, and cloud-fog IoT security—topics unrelated to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; domain is cybersecurity/edge computing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "324d723195ae92dcc2d98e3e95728b40741030434b3a79ff048c6b98387b36d8": {
+    "paper_id": "https://openalex.org/W4415786230",
+    "title": "In situ Crystal Structure Growth and Control for Enhancing Comprehensive Performance in Ultra‐High Nickel‐Layered Lithium Cathodes",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:15.337Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in materials chemistry and battery electrochemistry, with no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract focus exclusively on lithium cathode crystal structure, Li+ transport, and electrochemical performance."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "1051fcdcf3275cc252714978663fcfb1e64530f594f3be38840832cbabd42d02": {
+    "paper_id": "https://openalex.org/W4412919661",
+    "title": "Maintenance Mode Decision Model of Hangzhou Metro Equipment Based on RCM",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:15.514Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on reliability-centered maintenance modeling for metro equipment, with no mention or conceptual overlap with emotion, affective computing, or psychological/emotional processes.",
+      "evidence": [
+        "Abstract and concepts exclusively concern maintenance decision models, reliability, cost optimization, and engineering systems"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "73390321dc9a6f3c1cc5750b0b88e95e741f334cab592a0caf1276f63614763e": {
+    "paper_id": "https://openalex.org/W4414141552",
+    "title": "Exploring Chinese Text Generation And Typography Using Diffusion Models",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:15.610Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on Chinese text generation and typography using diffusion models, with no mention of emotion, affect, or related psychological, linguistic, or computational affective science concepts.",
+      "evidence": [
+        "Abstract discusses character strokes, layout accuracy, and visual coherence—no emotion-related terms or goals."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bf8d9739c8278115c86649affc587bd23f0f35f94403e8ac5eb677bf48a97427": {
+    "paper_id": "https://openalex.org/W4409748878",
+    "title": "IdeationWeb: Tracking the Evolution of Design Ideas in Human-AI Co-Creation",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:15.686Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.85,
+      "reason": "The paper's metadata contains no emotion-related concepts, keywords, or contextual indicators; 'emotion' does not appear in title, concepts, or available abstract.",
+      "evidence": [
+        "Concepts list includes only technical and social science terms (e.g., AI, HCI, pedagogy) with no affective/emotion terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9da7c97e389918c4257d596d09e4760f391c60c706b619ebdfd7af89a74887b5": {
+    "paper_id": "https://openalex.org/W4409362690",
+    "title": "SongGLM: Lyric-to-Melody Generation with 2D Alignment Encoding and Multi-Task Pre-Training",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:15.724Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical aspects of lyric-to-melody generation, with no mention of emotion modeling, affective computing, or emotional content in lyrics/melodies.",
+      "evidence": [
+        "Abstract and metadata contain no emotion-related terms; concepts are centered on NLP, encoding, AI, and music generation engineering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ead4f94324b79a19235454b8a00d6365119f671f14c0a348ff195d00dd6dde87": {
+    "paper_id": "https://openalex.org/W4412598164",
+    "title": "DREP-TAP: Dynamic reputation-based threshold anonymous credential protocol",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:15.775Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computer security, reputation systems, and cryptographic protocols; 'emotion' is not mentioned or implied in title, abstract, concepts, or technical content.",
+      "evidence": [
+        "Interest topics: emotion; Paper concepts include Credential, Protocol, Computer security, Reputation — no affective/emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e9006ca2c2c564eeb05119a8e0c5b32df766fdaf3e51511aecccd1623fa519c6": {
+    "paper_id": "https://openalex.org/W4416447741",
+    "title": "Losing is for Cherishing: Data Valuation Based on Machine Unlearning and Shapley Value",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:15.807Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on data valuation, machine unlearning, and Shapley value computation for AI models; it contains no mention of emotion, affect, sentiment, or any psychological or affective constructs.",
+      "evidence": [
+        "Abstract and title contain no emotion-related terms; core concepts are computational efficiency, data markets, and model unlearning."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d270d9ead640f977831b170392c24918e47b38d87ec3d96328212828fde30de0": {
+    "paper_id": "https://openalex.org/W4416254766",
+    "title": "Assessing Data Replication in Symbolic Music via Adapted Structural Similarity Index Measure",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:16.005Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on data replication detection in symbolic music using an adapted image similarity metric; no connection to emotion, affect, or psychological/behavioral aspects of emotion is present.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, mood, or related constructs; technical focus is on SSIM adaptation for plagiarism detection in AI-generated music."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7de141a9f00a3430ef35a5f7ede87713f46194411d5817a4c68873fdc0afddab": {
+    "paper_id": "https://openalex.org/W4411569807",
+    "title": "Federated learning with heterogeneous data and models based on global decision boundary distillation",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:16.188Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on federated learning, decision boundary distillation, and statistical heterogeneity—technical machine learning topics with no conceptual, methodological, or applied connection to emotion or affective science.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper concepts: 'Distillation', 'Boundary (topology)', 'Artificial intelligence', 'Machine learning' — none relate to affective computing or emotion modeling."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7e938a2fcae03d95323103abda93be24dbee4ef64f3520fa6960fcecbcf4364c": {
+    "paper_id": "https://openalex.org/W4412382955",
+    "title": "Oxygen Vacancy‐Driven Lattice Modulation in Zn <sub>2</sub> P <sub>2</sub> O <sub>7</sub> : A Novel Anode Enabling Accelerated Kinetics and Long Cycling Stability for Sodium‐Ion Batteries",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:16.308Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in materials science and electrochemistry, focusing on oxygen vacancies and battery anode performance; no connection to emotion or affective science.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper concepts: 'Materials science', 'Anode', 'Ion', 'Kinetics', 'Oxygen', 'Vacancy defect', 'Sodium', 'Lattice (music)' — none relate to affective/emotion research."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e7583da4781e460eda502591540af65b1a71618c3806d35340e939e09b4e98fd": {
+    "paper_id": "https://openalex.org/W4415539240",
+    "title": "Multi-Accent Mandarin Dry-Vocal Singing Dataset: Benchmark for Singing Accent Recognition",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:16.494Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on singing accent recognition, regional dialects in Mandarin singing, and dataset construction—none of which involve emotion modeling, affective computing, or emotional content analysis.",
+      "evidence": [
+        "Title and abstract emphasize 'singing accent recognition', 'regional accent annotations', and 'dialectal influences', with no mention of emotion, affect, valence, arousal, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d2a2743c18bbeb88fe0ff4230f21eb7aca6f546d87f711685255f042b2d62fa7": {
+    "paper_id": "https://openalex.org/W4410986449",
+    "title": "Array center and array corner loading effect improvement in r-SADP",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:17.536Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a semiconductor process engineering study focused on etching uniformity in chip fabrication; 'emotion' is unrelated to its technical content.",
+      "evidence": [
+        "Concepts include Center (category theory), Computer science, Materials science, Chemistry, Crystallography — no emotion-related terms or themes"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e8201a06372e74e6a74a73ee6341fc2e0cd3438feb3deac57f5e9ca31502a671": {
+    "paper_id": "https://openalex.org/W4414360199",
+    "title": "AI-Assisted Human-Pet Artistic Musical Co-Creation for Wellness Therapy",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:17.725Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses emotion-related outcomes (anxiety reduction, pleasure enhancement, emotional investment) in a therapeutic context, aligning precisely with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Results demonstrate significant enhancements in pleasure and creative satisfaction",
+        "Significant reduction in participants' anxiety levels",
+        "Leveraging pet vocal timbres to enhance emotional investment"
+      ],
+      "keywords": [
+        "emotion",
+        "anxiety",
+        "pleasure",
+        "emotional investment",
+        "wellness therapy",
+        "affective response"
+      ],
+      "research_directions": [
+        "affective computing in human-animal interaction",
+        "emotion-aware AI music generation",
+        "therapeutic affective co-creation",
+        "emotion measurement in creative wellness interventions"
+      ]
+    }
+  },
+  "33825eaf37b28d5af64ad1e358a77566779f72ed4175d355a52815b698c9b6e5": {
+    "paper_id": "https://openalex.org/W4415546045",
+    "title": "PetChat: An Emotion-Aware Pet Communication System Powered by LLMs and Wearable Devices",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:17.831Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on emotion recognition (feline vocal emotion), affective understanding, and emotion-driven human–pet interaction — directly aligning with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title contains 'Emotion-Aware'",
+        "Abstract states 'emotion-driven communication', 'cat vocal emotion recognition module', 'affective understanding'",
+        "System embeds 'emotion classifier' with reported accuracy on a 10-class feline vocalization dataset"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "affective computing",
+        "vocal emotion",
+        "human-animal interaction",
+        "wearable affective systems"
+      ],
+      "research_directions": [
+        "affective human-computer/animal interaction",
+        "multimodal emotion sensing",
+        "LLM-based affective response generation",
+        "real-time emotion-aware wearables"
+      ]
+    }
+  },
+  "0946d0b0929c3f6ba32a814ac71b1307a08414d8a3a08e98650227d8546e80b6": {
+    "paper_id": "https://openalex.org/W4416235991",
+    "title": "Diff-V2M: A Hierarchical Conditional Diffusion Model with Explicit Rhythmic Modeling for Video-to-Music Generation",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:17.970Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper explicitly incorporates emotional features to shape the 'affective tone' of generated music, directly aligning with the researcher's interest in 'emotion'. Emotion is used as a functional, structural component in the model architecture (first-layer cross-attention) and is evaluated for contextual and affective coherence.",
+      "evidence": [
+        "we also extract semantic and emotional features",
+        "emotional features shape the affective tone via the first layer",
+        "To ensure contextual and affective coherence, we also extract semantic and emotional features"
+      ],
+      "keywords": [
+        "affective tone",
+        "emotional features",
+        "affective coherence",
+        "emotion modeling",
+        "video-to-music generation"
+      ],
+      "research_directions": [
+        "Affective computing",
+        "Multimodal emotion representation",
+        "Emotion-conditioned generative models",
+        "Affective audiovisual alignment"
+      ]
+    }
+  },
+  "31f66a66193147eeedfa036c0f49ec8d9c5030b7f197dc8b4cd543c5d58bc265": {
+    "paper_id": "https://openalex.org/W4407593371",
+    "title": "A Two-Level Anomaly Detection Method for Industrial System Cybersecurity Using Ggl-Wave-Cnn",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:18.376Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on cybersecurity anomaly detection using signal processing and AI methods; no connection to emotion or affective science is indicated by title, venue, or listed concepts.",
+      "evidence": [
+        "Concepts: Anomaly detection, Computer security, Artificial intelligence, Physics"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9acae48eeec2f828cd024c31bd21d0131e15e4703fac39e3da747efb085507e1": {
+    "paper_id": "https://openalex.org/W4407759530",
+    "title": "A Comprehensive Survey on Generative AI for Video-to-Music Generation",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:18.758Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical aspects of generative AI for video-to-music synthesis, with no mention of emotion modeling, affective computing, or psychological/behavioral dimensions of emotion.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; topics are strictly technical: generative grammar, multimodal AI, music generation frameworks"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6f744e56822f446094851f44587fda626ecc902d2faa1db0de24cb9ea6445a11": {
+    "paper_id": "https://openalex.org/W4412019452",
+    "title": "Crosslinked ion-conducting hybrid coating layers for robust artificial solid-electrolyte interphase towards high-performance silicon anodes",
+    "researcher_name": "Kejun Zhang",
+    "researcher_openalex_author_id": "A5101577175",
+    "updated_at": "2026-02-20T14:42:18.802Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in materials science and electrochemistry, focusing on battery anode interfaces; no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract concern silicon anodes, SEI layers, and ion conduction—no emotional, psychological, or affective terms or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  }
+}

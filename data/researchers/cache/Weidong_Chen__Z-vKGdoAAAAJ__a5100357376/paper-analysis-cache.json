@@ -1,0 +1,375 @@
+{
+  "f3c0d6be000014a1785473a9b1e19fb0563682edfa36dfcd16941de968b2e809": {
+    "paper_id": "https://openalex.org/W4414329710",
+    "title": "Covalent Organic Frameworks for Water Sorption: The Importance of Framework Physical Stability",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.425Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on material stability and water sorption properties of covalent organic frameworks, with no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract exclusively discuss COFs, physical stability, water vapor adsorption, and device-level dehumidification."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a42d97bf0d1330f1ec5dedd85bd086d7414217f5185379de1ac520fca202cf1d": {
+    "paper_id": "https://openalex.org/W4411730872",
+    "title": "Material point method investigation of thermal effects on combustion evolution in composition B explosive",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.476Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on thermal and combustion dynamics in explosive materials using computational mechanics; no connection to human emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "All concepts and abstract content pertain to physics, thermodynamics, and energetic materials—no emotion-related terms or contexts appear."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f9b03498c0fab92503737edd38010b29b3890fc6e73d9b9348e3f088e2a576d0": {
+    "paper_id": "https://openalex.org/W4412707421",
+    "title": "Interrupted field-stop layer reverse conducting MOS controlled thyristor and mitigation of the voltage snapback",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.492Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in power semiconductor device engineering, focusing on thyristor design and voltage snapback mitigation; no connection to emotion or affective science.",
+      "evidence": [
+        "Title contains only electrical engineering terms: 'field-stop layer', 'reverse conducting MOS controlled thyristor', 'voltage snapback'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "1cbb9ae6e426491db218a753e059b27a3b66fecb032b45c581d4e7e35f0e4c8f": {
+    "paper_id": "https://openalex.org/W4412529475",
+    "title": "Universal mechanisms and technological breakthrough strategies for external gettering deoxidation: A titanium-based case study",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.497Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on metallurgical deoxidation techniques using titanium-based getters, with no conceptual or lexical connection to emotion or affective science.",
+      "evidence": [
+        "Title and concepts are exclusively materials science/metallurgy-focused: 'getter', 'titanium', 'alloy', 'metallurgy'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "14ad3ab64f81cb7ee3f16a85491e8420645f76ef78bda69f600b8056c0553e89": {
+    "paper_id": "https://openalex.org/W4416650108",
+    "title": "Progress in Deformation Sensing for Flexible Robots",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.510Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses exclusively on deformation sensing technologies for flexible robots, with no mention of emotion, affect, psychological states, human affective responses, or any related constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, sentiment, mood, or human-centered emotional interaction."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8b41eeded0e2127f129b712a77e6b0cee4b21fbc1cd9bc18e21a53e2370006ae": {
+    "paper_id": "https://openalex.org/W4415829412",
+    "title": "Noninvasive Temporal Interference Electrical Stimulation for Spinal Cord Rehabilitation",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.532Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on noninvasive electrical stimulation for spinal cord rehabilitation, with no mention of emotion, affect, or related psychological/physiological constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all content pertains to neuroengineering, electric field modeling, and spinal cord injury rehabilitation."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a617e6d729b8a5d898fa5315185a0a57647e69597dc23469f930d8a415a9c114": {
+    "paper_id": "https://openalex.org/W4411503959",
+    "title": "Interactively Integrating Reach and Grasp Information in Macaque Premotor Cortex",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.573Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on motor control (reach and grasp encoding in premotor cortex) with no mention or conceptual link to emotion or affective processes.",
+      "evidence": [
+        "Concepts include GRASP, Premotor cortex, Gesture, Neuroscience — all motor-cognitive; 'emotion' is absent from title, concepts, and abstract."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "19b29716e17450d8b15e5c792d1180840748d2f68a56267e4908c90cb9ce74fb": {
+    "paper_id": "https://openalex.org/W4411945671",
+    "title": "Effect of Ce on Microstructure and Mechanical Properties of Al-Cu-Mn Alloys",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.606Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on materials science and metallurgy, specifically the effect of cerium on microstructure and mechanical properties of aluminum alloys; no connection to emotion or affective science is indicated.",
+      "evidence": [
+        "Title: 'Effect of Ce on Microstructure and Mechanical Properties of Al-Cu-Mn Alloys'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "3ae394157a66ecb751c45c174afc036442e4cbbea79f9b8f579ec3a17aef30c3": {
+    "paper_id": "https://openalex.org/W4412860557",
+    "title": "MCFENet: Multi-scale fusion and feature extraction network for instance segmentation under urban scenarios",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.609Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on instance segmentation in urban scenarios using multi-scale fusion and feature extraction; no conceptual or methodological link to emotion or affective science is evident from title, venue, or listed concepts.",
+      "evidence": [
+        "Concepts include 'Segmentation', 'Feature extraction', 'Fusion', but no emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "fef9631da0f03e82b6ad9c6ba2f5f232975df40dc27687f474c9ae152dc5867e": {
+    "paper_id": "https://openalex.org/W4411171959",
+    "title": "Optimization-Based Trajectory Planning for Tractor-Trailer Vehicles on Curvy Roads: A Progressively Increasing Sampling Number Method",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.695Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is purely technical, focusing on trajectory optimization and sampling methods for tractor-trailer vehicles; no emotion-related concepts, measures, or applications are present.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, psychology, human factors, or related terms; all concepts are in robotics, control theory, and automotive engineering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "03307e7c9bc88d748fd23526d8701887e0817e426ae42f6a528cfaa0785b97fe": {
+    "paper_id": "https://openalex.org/W4415731658",
+    "title": "Real-Time Whole-Body Contact Estimation of Continuum Robots Using Multiplexed Fibers for Embodied Actuation and Sensing to Quantify Interactions",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.695Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on real-time contact force and position estimation for continuum robots using fiber sensing and model-informed neural networks; no mention of emotion, affect, human affective states, or related psychological/physiological constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, sentiment, feeling, mood, or human emotional response."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9d1102e7c15c3bed34bfbf2149234322c2a8bff18436b5463201531fdf9af653": {
+    "paper_id": "https://openalex.org/W4413973038",
+    "title": "Hybrid pneumatic-hydraulic actuation for MRI-guided robotic stereotactic neurointervention",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.808Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on robotic engineering, MRI-guided surgery, and biomedical actuation systems with no mention of emotion, affective states, psychological processes, or related constructs.",
+      "evidence": [
+        "Abstract and concepts contain only technical terms from robotics, imaging, and neurosurgery; 'emotion' does not appear in title, abstract, or listed concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "5fed99820c232fc7e96f57d8633786975f230b937af0859b2afa781e3c5f0524": {
+    "paper_id": "https://openalex.org/W4413147035",
+    "title": "MNE-SLAM: Multi-Agent Neural SLAM for Mobile Robots",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.838Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on multi-agent neural SLAM for mobile robots and contains no mention of emotion, affective computing, or any psychological, behavioral, or human-centered affective constructs.",
+      "evidence": [
+        "All concepts and the abstract center on robotics, SLAM, neural implicit representations, and dataset creation for 3D mapping—no emotion-related terms or themes appear."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d54f2f9a7b21b32cb300178897807763a9a07bb85020305d13ed168e8e99c5aa": {
+    "paper_id": "https://openalex.org/W4417102259",
+    "title": "Registering the 4D Millimeter Wave Radar Point Clouds Via Generalized Method of Moments",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.958Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on technical point cloud registration for 4D millimeter wave radar sensors in robotics perception, with no mention or conceptual link to emotion, affective computing, or human-centered affective phenomena.",
+      "evidence": [
+        "Title and abstract exclusively discuss radar sensor data, point cloud registration, Generalized Method of Moments, SLAM, and robustness under weather conditions."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9b12a5f0fb5f655500c845cef873681a4c29e274168d17b55fb3e27d95c618b6": {
+    "paper_id": "https://openalex.org/W4415789718",
+    "title": "Influence of suspension system service degradation characteristics on running stability performance of 160 km/h express freight car",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:38.991Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on mechanical suspension degradation and train dynamic stability, with no conceptual, methodological, or empirical connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract exclusively discuss freight car suspension systems, damping failures, multibody dynamics, and speed restrictions—no mention of emotion, affect, psychology, neuroscience, or human response."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7cd3547c01c4cabc38e1db75480c6af6f0f7a7e03397847e34a50c9b9e6620c4": {
+    "paper_id": "https://openalex.org/W4416355757",
+    "title": "EmoVerse: A MLLMs-Driven Emotion Representation Dataset for Interpretable Visual Emotion Analysis",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:39.148Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.98,
+      "confidence": 0.99,
+      "reason": "The paper is explicitly focused on emotion representation, analysis, and interpretation in visual content, directly aligning with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title contains 'EmoVerse' and 'Emotion Representation'",
+        "Abstract centers on 'Visual Emotion Analysis (VEA)', 'affective gap', 'Categorical Emotion States (CES)', and 'Dimensional Emotion Space (DES)'",
+        "Methodology emphasizes interpretable, multi-layered emotional reasoning grounded in visual regions"
+      ],
+      "keywords": [
+        "visual emotion analysis",
+        "emotion representation",
+        "interpretable AI",
+        "affective computing",
+        "emotion dataset"
+      ],
+      "research_directions": [
+        "explainable affective vision",
+        "multimodal emotion modeling",
+        "knowledge-graph-based emotion annotation",
+        "continuous and discrete emotion representation"
+      ]
+    }
+  },
+  "9ed92d041736924a34432116ff9ef67128e3b296584b59e48d47675e98c3525e": {
+    "paper_id": "https://openalex.org/W4408634144",
+    "title": "Process design of molten salt distillation separation of ZrCl4 and HfCl4 for nuclear purposes",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:41.449Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on chemical engineering and nuclear materials separation; no connection to emotion or affective science.",
+      "evidence": [
+        "Title explicitly describes molten salt distillation for ZrCl4/HfCl4 separation in nuclear contexts"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "33ef49ffa41a4a70cdbb8cb928287cfbc59606a09309f1fb82227699a837e7a0": {
+    "paper_id": "https://openalex.org/W4407567741",
+    "title": "Multi-axis robotic forceps with decoupled pneumatic actuation and force sensing for cochlear implantation",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:41.684Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on robotic surgical instrumentation for cochlear implantation, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Concepts include Forceps, Cochlear implantation, Actuator, Robot, Biomedical engineering — all technical and clinical, not affective"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a9e9abdf7a7e67a635908cbb5d05ad09dda31df310421c740a81f01ace2f8267": {
+    "paper_id": "https://openalex.org/W4416113092",
+    "title": "Non-Invasive Temporal Interference Electrical Stimulation for Spinal Cord Injury Rehabilitation: A Simulation Study",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:41.719Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computational modeling and neuromodulation for spinal cord injury rehabilitation, with no mention of emotion, affective processes, or related psychological/physiological constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, mood, feeling, or behavioral/emotional outcomes."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6fa200d1deef10e9c641376d425c88d66750dc281f93f69015e4ec86f8d95fb0": {
+    "paper_id": "https://openalex.org/W4413980338",
+    "title": "Just-In-Time Multi-Agent Path Finding with Earliness-Tardiness Costs",
+    "researcher_name": "Weidong Chen",
+    "researcher_openalex_author_id": "A5100357376",
+    "updated_at": "2026-02-20T14:40:42.026Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper addresses multi-agent path finding with earliness-tardiness optimization, a technical problem in mathematical optimization and computer science; no conceptual, methodological, or empirical connection to emotion or affective science.",
+      "evidence": [
+        "Interest topics: emotion; Paper concepts: Tardiness, Mathematical optimization, Path (computing), etc. — no emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  }
+}

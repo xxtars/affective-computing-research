@@ -1,0 +1,478 @@
+{
+  "b5a60bd640616e18d14aa3be806ef7a7720c3acdb8c2deadd14a1d116d529eee": {
+    "paper_id": "https://openalex.org/W4417410482",
+    "title": "A tiered framework for ecological risk assessment of contaminants: from model species to local pollution-impacted assemblages",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:53.678Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on ecological risk assessment of environmental contaminants, with no apparent connection to human or computational emotion modeling, affective science, or emotion-related methodologies.",
+      "evidence": [
+        "Title explicitly concerns ecological risk assessment and pollution-impacted assemblages"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bf446a41f6c5f72b7e374ec89e4b964d02da9d28112e84f88ec140e7c394bc7d": {
+    "paper_id": "https://openalex.org/W4417112369",
+    "title": "Code Agent can be an End-to-end System Hacker: Benchmarking Real-world Threats of Computer-use Agent",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:54.980Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computer-use agents, cybersecurity, and adversarial benchmarking; no connection to emotion, affective computing, or psychological/physiological aspects of emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are OS security, MITRE ATT&CK, LLM-based agents, and cyber threats."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "24e0041861c7f9f9efb8454ff73495f3514f0a70915255d2a663524967295e6d": {
+    "paper_id": "https://openalex.org/W4417207662",
+    "title": "Body sound denoising technologies: A survey and validation",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:55.305Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on body sound denoising technologies in biomedical signal processing, with no explicit or implied connection to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; venue is biomedical engineering; abstract is empty and no concepts provided."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "2408bd274aaba4085ce513d25f05c4c27f45bcdff5fc9f5f2faff7095365eba3": {
+    "paper_id": "https://openalex.org/W4416425531",
+    "title": "BBANet: Bilateral biological auditory-inspired neural network for heart sound classification",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:55.377Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on heart sound classification using an auditory-inspired neural network; no explicit connection to emotion or affective computing is indicated in the title or available metadata.",
+      "evidence": [
+        "Title mentions 'heart sound classification' and 'biological auditory-inspired neural network', with no emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7638973f103ae8d2ae45538773b1757b68cd4d834ad84ca28a3d1e29bcf21a3c": {
+    "paper_id": "https://openalex.org/W4414871457",
+    "title": "Flexible Electrodes: Catalyzing Commercial Revolution of Brain–Computer Interfaces",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:55.420Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on flexible electrodes and brain-computer interface commercialization, with no explicit or implied connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions 'Brain–Computer Interfaces' and 'Commercial Revolution', not emotion; abstract is empty; interest topic 'emotion' is not reflected in metadata."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "fb0f2e85e0ff53248d5394c7300eb8889e1865872765957c65ee4154272c5d36": {
+    "paper_id": "https://openalex.org/W4417100138",
+    "title": "From Generic to Specialized: A Subspecialty Diagnostic System Powered by Self-Supervised Learning for Cervical Histopathology",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:55.421Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on cervical histopathology diagnostics using self-supervised learning and multimodal AI; no mention of emotion, affective computing, or related psychological/physiological constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, sentiment, mood, or human affective states."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b3beea1eb21112f6f4f75abdb0c28155a4cdd4bc58b26e031527cb742a492bea": {
+    "paper_id": "https://openalex.org/W4417142135",
+    "title": "Disturbance Compensation for Safe Kinematic Control of Robotic Systems with Closed Architecture",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:55.456Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on robotic control theory, disturbance rejection, and safety-critical kinematic control—no connection to emotion, affective computing, or psychological/physiological aspects of emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are control theory, robotics, safety, and dynamic systems."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "75c8fc9bab9f05f249286c4220dab75d58a62aead53d90c4ca00b02e06c0c7ba": {
+    "paper_id": "https://openalex.org/W4415544795",
+    "title": "Artificial intelligence as a surrogate brain: bridging neural dynamical models and data",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:55.691Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on AI-based neural dynamical modeling and 'surrogate brains' for whole-brain dynamics prediction and neuroengineering applications, with no mention of emotion, affective processes, or related psychological/physiological constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, mood, feeling, valence, arousal, or affective neuroscience."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "2a02598706ad70023726a6b13fd07ca3a56ae3ea81a48ca9466dc12f3d6ee5df": {
+    "paper_id": "https://openalex.org/W4416798205",
+    "title": "Can Information Representations Inspired by the Human Auditory Perception Benefit Computer Audition-Based Disease Detection? An Interpretable Comparative Study",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:56.049Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.92,
+      "reason": "The paper focuses on auditory signal representations for disease detection (psychological/physiological), not emotion modeling, recognition, or affective computing; 'emotion' in the researcher's interest is not substantiated by title, abstract, or concepts.",
+      "evidence": [
+        "Abstract mentions 'a psychological ... disease' but does not specify emotion-related disorders (e.g., depression, anxiety) nor discusses emotion elicitation, perception, or affective states."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "83207da06c8eb0e1347cb8de3af972bd84625c5f416b252fb1fb93e21a54725a": {
+    "paper_id": "https://openalex.org/W4415687508",
+    "title": "LLM-based semantic integration of stimulus–response pairs for depression detection in interview scenarios",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:56.493Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly targets depression detection—a core affective/emotion-related clinical condition—and uses stimulus–response semantic integration, which inherently involves emotional expression and regulation in interview contexts.",
+      "evidence": [
+        "Title contains 'depression detection in interview scenarios'",
+        "Researcher's interest topic is 'emotion'"
+      ],
+      "keywords": [
+        "depression",
+        "emotion recognition",
+        "affective computing",
+        "LLM",
+        "stimulus-response",
+        "mental health"
+      ],
+      "research_directions": [
+        "Affective NLP",
+        "Clinical emotion assessment",
+        "Multimodal affective behavior analysis",
+        "AI for mental health screening"
+      ]
+    }
+  },
+  "04f571a2b42c88c27aae371858b3f4311c7834a4fdf824296912aa662a8d676d": {
+    "paper_id": "https://openalex.org/W4416157421",
+    "title": "Frequency-Domain Entropy Sequence as a Dynamic EEG Representation for Depression Recognition",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:56.649Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly addresses depression recognition using EEG signals within the context of affective computing, directly aligning with the researcher's interest in 'emotion'.",
+      "evidence": [
+        "'In the field of affective computing, representing depression through electroencephalogram (EEG) signals remains a fundamental challenge'",
+        "'emotion' is the sole listed interest topic for Bin Hu"
+      ],
+      "keywords": [
+        "affective computing",
+        "depression recognition",
+        "EEG",
+        "emotion",
+        "frequency-domain entropy"
+      ],
+      "research_directions": [
+        "affective brain-computer interfaces",
+        "emotion-based mental health assessment",
+        "dynamic neural biomarkers of emotion disorders"
+      ]
+    }
+  },
+  "5b13c9be4d0651ce8cb10bc08f54d12c30f65dd05492a97924505c840889f264": {
+    "paper_id": "https://openalex.org/W4416016735",
+    "title": "Spatio-temporal fusion of fNIRS signals with multi-view structured sparse canonical correlation analysis for depression detection",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:56.835Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper focuses on depression detection using neuroimaging signals, and depression is a core clinical affective/emotional disorder; the researcher's stated interest is 'emotion', which directly encompasses emotion-related psychopathology including depression.",
+      "evidence": [
+        "Title explicitly mentions 'depression detection'",
+        "Researcher's interest topic is 'emotion' — depression is a canonical affective disorder"
+      ],
+      "keywords": [
+        "depression",
+        "fNIRS",
+        "emotion recognition",
+        "affective computing",
+        "mental health",
+        "canonical correlation analysis"
+      ],
+      "research_directions": [
+        "affective neuroscience",
+        "clinical emotion assessment",
+        "multimodal emotion sensing",
+        "computational psychiatry"
+      ]
+    }
+  },
+  "1216a29f2afcaf9445c7be24dac536b26d02723db2b5d027c05a017d01082bf7": {
+    "paper_id": "https://openalex.org/W4416707206",
+    "title": "MAMILS: A Memory-Aware Multiobjective Scheduler for Real-Time Embedded EEG Depression Diagnosis",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:56.924Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper focuses on real-time embedded EEG-based depression diagnosis, which is a core affective/emotion-related clinical application; the abstract explicitly states it targets 'affective disorders', and the researcher's stated interest is 'emotion'.",
+      "evidence": [
+        "Depression detection using EEG signals [...] has become a well-established approach in the field of affective disorders.",
+        "Researcher's interest topics: emotion"
+      ],
+      "keywords": [
+        "depression",
+        "EEG",
+        "affective disorders",
+        "emotion recognition",
+        "wearable diagnostics"
+      ],
+      "research_directions": [
+        "affective computing",
+        "clinical emotion AI",
+        "embedded affective signal processing",
+        "real-time mental health monitoring"
+      ]
+    }
+  },
+  "96d5dc4f8583b273323f35c35b3f4621a16d499ff650f18ee8e3f5aa22cdaee0": {
+    "paper_id": "https://openalex.org/W4417165842",
+    "title": "FDDGNet: An information bottleneck-inspired feature disentanglement network for cross-subject EEG-based emotion recognition",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:57.082Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly targets EEG-based emotion recognition, directly aligning with the researcher's interest topic 'emotion'. The title and venue (Neurocomputing) further support its affective computing focus.",
+      "evidence": [
+        "Title contains 'EEG-based emotion recognition'",
+        "Method name 'FDDGNet' is framed for emotion recognition",
+        "Venue Neurocomputing frequently publishes affective brain-computer interface work"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "EEG",
+        "feature disentanglement",
+        "information bottleneck",
+        "cross-subject learning"
+      ],
+      "research_directions": [
+        "affective computing",
+        "neural signal processing for emotion",
+        "transfer learning in affective BCI",
+        "interpretable deep learning for emotion"
+      ]
+    }
+  },
+  "42d22eccb394021b88ef52fce3f9697f380a95d9911a89a1777d8a0e5aaaadaa": {
+    "paper_id": "https://openalex.org/W4415592063",
+    "title": "Endogenous event-related analysis reveals dynamic brain network reorganization abnormalities in depression",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:57.195Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.9,
+      "reason": "The paper focuses on dynamic brain network reorganization abnormalities in depression, a clinical condition fundamentally characterized by emotion dysregulation; 'depression' is a core affective disorder, and 'endogenous event-related analysis' implies investigation of internally generated emotional or cognitive-affective processes.",
+      "evidence": [
+        "Title explicitly mentions 'depression'",
+        "Researcher's interest topic is 'emotion'",
+        "Depression is a canonical emotion-related psychiatric disorder"
+      ],
+      "keywords": [
+        "depression",
+        "emotion dysregulation",
+        "brain networks",
+        "endogenous events",
+        "affective neuroscience"
+      ],
+      "research_directions": [
+        "Affective brain dynamics",
+        "Computational psychiatry",
+        "Emotion-related neural reorganization",
+        "Neuroimaging of mood disorders"
+      ]
+    }
+  },
+  "db33217d1a9d712addd196ba8fb30d496a67d18e07f8697b8bbf8d4dfa75eb91": {
+    "paper_id": "https://openalex.org/W4414518997",
+    "title": "EmoSavior: Depression recognition and intervention via multimodal physiological signals and large language models",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:57.318Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses emotion-related research through depression recognition—an affective disorder—and uses physiological signals and LLMs for affective intervention, aligning precisely with 'emotion' as a core interest topic.",
+      "evidence": [
+        "Title contains 'EmoSavior' and explicitly states 'Depression recognition and intervention'",
+        "Depression is a clinically defined affective/emotional disorder",
+        "Focus on multimodal physiological signals (e.g., HRV, EDA) known to reflect emotional states"
+      ],
+      "keywords": [
+        "depression",
+        "emotion recognition",
+        "physiological signals",
+        "affective computing",
+        "large language models",
+        "mental health intervention"
+      ],
+      "research_directions": [
+        "Affective computing",
+        "Clinical emotion AI",
+        "Multimodal affective sensing",
+        "AI-driven mental health support"
+      ]
+    }
+  },
+  "09fced83c1402aad3686fc7a252d0cf250ded05f8544e2b2a71b957d91b5b545": {
+    "paper_id": "https://openalex.org/W4414492796",
+    "title": "AWRUT: hyperspectral video tracker based on attention weights and response map union",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:58.322Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on hyperspectral video tracking using attention weights and response map union, with no mention of emotion, affective computing, or psychological/physiological correlates of emotion.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; core concepts are computer vision, hyperspectral imaging, and target tracking."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9cea44064f468578aa5e76211faf06d0766ea2556bf93edfffcb984b72538b02": {
+    "paper_id": "https://openalex.org/W4414310255",
+    "title": "Omni-/Unidirectional Dual-Mode Dual-Polarized Wearable Antenna for IoT Applications",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:58.496Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper is a technical antenna design for IoT/WBAN applications with no connection to emotion, affective computing, or psychological/physiological affective states.",
+      "evidence": [
+        "Title and abstract focus exclusively on antenna radiation patterns, polarization, frequency bands, SAR, and wearable hardware performance."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f3f916e9626217dbc1263daa05886b182b22453576ad8c0a186f3c26bc489446": {
+    "paper_id": "https://openalex.org/W4414481283",
+    "title": "Deep adaptive fusion network with multimodal neuroimaging information for MDD diagnosis: an open data study",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:34:59.069Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.9,
+      "confidence": 0.95,
+      "reason": "The paper focuses on MDD (Major Depressive Disorder) diagnosis using multimodal neuroimaging, which is a core clinical affective disorder; 'emotion' is a central construct in MDD pathophysiology and assessment, and the researcher's stated interest in 'emotion' strongly aligns with this affective neuroscience application.",
+      "evidence": [
+        "Title explicitly addresses MDD diagnosis",
+        "MDD is a canonical emotion-related psychiatric disorder",
+        "Use of neuroimaging for affective disorder diagnosis falls under emotion research"
+      ],
+      "keywords": [
+        "major depressive disorder",
+        "affective neuroscience",
+        "neuroimaging",
+        "emotion regulation",
+        "biomarkers",
+        "deep learning"
+      ],
+      "research_directions": [
+        "computational psychiatry",
+        "affective brain-computer interfaces",
+        "multimodal emotion recognition",
+        "clinical emotion biomarkers"
+      ]
+    }
+  },
+  "a8f9531f8042c2f3d0d3b0b9aeae7378a95ea82c3a6319663e854e50ec8cd286": {
+    "paper_id": "https://openalex.org/W4414299652",
+    "title": "FedVCPL-Diff: A federated convolutional prototype learning framework with a diffusion model for speech emotion recognition",
+    "researcher_name": "Bin Hu",
+    "researcher_openalex_author_id": "A5100380066",
+    "updated_at": "2026-02-20T14:35:00.623Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly targets speech emotion recognition and incorporates 'emotion' in its core methodological framing, directly aligning with the researcher's stated interest topic.",
+      "evidence": [
+        "Title contains 'speech emotion recognition'",
+        "Method name includes 'FedVCPL-Diff' where 'VCPL' implies 'Voice/Verbal Convolutional Prototype Learning' for emotion",
+        "Venue 'Information Fusion' is a high-impact journal covering multimodal affective computing"
+      ],
+      "keywords": [
+        "speech emotion recognition",
+        "federated learning",
+        "diffusion models",
+        "prototype learning",
+        "affective computing"
+      ],
+      "research_directions": [
+        "federated affective computing",
+        "privacy-preserving emotion modeling",
+        "diffusion-based representation learning for emotions",
+        "convolutional prototype networks for paralinguistic analysis"
+      ]
+    }
+  }
+}

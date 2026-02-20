@@ -1,0 +1,362 @@
+{
+  "8dc561d4c3f8d1942e3f7cf29d272e0888d46573d1d03400b2f62cc92619d983": {
+    "paper_id": "https://openalex.org/W7118615263",
+    "title": "Long‐Term Chinese Milk Vetch Application Alters the Molecular Composition of Dissolved Organic Matter Through Reshaping Microbial Ecological Strategists",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:54.666Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on soil biogeochemistry, microbial ecology, and dissolved organic matter composition; no connection to human emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "All concepts and abstract content pertain to environmental chemistry and soil microbiology, with zero mention of emotion, affect, cognition, behavior, or related domains."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e6a41187ed997552300f61852e48a2c9e25d3107cb651218ffda72ef6c9896bc": {
+    "paper_id": "https://openalex.org/W4414584509",
+    "title": "DMetFinder: A novel mass spectrometry analysis tool for comprehensive drug metabolite detection",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.752Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on mass spectrometry and drug metabolite detection, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title: 'DMetFinder: A novel mass spectrometry analysis tool for comprehensive drug metabolite detection'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "beda2c968406d52d10baee0f7c82c501a3f85f55a548ef29e1463f19a869e942": {
+    "paper_id": "https://openalex.org/W4417027694",
+    "title": "Acute myeloid leukemia with plasmacytoid dendritic cell differentiation initially presenting as skin lesions: A case report",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.767Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper is a clinical case report on acute myeloid leukemia with skin presentation, unrelated to emotion or affective science.",
+      "evidence": [
+        "Title describes a hematologic malignancy with dermatologic manifestation; no emotional, psychological, or affective content indicated."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "dea453e62d565ff648b1d7f8a1a971e0b89c71f6e40385047f4cc8bdf7e5719f": {
+    "paper_id": "https://openalex.org/W4415322388",
+    "title": "Digital Microfluidic Platform Based on Printed Circuit Board for Affinity Evaluation of Mertansine Aptamers",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.768Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on digital microfluidics and aptamer affinity evaluation for a tumor drug, with no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; topic is analytical chemistry/biosensing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c4795b80e473d35e29c96856782ee21373d87402a7442c80d59d43f189b6fe4b": {
+    "paper_id": "https://openalex.org/W4417009185",
+    "title": "Ecografía Gástrica Preoperatoria en Anestesia",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.786Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper title is in Spanish and refers to preoperative gastric ultrasound in anesthesia, which is a clinical procedural topic unrelated to emotion or affective science.",
+      "evidence": [
+        "Title: 'Ecografía Gástrica Preoperatoria en Anestesia'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "18c0e1877b1d56a325e825acaafe9e195b3ba12d82c84b50b10b275fb699b475": {
+    "paper_id": "https://openalex.org/W4415942203",
+    "title": "2988MO Patient-derived organoids predict clinical response and guide personalized therapy in advanced thyroid cancer",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.786Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on patient-derived organoids for clinical response prediction in thyroid cancer, with no indication of emotion or affective science content.",
+      "evidence": [
+        "Title and venue indicate oncology/clinical translation; no emotion-related terms or concepts present."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c5d0ce9b81ddd17882eb9ab8aad8a0e47a431ebf96284fe83876c06d70c2a704": {
+    "paper_id": "https://openalex.org/W4413854165",
+    "title": "Ultrasound-assisted enzymatic extraction optimization of Cistanche deserticola polysaccharides, and combined analysis of the relationship between polysaccharide structure and activity by liquid chromatography and GC-MS",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.811Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on analytical chemistry and biochemical extraction methods for polysaccharides, with no conceptual or methodological connection to emotion or affective science.",
+      "evidence": [
+        "Title mentions ultrasound-assisted enzymatic extraction, chromatography, and polysaccharide structure-activity analysis"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "dd9f7f6ee89e0964f34b083ac13d505df097199ea1c3141b1d1287090c174af1": {
+    "paper_id": "https://openalex.org/W4415973898",
+    "title": "Foliar application of iron-oxide nanomaterials improves cadmium tolerance in dandelion seedlings through coordinated physiological and metabolic regulation",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.946Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on nanomaterial-induced physiological and metabolic responses to cadmium stress in plants, with no connection to human or animal emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "Title explicitly concerns cadmium tolerance and physiological/metabolic regulation in dandelion seedlings"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "310e4d17d81fca1ad42962d254bc246f691dd29c79e6d7467d4d38429172bc2c": {
+    "paper_id": "https://openalex.org/W4414861707",
+    "title": "Integrating cross-sample and cross-modal data for spatial transcriptomics and metabolomics with SpatialMETA",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.954Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computational integration of spatial transcriptomics and metabolomics data, with no indication of emotion or affective science content.",
+      "evidence": [
+        "Title and venue indicate bioinformatics/spatial omics methodology; 'emotion' is not present in title, metadata, or abstract (which is empty)."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "260057aeacf0980008f5840890a11ccb77a4e1b819a188e81537d6e636aee731": {
+    "paper_id": "https://openalex.org/W4415350324",
+    "title": "Resilient Renewal of Aging Parks in High-Density Cities: Integrating Performance-Based Design and the Environmental Overlay Method in the Wuxi Case",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:55.972Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on climate-adaptive urban park design using performance-based metrics and environmental simulations; no mention of emotion, affective states, psychological responses, or related constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, mood, perception, subjective experience, or human emotional response."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "dd97cc9fbc204d308d94380eb6fe8b1a5dccbe7626681156de2102269b7e4ad0": {
+    "paper_id": "https://openalex.org/W4416978059",
+    "title": "Recent Advances in On‐Tissue Chemical Derivatization Strategies for Enhancing MALDI‐MSI",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:56.075Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a technical review on chemical derivatization for MALDI-MSI in biomedical mass spectrometry; it contains no mention of emotion, affect, psychology, neuroscience of emotion, or related constructs.",
+      "evidence": [
+        "Abstract focuses exclusively on analytical chemistry methods for enhancing mass spectrometry imaging of biomolecules."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a66b77209c841f3c4b97c167e2f95b10133cb3c0bb5f7304f9fcc81a05f3244e": {
+    "paper_id": "https://openalex.org/W4417344357",
+    "title": "Investigating the Ecotoxicity of DEHP and ZnO NPs in Dandelion: Effects on Growth, Physiology, and Metabolite Profiles",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:56.124Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on ecotoxicology, plant physiology, and metabolomics under chemical stress; 'emotion' is unrelated to plant biochemical responses.",
+      "evidence": [
+        "The abstract discusses biomass reduction, oxidative stress, metabolite profiles, and toxicological interactions in dandelions—no mention or conceptual link to human or animal emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "978bb59a2d08cb9b1904b01f67bfde74024e66f977b8685b4c3fdee0fb5a9bdf": {
+    "paper_id": "https://openalex.org/W7116599145",
+    "title": "Auditor Attributes and Audit Effectiveness Through the Lens of Accounting Errors: Evidence from Australia",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:56.148Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on audit effectiveness, accounting errors, and auditor attributes in accounting and corporate governance; it contains no mention of emotion, affect, psychological states, or related constructs.",
+      "evidence": [
+        "Abstract and concepts exclusively center on accounting, audit risk, governance, and firm-level expertise—no affective or emotion-related terms appear."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "44241ab74755ac1bd4633025eaef0c635a31135ad0c55bf7b0a8dbe6f352e9e6": {
+    "paper_id": "https://openalex.org/W4414945897",
+    "title": "Engineering <i>Streptomyces Albulus</i> for Efficient ε-Poly- <scp>l</scp> -lysine Production",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:56.230Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a biochemical engineering study focused on microbial strain optimization for ε-poly-L-lysine production; it contains no content related to emotion, affect, psychology, or human behavior.",
+      "evidence": [
+        "Title and abstract exclusively discuss Streptomyces albulus mutagenesis, fermentation optimization, and metabolic engineering for industrial bioproduction."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b6c726d0b268bdef799a6371b00ee220561d1773f7a01209668b23f40d490e74": {
+    "paper_id": "https://openalex.org/W4415481067",
+    "title": "Quantitative Mass Spectrometry Imaging of Amino Acids Enabled by Pyridinium Salt MALDI Probe",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:56.312Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a technical methodological study in analytical chemistry focused on mass spectrometry imaging of amino acids; it contains no conceptual, empirical, or methodological engagement with emotion, affect, or psychological constructs.",
+      "evidence": [
+        "Title and abstract exclusively concern pyridinium salt MALDI probes, quantitative MSI, amino acid detection, and hepatocellular carcinoma tissue analysis."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "22323465ee0b4b870f3f429aff1319372c97ba648a939dcff45cf6187f829e66": {
+    "paper_id": "https://openalex.org/W4417184274",
+    "title": "A digital microfluidic platform based on CRISPR-Cas autocatalysis signal amplification for detection of two tumor biomarkers in saliva",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:56.396Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on a digital microfluidic platform for tumor biomarker detection using CRISPR-Cas signal amplification, which is biomedical engineering and analytical chemistry — unrelated to emotion or affective science.",
+      "evidence": [
+        "Title mentions 'detection of two tumor biomarkers in saliva' and 'CRISPR-Cas autocatalysis', with no emotional, psychological, or affective terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6f9e9479bb3293f280fa17a7d570fcc4823a277f5398e4ed80f00f46a682f929": {
+    "paper_id": "https://openalex.org/W4413485985",
+    "title": "Integrated Approach Reveals Fermented Moringa oleifera Leaves Extracts’ Impact on Mouse Sleep",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:58.288Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.92,
+      "reason": "The paper focuses on sleep physiology, gut-brain axis, neurotransmitter modulation (GABA, glutamate, serotonin), and microbiota—none of which directly address emotion or affective processes as defined in affective science.",
+      "evidence": [
+        "Abstract emphasizes sleep latency, duration, and neurochemical pathways—not emotional states, regulation, valence, arousal, or affective disorders."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "4beb4cd5bf797675ccdd8ec1d2c01f37a213372621427c725f0a0cd088837c99": {
+    "paper_id": "https://openalex.org/W4412558763",
+    "title": "High-value utilization of volcanic rock as NH3-SCR denitration catalyst loaded with Mn: denitration effect and mechanism",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:58.831Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on catalytic denitration chemistry using volcanic rock and manganese, with no conceptual or lexical connection to emotion or affective science.",
+      "evidence": [
+        "Title and concepts are exclusively from environmental chemistry, catalysis, and inorganic chemistry."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "cdf386cb3a73c86f18ce55f60a1978073284d70b31f54b25737fd66b2e2854c0": {
+    "paper_id": "https://openalex.org/W4412696262",
+    "title": "Do companies’ green credentials enhance trade credit provisions? Global evidence",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:59.131Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on corporate renewable energy adoption and its financial implications for trade credit, firm value, and supply-chain dynamics; no mention of emotion, affect, or psychological constructs.",
+      "evidence": [
+        "Interest topics: 'emotion'; paper concepts: Economics, International trade, Business; abstract contains zero emotion-related terms or mechanisms."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "073cf370a93e01b30f952fc8e68ddce27f27bdc56ad17978439dbd899b5bafab": {
+    "paper_id": "https://openalex.org/W4412688221",
+    "title": "Foliar nanoparticles alleviated cadmium-induced phytotoxicity in dandelion via regulation of ionomics, metabolomics, and rhizobacterial networks",
+    "researcher_name": "Jia Liu",
+    "researcher_openalex_author_id": "A5005829172",
+    "updated_at": "2026-02-20T14:32:59.180Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on plant toxicology, nanomaterials, and soil chemistry; 'emotion' is unrelated to the biological and environmental science context.",
+      "evidence": [
+        "Interest topic 'emotion' has no conceptual overlap with cadmium phytotoxicity, metabolomics, or rhizobacterial networks."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  }
+}

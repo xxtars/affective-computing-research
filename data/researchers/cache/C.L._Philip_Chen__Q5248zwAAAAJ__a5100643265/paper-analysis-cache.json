@@ -1,0 +1,362 @@
+{
+  "fcb0a445311269c8c20014a8784ed05870dbd79834374bb9b6453159bce834f7": {
+    "paper_id": "https://openalex.org/W7130502982",
+    "title": "Inhibition of ferroptosis by microbiota‐derived lithocholic acid underlies the intestinal radioprotection of a host defensin‐derived oligopeptide",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:07.554Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on intestinal radioprotection, ferroptosis inhibition, microbiota-derived bile acids, and molecular pharmacology—none of which intersect with emotion or affective science.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, mood, behavior, psychology, neuroscience of feeling, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "fdb926d72beefa0f325911f0792c0745e61fcd4a5bc80577c3e70e78ea3ac73b": {
+    "paper_id": "https://openalex.org/W7130341439",
+    "title": "Leveraging large language models for smart manufacturing: Reviews, enablers, challenges, and opportunities",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:08.908Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on large language models in smart manufacturing, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Concepts include Big data, Engineering, Process (computing), and Enabling—none relate to emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "545bcc57cfa7e9985424f1bc7a86da17eec821c372ec89539dee7de1c64b60a3": {
+    "paper_id": "https://openalex.org/W7128675416",
+    "title": "Interval forecast of natural gas daily consumption based on spatial–temporal Bayesian model",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:08.924Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on interval forecasting of natural gas consumption using a spatial-temporal Bayesian model, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title and concepts are exclusively technical/computational, centered on energy consumption and Bayesian modeling"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "1d07bfa9d055d0645f2e544316028ad7514bf3fa58622ca70518e58e732df4f5": {
+    "paper_id": "https://openalex.org/W7128379619",
+    "title": "DP7-C-loaded circ-ITCH from periodontal ligament stem cell-derived exosomes promotes alveolar bone defect repair via immunomodulation",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.087Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on exosome-mediated bone repair and immunomodulation in dentistry; no mention or conceptual link to emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "Concepts are exclusively biomedical: exosomes, stem cells, alveolar bone, immunomodulation"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7c2da34f9aa9f8cde28dd4687024f1cf9b9f0f4f49d67b259a70b13207a477f9": {
+    "paper_id": "https://openalex.org/W7128005789",
+    "title": "Model-driven deep learning enables speckle-free holography for 3D parallel nanofabrication",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.122Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on model-driven deep learning for speckle-free holography and nanofabrication, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Concepts include deep learning, holography, nanolithography, and computer vision—none relate to emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "5b629bd2ac1bf6201879b0a61cbb2373e0253ab952f7e276264731a44478916f": {
+    "paper_id": "https://openalex.org/W7130387352",
+    "title": "Application of Non‐Invasive Prenatal Testing for Dominant Single‐Gene Disorders in an Intermediate‐Risk Population: A Prospective Cohort Study",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.155Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on clinical genetics and prenatal diagnostic methodology, with no mention of emotion, affective processes, or psychological constructs.",
+      "evidence": [
+        "All concepts and the abstract center on genetic testing, obstetrics, and diagnostic accuracy; 'emotion' does not appear in title, abstract, or listed concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8607f679ed038cccee6285f7fc484c8ccbe7847b5f93acd772366e511c8c1194": {
+    "paper_id": "https://openalex.org/W7128787512",
+    "title": "Novel Haplotype‐Based Noninvasive Prenatal Diagnosis for Recessive Single‐Gene Disorders: A Proof‐of‐Concept Study",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.156Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a technical genetics study focused on haplotype-based prenatal diagnosis; no content relates to emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "All concepts and methods are biomedical: haplotype, SNP, stLFR sequencing, hidden Markov model, prenatal diagnosis."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "5354f4cbaa2baf6ad01482eaf4a9d4751237ed452ab35f81d1f015ff45f9fa40": {
+    "paper_id": "https://openalex.org/W7129094668",
+    "title": "Energy Consumption and Property Optimization in Laser Powder Bed Fusion of Fe-50wt%Ni Permalloys",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.214Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on energy-efficient laser additive manufacturing and materials property optimization; no content relates to human emotion, affective computing, or psychological/emotional processes.",
+      "evidence": [
+        "All concepts and the abstract concern energy consumption, laser processing, magnetic permeability, mechanical strength, and process optimization in materials science."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a60beeda0a87374e6b72bf44e678920f5f72e1fe285740e49a25dc5c6db7a84a": {
+    "paper_id": "https://openalex.org/W7128903296",
+    "title": "Fully Automated and Noise-Robust SEEG Electrode Localization under Practical Clinical Conditions",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.221Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical automation and accuracy in SEEG electrode localization, with no mention of emotion, affective states, or related psychological/physiological constructs.",
+      "evidence": [
+        "Abstract and concepts exclusively concern neuroimaging, AI pipelines, artifact suppression, and clinical workflow optimization—no emotion-related terms or goals."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "3497435d3f33ecfa2d15a8df99ce7e5135c81133c33d31b49fd81e3259ee08a5": {
+    "paper_id": "https://openalex.org/W7128593368",
+    "title": "Mo-Doping Emergence in FeOOH/NiS <sub> <i>x</i> </sub> Heterostructure for Ultrastable Alkaline Overall Water Electrolysis",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.247Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a materials science and electrocatalysis study focused on Mo-doped heterostructures for water electrolysis; it contains no affective, emotional, or psychological content.",
+      "evidence": [
+        "All concepts and the abstract pertain to electrochemistry, catalysis, and materials engineering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "031e0815c0318b9c9d90f756a9d81288815aceab9b452c8172deef8f95f255ed": {
+    "paper_id": "https://openalex.org/W7130392840",
+    "title": "Optimal Storage Temperature for Maintaining the Solubility of Micellar Casein Powder",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.316Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on material stability and solubility of micellar casein powder under varying storage temperatures, with no mention or conceptual link to emotion, affective science, or psychological/physiological emotion measures.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are from materials science, food chemistry, and chemical engineering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "496333d4a4bf60d8f1d133860b97aa7ffed29d26be0e4973b5d40e59011b3a41": {
+    "paper_id": "https://openalex.org/W7128703139",
+    "title": "Genetic variation shapes human mRNA translation and disease risk",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.352Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on genetic variation, mRNA translation efficiency, and disease risk in molecular biology and genetics; no mention or conceptual link to emotion, affective science, psychology, or neuroscience.",
+      "evidence": [
+        "All concepts and abstract content are strictly molecular/genomic; 'emotion' does not appear and is not implied by any term or mechanism described."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "77d74f21fe7cd4bd6e23e12cfc09554dd6279f626acff6ed251ecfdbb56cae1d": {
+    "paper_id": "https://openalex.org/W7128992689",
+    "title": "Enriching Local Reaction Fields via Ordered Multidimensional Interfaces for High-Yield Urea Electrosynthesis",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.430Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in electrochemical urea synthesis and catalysis; 'emotion' in the researcher's interest topics is unrelated to the paper's chemical engineering and materials science content.",
+      "evidence": [
+        "All concepts and abstract focus on electrosynthesis, electrocatalysis, nanotechnology, and reaction kinetics—no mention or implication of affective/emotion-related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8a90b1b3a709acf0c120e9be5a757a0dd24496accc5d63aeafe3afd022adc55f": {
+    "paper_id": "https://openalex.org/W7127632006",
+    "title": "Study on physiological indicators and spectral response characteristics of alfalfa under simulated spontaneous combustion of coal gangue dumps",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.435Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on plant physiological responses to heat stress from coal gangue spontaneous combustion, with no connection to human or animal emotion, affective computing, or emotion-related measurement.",
+      "evidence": [
+        "All concepts and methods are rooted in plant ecology, environmental science, and remote sensing; 'emotion' does not appear in title, abstract, or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "936f65303ea1f29da9dfd459830c534cce1aeddf53d46857d4b5b5f8f2b7196b": {
+    "paper_id": "https://openalex.org/W7129070719",
+    "title": "Interfacial Electric Locking of the Aptamer Conformation for Accurate Liquid Biopsy Detection",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.498Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on biophysical chemistry and biosensor engineering, with no conceptual, methodological, or application-level connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and the abstract concern aptamer conformation stabilization, interfacial electrochemistry, and ultrasensitive detection in liquid biopsy—no mention of emotion, affect, psychology, neuroscience of emotion, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "3a0e1d59b219a570d3139ec3b2008900c09b13bf82b9efcc76d991263760d79f": {
+    "paper_id": "https://openalex.org/W7128380110",
+    "title": "Real-world deployment of deep reinforcement learning-based control for cost-efficient PM2.5 mitigation in a naturally ventilated multi-room residence",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:09.559Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on deep reinforcement learning for PM2.5 mitigation in building ventilation, with no mention or conceptual link to emotion or affective science.",
+      "evidence": [
+        "Concepts are entirely environmental/engineering-focused: 'Software deployment', 'Control (management)', 'Environmental science', 'Residence time (fluid dynamics)'; 'emotion' is absent from title, venue, and concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "4fe9f835d0485f14981de3a7f5b204e64d1a19bf131868e98a5315502ebe3101": {
+    "paper_id": "https://openalex.org/W7127654810",
+    "title": "Susceptible Antiferroelectric/Ferroelectric Transitions in Silver Niobate-Based Ceramics Induced by Manual Mechanical Processing",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:11.058Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in materials chemistry/physics, focusing on phase transitions in ceramic materials; 'emotion' in the researcher's interest topics is unrelated to the paper's content.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; all concepts are physical/chemical (e.g., 'phase transition', 'antiferroelectric', 'annealing')."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c6363886e5aca10441a0f89518f6b462a7268ff5f4b0a541c7401cede5d0e04a": {
+    "paper_id": "https://openalex.org/W7127275052",
+    "title": "Towards enhanced situation awareness in HMI for traffic operations: a robust eye-tracking-based method",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:12.102Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper focuses on eye-tracking for situation awareness in traffic HMI, with no explicit or implied connection to emotion or affective computing.",
+      "evidence": [
+        "Concepts list contains no emotion-related terms; title and venue emphasize engineering design and human-computer interaction without affective components."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "296bba7d5233eb9f1e70d398a5f16cd4a60bd1e52f8c567c2f78538ddd79a2c0": {
+    "paper_id": "https://openalex.org/W7127312517",
+    "title": "Injectable Thermogel‐Loaded Bi <sub>2</sub> S <sub>3</sub> Nanorods for Synergistic Photothermal Bacterial Elimination and Anti‑Inflammation to Remodel Periodontitis Microenvironment",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:12.301Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on biomedical engineering, photothermal therapy, and anti-inflammatory treatment for periodontitis; 'emotion' in the researcher's interest topics is not addressed or implied anywhere in the metadata or abstract.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, mood, psychological states, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e7b44dff91e071ded7773cb399d1f99d921f0e7c672e2c9c0f7e0a232737fe45": {
+    "paper_id": "https://openalex.org/W7127383914",
+    "title": "Teaching People to Spot Deepfakes: Investigating User Acceptance of LLM-Powered Chatbots",
+    "researcher_name": "C.L. Philip Chen",
+    "researcher_openalex_author_id": "A5100643265",
+    "updated_at": "2026-02-20T14:39:12.406Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper focuses on user acceptance of LLM-powered chatbots for deepfake detection, with no explicit mention or conceptual linkage to emotion or affective processes.",
+      "evidence": [
+        "Interest topic is 'emotion', but paper concepts include Computer science, Chatbot, HCI, privacy—no affective/emotion-related terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  }
+}

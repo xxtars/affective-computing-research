@@ -1,0 +1,372 @@
+{
+  "6b89a140264c4695b0fc7a6c2f406384807031754821ee9b140d7b8cc1bc3a63": {
+    "paper_id": "https://openalex.org/W4417515644",
+    "title": "Backdoor Attacks and Defenses on Large Multimodal Models: A Survey",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:51.058Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on backdoor attacks and defenses in large multimodal models, with no mention of emotion, affective computing, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are security, adversarial machine learning, and multimodal model robustness."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ae1f80938ebcd0399bb3b399b11babaa53a71eab2698111e850b3ffbb780b94c": {
+    "paper_id": "https://openalex.org/W4417315791",
+    "title": "Exploring machine learning algorithms to identify predictors of glycaemic control in type 2 diabetes mellitus patients",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.176Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on glycaemic control prediction in diabetes using machine learning, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title explicitly concerns clinical diabetes management and ML-based biomarker prediction"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "96e807213a0f9108d40c9ea5433ef5ebcd754beae16aa8d8e717a2c9ee25f28d": {
+    "paper_id": "https://openalex.org/W4416247025",
+    "title": "KnowMol: Advancing Molecular Large Language Models with Multi-Level Chemical Knowledge",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.493Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on molecular large language models and chemical knowledge representation, with no connection to emotion or affective science.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; topics are strictly computational chemistry and AI for molecular modeling."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "d42acff0ff4e2b1206430cf7ad206b4e28f724bbcd63cb6b8130197c4189b772": {
+    "paper_id": "https://openalex.org/W4416119537",
+    "title": "Leveraging auxiliary-tasks for height and weight estimation with pose-disentanglement",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.497Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on height and weight estimation using pose-disentanglement and auxiliary tasks, with no apparent connection to emotion or affective computing.",
+      "evidence": [
+        "Title contains no emotion-related terms; abstract is empty; 'emotion' is not reflected in scope or methodology"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "1042efe7b53b9228d137b618f46d6cbc4c54610d6421c14330295c716e42c726": {
+    "paper_id": "https://openalex.org/W4417468032",
+    "title": "Semantic Mismatch and Perceptual Degradation: A New Perspective on Image Editing Immunity",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.567Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on image editing immunization, diffusion model security, and perceptual/semantic robustness—no connection to emotion recognition, affective computing, or psychological/emotional modeling.",
+      "evidence": [
+        "Interest topics are 'emotion', but the paper's abstract contains zero emotion-related terms or concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "3e8b1d2319300c6b072ce4cd1a156e8ebc80cb90f1b5d8c71eb198bff502a598": {
+    "paper_id": "https://openalex.org/W4417168850",
+    "title": "RAP: Role-Aware Joint Prediction and Planning in Autonomous Driving",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.595Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on autonomous driving, joint prediction and planning, and role-aware modeling; no mention or conceptual link to emotion, affective computing, or human emotional states.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, sentiment, human behavior modeling for affect, or psychological constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bbbd8053cbd4d181eb108586f72de531a34b08e7de31f056ad236e452f7f8475": {
+    "paper_id": "https://openalex.org/W4417427582",
+    "title": "Dynamic Attention Analysis for Backdoor Detection in Text-to-Image Diffusion Models",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.596Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on backdoor detection in text-to-image diffusion models using dynamic attention analysis, with no connection to emotion modeling, affective computing, or human emotional states.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, perception, or related psychological or behavioral constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "1d3b4fd1cf975026bcaf7ad956593381a2ef5e1c0897b269d999c7cc381b3417": {
+    "paper_id": "https://openalex.org/W4417468005",
+    "title": "Towards Transferable Defense Against Malicious Image Edits",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.608Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on adversarial defense for diffusion-based image editing, with no mention of emotion, affect, or psychological/behavioral aspects of human emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are in computer vision, adversarial robustness, and multimodal optimization."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "91b8d5ceff90e9f9847c787b54dd5e4abe874d5819689bec0d755d6b82457b96": {
+    "paper_id": "https://openalex.org/W4416618298",
+    "title": "Revisiting Logit Distributions for Reliable Out-of-Distribution Detection",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.608Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on out-of-distribution detection in deep learning, with no mention of emotion, affect, or related psychological, behavioral, or neuroscientific constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, sentiment, mood, or human emotional processing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "36235e993ff2710b45413beb98125d7d5bae0430eb923f9f3bbc12ee06ac9090": {
+    "paper_id": "https://openalex.org/W4415540927",
+    "title": "SHALE: A Scalable Benchmark for Fine-grained Hallucination Evaluation in LVLMs",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.635Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on hallucination evaluation in vision-language models, with no mention of emotion, affective computing, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core concepts are faithfulness, factuality, hallucination, and benchmarking."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "89c051fe3eaa7f4f1531ccea992c766dade7bed2065b8312ab459a8c2e78d7c1": {
+    "paper_id": "https://openalex.org/W4416654764",
+    "title": "VOPE: Revisiting Hallucination of Vision-Language Models in Voluntary Imagination Task",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.693Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on hallucination evaluation in vision-language models during voluntary imagination tasks, with no mention of emotion, affect, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core concepts are hallucination, presence evaluation, LVLMs, and voluntary imagination."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "59e843c7acee6933362f9617f9b60af6327a346c98961d7ab02a19544b97eb36": {
+    "paper_id": "https://openalex.org/W4416749302",
+    "title": "Task-Oriented Token Pruning for Efficient Object Detection and Segmentation",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.788Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on task-oriented token pruning for efficient object detection and segmentation in robotics, with no mention of emotion, affect, or related psychological, behavioral, or computational models of emotion.",
+      "evidence": [
+        "Title and abstract contain no emotion-related terms; core concepts are efficiency, token pruning, Transformer, robotic perception, and category-specific computation."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "c268c60788d2e5984a21ade80d12f6547cc9ac20988fe36e9fd283bb4548576a": {
+    "paper_id": "https://openalex.org/W4417131160",
+    "title": "Walking World Model for Visually Impaired Path Following",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.792Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on robotics, path following, and cognitive load reduction for visually impaired navigation; 'emotion' is not mentioned or implied in title, abstract, or concepts.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; focus is on walking dynamics, vibrotactile guidance, model predictive control, and cognitive load—not affective states or emotion processing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "507ee9b51b43ee94cbbd6c51f8ee3fc590ca2456df53d3a539a4b5423eca168a": {
+    "paper_id": "https://openalex.org/W4416935874",
+    "title": "Assimilation Matters: Model-level Backdoor Detection in Vision-Language Pretrained Models",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.841Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on backdoor detection in vision-language models, with no mention of emotion, affect, sentiment, or any affective/emotion-related constructs in title, abstract, or concepts.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core focus is on model security, feature assimilation, and backdoor detection."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "518cd1bd057ffe8e6efe91aa2b90a766e5063ac92bdc373fe677ce297c338ea5": {
+    "paper_id": "https://openalex.org/W4417468016",
+    "title": "Dual Attention Guided Defense Against Malicious Edits",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.893Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on adversarial defense for text-to-image diffusion models, with no mention of emotion, affect, or psychological/behavioral aspects of human emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core concepts are 'noise perturbation', 'cross-attention maps', 'malicious edits', and 'diffusion models'."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e149faeda28eadd144430062fb3fbd73a77ee13fd0d20a2992dfdd692669023a": {
+    "paper_id": "https://openalex.org/W4417276613",
+    "title": "V-Attack: Targeting Disentangled Value Features for Controllable Adversarial Attacks on LVLMs",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:52.906Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on adversarial attacks on vision-language models, specifically manipulating disentangled value features for semantic control; no mention of emotion, affect, sentiment, or any affective/emotion-related constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core concepts are 'adversarial attacks', 'value features', 'semantic manipulation', 'LVLMs'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0ed38abbb5de3ccb028611c6c50991e1ad57de802e62b954a4837f6438b656c8": {
+    "paper_id": "https://openalex.org/W4414752452",
+    "title": "Consistent multimodal pre-training for visual tokenization",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:55.169Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "Title and venue suggest focus on multimodal pre-training and visual tokenization, with no explicit or implied connection to emotion or affective computing.",
+      "evidence": [
+        "Title: 'Consistent multimodal pre-training for visual tokenization'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a45a64da176b6dff3e0c0be585bec8047ca91b4e87fcc898f57e92f645f062c8": {
+    "paper_id": "https://openalex.org/W4415271289",
+    "title": "Task-aware pre-training for facial action analysis",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:55.245Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.9,
+      "reason": "The paper focuses on facial action analysis using task-aware pre-training, which is a core methodology in automatic emotion recognition since facial actions (e.g., AU detection) are primary behavioral indicators of emotion.",
+      "evidence": [
+        "Title contains 'facial action analysis', a well-established proxy for emotion inference in affective computing"
+      ],
+      "keywords": [
+        "facial action units",
+        "emotion recognition",
+        "pre-training",
+        "affective computing",
+        "facial expression analysis"
+      ],
+      "research_directions": [
+        "Affective AI",
+        "Behavioral signal modeling",
+        "Transfer learning for emotion understanding"
+      ]
+    }
+  },
+  "585bbd361b80848916b9d7c1586b299e7aaa480228a5b6374dfc4df0a2543f7a": {
+    "paper_id": "https://openalex.org/W4415332630",
+    "title": "MotionVerse: A Unified Multimodal Framework for Motion Comprehension, Generation and Editing",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:55.762Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on motion comprehension, generation, and editing using LLMs and multimodal architecture; no mention of emotion, affect, or psychological/behavioral affective constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, sentiment, expression, or human affective states."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6c35879ed4f72131ab89d5da6d50c5b1de0135c251adb5531e976a114056188b": {
+    "paper_id": "https://openalex.org/W4414083834",
+    "title": "<i>Pantoea ananatis</i> as the Emerging Causal Agent of Novel Bacterial Leaf Blight in Rice: Characterization and Management in Anhui, China",
+    "researcher_name": "Shiguang Shan",
+    "researcher_openalex_author_id": "A5050297728",
+    "updated_at": "2026-02-20T14:36:55.839Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is a plant pathology study focused on bacterial disease in rice; 'emotion' in the researcher's interest topics is unrelated to the paper's biological, agricultural, and genomic content.",
+      "evidence": [
+        "Title and abstract exclusively concern Pantoea ananatis, rice disease management, and bacterial virulence mechanisms."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  }
+}

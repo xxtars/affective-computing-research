@@ -1,0 +1,462 @@
+{
+  "5f93082c434a275c5226bc47159635f25bc30ac7c3529736c5840ed3925bc529": {
+    "paper_id": "https://openalex.org/W7122780867",
+    "title": "A multi-objective resource reallocation framework for disruption management in long-range maritime search and rescue",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:18.432Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on operations research and disruption management in maritime search and rescue, with no conceptual, methodological, or empirical engagement with human emotion, affective states, or emotion-related constructs.",
+      "evidence": [
+        "'victim dissatisfaction' is used as a proxy metric for service quality/latency, not as an affective or psychological measure; no emotion modeling, measurement, or theory is present"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b90be4c88571af4a782a75a4faf7e66fc785503638d1d07363134ff9abe47686": {
+    "paper_id": "https://openalex.org/W4415538660",
+    "title": "ALLM4ADD: Unlocking the Capabilities of Audio Large Language Models for Audio Deepfake Detection",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.311Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on audio deepfake detection using audio large language models, with no connection to emotion or affective computing.",
+      "evidence": [
+        "The abstract and title exclusively address audio authenticity verification, not emotional content, expression, recognition, or affective states."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "040d474738365f89fee3fb0ffd338170913716df369ee9cf0a88673f453fc6c0": {
+    "paper_id": "https://openalex.org/W4410459004",
+    "title": "Evidential reasoning rule with dynamic correlation for system reliability prediction",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.372Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on system reliability prediction using evidential reasoning and dynamic correlation, with no indication of emotion or affective science content.",
+      "evidence": [
+        "Title and venue (Reliability Engineering & System Safety) indicate domain is reliability engineering, not affective computing or emotion research."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "35112a93716b8468523186af4139d2e8695f60df37edb79adf9de060d9887c62": {
+    "paper_id": "https://openalex.org/W4415137535",
+    "title": "QuMATL: Query-based Multi-annotator Tendency Learning",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.453Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on multi-annotator tendency modeling and label disagreement in machine learning, with no mention of emotion, affect, or psychological constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core concepts are annotator tendency, consensus, labeling patterns, and DIC metric."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "98d6d6c647cf178ee5456a540c17ad0fa9f7e815e23e220579b302c630fc0afe": {
+    "paper_id": "https://openalex.org/W4408353741",
+    "title": "Adversarial Training and Gradient Optimization for Partially Deepfake Audio Localization",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.521Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on deepfake audio localization using adversarial training and gradient optimization, with no mention of emotion, affect, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Concepts include 'Adversarial system', 'Speech recognition', 'Artificial intelligence'; no emotion-related concepts listed"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "3c46e5b4e6e6f2da6d37da944dde71e1f9b343b73e572d8b334b6120ed253082": {
+    "paper_id": "https://openalex.org/W4415537975",
+    "title": "Enhancing Multimodal Personality Assessment with LLM-Augmented Hierarchical Fusion",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.580Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.92,
+      "reason": "The paper focuses on personality and cognitive ability assessment, not emotion or affective processes.",
+      "evidence": [
+        "Interest topics specify 'emotion', but the paper's scope is 'personality and ability assessment' with no mention of emotion recognition, affective states, valence/arousal, or related constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bd45858df2a35f210775b0cf73a669e0f485090e18a5e0d84006fef59cd42053": {
+    "paper_id": "https://openalex.org/W4415124220",
+    "title": "IRNet: Iterative Refinement Network for Noisy Partial Label Learning",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.581Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper addresses noisy partial label learning in machine learning, with no conceptual, methodological, or empirical connection to emotion or affective science.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, behavior, psychology, or related constructs; focus is on label noise correction and theoretical learning guarantees."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6ce3d13c740a662a0abf3ab1864470156ec0b4cd3c8e0f67f8b480d43bee7da6": {
+    "paper_id": "https://openalex.org/W4415990607",
+    "title": "Advancement Towards FIB Active Auto Thinning (AAT) Process",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.688Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is about semiconductor metrology and autonomous FIB thinning for memory device analysis, with no connection to emotion, affective science, or psychological/physiological affective processes.",
+      "evidence": [
+        "Title and abstract focus exclusively on FIB, SEM, machine vision, and autonomous thinning in DRAM/NAND fabrication."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0a0032292edd5ea95dfacc1e97ced2d8bee8d9d1204a5a9e3c2ca0e0d1edcd1a": {
+    "paper_id": "https://openalex.org/W7127543215",
+    "title": "Optimizing Embedded Operating System Configuration for Heterogeneous Platforms in Health Applications",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.734Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on embedded OS configuration, real-time imaging hardware, and SoC-level system integration for medical optical imaging (SFDI), with no mention of emotion, affective computing, or psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, sentiment, behavior, psychology, or human emotional response."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "1ea7841fce2676ef16819a5ac75d731ddaaabdc1983d54318f527bc40a385f3a": {
+    "paper_id": "https://openalex.org/W4413391708",
+    "title": "Research on the Dynamic Behavior of 6000M-Class Rigid Risers in Hang-Off Configuration Under Regular Wave in Deep Sea Mining Operations",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.749Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper is in marine and structural engineering, focusing on riser dynamics under physical ocean conditions; no connection to human emotion, affective science, or psychological constructs.",
+      "evidence": [
+        "Title and abstract exclusively address mechanical behavior of rigid risers, wave-current loading, bending moment, tension, and buffer mass optimization in deep-sea mining."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "79de62d8c7f014c7a002cbfeef419ac2caca8f6a74b7287c95cc5e491bf7e713": {
+    "paper_id": "https://openalex.org/W4407961144",
+    "title": "A new compact belief rule model for fault diagnosis",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:19.765Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on fault diagnosis using a compact belief rule model, with concepts rooted in control engineering, AI, and geology—no indication of emotion modeling, affective computing, or psychological/behavioral affective phenomena.",
+      "evidence": [
+        "Concepts: Fault (geology), Rule-based system, Computer science, Artificial intelligence, Geology, Seismology"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0aa410cc9260a1d682b50ea7ead2a837d116da8b3d0d01684611a7194f20e4b3": {
+    "paper_id": "https://openalex.org/W4407230367",
+    "title": "Water saturation effect on the dynamic tensile behavior of high ductility concrete",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:21.259Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on mechanical behavior of concrete under physical conditions, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title explicitly concerns water saturation and dynamic tensile behavior of concrete"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "09607755f43d4eadc556fc20bf37ddd0bbd6de2b140d08dd334713547539fb72": {
+    "paper_id": "https://openalex.org/W4415540092",
+    "title": "Hardness-Aware Dynamic Curriculum Learning for Robust Multimodal Emotion Recognition with Missing Modalities",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:21.776Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on multimodal emotion recognition, directly aligning with the researcher's stated interest in 'emotion'. It addresses core affective computing challenges—robustness to missing modalities, sample-level hardness in emotion modeling, and curriculum learning for emotional data.",
+      "evidence": [
+        "Title contains 'Multimodal Emotion Recognition'",
+        "Abstract states 'missing modalities have recently emerged as a critical research direction in multimodal emotion recognition (MER)'",
+        "Researcher's interest topic is 'emotion'"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "multimodal learning",
+        "curriculum learning",
+        "missing modalities",
+        "hardness estimation",
+        "affective computing"
+      ],
+      "research_directions": [
+        "affective computing",
+        "multimodal emotion analysis",
+        "robust affective modeling",
+        "dynamic curriculum learning for emotions"
+      ]
+    }
+  },
+  "dc7ef7116f5ed47d4105b958f834341bef078fd3be309044818474ef4687071d": {
+    "paper_id": "https://openalex.org/W4415937513",
+    "title": "Rethinking Facial Expression Recognition in the Era of Multimodal Large Language Models: Benchmark, Datasets, and Beyond",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:22.007Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses facial expression recognition—a core subfield of affective computing—and explicitly links it to emotion understanding, with emphasis on reasoning about emotional states from facial cues using multimodal LLMs.",
+      "evidence": [
+        "Title includes 'Facial Expression Recognition' and references 'affective computing' in abstract",
+        "Abstract states FER is 'a pivotal challenge in this interdisciplinary domain' including 'affective computing'",
+        "Researcher's interest topic is 'emotion', and FER is a canonical emotion-related perceptual task"
+      ],
+      "keywords": [
+        "facial expression recognition",
+        "affective computing",
+        "emotion recognition",
+        "multimodal large language models",
+        "visual question answering",
+        "reasoning about emotion"
+      ],
+      "research_directions": [
+        "affective multimodal AI",
+        "interpretability of emotion models",
+        "LLM-based affective reasoning",
+        "benchmarking emotion perception in foundation models"
+      ]
+    }
+  },
+  "6c56b61859f7cbac2574955b839e2c9a188d3d687ae4339f0f95cb5bcf7bac1b": {
+    "paper_id": "https://openalex.org/W4408352639",
+    "title": "MEIJU - The 1st Multimodal Emotion and Intent Joint Understanding Challenge",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:22.352Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is explicitly centered on multimodal emotion understanding, directly aligning with the researcher's interest topic 'emotion'. It is a dedicated challenge (MEIJU) focused on joint emotion and intent recognition in human-machine interaction.",
+      "evidence": [
+        "Title contains 'Multimodal Emotion and Intent Joint Understanding Challenge'",
+        "Abstract states the goal is 'inferring the emotions and intents' to enable 'humanized human-machine interaction'",
+        "Researcher's interest topic is 'emotion', and the paper's core task is emotion decoding in multimodal dialogues"
+      ],
+      "keywords": [
+        "emotion",
+        "multimodal",
+        "affective computing",
+        "intent understanding",
+        "human-computer interaction",
+        "semi-supervised learning",
+        "class imbalance"
+      ],
+      "research_directions": [
+        "affective computing",
+        "multimodal emotion recognition",
+        "joint modeling of emotion and intent",
+        "low-resource and imbalanced affective data learning",
+        "cross-lingual affective understanding"
+      ]
+    }
+  },
+  "7b1d4fddf46a7ebe15b341e3bb74ff9ab06a11677161ec658a9c0a064d6a1937": {
+    "paper_id": "https://openalex.org/W4415536838",
+    "title": "MRAC 2025: 3rd International Workshop on Multimodal, Generative and Responsible Affective Computing",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:22.394Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is a workshop dedicated to affective computing, explicitly focusing on emotion modeling, detection, regulation, and responsible deployment — directly aligning with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title includes 'Affective Computing'",
+        "Abstract states: 'Affective computing has numerous applications, including innovative approaches to forecasting and preventing anxiety, stress, and mental health issues; enhancing robotic empathy; assisting individuals with ... emotion regulation challenges'",
+        "Abstract emphasizes 'emotion prediction results', 'emotionally intelligent systems', and 'affective computing'"
+      ],
+      "keywords": [
+        "affective computing",
+        "emotion prediction",
+        "emotion regulation",
+        "multimodal emotion analysis",
+        "responsible AI",
+        "empathic AI"
+      ],
+      "research_directions": [
+        "Emotion recognition from multimodal data",
+        "Generative models for emotional response synthesis",
+        "Ethical and privacy-aware affective systems",
+        "Clinical applications of emotion AI for mental health",
+        "Interpretability of emotion classifiers"
+      ]
+    }
+  },
+  "405bcb33e5bc962980cb6c41fafe079da41581e98e2a4345f992d61c6a66243a": {
+    "paper_id": "https://openalex.org/W4415538029",
+    "title": "MER 2025: When Affective Computing Meets Large Language Models",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:22.643Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is explicitly centered on affective computing and emotion recognition, directly aligning with the researcher's interest topic 'emotion'. It advances emotion understanding through LLMs and includes tracks focused on fine-grained, multimodal, and semi-supervised emotion recognition.",
+      "evidence": [
+        "Title contains 'Affective Computing' and 'Emotion'",
+        "Abstract states: 'MER2025 centers on the theme \"When Affective Computing Meets Large Language Models (LLMs)\"'",
+        "Tracks include MER-FG (fine-grained emotions), MER-DES (multimodal emotion cues), and MER-PR (emotion prediction for personality recognition)"
+      ],
+      "keywords": [
+        "affective computing",
+        "emotion recognition",
+        "large language models",
+        "fine-grained emotion",
+        "multimodal emotion",
+        "semi-supervised learning"
+      ],
+      "research_directions": [
+        "LLM-driven emotion generation",
+        "open-vocabulary emotion recognition",
+        "multimodal affective analysis",
+        "fine-grained emotional state modeling",
+        "emotion-personality relationship modeling"
+      ]
+    }
+  },
+  "22b633ffa107db3d49b3dce0f64231998c1ec58c24986dbd233dc99ae3f1beb0": {
+    "paper_id": "https://openalex.org/W4408936704",
+    "title": "Transparency, Control, and Pay in the Gig Economy: A Game-theoretic Perspective",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:22.701Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on economic and game-theoretic aspects of the gig economy, with no mention or conceptual link to emotion, affect, or psychological states.",
+      "evidence": [
+        "Concepts include Transparency, Gig economy, Game theory, Economics — none relate to emotion"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "8e7163caf3f362f1625cc20eb636cb4a45f5a052c98643d8ffbb98474868c17b": {
+    "paper_id": "https://openalex.org/W4412888359",
+    "title": "Listen, Watch, and Learn to Feel: Retrieval-Augmented Emotion Reasoning for Compound Emotion Generation",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:24.142Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on emotion reasoning and compound emotion generation, directly aligning with the researcher's interest topic 'emotion'. The title and concepts strongly indicate affective computing and emotion modeling.",
+      "evidence": [
+        "Title contains 'Emotion Reasoning' and 'Compound Emotion Generation'",
+        "Concepts include 'Emotion classification' and 'Psychology'"
+      ],
+      "keywords": [
+        "emotion reasoning",
+        "compound emotion",
+        "retrieval-augmented generation",
+        "affective computing",
+        "multimodal emotion analysis"
+      ],
+      "research_directions": [
+        "Affective AI",
+        "Multimodal emotion understanding",
+        "Cognitive modeling of emotions",
+        "Human-computer interaction for emotional intelligence"
+      ]
+    }
+  },
+  "2a329a6b1cf4123663c4e623586b3426609e078505076a7f8e9667ce1db11369": {
+    "paper_id": "https://openalex.org/W4406950238",
+    "title": "AffectGPT: A New Dataset, Model, and Benchmark for Emotion Understanding with Multimodal Large Language Models",
+    "researcher_name": "Zheng Lian",
+    "researcher_openalex_author_id": "A5001973434",
+    "updated_at": "2026-02-20T14:41:25.330Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.98,
+      "confidence": 0.99,
+      "reason": "The paper is explicitly focused on emotion understanding using multimodal large language models, directly aligning with the researcher's interest topic 'emotion'. It introduces a new dataset (MER-Caption), model (AffectGPT), and benchmark (MER-UniBench) all centered on affective computing and fine-grained emotion recognition.",
+      "evidence": [
+        "Title contains 'Emotion Understanding'",
+        "Abstract states 'benchmark for MLLM-based emotion understanding'",
+        "Dataset features 'over 2K fine-grained emotion categories'"
+      ],
+      "keywords": [
+        "emotion understanding",
+        "multimodal emotion recognition",
+        "affective computing",
+        "MER-Caption",
+        "AffectGPT",
+        "MER-UniBench"
+      ],
+      "research_directions": [
+        "affective multimodal AI",
+        "emotion annotation and dataset curation",
+        "large language models for affective computing",
+        "benchmarking emotion understanding systems"
+      ]
+    }
+  }
+}

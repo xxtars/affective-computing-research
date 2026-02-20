@@ -1,0 +1,402 @@
+{
+  "b8f3b950fdde1b08217da11e85d1c81b968792d622800911b753361b53812ae1": {
+    "paper_id": "https://openalex.org/W4414050267",
+    "title": "Agricrafter: Full-growth-cycle crop video generation via diffusion models",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:05.194Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on agricultural video generation using diffusion models, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title: 'Agricrafter: Full-growth-cycle crop video generation via diffusion models'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "50c011e3afd53e416539247e1507ec66840138f93030be741566f9145bbe4f44": {
+    "paper_id": "https://openalex.org/W4416509214",
+    "title": "Collaborative optimization for whole slide image classification",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:05.237Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper's title and venue indicate a focus on computational methods for medical image classification, with no explicit or implied connection to emotion or affective science.",
+      "evidence": [
+        "Title: 'Collaborative optimization for whole slide image classification'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "034eba4b9f970feea2f7a665341a5f95e4cdc0be82d52c4500f0e1b866bd3752": {
+    "paper_id": "https://openalex.org/W4417505557",
+    "title": "Dual-prompt-based binary matching for open set domain adaptation",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:05.318Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper's title and venue indicate a focus on domain adaptation and binary matching in machine learning, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title: 'Dual-prompt-based binary matching for open set domain adaptation'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b28f5f3ccfeccd842a1bdd27c60c7d351a011841d5a824491c5f7df7eec3f29b": {
+    "paper_id": "https://openalex.org/W4415968891",
+    "title": "A Prescribed-Time Disturbance Estimation Method for Aerial Manipulator System",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:05.556Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.95,
+      "reason": "The paper focuses on control theory and disturbance estimation for aerial manipulator systems, with no mention or conceptual link to emotion, affective computing, or human-centered affective phenomena.",
+      "evidence": [
+        "Title and abstract exclusively discuss prescribed-time control, Extended State Observer (ESO), and nonlinear disturbance estimation."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0dd56d7a7aae8e3b1d5b04d7ae40cfa145617cbd8a7f97559e9a3f113a960118": {
+    "paper_id": "https://openalex.org/W4414229814",
+    "title": "Bias-in-debias-out: Hierarchical channel-spatial bias calibration for cross-domain few-shot classification",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.528Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper's title and venue indicate a focus on domain adaptation and few-shot learning in computer vision/machine learning, with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; focuses on 'bias calibration' and 'cross-domain few-shot classification'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "f5920694aa9680e3ca2e75819a32c0fc5ea435157411d544f17f8ac0bafe3633": {
+    "paper_id": "https://openalex.org/W4415707794",
+    "title": "DreamAnimate: Temporal Consistency and Detail Preservation for Character Animation",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.572Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical aspects of character animation, temporal consistency, and detail preservation; 'emotion' is not addressed conceptually, methodologically, or empirically.",
+      "evidence": [
+        "Abstract mentions 'intricate facial expressions' only as visual details to be animated, not as emotional states or affective phenomena."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6060452c53faa3f826e8d5a84ad51efa2d3cc5bba41807f244838b85f14c7901": {
+    "paper_id": "https://openalex.org/W4408821608",
+    "title": "Drop inherent biases: Multi-level attention calibration for robust cross-domain few-shot classification",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.586Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical aspects of cross-domain few-shot classification, including attention calibration and domain adaptation; no mention or conceptual link to emotion or affective science.",
+      "evidence": [
+        "Concepts list contains no emotion-related terms; title and venue (Neurocomputing) suggest machine learning focus, not affective computing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6eda507d51c86a88723eb6d2392d343c27c5495edb4b3c1dcc84439c054a7a69": {
+    "paper_id": "https://openalex.org/W4411635597",
+    "title": "RetrievFace: Retrieval-Enhanced Diffusion for Controllable Text-Guided Face Editing",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.594Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on face editing using diffusion models and information retrieval; no explicit connection to emotion or affective science is indicated in title, concepts, or available metadata.",
+      "evidence": [
+        "Concepts include 'Face (sociological concept)' but not 'emotion', 'affect', or related psychological/behavioral terms"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "2ba6aee4544a182647fc1cbfb289319410632cd8ae06fee4b95cf014046b8f31": {
+    "paper_id": "https://openalex.org/W4417275605",
+    "title": "M2DAO-Talker: Harmonizing Multi-granular Motion Decoupling and Alternating Optimization for Talking-head Generation",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.625Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical aspects of talking-head generation—motion decoupling, optimization, rendering artifacts—and contains no mention of emotion, affect, sentiment, or psychological/behavioral affective constructs.",
+      "evidence": [
+        "Abstract and title contain no emotion-related terms; 'emotion' does not appear in metadata, concepts, or abstract text."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "2592838a5af73cd184d6d36d0d0349af0f86f29251fcb12a468990917d0ab8bc": {
+    "paper_id": "https://openalex.org/W4417284332",
+    "title": "PH-Mamba: Enhancing Mamba With Position Encoding and Harmonized Attention for Image Deraining and Beyond",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.678Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on image deraining using architectural enhancements to Mamba models; no mention of emotion, affect, or psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all content pertains to low-level computer vision and model efficiency."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6d86abf7c378414e2bb96ca400399ffa7b2837f0c163dd41e546294d17a38455": {
+    "paper_id": "https://openalex.org/W4410194895",
+    "title": "GraphMamba: Whole slide image classification meets graph-driven selective state space model",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.877Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on graph-based state space models for whole slide image classification in computer vision; no connection to emotion or affective science is indicated by title, venue, concepts, or available metadata.",
+      "evidence": [
+        "Concepts include 'Computer vision', 'Graph', 'Pattern recognition (psychology)' — but the latter refers to perceptual/cognitive pattern recognition, not affective psychology."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ccbd0dea97e0a3586c638256d520c14d909f56768f808d45fb27a1204c0681da": {
+    "paper_id": "https://openalex.org/W4409365653",
+    "title": "OODML: Whole Slide Image Classification Meets Online Pseudo-Supervision and Dynamic Mutual Learning",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.889Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computational methods for whole slide image classification in medical AI, with no mention of emotion, affective processes, or psychological constructs related to emotion.",
+      "evidence": [
+        "Abstract and metadata contain no emotion-related terms; concepts are technical (e.g., 'Image (mathematics)', 'Pattern recognition (psychology)' refers to perceptual pattern recognition, not affective psychology)"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e10164b25e81005e795ef7bb4637295719b742a0976a4a9ed03bd5a1a9b23d10": {
+    "paper_id": "https://openalex.org/W4413147544",
+    "title": "M3amba: Memory Mamba is All You Need for Whole Slide Image Classification",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:07.978Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on computational methods for whole slide image classification using a memory-augmented Mamba architecture; no mention of emotion, affect, psychological affective processes, or related constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; concepts include computer science, AI, computer vision, and pattern recognition (psychology) — but the latter is used in the technical/computational sense, not affective science."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "601ffd08ff369d3e4d379d7937336d3be0f3c7726117fc8e701d4d48490febb7": {
+    "paper_id": "https://openalex.org/W4408330987",
+    "title": "Real-time monitoring system for evaluating the operational quality of rice transplanters",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:08.382Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on real-time monitoring and operational quality assessment of rice transplanters, with no indication of emotion or affective computing in title, venue, concepts, or metadata.",
+      "evidence": [
+        "Title: 'Real-time monitoring system for evaluating the operational quality of rice transplanters'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e038f5d215fd86f90db6aee2b0fce5a748cf74bdde2a6702e72ecc7f65b25b55": {
+    "paper_id": "https://openalex.org/W4408352082",
+    "title": "Multimodal and Multiple Prompts for Biology",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:08.648Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on prompt learning for vision-language models in computational biology, with no mention of emotion, affect, or related psychological/behavioral constructs.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; all topics are technical/computational (e.g., 'computational biology', 'prompt tuning', 'vision-language models')."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "bba0b7630f78db2c37539d38955103a6be70b436735d849307998e36cc788d95": {
+    "paper_id": "https://openalex.org/W4406207632",
+    "title": "Patch-Based Spatio-Temporal Deformable Attention BiRNN for Video Deblurring",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:08.765Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on video deblurring using attention mechanisms and BiRNNs; no mention of emotion, affect, or psychological/behavioral constructs.",
+      "evidence": [
+        "All concepts and the abstract pertain to computer vision, image restoration, and deep learning architectures for video processing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b3d1d297446c34f113f1d04c1b74104407035bad6aaacad12b7eef6ab7785c85": {
+    "paper_id": "https://openalex.org/W4413973442",
+    "title": "Guest Editorial: Special Issue on Fuzzy Affective Computing Systems",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:09.003Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is a guest editorial for a special issue explicitly titled 'Fuzzy Affective Computing Systems', directly linking fuzzy systems with affective (emotion-related) computing — aligning precisely with the researcher's interest topic 'emotion'.",
+      "evidence": [
+        "Title: 'Guest Editorial: Special Issue on Fuzzy Affective Computing Systems'",
+        "Interest topics include 'emotion'"
+      ],
+      "keywords": [
+        "affective computing",
+        "fuzzy logic",
+        "emotion modeling",
+        "soft computing",
+        "human-computer interaction"
+      ],
+      "research_directions": [
+        "Affective computing",
+        "Fuzzy systems for emotion recognition and synthesis",
+        "Interpretability in emotion-aware AI",
+        "Human-centered fuzzy modeling of affect"
+      ]
+    }
+  },
+  "e5014b2e871490aabf2bac8978db75c1485f3af6f6d17b8d69aeb88a3920a52e": {
+    "paper_id": "https://openalex.org/W4407695315",
+    "title": "FMVP: Fine-grained Meta Visual Prompt enabled domain-specific few-shot classification",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:09.008Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on few-shot classification using meta visual prompting; no explicit connection to emotion or affective science is indicated in title, venue, concepts, or available metadata.",
+      "evidence": [
+        "Concepts include 'Artificial intelligence', 'Pattern recognition (psychology)', but 'pattern recognition (psychology)' here refers to computational pattern recognition, not affective psychology; no emotion-related terms appear."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "943188f4f41acdec69ab8863dd9877cf319d9d5ca9b06fc5c5793f2bbfaef390": {
+    "paper_id": "https://openalex.org/W4408346012",
+    "title": "Open-Vocabulary Visual Emotion Adaptation via Prompt Learning",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:09.403Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses visual emotion recognition using psychological emotion models and open-vocabulary adaptation—core to affective/emotion-related AI research—and aligns precisely with the researcher's stated interest in 'emotion'.",
+      "evidence": [
+        "Title explicitly contains 'Visual Emotion Adaptation'",
+        "Abstract centers on emotion labeling ambiguity, psychological emotion models, and Visual Emotion Recognition (VER)",
+        "Method (DSEP) unifies emotion labels using psychological emotion models"
+      ],
+      "keywords": [
+        "visual emotion recognition",
+        "open-vocabulary adaptation",
+        "prompt learning",
+        "psychological emotion models",
+        "unsupervised domain adaptation",
+        "affective computing"
+      ],
+      "research_directions": [
+        "Affective AI",
+        "Emotion-aware computer vision",
+        "Cross-domain emotion understanding",
+        "Human-centered AI with cognitive psychology grounding"
+      ]
+    }
+  },
+  "40d380414d6105fad46ec809b190e6c39f328b536e58589cdafd6453dfb2d12f": {
+    "paper_id": "https://openalex.org/W4415541150",
+    "title": "Emotion in a Bottle: Information Bottleneck Guided Disentanglement for Emotion Domain Adaptation",
+    "researcher_name": "Hongxun Yao",
+    "researcher_openalex_author_id": "A5023274785",
+    "updated_at": "2026-02-20T14:33:10.019Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is explicitly focused on emotion recognition and domain adaptation, directly aligning with the researcher's stated interest in 'emotion'. It introduces an emotion-specific disentanglement framework grounded in information bottleneck theory, targeting affective gap reduction — a core affective computing challenge.",
+      "evidence": [
+        "Title contains 'Emotion' and 'Emotion Domain Adaptation'",
+        "Abstract centers on 'Visual emotion recognition (VER)' and 'affective gap between domains'",
+        "Method (EmoD) explicitly extracts 'emotion-specific features' and removes 'emotion-agnostic information'"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "domain adaptation",
+        "disentanglement",
+        "information bottleneck",
+        "affective computing",
+        "visual emotion"
+      ],
+      "research_directions": [
+        "affective domain adaptation",
+        "emotion feature disentanglement",
+        "CLIP-based affective modeling",
+        "cross-domain affective representation learning"
+      ]
+    }
+  }
+}

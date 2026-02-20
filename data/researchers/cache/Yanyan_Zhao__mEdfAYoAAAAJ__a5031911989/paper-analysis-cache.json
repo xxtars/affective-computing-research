@@ -1,0 +1,500 @@
+{
+  "f59ee80a5c28d308a049839a6252cbadf1f9eecd4aaa9278249581a30f7d589d": {
+    "paper_id": "https://openalex.org/W4411517540",
+    "title": "Improving cross-task generalization with step-by-step instructions",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:24.252Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "No mention of emotion, affect, or related psychological/linguistic constructs; topics are purely technical/computational.",
+      "evidence": [
+        "Concepts include Generalization, Task (project management), Computer science, Arithmetic, Mathematics, Engineering — all unrelated to emotion."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "872e8575ff80821283c1e628f29f0fef368e03cf1600b9e68cd17ef604aa211e": {
+    "paper_id": "https://openalex.org/W4387489928",
+    "title": "Research on the efficiency of combined convolutional neural network and traditional optimization methods",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:24.463Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on computational efficiency in topology optimization using CNNs and traditional numerical methods; no mention of emotion, affect, sentiment, or any psychological/behavioral constructs related to affective science.",
+      "evidence": [
+        "Abstract and concepts exclusively concern mathematical optimization, CNNs, MATLAB, iterative algorithms, and structural design"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "58083ebc1cb80c1eda379d29527cc7272248099f58ddfd1fd787e19a69a027a0": {
+    "paper_id": "https://openalex.org/W4402671576",
+    "title": "SAPT: A Shared Attention Framework for Parameter-Efficient Continual Learning of Large Language Models",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:24.530Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on parameter-efficient continual learning for large language models using a shared attention framework, with no mention of emotion, affect, or related psychological or linguistic constructs.",
+      "evidence": [
+        "Title and abstract emphasize technical machine learning concepts: 'Shared Attention Framework', 'Parameter-Efficient Continual Learning', 'Large Language Models'"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "96cf7d227c934f1d46504e93f1affbf3cbe9745beac569f23b586c85a80528e3": {
+    "paper_id": "https://openalex.org/W4410932683",
+    "title": "Comprehensive Characterization of the Unconventional Fracture Networks via Fiber Optic Tools and Microseismicity Analysis",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:26.284Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on geomechanical modeling, fracture characterization, and fiber-optic monitoring in shale gas reservoirs; no connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and abstract content pertain to geology, seismology, and reservoir engineering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "9316e30de56a4ca3697b8df114e5b905723d626db6d7f101a32f45d8cc945076": {
+    "paper_id": "https://openalex.org/W4387963941",
+    "title": "An Early Evaluation of GPT-4V(ision)",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:26.335Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on multimodal evaluation of GPT-4V, with no mention of emotion, affect, sentiment, or related psychological/linguistic constructs.",
+      "evidence": [
+        "Abstract and concepts list contain no emotion-related terms; topics are technical (vision, NLP, modalities, benchmarks)."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "16bf60eb81205868119efbdbcbfb1ddb98aef6e8ba50f93e863d6db93a5d9156": {
+    "paper_id": "https://openalex.org/W4414252542",
+    "title": "Climate Physical Risk, Corporate Investment Behavior and Supply Chain Risk Level",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:26.451Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on climate physical risk, corporate investment behavior, and supply chain risk—topics in finance, economics, and operations management—with no apparent connection to emotion or affective science.",
+      "evidence": [
+        "Title contains no emotion-related terms; abstract is empty and venue (SSRN) suggests economics/finance domain."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "48ae60180fa342b4ba326e0ff3deee48ed7ab207237b1894b2c05135bdc59c7b": {
+    "paper_id": "https://openalex.org/W4386766906",
+    "title": "Toward Label-Efficient Emotion and Sentiment Analysis",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:26.606Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is explicitly focused on emotion and sentiment analysis, aligning directly with the researcher's interest topic 'emotion'; it addresses core affective computing challenges including label efficiency, subjectivity, and ambiguity in emotion recognition.",
+      "evidence": [
+        "Title contains 'Emotion and Sentiment Analysis'",
+        "Abstract states 'The first step of AEI is to recognize the emotion and sentiment that are conveyed in different affective signals'",
+        "Interest topics include 'emotion' and paper's primary domain is affective NLP"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "sentiment analysis",
+        "affective computing",
+        "label-efficient learning",
+        "artificial emotional intelligence"
+      ],
+      "research_directions": [
+        "low-shot emotion classification",
+        "domain-adaptive sentiment analysis",
+        "weakly supervised affective signal modeling",
+        "quantitative evaluation of emotion annotation ambiguity"
+      ]
+    }
+  },
+  "b07007d0ba61dcdec5fb9b22def9ea7656292c5c78f7651d2e3f5f732b931dda": {
+    "paper_id": "https://openalex.org/W4402475634",
+    "title": "Deep Learning Based Algorithm for Efficient Information Retrieval in Blockchain Transactions",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:26.650Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on blockchain transaction information retrieval using deep learning, with no mention of emotion, affective computing, sentiment, or related psychological or linguistic constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are technical/computational (e.g., 'blockchain', 'information retrieval', 'deep learning', 'data mining')"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "dfce08a7a971077ba2f86b38c8a5a164ba6bbff3dcce37206451d16f7791246f": {
+    "paper_id": "https://openalex.org/W4392489122",
+    "title": "Improving the Downstream Performance of Mixture-of-Experts Transformers via Weak Vanilla Transformers",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:26.704Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on model architecture optimization, transfer capability distillation, and MoE Transformers—topics in machine learning systems and NLP engineering—not emotion or affective science.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, behavior, psychology, or related constructs; all concepts are technical (Transformer, distillation, BERT, pre-training)."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "95bd06c62c0ff5cdfda98f5062f328e7a2957e157b426ecab44d9a893f451baf": {
+    "paper_id": "https://openalex.org/W4292829730",
+    "title": "DiseSniper: A potato disease identification system based on the ResNet model",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:27.864Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on agricultural image classification for potato disease detection using ResNet; no mention of emotion, affective computing, or psychological/behavioral affective constructs.",
+      "evidence": [
+        "Concepts include Blight, Image processing, Artificial intelligence, Plant disease — all domain-specific to computer vision in agriculture."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "81e932dfc106972fd78f89ad8054e4f65093304a3e92b496a168a4da81032573": {
+    "paper_id": "https://openalex.org/W4386870612",
+    "title": "Improving Affective Event Classification with Multi-perspective Knowledge Injection",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:27.886Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper title explicitly references 'Affective Event Classification', directly aligning with the researcher's interest in 'emotion'. The inclusion of 'Sentiment analysis' and 'Natural language processing' among concepts further supports affective computing relevance.",
+      "evidence": [
+        "Title: 'Improving Affective Event Classification with Multi-perspective Knowledge Injection'",
+        "Concepts include: 'Sentiment analysis', 'Natural language processing'"
+      ],
+      "keywords": [
+        "affective computing",
+        "emotion classification",
+        "sentiment analysis",
+        "event classification",
+        "natural language processing"
+      ],
+      "research_directions": [
+        "Affective event detection in text",
+        "Knowledge-enhanced emotion modeling",
+        "Multi-perspective representation learning for affect"
+      ]
+    }
+  },
+  "4c2097f682cb04a7752df2242589156398bb8a1e8cca9836a64a1fef3e0d85fe": {
+    "paper_id": "https://openalex.org/W4285391343",
+    "title": "Copy Number Variation Analysis of 5p Deletion Provides Accurate Prenatal Diagnosis and Reveals Candidate Pathogenic Genes",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:28.040Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on genetic analysis of 5p deletion syndrome, chromosomal breakpoints, and prenatal diagnosis; no mention of emotion, affective processes, or psychological/behavioral correlates beyond the 'cat-like cry' as a clinical symptom.",
+      "evidence": [
+        "'cat-like cry' is described as a phenotypic feature, not an emotional or affective state"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "cdd91fe584397bbfc95bf4c1865b500fcdcccd8a648f4cbd84c6d6e1603a53b7": {
+    "paper_id": "https://openalex.org/W4375868793",
+    "title": "A Topic-Enhanced Approach for Emotion Distribution Forecasting in Conversations",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:28.427Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses emotion forecasting in conversations, explicitly introduces 'Emotion Distribution Forecasting' as its core task, and aligns precisely with the researcher's interest topic 'emotion'. The methodology, evaluation, and conceptual framing are centered on affective computing and emotion modeling.",
+      "evidence": [
+        "Title contains 'Emotion Distribution Forecasting in Conversations'",
+        "Abstract defines EDFC as predicting 'emotion distribution of next utterance'",
+        "Interest topics include 'emotion', and paper's concepts include 'Emotion classification'"
+      ],
+      "keywords": [
+        "emotion distribution",
+        "emotion forecasting",
+        "conversational emotion",
+        "affective NLP",
+        "emotion classification"
+      ],
+      "research_directions": [
+        "affective computing",
+        "natural language processing",
+        "emotion modeling",
+        "dialogue systems",
+        "distributional emotion prediction"
+      ]
+    }
+  },
+  "a3ba27ab0bf9c7aec59b6155eb5a0e50c738928203372f5051975859a7b6e5eb": {
+    "paper_id": "https://openalex.org/W4405034010",
+    "title": "Data Uncertainty-Aware Learning for Multimodal Aspect-based Sentiment Analysis",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:29.093Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper addresses sentiment analysis—a core affective/emotion-related NLP task—and explicitly focuses on aspect-level sentiment, which is semantically and functionally grounded in emotion and attitude expression. The researcher's stated interest is 'emotion', and sentiment is a direct, widely accepted proxy and subdomain of affective computing.",
+      "evidence": [
+        "Interest topics include 'emotion'",
+        "Paper title and abstract center on 'multimodal aspect-based sentiment analysis' (MABSA)",
+        "Sentiment analysis is a canonical affective computing task mapping linguistic/visual cues to emotional valence (positive/negative/neutral) and related states"
+      ],
+      "keywords": [
+        "sentiment analysis",
+        "affective computing",
+        "emotion recognition",
+        "aspect-based sentiment",
+        "multimodal learning"
+      ],
+      "research_directions": [
+        "Affective multimodal AI",
+        "Fine-grained emotion/sentiment modeling",
+        "Uncertainty-aware affective systems",
+        "Robust affective NLP"
+      ]
+    }
+  },
+  "2f83b03051ab06f3615a730d58b43b512183342c55b987e6fbf82ccc538bea17": {
+    "paper_id": "https://openalex.org/W4385718301",
+    "title": "HIT-SCIR at WASSA 2023: Empathy and Emotion Analysis at the Utterance-Level and the Essay-Level",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:29.271Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper is explicitly focused on empathy and emotion analysis across multiple shared task tracks, directly aligning with the researcher's interest topic 'emotion'. It employs state-of-the-art NLP models for utterance-level and essay-level emotion detection and empathy prediction.",
+      "evidence": [
+        "Title contains 'Empathy and Emotion Analysis'",
+        "Abstract states focus on 'Empathy Detection and Emotion Classification'",
+        "Three tracks explicitly named: 'Empathy and Emotion Prediction', 'Empathy Prediction', 'Emotion Classification'"
+      ],
+      "keywords": [
+        "empathy",
+        "emotion detection",
+        "emotion classification",
+        "utterance-level analysis",
+        "essay-level analysis",
+        "DeBERTa",
+        "RoBERTa",
+        "WASSA",
+        "shared task"
+      ],
+      "research_directions": [
+        "affective computing",
+        "natural language processing for emotion",
+        "multilevel emotion modeling",
+        "regression-based empathy prediction",
+        "classification-based emotion analysis"
+      ]
+    }
+  },
+  "42df01b4f39b7d9f41fb08bc0a597a8828fbf5fcfc9c0d77c96808e3a0e18644": {
+    "paper_id": "https://openalex.org/W4316670157",
+    "title": "Cognitive distortion based explainable depression detection and analysis technologies for the adolescent internet users on social media",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:29.273Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on emotion-adjacent psychological constructs—specifically depression and cognitive distortions—which are core affective phenomena grounded in emotion theory and clinical affective science.",
+      "evidence": [
+        "Title explicitly references 'depression detection' and 'cognitive distortion', both well-established in affective science",
+        "Abstract states the goal is 'explainable depression detection' grounded in 'cognitive distortion theory', a key emotion-cognition interaction framework",
+        "Researcher's interest topic 'emotion' directly aligns with depression as a clinical affective disorder and cognitive distortions as emotion-regulation failures"
+      ],
+      "keywords": [
+        "depression",
+        "cognitive distortion",
+        "affective computing",
+        "explainable AI",
+        "adolescent mental health",
+        "social media analytics"
+      ],
+      "research_directions": [
+        "Affective computing for mental health",
+        "Explainable AI in emotion modeling",
+        "Cognition-emotion interactions in digital behavior",
+        "Emotion-related linguistic analysis on social media"
+      ]
+    }
+  },
+  "e41078c3bcd934965d5440ab13162feff3317e9da80b422aa078357b2caea2a7": {
+    "paper_id": "https://openalex.org/W4297510826",
+    "title": "Leveraging Multi-modal Interactions among the Intermediate Representations of Deep Transformers for Emotion Recognition",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:29.426Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper explicitly focuses on emotion recognition using multi-modal deep learning, directly aligning with the researcher's interest topic 'emotion'. The title, abstract, and methodology all center on modeling emotional states from speech and other modalities.",
+      "evidence": [
+        "Title contains 'Emotion Recognition'",
+        "Abstract states 'Multi-modal emotion recognition aims to recognize emotion states'",
+        "Method targets 'end-to-end emotion recognition' and evaluates on emotion benchmarks IEMOCAP and CMU-MOSEI"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "multi-modal learning",
+        "transformer",
+        "intermediate representations",
+        "speech emotion"
+      ],
+      "research_directions": [
+        "affective computing",
+        "multi-modal affective analysis",
+        "deep learning for emotion",
+        "transformer-based emotion modeling"
+      ]
+    }
+  },
+  "cdbba46ccf7db57205fe6284fe03d7ce51daaeb4562f99142f0954e11fdfa943": {
+    "paper_id": "https://openalex.org/W4406260515",
+    "title": "Scale-CoT: Integrating LLM with Psychiatric Scales for Analyzing Mental Health Issues on Social Media",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:29.540Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses emotion-related mental health assessment using psychiatric scales—core tools for evaluating affective states—and explicitly integrates them with LLMs to analyze emotional and psychological content in social media, aligning tightly with 'emotion' as a research interest.",
+      "evidence": [
+        "Uses psychiatric scales (e.g., PHQ-9, GAD-7) that clinically assess emotional symptoms like depression and anxiety",
+        "Focuses on detecting mental health issues via language reflecting affective states in social media posts",
+        "Researcher's stated interest topic is 'emotion', and the paper's goal is emotion-informed mental health analysis"
+      ],
+      "keywords": [
+        "emotion",
+        "mental health",
+        "psychiatric scales",
+        "affective computing",
+        "social media analysis",
+        "LLM prompting",
+        "explainable AI"
+      ],
+      "research_directions": [
+        "Affective NLP for clinical scale alignment",
+        "Emotion-aware prompt engineering for LLMs",
+        "Explainable detection of emotional distress in user-generated text",
+        "Cross-disciplinary integration of clinical psychology and AI"
+      ]
+    }
+  },
+  "445b83089812d4b0fcbc604e1d9ec513515be9a4d0e036b0793792935bea8b75": {
+    "paper_id": "https://openalex.org/W4389520267",
+    "title": "C2D2 Dataset: A Resource for the Cognitive Distortion Analysis and Its Impact on Mental Health",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:29.685Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.85,
+      "confidence": 0.92,
+      "reason": "The paper directly addresses emotion-adjacent psychological constructs—cognitive distortions are well-established in clinical psychology as maladaptive thought patterns that mediate emotional dysregulation and contribute to affective disorders (e.g., depression, anxiety). The focus on mental health impact, language-based detection of distortion, and linkage to real-world emotional distress aligns strongly with affective/emotion research.",
+      "evidence": [
+        "Cognitive distortions refer to patterns of irrational thinking that can lead to distorted perceptions of reality and mental health problems",
+        "examines the association between cognitive distortions and mental health conditions",
+        "incorporating information about users’ cognitive distortions can enhance the performance of existing models mental disorder detection"
+      ],
+      "keywords": [
+        "cognitive distortion",
+        "mental health",
+        "affective disorders",
+        "emotional dysregulation",
+        "clinical psychology",
+        "language and emotion"
+      ],
+      "research_directions": [
+        "Affective computing for mental health assessment",
+        "Linguistic markers of emotion-related cognition",
+        "Clinical NLP for depression/anxiety detection",
+        "Emotion-cognition interaction modeling"
+      ]
+    }
+  },
+  "83723d0a18a1296a52d16a343a1176538574717b8db94995163fec9d00948979": {
+    "paper_id": "https://openalex.org/W4285604359",
+    "title": "CauAIN: Causal Aware Interaction Network for Emotion Recognition in Conversations",
+    "researcher_name": "Yanyan Zhao",
+    "researcher_openalex_author_id": "A5031911989",
+    "updated_at": "2026-02-20T14:31:31.005Z",
+    "analysis": {
+      "is_interesting": true,
+      "relevance_score": 0.95,
+      "confidence": 0.98,
+      "reason": "The paper directly addresses emotion recognition in conversations, explicitly incorporates emotion cause (a core affective construct), and aligns with the researcher's stated interest topic 'emotion'.",
+      "evidence": [
+        "Title contains 'Emotion Recognition in Conversations'",
+        "Abstract emphasizes 'emotion cause' as stimulus to target emotion",
+        "Concepts include 'Emotion recognition' as a top-level concept"
+      ],
+      "keywords": [
+        "emotion recognition",
+        "emotion cause",
+        "conversational emotion",
+        "causal modeling",
+        "affective computing"
+      ],
+      "research_directions": [
+        "Affective NLP",
+        "Causal modeling of emotions",
+        "Context-aware emotion detection",
+        "Multiturn conversational affect analysis"
+      ]
+    }
+  }
+}

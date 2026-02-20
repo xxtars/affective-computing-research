@@ -1,0 +1,362 @@
+{
+  "9ccd9c20bb7d2490e4c5846586e5fa856bf6bcb6cdee4763950ddce3650accd9": {
+    "paper_id": "https://openalex.org/W7127950470",
+    "title": "Towards explainable image composition assessment: a dataset and a model",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:48.718Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on image composition assessment and explainability in AI, with no explicit or implied connection to emotion or affective science.",
+      "evidence": [
+        "Interest topics specify 'emotion', but paper concepts include 'Computer science', 'Artificial intelligence', 'Embedding', etc.—none are emotion-related"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "7d528065c18c9a12bae722ead0e6d37306eed344dc413616d43cad5f3baa2368": {
+    "paper_id": "https://openalex.org/W4415014701",
+    "title": "Fine-grained Image Quality Assessment for Perceptual Image Restoration",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.146Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on image quality assessment and perceptual image restoration, with no mention of emotion, affective states, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; topics are purely computer vision and IQA metrics."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "94d78c9e83b09a3756fe99e8f5357beaeeed34dcbbfbd2683f62d077b92aa6c5": {
+    "paper_id": "https://openalex.org/W4415538072",
+    "title": "InstructCrop: Teaching Multimodal Large Language Models to Crop Aesthetic Images",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.171Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on aesthetic image cropping and multimodal LLM instruction tuning, with no mention of emotion, affect, sentiment, or related psychological or computational affective constructs.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, feeling, sentiment, mood, or human emotional response."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a9e678749da5f72470467fb8fb1746df88d8d367fde38957ad27e8584c8a7eb1": {
+    "paper_id": "https://openalex.org/W4414524409",
+    "title": "AesPrompt: Zero-Shot Image Aesthetics Assessment With Multi-Granularity Aesthetic Prompt Learning",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.172Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on image aesthetics assessment using prompt learning, with no mention or conceptual link to emotion, affect, or psychological states.",
+      "evidence": [
+        "Title and abstract emphasize 'aesthetics', 'zero-shot assessment', and 'prompt learning'—no emotion-related terms or constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "1d1d54f3b1c908c228a5aedbb67d810f4bc80a96b5e705f7e03f8aa3feefb126": {
+    "paper_id": "https://openalex.org/W4410706083",
+    "title": "GAN-Guided Few-Shot Attention Network for Medical Images Fusion Quality Assessment",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.215Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on medical image fusion quality assessment using GANs and attention networks; 'emotion' is not mentioned or implied in title, abstract, concepts, or methodology.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; all concepts are technical/computer vision/medical imaging focused."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ed455a28f3b31953f8dcd0e42a80e8f3dedc8ca2a63b19302deafff8dc7c69b5": {
+    "paper_id": "https://openalex.org/W4412939523",
+    "title": "Learning Scene-Invariant Distribution for Generalizable Blind Image Quality Assessment",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.255Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on blind image quality assessment and scene-invariant distribution learning, with no mention of emotion, affective states, or psychological constructs related to emotion.",
+      "evidence": [
+        "Abstract and concepts contain no emotion-related terms; 'emotion' does not appear in title, abstract, or listed concepts."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "a1c6788cc1be5fb3d91dc77b86cbb829967649ccd403eb6c828f1448d9cf0f1d": {
+    "paper_id": "https://openalex.org/W4417469954",
+    "title": "UAV-Assisted Task Offloading and Resource Allocation in Internet of Vehicles: An Integration of Digital Twin and Generative AI",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.257Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.05,
+      "confidence": 0.98,
+      "reason": "The paper focuses on UAV-assisted task offloading, digital twin, generative AI, and federated reinforcement learning in vehicular networks; no mention of emotion, affective computing, or psychological/behavioral aspects of emotion.",
+      "evidence": [
+        "Abstract contains no emotion-related terms or concepts"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "6ab07ef038cd672ed86f6647e1033edaaf53614597c48ddb6b7972196a80befb": {
+    "paper_id": "https://openalex.org/W4415129792",
+    "title": "Trends in Image Aesthetics Assessment",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.269Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.92,
+      "reason": "The paper focuses on image aesthetics assessment, which concerns visual perception and quality evaluation, not emotion or affective states.",
+      "evidence": [
+        "Abstract mentions 'aesthetic perception', 'aesthetic quality evaluation', and 'image cropping'—no reference to emotion, affect, sentiment, or related psychological constructs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "48c51df35da680d10787d70e5d12b6bbf522bdc4ddf4d60ff7dfa9022e33d729": {
+    "paper_id": "https://openalex.org/W4413869916",
+    "title": "Semi-SNN: Biological-inspired semi-supervised image classification with spiking neural networks",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.355Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on spiking neural networks for image classification and shows no conceptual or methodological connection to emotion or affective science.",
+      "evidence": [
+        "Concepts include 'Spiking neural network', 'Machine learning', 'Image classification' — none relate to emotion, affect, psychology of emotion, or affective computing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "b52409fdb5ef27b0dd13caa2448cd5013fb508064e9458c37a7f00babda23027": {
+    "paper_id": "https://openalex.org/W4417291555",
+    "title": "Content-Adaptive Image Retouching Guided by Attribute-Based Text Representation",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.357Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on content-adaptive image retouching using attribute-based text guidance; 'emotion' is not mentioned or implied in title, abstract, or methodology.",
+      "evidence": [
+        "Abstract contains no emotion-related terms or concepts; core focus is color mapping, visual attributes, and multimodal text-image integration for retouching."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "ca58b0a2fb10b64f066ef81f21333277f5c6abf05de387219c125aaa5f3d1006": {
+    "paper_id": "https://openalex.org/W4415707688",
+    "title": "Text-to-Image Diffusion Models are AI-Generated Image Quality Scorers",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.380Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on AI-generated image quality assessment using diffusion models, with no mention of emotion, affect, sentiment, or any psychological or affective constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core concepts are 'image quality', 'text-image alignment', 'diffusion models', and 'AGIQA'."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "dd2d407a7bdd6de246060f78c516c05c0f267120c0fc7b961f7bd4cb92ab1d62": {
+    "paper_id": "https://openalex.org/W4415540187",
+    "title": "Low-light Image Enhancement Quality Assessment: A Real-World Dataset and An Objective Method",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.395Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on low-light image enhancement quality assessment using objective metrics and a real-world dataset; no mention of emotion, affective states, or psychological/behavioral responses to images.",
+      "evidence": [
+        "Abstract contains no terms related to emotion, affect, perception of emotion, sentiment, mood, or human affective response."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "0691920506402c81e4ae361dfd3549b759d865c517f16457eed8abbb53d6501c": {
+    "paper_id": "https://openalex.org/W4414011766",
+    "title": "MIGF-Net: Multimodal interaction-guided fusion network for image aesthetics assessment",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.511Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.85,
+      "reason": "The paper focuses on image aesthetics assessment using multimodal fusion techniques, which is a computer vision task; 'emotion' is not indicated in title, venue, concepts, or abstract (which is empty), and aesthetics ≠ emotion despite potential weak associations.",
+      "evidence": [
+        "Title and concepts center on image fusion, computer vision, and aesthetics—not emotion processing or affective computing."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e040684b7be7ffda727b897884f4d474b8222d30f4295cf44d2f7b3bf98afbc3": {
+    "paper_id": "https://openalex.org/W4412404521",
+    "title": "Dark Channel Difference Driven Dehazed Image Quality Assessment With Progressive Injection",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.541Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on objective image quality assessment for dehazed images using low-level vision and feature engineering; no mention of emotion, affective computing, or human subjective experience related to emotions.",
+      "evidence": [
+        "Abstract and metadata contain no emotion-related terms; all concepts are technical/computer vision-oriented (e.g., 'dark channel', 'feature fusion', 'quality regression')."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "4fbe3d2793e8ea26389a2585a00a1016f5c299c2472c07f0e561580104abe317": {
+    "paper_id": "https://openalex.org/W4417290845",
+    "title": "LongT2IBench: A Benchmark for Evaluating Long Text-to-Image Generation with Graph-structured Annotations",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.629Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on benchmarking and evaluating long text-to-image generation alignment using graph-structured annotations and MLLM-based evaluation; no mention of emotion, affect, sentiment, or any affective/emotion-related constructs.",
+      "evidence": [
+        "Abstract contains no emotion-related terms; core concepts are alignment, graph-structured annotations, T2I evaluation, and instruction-tuned MLLMs."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "5dece679b1bb7169dcacf0ca89b7afb9b55866b1fc71e8f2d816b5420a32d532": {
+    "paper_id": "https://openalex.org/W4412030281",
+    "title": "Blind Quality Assessment of Wide-Angle Videos Based on Deformation Representation Learning and Multi-Dimensional Feature Fusion",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:50.652Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on objective video quality assessment, specifically deformation modeling and feature fusion for wide-angle videos; no mention of emotion, affective states, subjective affective responses, or psychological/emotional perception mechanisms.",
+      "evidence": [
+        "Abstract emphasizes 'deformation representation learning', 'motion features', and 'prediction monotonicity and accuracy' — all technical VQA metrics, not affective evaluation."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e9eccacfb330817355a0c61495de294743a66a36620f05ca161c904ec0e99088": {
+    "paper_id": "https://openalex.org/W4409990928",
+    "title": "Progressively Generated Text-Assisted Image Aesthetic Quality Assessment",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:52.367Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.15,
+      "confidence": 0.92,
+      "reason": "The paper focuses on image aesthetic quality assessment using generated text as auxiliary signals, not on human emotion modeling, affective computing, or emotional responses.",
+      "evidence": [
+        "Interest topic is 'emotion', but paper's concepts and abstract center on image quality, aesthetics (as perceptual judgment), and multimodal AI—not affective states, emotion recognition, or emotion elicitation."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "717baa1da23cfabb2ba0afecbe29228c6843636ab3304d265d2b1764781f2c84": {
+    "paper_id": "https://openalex.org/W4408860491",
+    "title": "No-Reference Image Quality Assessment via Inter-Level Adaptive Knowledge Distillation",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:53.272Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on technical image quality assessment using knowledge distillation, with no mention of emotion, affective computing, or human emotional response.",
+      "evidence": [
+        "Abstract and metadata contain no emotion-related terms; concepts are strictly AI, signal processing, and quality engineering."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "fd55f60bab2780b64506e6cb10e2c0d720864980f6555e7782bac11307ef6b6b": {
+    "paper_id": "https://openalex.org/W4409365872",
+    "title": "Asymmetric Hierarchical Difference-aware Interaction Network for Event-guided Motion Deblurring",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:53.617Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on motion deblurring using event cameras and computer vision techniques, with no connection to emotion or affective science.",
+      "evidence": [
+        "All concepts and the abstract pertain to image restoration, computer vision, and sensor fusion—no emotional, psychological, or affective terms appear."
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  },
+  "e9ecfb656c591529d5a5d27fcb2fe55133f8842e5a6cb202653b2e9f40c92cbb": {
+    "paper_id": "https://openalex.org/W4415334578",
+    "title": "Language-Guided Visual Perception Disentanglement for Image Quality Assessment and Conditional Image Generation",
+    "researcher_name": "Leida Li",
+    "researcher_openalex_author_id": "A5033615240",
+    "updated_at": "2026-02-20T14:41:53.725Z",
+    "analysis": {
+      "is_interesting": false,
+      "relevance_score": 0.1,
+      "confidence": 0.95,
+      "reason": "The paper focuses on visual perception disentanglement, image quality assessment, and conditional generation using vision-language models; 'emotion' is not mentioned or implied in title, abstract, or concepts.",
+      "evidence": [
+        "Abstract contains no mention of emotion, affect, sentiment, aesthetics beyond technical/aesthetic quality (used as a perceptual attribute, not emotional response)"
+      ],
+      "keywords": [],
+      "research_directions": []
+    }
+  }
+}
