@@ -685,6 +685,24 @@ function buildCachedWorkIdSet(cache) {
   return ids;
 }
 
+async function backfillVenueFromDoiForWorks(works, resolveVenueByDoi) {
+  if (!Array.isArray(works) || typeof resolveVenueByDoi !== "function") return;
+  for (const work of works) {
+    if (!work) continue;
+    const hasSource = String(work?.source?.display_name || work?.primary_source || "").trim().length > 0;
+    if (hasSource) continue;
+    const doi = work?.doi || work?.doi_url || null;
+    if (!doi) continue;
+    const venue = await resolveVenueByDoi(doi);
+    if (!venue) continue;
+    work.primary_source = venue;
+    work.source = {
+      ...(work.source || {}),
+      display_name: venue,
+    };
+  }
+}
+
 async function analyzePaper({ researcher, work, args, cache, qwenConfig }) {
   const cacheKey = paperCacheKey(work);
   const cachedEntry = cache[cacheKey];
@@ -893,6 +911,15 @@ async function run() {
       }
     }
     const dedupedMergedWorks = dedupeWorksByTitle(mergedWorks);
+    await backfillVenueFromDoiForWorks(
+      dedupedMergedWorks,
+      (doi) =>
+        resolveVenueFromDoi({
+          doiValue: doi,
+          doiVenueCache,
+          doiVenueCachePath,
+        })
+    );
 
     dedupedMergedWorks.sort((a, b) => {
       const dateA = a.publication_date || "";
