@@ -42,7 +42,10 @@ export default function Home(): ReactNode {
             <div className={styles.linkGrid}>
               <Link className={styles.linkCard} to="/researchers">
                 <Heading as="h3">Researchers</Heading>
-                <p>Browse tracked researchers, search by name/country/university, and open detailed profiles.</p>
+                <p>
+                  Browse tracked researchers, search by name/institution country/university, and open detailed
+                  profiles.
+                </p>
               </Link>
               <Link className={styles.linkCard} to="/papers">
                 <Heading as="h3">Papers</Heading>
