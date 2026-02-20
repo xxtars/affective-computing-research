@@ -230,6 +230,7 @@ export default function ResearchersPage(): ReactNode {
                     <div className={styles.axisSwitch}>
                       <button
                         className={`${styles.axisBtn} ${initialAxis === 'family' ? styles.axisBtnActive : ''}`}
+                        aria-pressed={initialAxis === 'family'}
                         onClick={() => {
                           setInitialAxis('family');
                           setNameInitialFilter('All');
@@ -239,6 +240,7 @@ export default function ResearchersPage(): ReactNode {
                       </button>
                       <button
                         className={`${styles.axisBtn} ${initialAxis === 'given' ? styles.axisBtnActive : ''}`}
+                        aria-pressed={initialAxis === 'given'}
                         onClick={() => {
                           setInitialAxis('given');
                           setNameInitialFilter('All');
@@ -251,6 +253,7 @@ export default function ResearchersPage(): ReactNode {
                   <div className={styles.initialBar}>
                     <button
                       className={`${styles.initialBtn} ${nameInitialFilter === 'All' ? styles.initialBtnActive : ''}`}
+                      aria-pressed={nameInitialFilter === 'All'}
                       onClick={() => setNameInitialFilter('All')}
                       type="button">
                       All
@@ -260,6 +263,7 @@ export default function ResearchersPage(): ReactNode {
                       return (
                         <button
                           className={`${styles.initialBtn} ${nameInitialFilter === initial ? styles.initialBtnActive : ''}`}
+                          aria-pressed={nameInitialFilter === initial}
                           disabled={!enabled}
                           key={initial}
                           onClick={() => setNameInitialFilter(initial)}
