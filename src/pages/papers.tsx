@@ -12,6 +12,8 @@ type WorkItem = {
   title: string;
   publication_year: number | null;
   publication_date?: string | null;
+  tracked_author_rank?: number | null;
+  tracked_author_position?: string | null;
   doi?: string | null;
   doi_url?: string | null;
   cited_by_count: number;
@@ -50,7 +52,8 @@ type IndexFile = {
   researchers: IndexRecord[];
 };
 
-type PaperView = WorkItem & {researcherName: string; researcherId: string};
+type PaperAuthor = {name: string; id: string; order: number};
+type PaperView = WorkItem & {researchers: PaperAuthor[]};
 
 function normalizeTitle(title: string) {
   return String(title || '')
@@ -118,6 +121,40 @@ function formatPreviewList(items: string[] | undefined) {
   return normalized.map((item) => capitalizeFirst(item)).join(', ');
 }
 
+function authorPositionOrder(position: string | null | undefined) {
+  const value = String(position || '').toLowerCase();
+  if (value === 'first') return 0;
+  if (value === 'middle') return 1;
+  if (value === 'last') return 2;
+  return 3;
+}
+
+function authorOrderFromWork(work: WorkItem) {
+  const rank = Number(work.tracked_author_rank || 0);
+  if (Number.isFinite(rank) && rank > 0) return rank;
+  const fallback = authorPositionOrder(work.tracked_author_position);
+  return fallback + 1000;
+}
+
+function mergePaperAuthors(existing: PaperAuthor[], next: PaperAuthor[]) {
+  const merged = [...(existing || [])];
+  for (const author of next || []) {
+    if (!author?.id) continue;
+    const existingIndex = merged.findIndex((item) => item.id === author.id);
+    if (existingIndex >= 0) {
+      if (author.order < merged[existingIndex].order) {
+        merged[existingIndex] = author;
+      }
+      continue;
+    }
+    merged.push(author);
+  }
+  return merged.sort((a, b) => {
+    if (a.order !== b.order) return a.order - b.order;
+    return a.name.localeCompare(b.name, 'en', {sensitivity: 'base'});
+  });
+}
+
 export default function PapersPage(): ReactNode {
   const baseUrlRoot = useBaseUrl('/');
   const indexUrl = useBaseUrl('data/researchers/researchers.index.json');
@@ -169,8 +206,13 @@ export default function PapersPage(): ReactNode {
 
         const enriched: PaperView = {
           ...work,
-          researcherName: researcher.identity.name,
-          researcherId: researcher.identity.openalex_author_id,
+          researchers: [
+            {
+              name: researcher.identity.name,
+              id: researcher.identity.openalex_author_id,
+              order: authorOrderFromWork(work),
+            },
+          ],
         };
 
         const existing = byTitle.get(key);
@@ -179,14 +221,19 @@ export default function PapersPage(): ReactNode {
           continue;
         }
 
+        const mergedResearchers = mergePaperAuthors(existing.researchers, enriched.researchers);
+
         if ((enriched.analysis.relevance_score || 0) > (existing.analysis.relevance_score || 0)) {
-          byTitle.set(key, enriched);
+          byTitle.set(key, {...enriched, researchers: mergedResearchers});
           continue;
         }
 
         if ((enriched.cited_by_count || 0) > (existing.cited_by_count || 0)) {
-          byTitle.set(key, enriched);
+          byTitle.set(key, {...enriched, researchers: mergedResearchers});
+          continue;
         }
+
+        byTitle.set(key, {...existing, researchers: mergedResearchers});
       }
     }
 
@@ -208,7 +255,7 @@ export default function PapersPage(): ReactNode {
       const yearText = String(paper.publication_year || '');
       return (
         paper.title.toLowerCase().includes(keyword) ||
-        paper.researcherName.toLowerCase().includes(keyword) ||
+        paper.researchers.some((item) => item.name.toLowerCase().includes(keyword)) ||
         (paper.source?.display_name || paper.primary_source || '').toLowerCase().includes(keyword) ||
         (paper.doi || paper.doi_url || '').toLowerCase().includes(keyword) ||
         yearText.includes(keyword)
@@ -277,15 +324,20 @@ export default function PapersPage(): ReactNode {
                         </h2>
 
                         <p className={styles.metaLine}>
-                          Researcher:{' '}
-                          <Link className={styles.researcherLink} to={`/researchers/detail?id=${encodeURIComponent(paper.researcherId)}`}>
-                            {paper.researcherName}
-                          </Link>
+                          Researchers:{' '}
+                          {paper.researchers.map((item, index) => (
+                            <span key={item.id}>
+                              {index > 0 ? ', ' : ''}
+                              <Link className={styles.researcherLink} to={`/researchers/detail?id=${encodeURIComponent(item.id)}`}>
+                                {item.name}
+                              </Link>
+                            </span>
+                          ))}
                         </p>
 
-                      <p className={styles.metaLine}>
-                        Venue:{' '}
-                        {paper.links?.landing_page || paper.links?.openalex || paper.doi_url || paper.doi ? (
+                        <p className={styles.metaLine}>
+                          Venue:{' '}
+                          {paper.links?.landing_page || paper.links?.openalex || paper.doi_url || paper.doi ? (
                           <a
                             href={paper.links?.landing_page || paper.links?.openalex || paper.doi_url || paper.doi || '#'}
                             rel="noreferrer"

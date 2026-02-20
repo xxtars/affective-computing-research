@@ -525,6 +525,16 @@ async function fetchAuthorWorks(
         !primarySource?.display_name && typeof resolveVenueByDoi === "function"
           ? await resolveVenueByDoi(work.doi)
           : null;
+      const trackedAuthorship = Array.isArray(work.authorships)
+        ? work.authorships.find((item) => String(item?.author?.id || "") === `https://openalex.org/${authorId}`)
+        : null;
+      const trackedAuthorRank = Array.isArray(work.authorships)
+        ? work.authorships.findIndex((item) => String(item?.author?.id || "") === `https://openalex.org/${authorId}`) + 1
+        : 0;
+      const trackedAuthorPosition =
+        typeof trackedAuthorship?.author_position === "string"
+          ? trackedAuthorship.author_position.toLowerCase()
+          : null;
       const primaryTopic = work.primary_topic || null;
       const mappedWork = {
         id: work.id,
@@ -532,6 +542,8 @@ async function fetchAuthorWorks(
         title: work.display_name || "",
         publication_year: work.publication_year || null,
         publication_date: work.publication_date || null,
+        tracked_author_rank: trackedAuthorRank > 0 ? trackedAuthorRank : null,
+        tracked_author_position: trackedAuthorPosition,
         doi: work.doi || null,
         doi_url: work.doi ? `https://doi.org/${String(work.doi).replace(/^https?:\/\/doi.org\//, "")}` : null,
         type: work.type || null,
