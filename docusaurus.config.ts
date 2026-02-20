@@ -9,7 +9,7 @@ const projectName = 'affective-computing-research';
 const config: Config = {
   title: 'Affective Computing Research',
   tagline: 'Researchers × Papers — a structured collection',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/emotional.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -76,7 +76,7 @@ const config: Config = {
       title: 'Affective Computing Research',
       logo: {
         alt: 'Awesome Affective Computing Logo',
-        src: 'img/logo.svg',
+        src: 'img/emotional.png',
       },
       items: [
         {to: '/researchers', label: 'Researchers', position: 'left'},
