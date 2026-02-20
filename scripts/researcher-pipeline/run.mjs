@@ -4,17 +4,21 @@ import crypto from "node:crypto";
 
 const OPENALEX_BASE_URL = "https://api.openalex.org";
 const DEFAULT_QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1";
+const DEFAULT_INTEREST_TOPICS = ["emotion"];
 
 function parseArgs(argv) {
   const args = {
     seed: "data/researchers/researcher.seed.json",
     out: "data/researchers/researcher.profile.json",
-    cache: "data/researchers/cache/paper-analysis-cache.json",
+    cache: "data/researchers/cache",
     model: process.env.QWEN_MODEL || "qwen-plus",
     skipAi: false,
     maxPapers: null,
     delayMs: 200,
     fullRefresh: false,
+    concurrency: 4,
+    saveEvery: 1,
+    researcherNames: [],
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -25,6 +29,13 @@ function parseArgs(argv) {
     else if (token === "--model") args.model = argv[++i];
     else if (token === "--max-papers") args.maxPapers = Number(argv[++i]);
     else if (token === "--delay-ms") args.delayMs = Number(argv[++i]);
+    else if (token === "--concurrency") args.concurrency = Number(argv[++i]);
+    else if (token === "--save-every") args.saveEvery = Number(argv[++i]);
+    else if (token === "--researcher-name") {
+      const raw = String(argv[++i] || "");
+      const names = raw.split(",").map((x) => x.trim()).filter(Boolean);
+      args.researcherNames.push(...names);
+    }
     else if (token === "--skip-ai") args.skipAi = true;
     else if (token === "--full-refresh") args.fullRefresh = true;
   }
@@ -108,6 +119,35 @@ function normalizeTitle(title) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
+}
+
+function normalizeNameForMatch(name) {
+  return String(name || "").toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function sanitizeForPath(text) {
+  return String(text || "")
+    .replace(/[<>:"/\\|?*\u0000-\u001F]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/ /g, "_");
+}
+
+function getScholarUserId(googleScholarUrl) {
+  try {
+    const url = new URL(String(googleScholarUrl || ""));
+    return url.searchParams.get("user") || null;
+  } catch {
+    return null;
+  }
+}
+
+function getResearcherCachePath(cacheRoot, researcher, authorId) {
+  const safeName = sanitizeForPath(researcher.name || "unknown");
+  const scholarId = sanitizeForPath(getScholarUserId(researcher.google_scholar) || "no-scholar");
+  const safeAuthorId = sanitizeForPath(String(authorId || "unknown").toLowerCase());
+  const folder = `${safeName}__${scholarId}__${safeAuthorId}`;
+  return path.join(cacheRoot, folder, "paper-analysis-cache.json");
 }
 
 function isPreprintWork(work) {
@@ -309,8 +349,21 @@ function paperCacheKey(work) {
   return crypto.createHash("sha256").update(fingerprint).digest("hex");
 }
 
+function getInterestTopics(researcher) {
+  if (Array.isArray(researcher?.interest_topics) && researcher.interest_topics.length > 0) {
+    return researcher.interest_topics;
+  }
+  return DEFAULT_INTEREST_TOPICS;
+}
+
+function shortenText(text, maxChars = 1800) {
+  const normalized = String(text || "").replace(/\s+/g, " ").trim();
+  if (normalized.length <= maxChars) return normalized;
+  return `${normalized.slice(0, maxChars)} ...`;
+}
+
 function buildPaperPrompt(researcher, work) {
-  return `You are analyzing whether a paper matches user interest topics.\n\nResearcher: ${researcher.name}\nInterest topics: ${(researcher.interest_topics || []).join(", ")}\n\nPaper metadata:\n- Title: ${work.title}\n- Year: ${work.publication_year || "unknown"}\n- Venue: ${work.primary_source || "unknown"}\n- Concepts: ${(work.concepts || []).join(", ") || "none"}\n- Abstract: ${work.abstract || "(empty)"}\n\nReturn strict JSON with this schema:\n{\n  "is_interesting": boolean,\n  "relevance_score": number,\n  "confidence": number,\n  "reason": string,\n  "evidence": string[],\n  "keywords": string[],\n  "research_directions": string[]\n}\n\nRules:\n- relevance_score and confidence must be in [0,1]\n- evidence max 3 short strings\n- if is_interesting=false, keywords/research_directions can be empty arrays.`;
+  return `You are analyzing whether a paper is affective/emotion-related based on the interest topics.\n\nResearcher: ${researcher.name}\nInterest topics: ${getInterestTopics(researcher).join(", ")}\n\nPaper metadata:\n- Title: ${work.title}\n- Year: ${work.publication_year || "unknown"}\n- Venue: ${work.primary_source || "unknown"}\n- Concepts: ${(work.concepts || []).join(", ") || "none"}\n- Abstract: ${shortenText(work.abstract || "(empty)")}\n\nReturn strict JSON with this schema:\n{\n  "is_interesting": boolean,\n  "relevance_score": number,\n  "confidence": number,\n  "reason": string,\n  "evidence": string[],\n  "keywords": string[],\n  "research_directions": string[]\n}\n\nRules:\n- First decide related vs non-related.\n- If non-related, return minimal output:\n  - is_interesting=false\n  - relevance_score in [0,0.2]\n  - confidence in [0,1]\n  - short reason\n  - evidence max 1 short string\n  - keywords=[]\n  - research_directions=[]\n- If related, fill keywords/research_directions normally.\n- Always return valid JSON only.`;
 }
 
 function buildSummaryPrompt(researcher, analyzedWorks) {
@@ -321,18 +374,17 @@ function buildSummaryPrompt(researcher, analyzedWorks) {
       year: w.publication_year,
       cited_by_count: w.cited_by_count,
       directions: w.analysis.research_directions || [],
-      keywords: w.analysis.keywords || [],
-    }))
-    .slice(0, 120);
+    }));
 
   return `Based on interesting papers for researcher ${researcher.name}, summarize main research directions.\n\nInput papers JSON:\n${JSON.stringify(interesting)}\n\nReturn strict JSON:\n{\n  "top_research_directions": [{"name": string, "weight": number}],\n  "trend_summary": string,\n  "representative_papers": [{"title": string, "why": string}]\n}\n\nRules:\n- max 8 top directions\n- weight in [0,1] and sorted desc\n- representative_papers max 8`;
 }
 
-async function callQwenChat({ apiKey, baseUrl, model, userPrompt, temperature = 0 }) {
+async function callQwenChat({ apiKey, baseUrl, model, userPrompt, temperature = 0, maxTokens = 420 }) {
   const url = `${baseUrl.replace(/\/$/, "")}/chat/completions`;
   const body = {
     model,
     temperature,
+    max_tokens: maxTokens,
     response_format: { type: "json_object" },
     messages: [
       { role: "system", content: "You are a precise research analysis assistant. Return valid JSON only." },
@@ -418,7 +470,13 @@ function fallbackSummary(analyzedWorks) {
 
 async function analyzePaper({ researcher, work, args, cache, qwenConfig }) {
   const cacheKey = paperCacheKey(work);
-  if (cache[cacheKey]) return { analysis: cache[cacheKey], fromCache: true };
+  const cachedEntry = cache[cacheKey];
+  if (cachedEntry) {
+    if (cachedEntry.analysis && typeof cachedEntry.analysis === "object") {
+      return { analysis: cachedEntry.analysis, fromCache: true };
+    }
+    return { analysis: cachedEntry, fromCache: true };
+  }
 
   if (args.skipAi) {
     const skipped = {
@@ -430,7 +488,14 @@ async function analyzePaper({ researcher, work, args, cache, qwenConfig }) {
       keywords: [],
       research_directions: [],
     };
-    cache[cacheKey] = skipped;
+    cache[cacheKey] = {
+      paper_id: work.id,
+      title: work.title,
+      researcher_name: researcher.name,
+      researcher_openalex_author_id: normalizeAuthorId(researcher.openalex_author_id),
+      updated_at: new Date().toISOString(),
+      analysis: skipped,
+    };
     return { analysis: skipped, fromCache: false };
   }
 
@@ -449,7 +514,14 @@ async function analyzePaper({ researcher, work, args, cache, qwenConfig }) {
         temperature: 0,
       });
       const normalized = normalizePaperAnalysis(raw);
-      cache[cacheKey] = normalized;
+      cache[cacheKey] = {
+        paper_id: work.id,
+        title: work.title,
+        researcher_name: researcher.name,
+        researcher_openalex_author_id: normalizeAuthorId(researcher.openalex_author_id),
+        updated_at: new Date().toISOString(),
+        analysis: normalized,
+      };
       return { analysis: normalized, fromCache: false };
     } catch (err) {
       lastErr = err;
@@ -466,6 +538,20 @@ async function run() {
   if (!seed?.researchers?.length) {
     throw new Error(`No researchers found in ${args.seed}`);
   }
+  const seedResearchers = seed.researchers;
+  const selectedResearchers =
+    args.researcherNames.length === 0
+      ? seedResearchers
+      : seedResearchers.filter((r) =>
+          args.researcherNames.some(
+            (target) => normalizeNameForMatch(target) === normalizeNameForMatch(r.name)
+          )
+        );
+  if (selectedResearchers.length === 0) {
+    throw new Error(
+      `No researcher matched --researcher-name in seed. Input: ${args.researcherNames.join(", ")}`
+    );
+  }
 
   const qwenApiKey = process.env.QWEN_API_KEY;
   if (!args.skipAi && !qwenApiKey) {
@@ -473,8 +559,9 @@ async function run() {
   }
   const qwenBaseUrl = process.env.QWEN_BASE_URL || DEFAULT_QWEN_BASE_URL;
 
-  const cache = (await loadJson(args.cache, {})) || {};
   const previousOutput = (await loadJson(args.out, null)) || null;
+  const previousResearchers = Array.isArray(previousOutput?.researchers) ? previousOutput.researchers : [];
+  const outputResearchers = [...previousResearchers];
   const generatedAt = new Date().toISOString();
   const output = {
     generated_at: generatedAt,
@@ -485,15 +572,21 @@ async function run() {
       full_refresh: args.fullRefresh,
       max_papers: args.maxPapers,
       delay_ms: args.delayMs,
+      concurrency: args.concurrency,
+      save_every: args.saveEvery,
+      researcher_names:
+        args.researcherNames.length > 0 ? args.researcherNames : selectedResearchers.map((r) => r.name),
     },
-    researchers: [],
+    researchers: outputResearchers,
   };
 
-  for (const researcher of seed.researchers) {
+  for (const researcher of selectedResearchers) {
     const authorId = normalizeAuthorId(researcher.openalex_author_id);
     const previousResearcher = previousOutput?.researchers?.find(
       (item) => item?.identity?.openalex_author_id === authorId
     );
+    const cachePath = getResearcherCachePath(args.cache, researcher, authorId);
+    const cache = (await loadJson(cachePath, {})) || {};
     const previousWorks = Array.isArray(previousResearcher?.works) ? previousResearcher.works : [];
     const knownWorkIds = new Set(previousWorks.map((w) => w.id).filter(Boolean));
 
@@ -508,20 +601,46 @@ async function run() {
     });
     console.log(`Fetched ${newWorks.length} new works`);
 
-    const analyzedNewWorks = [];
-    for (let i = 0; i < newWorks.length; i += 1) {
-      const work = newWorks[i];
-      process.stdout.write(`Analyzing new paper ${i + 1}/${newWorks.length}\r`);
-      const { analysis, fromCache } = await analyzePaper({
-        researcher,
-        work,
-        args,
-        cache,
-        qwenConfig: { apiKey: qwenApiKey, baseUrl: qwenBaseUrl },
-      });
-      analyzedNewWorks.push({ ...work, analysis });
-      if (!fromCache && args.delayMs > 0) await sleep(args.delayMs);
-    }
+    const analyzedNewWorks = newWorks;
+    let aiCalledCount = 0;
+    let processedCount = 0;
+    let nextIndex = 0;
+    let processedSinceFlush = 0;
+    const saveEvery = Math.max(1, Math.floor(args.saveEvery || 1));
+    let cacheSaveChain = Promise.resolve();
+    const queueCacheSave = async () => {
+      cacheSaveChain = cacheSaveChain.then(() => saveJson(cachePath, cache));
+      await cacheSaveChain;
+    };
+    const workerCount = Math.max(1, Math.floor(args.concurrency || 1));
+    const workers = new Array(workerCount).fill(null).map(async () => {
+      while (true) {
+        const i = nextIndex;
+        if (i >= newWorks.length) break;
+        nextIndex += 1;
+        const work = newWorks[i];
+
+        const { analysis, fromCache } = await analyzePaper({
+          researcher,
+          work,
+          args,
+          cache,
+          qwenConfig: { apiKey: qwenApiKey, baseUrl: qwenBaseUrl },
+        });
+        analyzedNewWorks[i] = { ...work, analysis };
+        if (!fromCache) aiCalledCount += 1;
+        if (!fromCache && args.delayMs > 0) await sleep(args.delayMs);
+        processedCount += 1;
+        processedSinceFlush += 1;
+        if (processedSinceFlush >= saveEvery) {
+          processedSinceFlush = 0;
+          await queueCacheSave();
+        }
+        process.stdout.write(`Analyzing new paper ${processedCount}/${newWorks.length}\r`);
+      }
+    });
+    await Promise.all(workers);
+    await cacheSaveChain;
     if (newWorks.length > 0) process.stdout.write("\n");
 
     const mergedWorks = [...analyzedNewWorks];
@@ -545,8 +664,12 @@ async function run() {
 
     const interestingWorks = dedupedMergedWorks.filter((w) => w.analysis?.is_interesting);
 
-    let topicSummary = fallbackSummary(dedupedMergedWorks);
-    if (!args.skipAi) {
+    const shouldRecomputeSummary =
+      args.fullRefresh || analyzedNewWorks.length > 0 || !previousResearcher?.topic_summary;
+    let topicSummary = shouldRecomputeSummary
+      ? fallbackSummary(dedupedMergedWorks)
+      : previousResearcher.topic_summary;
+    if (!args.skipAi && shouldRecomputeSummary) {
       try {
         const summaryRaw = await callQwenChat({
           apiKey: qwenApiKey,
@@ -554,6 +677,7 @@ async function run() {
           model: args.model,
           userPrompt: buildSummaryPrompt(researcher, dedupedMergedWorks),
           temperature: 0,
+          maxTokens: 1000,
         });
         topicSummary = {
           top_research_directions: Array.isArray(summaryRaw?.top_research_directions)
@@ -578,17 +702,27 @@ async function run() {
       }
     }
 
-    output.researchers.push({
+    const nextResearcherProfile = {
+      // Affiliation priority:
+      // 1) if google_scholar exists, use seed affiliation first
+      // 2) otherwise fallback to OpenAlex first institution
+      // This is heuristic and may be stale or incorrect.
       identity: {
         name: researcher.name,
         google_scholar: researcher.google_scholar,
         openalex_author_id: authorId,
         openalex_author_url: `https://openalex.org/${authorId}`,
-        interest_topics: researcher.interest_topics || [],
       },
       affiliation: {
-        last_known_institution: authorProfile.last_known_institutions?.[0]?.display_name || null,
+        last_known_institution:
+          (researcher.google_scholar && researcher.affiliation) ||
+          authorProfile.last_known_institutions?.[0]?.display_name ||
+          null,
         last_known_country: authorProfile.last_known_institutions?.[0]?.country_code || null,
+        source:
+          researcher.google_scholar && researcher.affiliation
+            ? "seed_google_scholar"
+            : "openalex_first_institution",
       },
       metrics: {
         works_count: authorProfile.works_count || 0,
@@ -602,13 +736,23 @@ async function run() {
         interesting_works_count: interestingWorks.length,
         new_works_count: analyzedNewWorks.length,
         deduped_works_count: dedupedMergedWorks.length,
+        ai_called_count: aiCalledCount,
+        summary_recomputed: shouldRecomputeSummary,
       },
       works: dedupedMergedWorks,
-    });
-  }
+    };
+    const existingIndex = output.researchers.findIndex(
+      (item) => item?.identity?.openalex_author_id === authorId
+    );
+    if (existingIndex >= 0) output.researchers[existingIndex] = nextResearcherProfile;
+    else output.researchers.push(nextResearcherProfile);
 
-  await saveJson(args.cache, cache);
-  await saveJson(args.out, output);
+    // Save checkpoint after each researcher to avoid losing progress.
+    output.generated_at = new Date().toISOString();
+    await saveJson(cachePath, cache);
+    await saveJson(args.out, output);
+    console.log(`Checkpoint saved for ${researcher.name}`);
+  }
   console.log(`Profile exported to ${args.out}`);
 }
 

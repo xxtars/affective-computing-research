@@ -33,6 +33,10 @@
   margin-bottom: 0.8rem;
 }
 
+.note {
+  color: var(--ifm-color-emphasis-700);
+}
+
 .grid {
   display: grid;
   gap: 1rem;

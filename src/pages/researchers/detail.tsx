@@ -19,6 +19,7 @@ type WorkItem = {
   id: string;
   title: string;
   publication_year: number | null;
+  publication_date?: string | null;
   primary_source: string | null;
   source?: {display_name: string | null};
   links?: {
@@ -81,6 +82,13 @@ function formatList(items: string[] | undefined) {
   return items.map((item) => capitalizeFirst(item)).join(', ');
 }
 
+function normalizeVenueName(name: string | null | undefined) {
+  const raw = String(name || '').trim();
+  if (!raw) return '-';
+  if (raw.toLowerCase().includes('arxiv')) return 'arXiv';
+  return raw;
+}
+
 export default function ResearcherDetailPage(): ReactNode {
   const location = useLocation();
   const researcherId = useMemo(() => {
@@ -106,7 +114,15 @@ export default function ResearcherDetailPage(): ReactNode {
 
   const interestingWorks = researcher.works
     .filter((work) => work.analysis?.is_interesting)
-    .sort((a, b) => b.analysis.relevance_score - a.analysis.relevance_score);
+    .sort((a, b) => {
+      const dateA = String(a.publication_date || '');
+      const dateB = String(b.publication_date || '');
+      if (dateA && dateB && dateA !== dateB) return dateA > dateB ? -1 : 1;
+      const yearA = a.publication_year || 0;
+      const yearB = b.publication_year || 0;
+      if (yearA !== yearB) return yearB - yearA;
+      return (b.analysis.relevance_score || 0) - (a.analysis.relevance_score || 0);
+    });
 
   return (
     <Layout title={`${researcher.identity.name} - Detail`}>
@@ -190,14 +206,14 @@ export default function ResearcherDetailPage(): ReactNode {
                           }
                           rel="noreferrer"
                           target="_blank">
-                          {work.source?.display_name || work.primary_source}
+                          {normalizeVenueName(work.source?.display_name || work.primary_source)}
                         </a>
                       ) : (
                         '-'
                       )}
                       <div>
-                        {work.links?.source_openalex && (
-                          <a href={work.links.source_openalex} rel="noreferrer" target="_blank">
+                        {work.links?.openalex && (
+                          <a href={work.links.openalex} rel="noreferrer" target="_blank">
                             Source(OpenAlex)
                           </a>
                         )}

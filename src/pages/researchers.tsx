@@ -97,6 +97,10 @@ export default function ResearchersPage(): ReactNode {
         <div className="container">
           <Heading as="h1">Researchers</Heading>
           <p>Generated at: {formatDateOnly(profile.generated_at)}</p>
+          <p className={styles.note}>
+            Institution is shown by priority rule: seed (with Scholar) first, otherwise OpenAlex first institution.
+            Country follows OpenAlex institution country code. Real-time correctness is not guaranteed.
+          </p>
 
           {profile.researchers.length === 0 ? (
             <div className={styles.empty}>

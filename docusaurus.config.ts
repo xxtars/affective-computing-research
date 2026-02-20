@@ -7,7 +7,7 @@ const organizationName = 'xxtars';
 const projectName = 'awesome-affective-computing';
 
 const config: Config = {
-  title: 'Awesome Affective Computing',
+  title: 'Affective Computing Research',
   tagline: 'Researchers × Papers — a structured collection',
   favicon: 'img/favicon.ico',
 
@@ -73,7 +73,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Awesome Affective Computing',
+      title: 'Affective Computing Research',
       logo: {
         alt: 'Awesome Affective Computing Logo',
         src: 'img/logo.svg',

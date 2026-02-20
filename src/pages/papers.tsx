@@ -47,6 +47,13 @@ function normalizeTitle(title: string) {
     .trim();
 }
 
+function normalizeVenueName(name: string | null | undefined) {
+  const raw = String(name || '').trim();
+  if (!raw) return '-';
+  if (raw.toLowerCase().includes('arxiv')) return 'arXiv';
+  return raw;
+}
+
 export default function PapersPage(): ReactNode {
   const [query, setQuery] = useState('');
 
@@ -152,13 +159,13 @@ export default function PapersPage(): ReactNode {
                           href={paper.links?.landing_page || paper.links?.openalex || '#'}
                           rel="noreferrer"
                           target="_blank">
-                          {paper.source?.display_name || paper.primary_source || '-'}
+                          {normalizeVenueName(paper.source?.display_name || paper.primary_source)}
                         </a>
-                        {paper.links?.source_openalex && (
+                        {paper.links?.openalex && (
                           <>
                             {' '}
                             |{' '}
-                            <a href={paper.links.source_openalex} rel="noreferrer" target="_blank">
+                            <a href={paper.links.openalex} rel="noreferrer" target="_blank">
                               Source(OpenAlex)
                             </a>
                           </>

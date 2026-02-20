@@ -1,8 +1,7 @@
-# Awesome Affective Computing
+# Affective Computing Research
 
-This is a personal, ongoing collection of resources in Affective Computing, including research teams, directions, and representative papers.
-
-The repository aims to provide a structured perspective on the landscape of affective computing research.
+This repository is an AI-assisted personal tracking workspace for affective computing research.
+It focuses on identity-based researcher tracking, OpenAlex paper retrieval, and paper-level analysis outputs.
 
 ⚠️ **Disclaimer**
 
@@ -20,15 +19,14 @@ Current website structure:
 
 ### Seed file
 
-Base researcher info is stored in:
+Identity-only researcher info is stored in:
 
 - `data/researchers/researcher.seed.json`
 
-Current example researcher:
+The seed is used to confirm identity (name, scholar URL, OpenAlex author ID, optional manual affiliation/country).
+It is not treated as a complete profile source.
 
-- `Jufeng Yang`
-- Scholar: `https://scholar.google.com/citations?user=c5vDJv0AAAAJ`
-- OpenAlex Author ID: `a5089409678`
+Seed can include multiple researchers and is designed for incremental expansion.
 
 ### Environment variables
 
@@ -46,7 +44,15 @@ Default behavior is incremental:
 
 - Only new papers are fetched/analyzed.
 - Existing papers from `researcher.profile.json` are reused.
-- Cached AI results are reused from `paper-analysis-cache.json`.
+- Cached AI results are reused from per-researcher `paper-analysis-cache.json` files.
+- Checkpoint is saved after each processed researcher (profile + cache).
+- Cache can be flushed during processing with `--save-every` (default `1`, i.e., save after each paper).
+- AI analysis is optimized for speed:
+  - Non-related papers return minimal output only.
+  - Keywords/directions are generated only for affective-related papers.
+- Summary is incremental-aware:
+  - If no new papers are found for a researcher, previous summary is reused.
+  - Summary AI call is triggered only when new papers are added (or full refresh).
 - Works are deduplicated by title before final output.
   - If both published and preprint versions exist, published version is preferred.
   - If only preprints exist, `ArXiv.org` is preferred.
@@ -55,6 +61,10 @@ Optional flags:
 
 ```bash
 node scripts/researcher-pipeline/run.mjs --max-papers 20 --delay-ms 300
+node scripts/researcher-pipeline/run.mjs --max-papers 20 --concurrency 4
+node scripts/researcher-pipeline/run.mjs --max-papers 50 --concurrency 4 --save-every 1
+node scripts/researcher-pipeline/run.mjs --researcher-name "Jufeng Yang"
+node scripts/researcher-pipeline/run.mjs --researcher-name "Jufeng Yang,Sicheng Zhao"
 node scripts/researcher-pipeline/run.mjs --skip-ai --max-papers 5
 node scripts/researcher-pipeline/run.mjs --full-refresh
 ```
@@ -62,20 +72,31 @@ node scripts/researcher-pipeline/run.mjs --full-refresh
 ### Output
 
 - `data/researchers/researcher.profile.json`: enriched researcher profile
-- `data/researchers/cache/paper-analysis-cache.json`: per-paper AI cache
+- `data/researchers/cache/<name>__<scholarUserId>__<openalexAuthorId>/paper-analysis-cache.json`: per-researcher AI cache
+  - cache entries include `paper_id`, `title`, `researcher_name`, and `researcher_openalex_author_id` for manual checks
 
 ### Pipeline flow
 
 1. Read researchers from `data/researchers/researcher.seed.json`
 2. Fetch author profile + works from OpenAlex
-3. Deduplicate works by title with source preference rules
-4. Run AI analysis per paper (affective-related judgment + directions + keywords)
-5. Build researcher-level summaries
-6. Export profile JSON for website pages
+3. Optionally run per-name mode (`--researcher-name`) to process only selected researchers
+4. Deduplicate works by title with source preference rules
+5. Run AI analysis per paper (affective-related judgment + conditional extraction)
+6. Save cache checkpoints during processing (`--save-every`, default each paper)
+7. Build or reuse researcher-level summaries (incremental-aware)
+8. Export profile JSON for website pages
+
+### Affiliation rule
+
+- If a researcher has `google_scholar` in seed, the pipeline prefers seed affiliation first.
+- If `google_scholar` is missing (or seed affiliation is missing), the pipeline falls back to OpenAlex first institution.
+- Researcher country is taken from institution country (OpenAlex institution country code) to reduce ambiguity.
+- This rule is practical but heuristic, and may not always be real-time or correct.
 
 ## Disclaimer
 
 - Researchers are continuously being added.
 - The current list is not a filtered shortlist, ranking, or complete coverage of the field.
 - Parts of this project are AI-assisted. Metadata extraction, topic labeling, and summaries may contain errors or omissions.
+- Affiliation and metadata sources may be stale; real-time correctness is not guaranteed.
 - Please verify important details with official paper pages, publishers, and OpenAlex records.

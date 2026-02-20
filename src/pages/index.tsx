@@ -16,7 +16,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">Personal Tracking for Affective Computing Research</p>
+        <p className="hero__subtitle">AI-assisted Personal Tracking</p>
       </div>
     </header>
   );
@@ -24,16 +24,16 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   return (
-    <Layout title="Awesome Affective Computing Collection">
+    <Layout title="Affective Computing Research">
       <HomepageHeader />
       <main className={styles.mainContent}>
         <div className="container">
           <section className={styles.section}>
             <Heading as="h2">Project Purpose</Heading>
             <p>
-              This project is a personal tracking workspace for affective computing research. It focuses on
-              organizing teams, directions, and representative papers in a structured way, so updates and
-              comparisons are easier over time.
+              This project is an AI-assisted personal tracking workspace for affective computing research. It
+              organizes researcher identities, paper-level analysis, and aggregated paper views for continuous
+              updates.
             </p>
           </section>
 
@@ -42,11 +42,11 @@ export default function Home(): ReactNode {
             <div className={styles.linkGrid}>
               <Link className={styles.linkCard} to="/researchers">
                 <Heading as="h3">Researchers</Heading>
-                <p>View AI-assisted researcher profiles, topics, and selected papers.</p>
+                <p>Browse tracked researchers, search by name/country/university, and open detailed profiles.</p>
               </Link>
               <Link className={styles.linkCard} to="/papers">
                 <Heading as="h3">Papers</Heading>
-                <p>Browse main selected papers aggregated from all tracked researchers.</p>
+                <p>Browse affective-related papers aggregated across tracked researchers.</p>
               </Link>
             </div>
           </section>
@@ -54,18 +54,18 @@ export default function Home(): ReactNode {
           <section className={styles.section}>
             <Heading as="h2">What You&apos;ll Find</Heading>
             <ul className={styles.list}>
-              <li>Researcher-centered snapshots with interests, institutions, and representative outputs.</li>
-              <li>Topic-level organization across emotion, multimodality, speech, vision, and related areas.</li>
-              <li>A maintainable personal workflow for incrementally updating tracked researchers.</li>
+              <li>Identity-based researcher tracking with OpenAlex author linkage.</li>
+              <li>Per-paper affective-related classification and extracted directions/keywords.</li>
+              <li>Per-researcher cache and incremental updates for scalable maintenance.</li>
             </ul>
           </section>
 
           <section className={styles.section}>
             <Heading as="h2">Workflow</Heading>
             <ul className={styles.list}>
-              <li>Add or edit researcher seeds in `data/researchers/researcher.seed.json`.</li>
-              <li>Run the pipeline to fetch OpenAlex works and update AI-assisted profile output.</li>
-              <li>Review results in the Researchers page and manually validate important records.</li>
+              <li>Edit identity records in `data/researchers/researcher.seed.json`.</li>
+              <li>Run pipeline incrementally (supports per-name runs, concurrency, and frequent checkpoint saves).</li>
+              <li>Review outputs in Researchers/Papers pages and manually verify critical records.</li>
             </ul>
           </section>
         </div>
@@ -74,13 +74,20 @@ export default function Home(): ReactNode {
           <div className="container">
             <Heading as="h3">Disclaimer</Heading>
             <p>
+              Most content in this project is generated through AI-assisted collection and analysis, together with
+              personal summary and curation.
+            </p>
+            <p>
               Researchers are continuously being added. The current list is not a filtered shortlist, ranking, or
               complete coverage of the field.
             </p>
             <p>
-              Parts of this project are AI-assisted. Metadata extraction, topic labeling, and summaries may
-              contain errors or omissions. Please verify important details with official paper pages, publishers,
-              and OpenAlex records.
+              Outputs may contain mistakes, outdated information, omissions, or interpretation bias. This site
+              should be treated as a personal tracking reference, not an authoritative source.
+            </p>
+            <p>
+              Please verify critical details with official paper pages, publisher records, Google Scholar, and
+              OpenAlex.
             </p>
           </div>
         </section>
