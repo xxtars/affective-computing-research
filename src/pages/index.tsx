@@ -16,7 +16,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">AI-assisted Personal Tracking</p>
+        <p className="hero__subtitle">AI-assisted Research Landscape Tracking</p>
       </div>
     </header>
   );
