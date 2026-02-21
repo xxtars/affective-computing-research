@@ -1435,13 +1435,17 @@ async function run() {
       });
     };
 
-    pushInstitutionCandidate(scholarAffiliation, "google_scholar", null);
-    pushInstitutionCandidate(
-      authorProfile.last_known_institutions?.[0]?.display_name,
-      "openalex",
-      countryNameFromCode(authorProfile.last_known_institutions?.[0]?.country_code)
-    );
-    pushInstitutionCandidate(orcidAffiliation.institution, "orcid", orcidAffiliation.country);
+    const openalexInstitution = authorProfile.last_known_institutions?.[0]?.display_name;
+    const openalexCountryHint = countryNameFromCode(authorProfile.last_known_institutions?.[0]?.country_code);
+    // Strict fallback chain: Google Scholar -> OpenAlex -> ORCID.
+    // Once an upper-priority source provides affiliation, do not pull lower-priority sources.
+    if (String(scholarAffiliation || "").trim()) {
+      pushInstitutionCandidate(scholarAffiliation, "google_scholar", null);
+    } else if (String(openalexInstitution || "").trim()) {
+      pushInstitutionCandidate(openalexInstitution, "openalex", openalexCountryHint);
+    } else {
+      pushInstitutionCandidate(orcidAffiliation.institution, "orcid", orcidAffiliation.country);
+    }
 
     let institutions = [];
     let institutionCountries = [];
