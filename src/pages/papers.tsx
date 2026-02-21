@@ -27,7 +27,7 @@ type WorkItem = {
   analysis: {
     is_interesting: boolean;
     relevance_score: number;
-    keywords?: string[];
+    tldr?: string;
     research_directions?: string[];
   };
 };
@@ -291,7 +291,7 @@ export default function PapersPage(): ReactNode {
           <Heading as="h1">Papers</Heading>
           <p>Main affective-related papers from tracked researchers (deduplicated by title).</p>
           <p className={styles.note}>
-            Disclaimer: author order and venue are resolved from OpenAlex/DOI metadata; directions and keywords are
+            Disclaimer: author order and venue are resolved from OpenAlex/DOI metadata; directions and TLDR are
             AI-generated and may contain errors.
           </p>
           <section className={styles.searchSection}>
@@ -357,9 +357,7 @@ export default function PapersPage(): ReactNode {
                         Directions: {formatPreviewList(paper.analysis?.research_directions)}
                       </p>
 
-                      <p className={styles.keywordLine}>
-                        Keywords: {formatPreviewList(paper.analysis?.keywords)}
-                      </p>
+                      <p className={styles.keywordLine}>TLDR: {paper.analysis?.tldr || '-'}</p>
 
                       <div className={styles.actions}>
                           {paper.links?.openalex && (

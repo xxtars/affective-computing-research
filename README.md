@@ -54,7 +54,7 @@ Seed can include multiple researchers and is designed for incremental expansion.
   - Priority: Google Scholar profile affiliation -> ORCID affiliation -> OpenAlex first institution
 - Institution country/region:
   - Priority: geocoding result from chosen institution name -> OpenAlex institution country code fallback
-- Directions / keywords:
+- Directions / TLDR:
   - Source: AI-generated from title/abstract/concepts and affective-topic prompt
   - Note: may contain errors, omissions, or interpretation bias
 - Venue:

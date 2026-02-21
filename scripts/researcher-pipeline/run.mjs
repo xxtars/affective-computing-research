@@ -777,12 +777,21 @@ function buildSummaryPrompt(researcher, analyzedWorks) {
   return `Based on interesting papers for researcher ${researcher.name}, summarize research directions and evolution.\n\nInput papers JSON:\n${JSON.stringify(interesting)}\n\nReturn strict JSON:\n{\n  "top_research_directions": [{"name": string, "weight": number}],\n  "trend_summary": string,\n  "representative_papers": [{"title": string, "why": string}]\n}\n\nRules for top_research_directions:\n- Keep direction labels concise and stable (noun phrases).\n- max 8 directions\n- weight in [0,1], sorted desc\n- Do NOT turn directions into timeline sentences.\n\nRules for trend_summary:\n- Write 1 paragraph (120-220 words), academic and neutral tone.\n- Divide the timeline into fixed 5-year windows, starting from the earliest full year in input.\n- Mention explicit year ranges for each 5-year window (e.g., 2011-2015, 2016-2020, 2021-2025).\n- Describe evolution window by window (earliest -> latest), then summarize the latest window as current focus.\n- Do NOT use vague absolute-time words without window anchors.\n- Ground statements in the input years/titles/directions only; do not invent facts.\n- If data in some window is sparse, explicitly say evidence is limited for that window.\n- Use consistent terminology across windows; avoid renaming the same direction with synonyms.\n- If no meaningful shift is observed between windows, explicitly state continuity instead of forcing a transition.\n- Avoid generic praise or vague wording.\n\nRules for representative_papers:\n- max 8 items\n- why should explain representativeness for direction/evolution, not only citation count.`;
 }
 
-async function callQwenChat({ apiKey, baseUrl, model, userPrompt, temperature = 0, maxTokens = 420 }) {
+async function callQwenChat({
+  apiKey,
+  baseUrl,
+  model,
+  userPrompt,
+  temperature = 0,
+  maxTokens = 420,
+  enableThinking = false,
+}) {
   const url = `${baseUrl.replace(/\/$/, "")}/chat/completions`;
   const body = {
     model,
     temperature,
     max_tokens: maxTokens,
+    enable_thinking: enableThinking,
     response_format: { type: "json_object" },
     messages: [
       { role: "system", content: "You are a precise research analysis assistant. Return valid JSON only." },

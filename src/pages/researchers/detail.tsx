@@ -11,7 +11,7 @@ import styles from './detail.module.css';
 type WorkAnalysis = {
   is_interesting: boolean;
   relevance_score: number;
-  keywords: string[];
+  tldr?: string;
   research_directions: string[];
 };
 
@@ -325,8 +325,8 @@ export default function ResearcherDetailPage(): ReactNode {
                 )}
                 <p className={styles.paperMeta}>Directions</p>
                 <p className={styles.paperText}>{formatList(work.analysis.research_directions)}</p>
-                <p className={styles.paperMeta}>Keywords</p>
-                <p className={styles.paperText}>{formatList(work.analysis.keywords)}</p>
+                <p className={styles.paperMeta}>TLDR</p>
+                <p className={styles.paperText}>{work.analysis.tldr || '-'}</p>
               </article>
             ))}
           </div>

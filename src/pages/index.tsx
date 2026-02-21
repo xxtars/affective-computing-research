@@ -58,7 +58,7 @@ export default function Home(): ReactNode {
             <Heading as="h2">What You&apos;ll Find</Heading>
             <ul className={styles.list}>
               <li>Identity-based researcher tracking with OpenAlex as primary ID, enriched by optional ORCID/Google Scholar.</li>
-              <li>Per-paper affective-related classification and AI-generated directions/keywords.</li>
+              <li>Per-paper affective-related classification and AI-generated directions/TLDR.</li>
               <li>Per-researcher cache and incremental updates for scalable maintenance.</li>
             </ul>
           </section>
@@ -69,7 +69,7 @@ export default function Home(): ReactNode {
               <li>Seed fields: `name`, `openalex_author_id`, `orcid` (optional), `google_scholar` (optional).</li>
               <li>Institution priority: Google Scholar profile affiliation → ORCID affiliation → OpenAlex first institution.</li>
               <li>Institution country/region: geocoding result from institution name, with OpenAlex country code as fallback.</li>
-              <li>Directions/keywords: AI-generated from OpenAlex metadata + abstract; may contain errors.</li>
+              <li>Directions/TLDR: AI-generated from OpenAlex metadata + abstract; may contain errors.</li>
               <li>Venue: OpenAlex primary source first, then DOI/Crossref resolution fallback.</li>
             </ul>
           </section>
