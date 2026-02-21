@@ -15,6 +15,8 @@ type ResearcherProfile = {
     openalex_author_url: string;
   };
   affiliation: {
+    institutions?: string[];
+    institution_countries?: (string | null)[];
     last_known_institution: string | null;
     last_known_country: string | null;
   };
@@ -69,6 +71,25 @@ function splitInstitutionNames(value: string | null | undefined) {
     .filter(Boolean);
 }
 
+function getInstitutions(researcher: ResearcherProfile) {
+  const list = Array.isArray(researcher.affiliation?.institutions)
+    ? researcher.affiliation.institutions.map((x) => String(x || '').trim()).filter(Boolean)
+    : [];
+  if (list.length > 0) return list;
+  return splitInstitutionNames(researcher.affiliation?.last_known_institution);
+}
+
+function getInstitutionCountries(researcher: ResearcherProfile) {
+  const list = Array.isArray(researcher.affiliation?.institution_countries)
+    ? researcher.affiliation.institution_countries
+        .map((x) => formatInstitutionCountry(x ? String(x).trim() : null))
+        .filter(Boolean)
+    : [];
+  if (list.length > 0) return list;
+  const fallback = formatInstitutionCountry(researcher.affiliation?.last_known_country || null);
+  return fallback ? [fallback] : [];
+}
+
 function splitNameParts(fullName: string) {
   const parts = String(fullName || '')
     .trim()
@@ -114,11 +135,8 @@ function formatInstitutionCountry(value: string | null) {
 
 export default function ResearchersPage(): ReactNode {
   const dataBaseUrl = useResearchDataBaseUrl();
-  const [profile, setProfile] = useState<IndexFile>({
-    generated_at: null,
-    pipeline_version: 'v0.1.0',
-    researchers: [],
-  });
+  const [generatedAt, setGeneratedAt] = useState<string | null>(null);
+  const [researchers, setResearchers] = useState<ResearcherProfile[]>([]);
   const [loading, setLoading] = useState(true);
   const [countryFilter, setCountryFilter] = useState('All');
   const [universityFilter, setUniversityFilter] = useState('All');
@@ -147,15 +165,14 @@ export default function ResearchersPage(): ReactNode {
         );
 
         if (!disposed) {
-          setProfile({
-            ...json,
-            researchers: loadedProfiles.filter(Boolean) as ResearcherProfile[],
-          });
+          setGeneratedAt(json.generated_at || null);
+          setResearchers(loadedProfiles.filter(Boolean) as ResearcherProfile[]);
         }
       } catch (err) {
         console.error(err);
         if (!disposed) {
-          setProfile({generated_at: null, pipeline_version: 'v0.1.0', researchers: []});
+          setGeneratedAt(null);
+          setResearchers([]);
         }
       } finally {
         if (!disposed) setLoading(false);
@@ -170,28 +187,26 @@ export default function ResearchersPage(): ReactNode {
   const countryOptions = useMemo(
     () =>
       uniqueSorted(
-        profile.researchers.map((researcher) => formatInstitutionCountry(researcher.affiliation.last_known_country)),
+        researchers.flatMap((researcher) => getInstitutionCountries(researcher)),
       ),
-    [profile.researchers],
+    [researchers],
   );
   const universityOptions = useMemo(
     () =>
       uniqueSorted(
-        profile.researchers.flatMap((researcher) =>
-          splitInstitutionNames(researcher.affiliation.last_known_institution),
-        ),
+        researchers.flatMap((researcher) => getInstitutions(researcher)),
       ),
-    [profile.researchers],
+    [researchers],
   );
   const activeInitialOptions = useMemo(() => {
     return uniqueSorted(
-      profile.researchers.map((researcher) => {
+      researchers.map((researcher) => {
         const nameParts = splitNameParts(researcher.identity.name);
         const source = initialAxis === 'family' ? nameParts.familyName : nameParts.givenName;
         return getNameInitial(source);
       }),
     );
-  }, [initialAxis, profile.researchers]);
+  }, [initialAxis, researchers]);
 
   const resetFilters = () => {
     setCountryFilter('All');
@@ -204,22 +219,20 @@ export default function ResearchersPage(): ReactNode {
   const filteredResearchers = useMemo(() => {
     const keyword = query.trim().toLowerCase();
 
-    const matched = profile.researchers.filter((researcher) => {
+    const matched = researchers.filter((researcher) => {
       const nameParts = splitNameParts(researcher.identity.name);
       const familyInitial = getNameInitial(nameParts.familyName);
       const givenInitial = getNameInitial(nameParts.givenName);
-      const institutionCountry = formatInstitutionCountry(researcher.affiliation.last_known_country);
-      const institutions = splitInstitutionNames(researcher.affiliation.last_known_institution);
-      const countryMatch =
-        countryFilter === 'All' || institutionCountry === countryFilter;
-      const universityMatch =
-        universityFilter === 'All' || institutions.includes(universityFilter);
+      const countries = getInstitutionCountries(researcher);
+      const institutions = getInstitutions(researcher);
+      const countryMatch = countryFilter === 'All' || countries.includes(countryFilter);
+      const universityMatch = universityFilter === 'All' || institutions.includes(universityFilter);
       const selectedInitial = initialAxis === 'family' ? familyInitial : givenInitial;
       const initialMatch = nameInitialFilter === 'All' || selectedInitial === nameInitialFilter;
       const keywordMatch =
         keyword.length === 0 ||
         researcher.identity.name.toLowerCase().includes(keyword) ||
-        institutionCountry.toLowerCase().includes(keyword) ||
+        countries.join(' ').toLowerCase().includes(keyword) ||
         institutions.join(' ').toLowerCase().includes(keyword) ||
         formatTopDirections(researcher).toLowerCase().includes(keyword);
 
@@ -235,25 +248,25 @@ export default function ResearchersPage(): ReactNode {
       if (givenCmp !== 0) return givenCmp;
       return a.identity.name.localeCompare(b.identity.name, 'en', {sensitivity: 'base'});
     });
-  }, [countryFilter, initialAxis, nameInitialFilter, profile.researchers, query, universityFilter]);
+  }, [countryFilter, initialAxis, nameInitialFilter, query, researchers, universityFilter]);
 
   return (
     <Layout title="Researchers">
       <main className={styles.page}>
         <div className="container">
           <Heading as="h1">Researchers</Heading>
-          <p>Generated at: {formatDateOnly(profile.generated_at)}</p>
+          <p>Generated at: {formatDateOnly(generatedAt)}</p>
           <p className={styles.note}>
-            Institution is shown by priority rule: Google Scholar first, then ORCID, otherwise OpenAlex first
-            institution. Country is resolved from institution name (geocoding lookup) and displayed as full country
-            name.
+            Institution is shown by priority rule: Google Scholar first, then OpenAlex, otherwise ORCID.
+            Institution country/region is resolved per institution from institution name (geocoding lookup) and
+            displayed as full country name.
           </p>
 
           {loading ? (
             <div className={styles.empty}>
               <p>Loading researcher data...</p>
             </div>
-          ) : profile.researchers.length === 0 ? (
+          ) : researchers.length === 0 ? (
             <div className={styles.empty}>
               <p>No profile data yet.</p>
               <p>
@@ -364,15 +377,25 @@ export default function ResearchersPage(): ReactNode {
                       {researcher.identity.name}
                     </Heading>
 
-                    <p className={styles.meta}>
-                      <span className={styles.institutionText} title={researcher.affiliation.last_known_institution || '-'}>
-                        {researcher.affiliation.last_known_institution || '-'}
-                      </span>
-                    </p>
+                    {(() => {
+                      const institutions = getInstitutions(researcher);
+                      const institutionLabel = institutions.length > 0 ? institutions.join(' ; ') : '-';
+                      const countries = getInstitutionCountries(researcher);
+                      const countryLabel = countries.length > 0 ? countries.join(' ; ') : '-';
+                      return (
+                        <>
+                          <p className={styles.meta}>
+                            <span className={styles.institutionText} title={institutionLabel}>
+                              {institutionLabel}
+                            </span>
+                          </p>
 
-                    <p className={styles.meta}>
-                      {formatInstitutionCountry(researcher.affiliation.last_known_country) || '-'}
-                    </p>
+                          <p className={styles.meta} title={countryLabel}>
+                            {countryLabel}
+                          </p>
+                        </>
+                      );
+                    })()}
 
                     <p className={styles.directions}>
                       Top directions: <span className={styles.directionsText}>{formatTopDirections(researcher) || '-'}</span>

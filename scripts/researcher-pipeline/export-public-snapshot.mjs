@@ -80,6 +80,12 @@ function toPublicProfile(profile) {
       openalex_author_url: profile?.identity?.openalex_author_url || "",
     },
     affiliation: {
+      institutions: Array.isArray(profile?.affiliation?.institutions)
+        ? profile.affiliation.institutions.map((x) => String(x || "").trim()).filter(Boolean)
+        : [],
+      institution_countries: Array.isArray(profile?.affiliation?.institution_countries)
+        ? profile.affiliation.institution_countries.map((x) => (x ? String(x).trim() : null))
+        : [],
       last_known_institution: profile?.affiliation?.last_known_institution || null,
       last_known_country: profile?.affiliation?.last_known_country || null,
     },

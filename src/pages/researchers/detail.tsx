@@ -40,6 +40,8 @@ type ResearcherProfile = {
     openalex_author_url: string;
   };
   affiliation: {
+    institutions?: string[];
+    institution_countries?: (string | null)[];
     last_known_institution: string | null;
     last_known_country: string | null;
   };
@@ -152,6 +154,26 @@ function formatInstitutionCountry(value: string | null) {
   return raw;
 }
 
+function getInstitutions(researcher: ResearcherProfile) {
+  const list = Array.isArray(researcher.affiliation?.institutions)
+    ? researcher.affiliation.institutions.map((x) => String(x || '').trim()).filter(Boolean)
+    : [];
+  if (list.length > 0) return list;
+  const fallback = String(researcher.affiliation?.last_known_institution || '').trim();
+  return fallback ? [fallback] : [];
+}
+
+function getInstitutionCountries(researcher: ResearcherProfile) {
+  const list = Array.isArray(researcher.affiliation?.institution_countries)
+    ? researcher.affiliation.institution_countries
+        .map((x) => formatInstitutionCountry(x ? String(x).trim() : null))
+        .filter((x) => x && x !== '-')
+    : [];
+  if (list.length > 0) return list;
+  const fallback = formatInstitutionCountry(researcher.affiliation?.last_known_country || null);
+  return fallback && fallback !== '-' ? [fallback] : [];
+}
+
 export default function ResearcherDetailPage(): ReactNode {
   const location = useLocation();
   const dataBaseUrl = useResearchDataBaseUrl();
@@ -235,6 +257,8 @@ export default function ResearcherDetailPage(): ReactNode {
       if (yearA !== yearB) return yearB - yearA;
       return (b.analysis.relevance_score || 0) - (a.analysis.relevance_score || 0);
     });
+  const institutions = getInstitutions(researcher);
+  const institutionCountries = getInstitutionCountries(researcher);
 
   return (
     <Layout title={`${researcher.identity.name} - Detail`}>
@@ -258,11 +282,15 @@ export default function ResearcherDetailPage(): ReactNode {
           <div className={styles.metaGrid}>
             <div className={styles.metaCard}>
               <span className={styles.metaLabel}>Institution</span>
-              <span className={styles.metaValue}>{researcher.affiliation.last_known_institution || '-'}</span>
+              <span className={styles.metaValue}>
+                {institutions.length > 0 ? institutions.join(' ; ') : '-'}
+              </span>
             </div>
             <div className={styles.metaCard}>
               <span className={styles.metaLabel}>Institution Country/Region</span>
-              <span className={styles.metaValue}>{formatInstitutionCountry(researcher.affiliation.last_known_country)}</span>
+              <span className={styles.metaValue}>
+                {institutionCountries.length > 0 ? institutionCountries.join(' ; ') : '-'}
+              </span>
             </div>
             <div className={styles.metaCard}>
               <span className={styles.metaLabel}>Analyzed / Affective-related</span>

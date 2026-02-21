@@ -782,6 +782,30 @@ function buildSummaryPrompt(researcher, analyzedWorks) {
   return `Based on interesting papers for researcher ${researcher.name}, summarize research directions and evolution.\n\nInput papers JSON:\n${JSON.stringify(interesting)}\n\nReturn strict JSON:\n{\n  "top_research_directions": [{"name": string, "weight": number}],\n  "trend_summary": string,\n  "representative_papers": [{"title": string, "why": string}]\n}\n\nRules for top_research_directions:\n- Keep direction labels concise and stable (noun phrases).\n- max 8 directions\n- weight in [0,1], sorted desc\n- Do NOT turn directions into timeline sentences.\n\nRules for trend_summary:\n- Write 1 paragraph (120-220 words), academic and neutral tone.\n- Divide the timeline into fixed 5-year windows, starting from the earliest full year in input.\n- Mention explicit year ranges for each 5-year window (e.g., 2011-2015, 2016-2020, 2021-2025).\n- Describe evolution window by window (earliest -> latest), then summarize the latest window as current focus.\n- Do NOT use vague absolute-time words without window anchors.\n- Ground statements in the input years/titles/directions only; do not invent facts.\n- If data in some window is sparse, explicitly say evidence is limited for that window.\n- Use consistent terminology across windows; avoid renaming the same direction with synonyms.\n- If no meaningful shift is observed between windows, explicitly state continuity instead of forcing a transition.\n- Avoid generic praise or vague wording.\n\nRules for representative_papers:\n- max 8 items\n- why should explain representativeness for direction/evolution, not only citation count.`;
 }
 
+function buildAffiliationNormalizationPrompt(researcher, candidates) {
+  return `You are normalizing researcher affiliation strings into structured institutions.
+
+Researcher: ${researcher.name}
+
+Input affiliation candidates (priority order, do not reorder):
+${JSON.stringify(candidates)}
+
+Return strict JSON:
+{
+  "institutions": string[],
+  "institution_countries": (string|null)[]
+}
+
+Rules:
+- Preserve input priority order.
+- Keep only institution names; remove titles/degrees/role text (e.g., Professor, PhD, Department, Lab).
+- Split combined affiliations into separate institutions when clearly present.
+- Do not invent institutions not grounded in input.
+- institutions length must equal institution_countries length.
+- Use English full country/region names in institution_countries when confident; otherwise null.
+- Output valid JSON only.`;
+}
+
 async function callQwenChat({
   apiKey,
   baseUrl,
@@ -855,6 +879,17 @@ function normalizePaperExtraction(raw) {
     tldr,
     research_directions: directions,
   };
+}
+
+function normalizeAffiliationNormalization(raw) {
+  const institutions = Array.isArray(raw?.institutions)
+    ? raw.institutions.map((x) => String(x || "").trim()).filter(Boolean)
+    : [];
+  const countriesRaw = Array.isArray(raw?.institution_countries) ? raw.institution_countries : [];
+  const institutionCountries = institutions.map((_, i) =>
+    normalizeCountryNameToEnglish(countriesRaw[i] == null ? null : String(countriesRaw[i]).trim()) || null
+  );
+  return { institutions, institution_countries: institutionCountries };
 }
 
 function fallbackSummary(analyzedWorks) {
@@ -1341,9 +1376,11 @@ async function run() {
         openalex_author_url: `https://openalex.org/${authorId}`,
       },
       affiliation: {
+        institutions: [],
+        institution_countries: [],
         last_known_institution: null,
         last_known_country: null,
-        source: "google_scholar_preferred_orcid_openalex_fallback",
+        source: "google_scholar_openalex_orcid",
       },
       metrics: {
         works_count: authorProfile.works_count || 0,
@@ -1383,32 +1420,95 @@ async function run() {
         await saveJson(scholarAffiliationCachePath, scholarAffiliationCache);
       }
     }
-    const selectedInstitution =
-      scholarAffiliation ||
-      authorProfile.last_known_institutions?.[0]?.display_name ||
-      orcidAffiliation.institution ||
-      null;
-    nextResearcherProfile.affiliation.source =
-      scholarAffiliation
-        ? "google_scholar"
-        : authorProfile.last_known_institutions?.[0]?.display_name
-        ? "openalex"
-        : orcidAffiliation.institution
-        ? "orcid"
-        : "openalex";
-    const countryFromInstitution = selectedInstitution
-      ? await resolveInstitutionCountryName({
-          institutionName: selectedInstitution,
+    const institutionCandidates = [];
+    const seenInstitutionKeys = new Set();
+    const pushInstitutionCandidate = (institutionName, source, countryHint = null) => {
+      const name = String(institutionName || "").trim();
+      if (!name) return;
+      const key = normalizeInstitutionKey(name);
+      if (!key || seenInstitutionKeys.has(key)) return;
+      seenInstitutionKeys.add(key);
+      institutionCandidates.push({
+        name,
+        source,
+        countryHint: normalizeCountryNameToEnglish(countryHint),
+      });
+    };
+
+    pushInstitutionCandidate(scholarAffiliation, "google_scholar", null);
+    pushInstitutionCandidate(
+      authorProfile.last_known_institutions?.[0]?.display_name,
+      "openalex",
+      countryNameFromCode(authorProfile.last_known_institutions?.[0]?.country_code)
+    );
+    pushInstitutionCandidate(orcidAffiliation.institution, "orcid", orcidAffiliation.country);
+
+    let institutions = [];
+    let institutionCountries = [];
+    if (!args.skipAi && qwenApiKey && institutionCandidates.length > 0) {
+      let lastAffErr = null;
+      for (let attempt = 1; attempt <= 2; attempt += 1) {
+        try {
+          const affRaw = await callQwenChat({
+            apiKey: qwenApiKey,
+            baseUrl: qwenBaseUrl,
+            model: args.model,
+            userPrompt: buildAffiliationNormalizationPrompt(
+              researcher,
+              institutionCandidates.map((c) => ({
+                institution: c.name,
+                source: c.source,
+                country_hint: c.countryHint || null,
+              }))
+            ),
+            temperature: 0,
+            maxTokens: 320,
+          });
+          const normalizedAff = normalizeAffiliationNormalization(affRaw);
+          institutions = normalizedAff.institutions;
+          institutionCountries = normalizedAff.institution_countries;
+          break;
+        } catch (err) {
+          lastAffErr = err;
+          await sleep(400 * attempt);
+        }
+      }
+      if (institutions.length === 0 && lastAffErr) {
+        console.warn(`Affiliation normalization failed, fallback used: ${lastAffErr.message}`);
+      }
+    }
+
+    if (institutions.length === 0) {
+      for (const candidate of institutionCandidates) {
+        const countryFromInstitution = await resolveInstitutionCountryName({
+          institutionName: candidate.name,
           institutionCountryCache,
           institutionCountryCachePath,
-        })
-      : null;
-    nextResearcherProfile.affiliation.last_known_institution = selectedInstitution;
-    nextResearcherProfile.affiliation.last_known_country =
-      normalizeCountryNameToEnglish(orcidAffiliation.country) ||
-      normalizeCountryNameToEnglish(countryFromInstitution) ||
-      countryNameFromCode(authorProfile.last_known_institutions?.[0]?.country_code) ||
-      null;
+        });
+        const finalCountry =
+          normalizeCountryNameToEnglish(countryFromInstitution) ||
+          candidate.countryHint ||
+          null;
+        institutions.push(candidate.name);
+        institutionCountries.push(finalCountry);
+      }
+    } else {
+      for (let i = 0; i < institutions.length; i += 1) {
+        if (institutionCountries[i]) continue;
+        const countryFromInstitution = await resolveInstitutionCountryName({
+          institutionName: institutions[i],
+          institutionCountryCache,
+          institutionCountryCachePath,
+        });
+        institutionCountries[i] = normalizeCountryNameToEnglish(countryFromInstitution) || null;
+      }
+    }
+
+    nextResearcherProfile.affiliation.source = institutionCandidates[0]?.source || "none";
+    nextResearcherProfile.affiliation.institutions = institutions;
+    nextResearcherProfile.affiliation.institution_countries = institutionCountries;
+    nextResearcherProfile.affiliation.last_known_institution = institutions[0] || null;
+    nextResearcherProfile.affiliation.last_known_country = institutionCountries[0] || null;
 
     const nextIndexRecord = makeIndexRecord(nextResearcherProfile, args.out);
     const existingIndex = output.researchers.findIndex(
