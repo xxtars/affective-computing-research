@@ -417,10 +417,43 @@ async function fetchCrossrefVenueByDoi(doi) {
   return null;
 }
 
+function buildDoiVenueNormalizationPrompt({ doi, rawVenue, publicationYear }) {
+  return `Normalize this DOI-derived venue label into a concise, common venue display name.\n\nInput:\n- DOI: ${doi}\n- Raw venue text: ${rawVenue || "unknown"}\n- Publication year: ${publicationYear || "unknown"}\n\nReturn strict JSON:\n{\n  "venue_display": string\n}\n\nRules:\n- For conferences, output common short venue + year (e.g., "ICASSP 2023", "ACM MM 2025", "CVPR 2024").\n- Prefer widely used venue abbreviations when they are unambiguous.\n- Do not include proceedings boilerplate, duplicated long-form text, ISBN, or publisher-only names.\n- If not a conference (e.g., journal), output concise canonical venue name without adding year.\n- If unsure, minimally clean the raw venue text and keep it factual.\n- Output valid JSON only.`;
+}
+
+function normalizeDoiVenueNormalization(raw, fallbackVenue, publicationYear) {
+  const fallback = String(fallbackVenue || "").replace(/\s+/g, " ").trim();
+  const value = String(raw?.venue_display || "").replace(/\s+/g, " ").trim();
+  let normalized = value || fallback;
+  if (!normalized) return null;
+
+  normalized = normalized
+    .replace(/\bproceedings of (the )?/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const year = Number(publicationYear);
+  if (
+    Number.isFinite(year) &&
+    year >= 1900 &&
+    year <= 2100 &&
+    /\b(conference|symposium|workshop|acm|ieee|cvpr|iccv|eccv|aaai|ijcai|mm|icassp)\b/i.test(
+      normalized
+    ) &&
+    !new RegExp(`\\b${year}\\b`).test(normalized)
+  ) {
+    normalized = `${normalized} ${year}`;
+  }
+
+  return normalized;
+}
+
 async function resolveVenueFromDoi({
   doiValue,
+  publicationYear = null,
   doiVenueCache,
   doiVenueCachePath,
+  qwenConfig = null,
 }) {
   const doi = normalizeDoi(doiValue);
   if (!doi) return null;
@@ -436,6 +469,33 @@ async function resolveVenueFromDoi({
     resolved = null;
   }
   if (!resolved) resolved = inferVenueFromDoiPrefix(doi);
+
+  if (
+    resolved &&
+    qwenConfig?.apiKey &&
+    qwenConfig?.baseUrl &&
+    qwenConfig?.model &&
+    typeof resolved === "string"
+  ) {
+    try {
+      const normalizedRaw = await callQwenChat({
+        apiKey: qwenConfig.apiKey,
+        baseUrl: qwenConfig.baseUrl,
+        model: qwenConfig.model,
+        userPrompt: buildDoiVenueNormalizationPrompt({
+          doi,
+          rawVenue: resolved,
+          publicationYear,
+        }),
+        temperature: 0,
+        maxTokens: 90,
+        enableThinking: false,
+      });
+      resolved = normalizeDoiVenueNormalization(normalizedRaw, resolved, publicationYear);
+    } catch {
+      // Keep Crossref/prefix fallback value when normalization fails.
+    }
+  }
 
   doiVenueCache[doi] = resolved || null;
   await saveJson(doiVenueCachePath, doiVenueCache);
@@ -624,7 +684,7 @@ async function fetchAuthorWorks(
       const primarySource = primaryLocation?.source || null;
       const doiVenue =
         !primarySource?.display_name && typeof resolveVenueByDoi === "function"
-          ? await resolveVenueByDoi(work.doi)
+          ? await resolveVenueByDoi(work.doi, work.publication_year || null)
           : null;
       const trackedAuthorship = Array.isArray(work.authorships)
         ? work.authorships.find((item) => String(item?.author?.id || "") === `https://openalex.org/${authorId}`)
@@ -766,7 +826,7 @@ function buildPaperFilterPrompt(work) {
 }
 
 function buildPaperExtractionPrompt(researcher, work) {
-  return `You are doing Stage-2 extraction for an already-selected affective/emotion-related paper.\n\nResearcher: ${researcher.name}\nInterest topics: ${getInterestTopics(researcher).join(", ")}\n\nPaper metadata:\n- Title: ${work.title}\n- Year: ${work.publication_year || "unknown"}\n- Venue: ${work.primary_source || "unknown"}\n- Concepts: ${(work.concepts || []).join(", ") || "none"}\n- Abstract: ${shortenText(work.abstract || "(empty)")}\n\nReturn strict JSON:\n{\n  "reason": string,\n  "evidence": string[],\n  "tldr": string,\n  "research_directions": string[]\n}\n\nRules:\n- reason: one concise sentence.\n- evidence: 1-3 short concrete clues from title/abstract/concepts.\n- TLDR: 1 sentence only, 25-40 words; focus on problem + method + contribution; neutral and factual.\n- research_directions: 2-5 items; noun phrases (2-6 words), lowercase, avoid overlap/synonyms.\n- Ground everything in given metadata only; do not invent facts.\n- Output valid JSON only.`;
+  return `You are doing Stage-2 extraction for an already-selected affective/emotion-related paper.\n\nResearcher: ${researcher.name}\nInterest topics: ${getInterestTopics(researcher).join(", ")}\n\nPaper metadata:\n- Title: ${work.title}\n- Year: ${work.publication_year || "unknown"}\n- Venue: ${work.primary_source || "unknown"}\n- Concepts: ${(work.concepts || []).join(", ") || "none"}\n- Abstract: ${shortenText(work.abstract || "(empty)")}\n\nReturn strict JSON:\n{\n  "reason": string,\n  "evidence": string[],\n  "tldr": string,\n  "research_directions": string[]\n}\n\nRules:\n- reason: one concise sentence.\n- evidence: 1-3 short concrete clues from title/abstract/concepts.\n- TLDR: 1 sentence only, 25-40 words; focus on problem + method + contribution; neutral and factual.\n- research_directions: 2-6 items; noun phrases (2-6 words), lowercase, avoid overlap/synonyms.\n- Ground everything in given metadata only; do not invent facts.\n- Output valid JSON only.`;
 }
 
 function buildSummaryPrompt(researcher, analyzedWorks) {
@@ -871,7 +931,7 @@ function normalizePaperFilter(raw) {
 
 function normalizePaperExtraction(raw) {
   const directions = Array.isArray(raw?.research_directions)
-    ? raw.research_directions.filter(Boolean).slice(0, 10)
+    ? raw.research_directions.filter(Boolean).slice(0, 6)
     : [];
   const evidence = Array.isArray(raw?.evidence) ? raw.evidence.filter(Boolean).slice(0, 3) : [];
   const tldr = typeof raw?.tldr === "string" ? raw.tldr.trim() : "";
@@ -939,24 +999,6 @@ function buildCachedWorkIdSet(cache) {
     if (typeof paperId === "string" && paperId) ids.add(paperId);
   }
   return ids;
-}
-
-async function backfillVenueFromDoiForWorks(works, resolveVenueByDoi) {
-  if (!Array.isArray(works) || typeof resolveVenueByDoi !== "function") return;
-  for (const work of works) {
-    if (!work) continue;
-    const hasSource = String(work?.source?.display_name || work?.primary_source || "").trim().length > 0;
-    if (hasSource) continue;
-    const doi = work?.doi || work?.doi_url || null;
-    if (!doi) continue;
-    const venue = await resolveVenueByDoi(doi);
-    if (!venue) continue;
-    work.primary_source = venue;
-    work.source = {
-      ...(work.source || {}),
-      display_name: venue,
-    };
-  }
 }
 
 async function analyzePaper({ researcher, work, args, cache, qwenConfig }) {
@@ -1175,11 +1217,15 @@ async function run() {
       maxPapers: args.maxPapers,
       knownWorkIds,
       fullRefresh: args.fullRefresh,
-      resolveVenueByDoi: (doi) =>
+      resolveVenueByDoi: (doi, publicationYear = null) =>
         resolveVenueFromDoi({
           doiValue: doi,
+          publicationYear,
           doiVenueCache,
           doiVenueCachePath,
+          qwenConfig: args.skipAi
+            ? null
+            : { apiKey: qwenApiKey, baseUrl: qwenBaseUrl, model: args.model },
         }),
     });
     console.log(`Fetched ${newWorks.length} uncached works`);
@@ -1319,15 +1365,6 @@ async function run() {
       }
     }
     const dedupedMergedWorks = dedupeWorksByTitle(mergedWorks);
-    await backfillVenueFromDoiForWorks(
-      dedupedMergedWorks,
-      (doi) =>
-        resolveVenueFromDoi({
-          doiValue: doi,
-          doiVenueCache,
-          doiVenueCachePath,
-        })
-    );
 
     dedupedMergedWorks.sort((a, b) => {
       const dateA = a.publication_date || "";
