@@ -379,29 +379,28 @@ export default function ResearchersPage(): ReactNode {
 
                     {(() => {
                       const institutions = getInstitutions(researcher);
-                      const institutionLabel = institutions.length > 0 ? institutions.join(' ; ') : '-';
                       const countries = getInstitutionCountries(researcher);
-                      const countryLabel = countries.length > 0 ? countries.join(' ; ') : '-';
+                      const pairedLines =
+                        institutions.length > 0
+                          ? institutions.map((institution, index) => {
+                              const country = countries[index] || '-';
+                              return `${institution}, ${country}`;
+                            })
+                          : ['-'];
+                      const institutionCountryLabel = pairedLines.join('\n');
                       const directionsLabel = formatTopDirections(researcher) || '-';
                       return (
                         <>
                           <div className={styles.infoBlock}>
                             <p className={styles.infoLabel}>Institution</p>
-                            <div className={styles.infoScroll} title={institutionLabel}>
-                              {institutionLabel}
-                            </div>
-                          </div>
-
-                          <div className={styles.infoBlock}>
-                            <p className={styles.infoLabel}>Institution Country/Region</p>
-                            <div className={styles.infoScroll} title={countryLabel}>
-                              {countryLabel}
+                            <div className={`${styles.infoScroll} ${styles.infoScrollInstitution}`} title={institutionCountryLabel}>
+                              {institutionCountryLabel}
                             </div>
                           </div>
 
                           <div className={styles.infoBlock}>
                             <p className={styles.infoLabel}>Top directions</p>
-                            <div className={styles.infoScroll} title={directionsLabel}>
+                            <div className={`${styles.infoScroll} ${styles.infoScrollDirections}`} title={directionsLabel}>
                               {directionsLabel}
                             </div>
                           </div>

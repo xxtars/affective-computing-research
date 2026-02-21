@@ -173,7 +173,17 @@
   min-height: 2.7rem;
   overflow-y: auto;
   padding: 0.45rem 0.55rem;
-  white-space: normal;
+  white-space: pre-line;
+}
+
+.infoScrollDirections {
+  min-height: calc(1.4em * 4);
+  max-height: calc(1.4em * 4);
+}
+
+.infoScrollInstitution {
+  min-height: calc(1.4em * 2);
+  max-height: calc(1.4em * 2);
 }
 
 .links {

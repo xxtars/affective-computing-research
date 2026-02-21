@@ -110,8 +110,8 @@
 }
 
 .blockScrollMd {
-  min-height: calc(1.45em * 3 + 1.5em);
-  max-height: calc(1.45em * 3 + 1.5em);
+  min-height: calc(1.45em * 2 + 1.5em);
+  max-height: calc(1.45em * 2 + 1.5em);
 }
 
 .researcherLink {
