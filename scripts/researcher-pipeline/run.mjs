@@ -1385,12 +1385,14 @@ async function run() {
     }
     const selectedInstitution =
       scholarAffiliation ||
-      orcidAffiliation.institution ||
       authorProfile.last_known_institutions?.[0]?.display_name ||
+      orcidAffiliation.institution ||
       null;
     nextResearcherProfile.affiliation.source =
       scholarAffiliation
         ? "google_scholar"
+        : authorProfile.last_known_institutions?.[0]?.display_name
+        ? "openalex"
         : orcidAffiliation.institution
         ? "orcid"
         : "openalex";
