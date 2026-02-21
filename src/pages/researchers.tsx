@@ -295,7 +295,7 @@ export default function ResearchersPage(): ReactNode {
                 </label>
 
                 <label>
-                  University
+                  Institution
                   <select value={universityFilter} onChange={(event) => setUniversityFilter(event.target.value)}>
                     <option value="All">All</option>
                     {universityOptions.map((university) => (
@@ -362,7 +362,7 @@ export default function ResearchersPage(): ReactNode {
                   <input
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
-                    placeholder="name / topic / institution country/region / university"
+                    placeholder="name / topic / institution country/region / institution"
                     type="text"
                   />
                 </label>
