@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-02-20T21:16:49.289Z",
+  "generated_at": "2026-02-21T08:39:48.609Z",
   "pipeline_version": "v0.1.0",
   "run_config": {
-    "model": "qwen-plus",
+    "model": "qwen3.5-plus",
     "skip_ai": false,
     "full_refresh": false,
     "max_papers": null,
@@ -10,39 +10,7 @@
     "concurrency": 32,
     "save_every": 5,
     "researcher_names": [
-      "Bin Hu",
-      "Bing Qin",
-      "C.L. Philip Chen",
-      "Dan Guo",
-      "Dong Zhang",
-      "Guanqun Bi",
-      "Guiguang Ding",
-      "Honghai Liu",
-      "Hongxun Yao",
-      "Jia Liu",
-      "Jianhua Tao",
-      "Jufeng Yang",
-      "Kejun Zhang",
-      "Leida Li",
-      "Meng Wang",
-      "Ming Li",
-      "Peipei Song",
-      "Qin Jin",
-      "Qunxi Dong",
-      "Shengping Zhang",
-      "Shiguang Shan",
-      "Sicheng Zhao",
-      "Su-Jing Wang",
-      "Tong Zhang",
-      "Weidong Chen",
-      "Wenming Zheng",
-      "Xiao Sun",
-      "Xiaobai Li",
-      "Xiaolan Fu",
-      "Xun Chen",
-      "Yanyan Zhao",
-      "Yue Gao",
-      "Zheng Lian"
+      "Björn Schuller"
     ]
   },
   "researchers": [
@@ -243,6 +211,106 @@
         "summary_recomputed": false
       },
       "profile_path": "data/researchers/profiles/A5017671620.json"
+    },
+    {
+      "identity": {
+        "name": "Björn Schuller",
+        "orcid": "https://orcid.org/0000-0002-6478-8699",
+        "google_scholar": "https://scholar.google.com/citations?user=TxKNCSoAAAAJ",
+        "openalex_author_id": "A5043060302",
+        "openalex_author_url": "https://openalex.org/A5043060302"
+      },
+      "affiliation": {
+        "last_known_institution": "Imperial College London",
+        "last_known_country": "United Kingdom",
+        "source": "orcid"
+      },
+      "metrics": {
+        "works_count": 1764,
+        "cited_by_count": 54089,
+        "h_index": 102,
+        "i10_index": 722
+      },
+      "topic_summary": {
+        "top_research_directions": [
+          {
+            "name": "Speech Emotion Recognition",
+            "weight": 0.95
+          },
+          {
+            "name": "Multimodal Affective Computing",
+            "weight": 0.88
+          },
+          {
+            "name": "Mental Health & Depression Detection",
+            "weight": 0.82
+          },
+          {
+            "name": "Computational Paralinguistics",
+            "weight": 0.78
+          },
+          {
+            "name": "Domain Adaptation & Transfer Learning",
+            "weight": 0.72
+          },
+          {
+            "name": "Deep Learning for Affect (Transformers, LLMs, Foundation Models)",
+            "weight": 0.68
+          },
+          {
+            "name": "Responsible & Ethical Affective Computing",
+            "weight": 0.55
+          },
+          {
+            "name": "Healthcare & Clinical Applications",
+            "weight": 0.52
+          }
+        ],
+        "trend_summary": "Björn Schuller's research has evolved from foundational speech emotion recognition and computational paralinguistics (2000s-2010s) toward multimodal affective computing with deep learning architectures (2015-2020), and most recently focuses on mental health applications, foundation models/LLMs for emotion AI, and responsible/ethical affective computing (2020-2025). The work consistently emphasizes real-world deployment, cross-corpus generalization, and clinical validation, with increasing attention to privacy, fairness, and bias mitigation in recent years.",
+        "representative_papers": [
+          {
+            "title": "The INTERSPEECH 2009 emotion challenge",
+            "why": "Seminal work establishing benchmarking standards for speech emotion recognition that shaped the field"
+          },
+          {
+            "title": "The Geneva Minimalistic Acoustic Parameter Set (GeMAPS) for Voice Research and Affective Computing",
+            "why": "Highly cited (1633+) foundational work standardizing acoustic features for affective computing"
+          },
+          {
+            "title": "End-to-End Multimodal Emotion Recognition Using Deep Neural Networks",
+            "why": "Pivotal deep learning work (697+ citations) advancing multimodal fusion architectures"
+          },
+          {
+            "title": "AVEC 2019 Workshop and Challenge: State-of-Mind, Detecting Depression with AI, and Cross-Cultural Affect Recognition",
+            "why": "Represents the shift toward mental health applications and cross-cultural affect analysis"
+          },
+          {
+            "title": "Will Affective Computing Emerge From Foundation Models and General Artificial Intelligence? A First Evaluation of ChatGPT",
+            "why": "Highly cited (149+) work exploring LLMs and foundation models for emotion AI"
+          },
+          {
+            "title": "Contrastive Learning Based Modality-Invariant Feature Acquisition for Robust Multimodal Emotion Recognition With Missing Modalities",
+            "why": "Recent high-impact work (59+ citations) on robust multimodal emotion recognition"
+          },
+          {
+            "title": "Ethical Awareness in Paralinguistics: A Taxonomy of Applications",
+            "why": "Represents the emerging focus on ethics, privacy, and responsible affective computing"
+          },
+          {
+            "title": "Digital interventions in mental health: An overview and future perspectives",
+            "why": "Highly cited (54+) work summarizing digital mental health interventions and AI-driven support"
+          }
+        ]
+      },
+      "stats": {
+        "analyzed_works_count": 1568,
+        "interesting_works_count": 907,
+        "new_works_count": 1568,
+        "deduped_works_count": 1568,
+        "ai_called_count": 1568,
+        "summary_recomputed": true
+      },
+      "profile_path": "data/researchers/profiles/A5043060302.json"
     },
     {
       "identity": {
