@@ -97,10 +97,9 @@ const config: Config = {
             {
               html: `
                 <div class="footer-footnote">
-                  <p>Most content is AI-assisted collection/analysis with personal summary and curation.</p>
-                  <p>The researcher list is continuously updated and is not a ranking or complete coverage.</p>
-                  <p>Outputs may contain mistakes, outdated information, omissions, or interpretation bias.</p>
-                  <p>Please verify critical details with official paper pages, publisher records, Google Scholar, and OpenAlex.</p>
+                  <p>All content on this site is generated automatically by AI systems and is not subject to manual review. As a result, it may contain inaccuracies, outdated information, omissions, or interpretative bias.</p>
+                  <p>The researcher list is continuously updated and does not constitute a ranking or a comprehensive representation of the field.</p>
+                  <p>For authoritative information, please consult official publication pages, publisher records, Google Scholar, or OpenAlex.</p>
                 </div>
               `,
             },
