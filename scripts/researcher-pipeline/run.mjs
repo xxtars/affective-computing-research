@@ -1165,6 +1165,7 @@ async function run() {
   }
   const qwenBaseUrl = process.env.QWEN_BASE_URL || DEFAULT_QWEN_BASE_URL;
   const workerCount = Math.max(1, Math.floor(args.concurrency || 1));
+  const fetchWorkerCount = Math.max(1, Math.floor(workerCount / 8));
   const queueTarget = Math.max(1, workerCount * 200);
 
   const previousIndex = (await loadJson(args.out, null)) || null;
@@ -1213,6 +1214,7 @@ async function run() {
   console.log(`  max_papers: ${args.maxPapers ?? "none"}`);
   console.log(`  delay_ms: ${args.delayMs}`);
   console.log(`  concurrency: ${workerCount}`);
+  console.log(`  fetch_workers: ${fetchWorkerCount}`);
   console.log(`  save_every: ${Math.max(1, Math.floor(args.saveEvery || 1))}`);
   console.log(`  queue_target: ${queueTarget}`);
   console.log(`  selected_researchers: ${selectedResearchers.length}`);
@@ -1300,30 +1302,33 @@ async function run() {
 
   const producer = (async () => {
     try {
-      while (producerCursor < selectedResearchers.length) {
-        if (outstandingTasks() >= queueTarget) {
-          await sleep(80);
-          continue;
-        }
-
-        const currentIndex = producerCursor;
-        producerCursor += 1;
-        const researcher = selectedResearchers[currentIndex];
-        inFlightResearchers += 1;
-        try {
-          const ctx = await prepareResearcherContext(researcher);
-          researcherContexts.push(ctx);
-          for (let i = 0; i < ctx.analyzedNewWorks.length; i += 1) {
-            analysisTasks.push({
-              ctx,
-              i,
-              work: ctx.analyzedNewWorks[i],
-            });
+      const producerWorkers = new Array(fetchWorkerCount).fill(null).map(async () => {
+        while (producerCursor < selectedResearchers.length) {
+          if (outstandingTasks() >= queueTarget) {
+            await sleep(80);
+            continue;
           }
-        } finally {
-          inFlightResearchers -= 1;
+
+          const currentIndex = producerCursor;
+          producerCursor += 1;
+          const researcher = selectedResearchers[currentIndex];
+          inFlightResearchers += 1;
+          try {
+            const ctx = await prepareResearcherContext(researcher);
+            researcherContexts.push(ctx);
+            for (let i = 0; i < ctx.analyzedNewWorks.length; i += 1) {
+              analysisTasks.push({
+                ctx,
+                i,
+                work: ctx.analyzedNewWorks[i],
+              });
+            }
+          } finally {
+            inFlightResearchers -= 1;
+          }
         }
-      }
+      });
+      await Promise.all(producerWorkers);
     } catch (err) {
       producerError = err;
     } finally {
