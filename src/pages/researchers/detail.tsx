@@ -2,10 +2,10 @@ import type {ReactNode} from 'react';
 import {useEffect, useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
 import {useLocation} from '@docusaurus/router';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
+import {buildResearchDataUrl, useResearchDataBaseUrl} from '../../lib/researchData';
 import styles from './detail.module.css';
 
 type WorkAnalysis = {
@@ -154,8 +154,8 @@ function formatInstitutionCountry(value: string | null) {
 
 export default function ResearcherDetailPage(): ReactNode {
   const location = useLocation();
-  const baseUrlRoot = useBaseUrl('/');
-  const indexUrl = useBaseUrl('data/researchers/researchers.index.json');
+  const dataBaseUrl = useResearchDataBaseUrl();
+  const indexUrl = buildResearchDataUrl(dataBaseUrl, 'data/researchers/researchers.index.json');
   const researcherId = useMemo(() => {
     const search = location.search || '';
     return new URLSearchParams(search).get('id') || '';
@@ -178,7 +178,7 @@ export default function ResearcherDetailPage(): ReactNode {
           return;
         }
         const rel = String(record.profile_path || '').replace(/^\/+/, '');
-        const profileUrl = `${baseUrlRoot}${rel}`;
+        const profileUrl = buildResearchDataUrl(dataBaseUrl, rel);
         const res = await fetch(profileUrl);
         if (!res.ok) throw new Error(`Failed to load profile: ${res.status}`);
         const profile = (await res.json()) as ResearcherProfile;
@@ -195,7 +195,7 @@ export default function ResearcherDetailPage(): ReactNode {
     return () => {
       disposed = true;
     };
-  }, [indexUrl, researcherId]);
+  }, [dataBaseUrl, indexUrl, researcherId]);
 
   if (loading) {
     return (

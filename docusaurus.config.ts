@@ -37,6 +37,12 @@ const config: Config = {
     locales: ['en'],
   },
 
+  customFields: {
+    researchDataBaseUrl:
+      process.env.RESEARCH_DATA_BASE_URL ||
+      'https://raw.githubusercontent.com/xxtars/affective-computing-research-data/main',
+  },
+
   presets: [
     [
       'classic',

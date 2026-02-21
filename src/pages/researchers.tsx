@@ -1,10 +1,10 @@
 import type {ReactNode} from 'react';
-import {useMemo, useState} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-import indexData from '@site/data/researchers/researchers.index.json';
+import {buildResearchDataUrl, useResearchDataBaseUrl} from '../lib/researchData';
 import styles from './researchers.module.css';
 
 type ResearcherProfile = {
@@ -110,12 +110,43 @@ function formatInstitutionCountry(value: string | null) {
 }
 
 export default function ResearchersPage(): ReactNode {
-  const profile = indexData as IndexFile;
+  const dataBaseUrl = useResearchDataBaseUrl();
+  const [profile, setProfile] = useState<IndexFile>({
+    generated_at: null,
+    pipeline_version: 'v0.1.0',
+    researchers: [],
+  });
+  const [loading, setLoading] = useState(true);
   const [countryFilter, setCountryFilter] = useState('All');
   const [universityFilter, setUniversityFilter] = useState('All');
   const [initialAxis, setInitialAxis] = useState<'family' | 'given'>('family');
   const [nameInitialFilter, setNameInitialFilter] = useState('All');
   const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    let disposed = false;
+    async function loadIndex() {
+      setLoading(true);
+      try {
+        const url = buildResearchDataUrl(dataBaseUrl, 'data/researchers/researchers.index.json');
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Failed to load index: ${res.status}`);
+        const json = (await res.json()) as IndexFile;
+        if (!disposed) setProfile(json);
+      } catch (err) {
+        console.error(err);
+        if (!disposed) {
+          setProfile({generated_at: null, pipeline_version: 'v0.1.0', researchers: []});
+        }
+      } finally {
+        if (!disposed) setLoading(false);
+      }
+    }
+    loadIndex();
+    return () => {
+      disposed = true;
+    };
+  }, [dataBaseUrl]);
 
   const countryOptions = useMemo(
     () =>
@@ -199,7 +230,11 @@ export default function ResearchersPage(): ReactNode {
             name.
           </p>
 
-          {profile.researchers.length === 0 ? (
+          {loading ? (
+            <div className={styles.empty}>
+              <p>Loading researcher data...</p>
+            </div>
+          ) : profile.researchers.length === 0 ? (
             <div className={styles.empty}>
               <p>No profile data yet.</p>
               <p>

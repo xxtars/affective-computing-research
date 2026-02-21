@@ -516,11 +516,16 @@ function makeIndexRecord(profile, indexPath) {
 
 async function saveIndexAndProfileWithStaticMirror({ indexPath, indexData, authorId, profileData }) {
   const profilePath = getProfileFilePathByAuthorId(indexPath, authorId);
-  const mirrorIndexPath = getStaticMirrorIndexPath(indexPath);
-  const mirrorProfilePath = getStaticMirrorProfilePathByAuthorId(indexPath, authorId);
 
   await saveJson(profilePath, profileData);
   await saveJson(indexPath, indexData);
+
+  if (process.env.RESEARCHER_DISABLE_STATIC_MIRROR === "1") {
+    return;
+  }
+
+  const mirrorIndexPath = getStaticMirrorIndexPath(indexPath);
+  const mirrorProfilePath = getStaticMirrorProfilePathByAuthorId(indexPath, authorId);
   await saveJson(mirrorProfilePath, profileData);
   await saveJson(mirrorIndexPath, indexData);
 }

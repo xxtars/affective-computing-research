@@ -18,3 +18,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Research data (moved to external data repository)
+/data/researchers/cache/
+/data/researchers/profiles/
+/data/researchers/researchers.index.json
+/static/data/researchers/
+!/data/researchers/researcher.seed.json

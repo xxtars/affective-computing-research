@@ -1,10 +1,10 @@
 import type {ReactNode} from 'react';
 import {useEffect, useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
+import {buildResearchDataUrl, useResearchDataBaseUrl} from '../lib/researchData';
 import styles from './papers.module.css';
 
 type WorkItem = {
@@ -156,8 +156,8 @@ function mergePaperAuthors(existing: PaperAuthor[], next: PaperAuthor[]) {
 }
 
 export default function PapersPage(): ReactNode {
-  const baseUrlRoot = useBaseUrl('/');
-  const indexUrl = useBaseUrl('data/researchers/researchers.index.json');
+  const dataBaseUrl = useResearchDataBaseUrl();
+  const indexUrl = buildResearchDataUrl(dataBaseUrl, 'data/researchers/researchers.index.json');
   const [query, setQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(100);
   const [profiles, setProfiles] = useState<ResearcherProfile[]>([]);
@@ -175,7 +175,7 @@ export default function PapersPage(): ReactNode {
         const loaded = await Promise.all(
           records.map(async (record) => {
             const rel = String(record.profile_path || '').replace(/^\/+/, '');
-            const profileUrl = `${baseUrlRoot}${rel}`;
+            const profileUrl = buildResearchDataUrl(dataBaseUrl, rel);
             const res = await fetch(profileUrl);
             if (!res.ok) return null;
             return (await res.json()) as ResearcherProfile;
@@ -193,7 +193,7 @@ export default function PapersPage(): ReactNode {
     return () => {
       disposed = true;
     };
-  }, [baseUrlRoot, indexUrl]);
+  }, [dataBaseUrl]);
 
   const papers = useMemo(() => {
     const byTitle = new Map<string, PaperView>();

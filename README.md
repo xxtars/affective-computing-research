@@ -110,6 +110,14 @@ node scripts/researcher-pipeline/run.mjs --full-refresh
 - `data/researchers/cache/<name>__<scholarUserId>__<openalexAuthorId>/paper-analysis-cache.json`: per-researcher AI cache
   - cache entries include `paper_id`, `title`, `researcher_name`, and `researcher_openalex_author_id` for manual checks
 
+Production recommendation:
+
+- Keep code and generated data in separate repositories.
+- This project is configured to read researcher data from
+  `https://raw.githubusercontent.com/xxtars/affective-computing-research-data/main` by default.
+- GitHub Actions `Researcher Build` writes updated data to the external data repo using `DATA_REPO_PAT`.
+  - Add `DATA_REPO_PAT` in repository secrets with write permission to `xxtars/affective-computing-research-data`.
+
 ### Pipeline flow
 
 1. Read researchers from `data/researchers/researcher.seed.json`
