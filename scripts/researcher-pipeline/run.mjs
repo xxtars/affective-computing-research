@@ -756,8 +756,12 @@ function shortenText(text, maxChars = 1800) {
   return `${normalized.slice(0, maxChars)} ...`;
 }
 
-function buildPaperPrompt(researcher, work) {
-  return `You are analyzing whether a paper is affective/emotion-related based on the interest topics.\n\nResearcher: ${researcher.name}\nInterest topics: ${getInterestTopics(researcher).join(", ")}\n\nPaper metadata:\n- Title: ${work.title}\n- Year: ${work.publication_year || "unknown"}\n- Venue: ${work.primary_source || "unknown"}\n- Concepts: ${(work.concepts || []).join(", ") || "none"}\n- Abstract: ${shortenText(work.abstract || "(empty)")}\n\nReturn strict JSON with this schema:\n{\n  "is_interesting": boolean,\n  "relevance_score": number,\n  "confidence": number,\n  "reason": string,\n  "evidence": string[],\n  "keywords": string[],\n  "research_directions": string[]\n}\n\nRules:\n- First decide related vs non-related.\n- If non-related, return minimal output:\n  - is_interesting=false\n  - relevance_score in [0,0.2]\n  - confidence in [0,1]\n  - short reason\n  - evidence max 1 short string\n  - keywords=[]\n  - research_directions=[]\n- If related, fill keywords/research_directions normally.\n- Always return valid JSON only.`;
+function buildPaperFilterPrompt(work) {
+  return `You are doing Stage-1 filtering for affective/emotion-related research.\n\nPaper title:\n${work.title}\n\nReturn strict JSON:\n{\n  "is_interesting": boolean,\n  "relevance_score": number,\n  "confidence": number,\n  "reason": string\n}\n\nRules:\n- Use title only.\n- If title is clearly affective/emotion-related, set is_interesting=true.\n- If title is clearly not related, set is_interesting=false.\n- If uncertain, lean conservative and set is_interesting=false.\n- relevance_score in [0,1].\n- confidence in [0,1].\n- reason: one short sentence (<=16 words).\n- Output valid JSON only.`;
+}
+
+function buildPaperExtractionPrompt(researcher, work) {
+  return `You are doing Stage-2 extraction for an already-selected affective/emotion-related paper.\n\nResearcher: ${researcher.name}\nInterest topics: ${getInterestTopics(researcher).join(", ")}\n\nPaper metadata:\n- Title: ${work.title}\n- Year: ${work.publication_year || "unknown"}\n- Venue: ${work.primary_source || "unknown"}\n- Concepts: ${(work.concepts || []).join(", ") || "none"}\n- Abstract: ${shortenText(work.abstract || "(empty)")}\n\nReturn strict JSON:\n{\n  "reason": string,\n  "evidence": string[],\n  "tldr": string,\n  "research_directions": string[]\n}\n\nRules:\n- reason: one concise sentence.\n- evidence: 1-3 short concrete clues from title/abstract/concepts.\n- TLDR: 1 sentence only, 18-40 words; focus on problem + method + contribution; neutral and factual.\n- research_directions: 2-5 items; noun phrases (2-6 words), lowercase, avoid overlap/synonyms.\n- Ground everything in given metadata only; do not invent facts.\n- Output valid JSON only.`;
 }
 
 function buildSummaryPrompt(researcher, analyzedWorks) {
@@ -815,20 +819,26 @@ function clamp01(value, fallback = 0) {
   return num;
 }
 
-function normalizePaperAnalysis(raw) {
-  const keywords = Array.isArray(raw?.keywords) ? raw.keywords.filter(Boolean).slice(0, 12) : [];
-  const directions = Array.isArray(raw?.research_directions)
-    ? raw.research_directions.filter(Boolean).slice(0, 10)
-    : [];
-  const evidence = Array.isArray(raw?.evidence) ? raw.evidence.filter(Boolean).slice(0, 3) : [];
-
+function normalizePaperFilter(raw) {
   return {
     is_interesting: Boolean(raw?.is_interesting),
     relevance_score: clamp01(raw?.relevance_score, 0),
     confidence: clamp01(raw?.confidence, 0),
     reason: typeof raw?.reason === "string" ? raw.reason : "",
+  };
+}
+
+function normalizePaperExtraction(raw) {
+  const directions = Array.isArray(raw?.research_directions)
+    ? raw.research_directions.filter(Boolean).slice(0, 10)
+    : [];
+  const evidence = Array.isArray(raw?.evidence) ? raw.evidence.filter(Boolean).slice(0, 3) : [];
+  const tldr = typeof raw?.tldr === "string" ? raw.tldr.trim() : "";
+
+  return {
+    reason: typeof raw?.reason === "string" ? raw.reason : "",
     evidence,
-    keywords,
+    tldr,
     research_directions: directions,
   };
 }
@@ -906,7 +916,7 @@ async function analyzePaper({ researcher, work, args, cache, qwenConfig }) {
       confidence: 0,
       reason: "AI skipped by --skip-ai",
       evidence: [],
-      keywords: [],
+      tldr: "",
       research_directions: [],
     };
     cache[cacheKey] = {
@@ -921,21 +931,45 @@ async function analyzePaper({ researcher, work, args, cache, qwenConfig }) {
     return { analysis: skipped, fromCache: false };
   }
 
-  const prompt = buildPaperPrompt(researcher, work);
+  const stage1Prompt = buildPaperFilterPrompt(work);
   let attempt = 0;
   let lastErr = null;
 
   while (attempt < 3) {
     attempt += 1;
     try {
-      const raw = await callQwenChat({
+      const filterRaw = await callQwenChat({
         apiKey: qwenConfig.apiKey,
         baseUrl: qwenConfig.baseUrl,
         model: args.model,
-        userPrompt: prompt,
+        userPrompt: stage1Prompt,
         temperature: 0,
+        maxTokens: 120,
       });
-      const normalized = normalizePaperAnalysis(raw);
+      const stage1 = normalizePaperFilter(filterRaw);
+      let normalized = {
+        ...stage1,
+        evidence: [],
+        tldr: "",
+        research_directions: [],
+      };
+
+      if (stage1.is_interesting) {
+        const extractionRaw = await callQwenChat({
+          apiKey: qwenConfig.apiKey,
+          baseUrl: qwenConfig.baseUrl,
+          model: args.model,
+          userPrompt: buildPaperExtractionPrompt(researcher, work),
+          temperature: 0,
+          maxTokens: 260,
+        });
+        const stage2 = normalizePaperExtraction(extractionRaw);
+        normalized = {
+          ...stage1,
+          ...stage2,
+        };
+      }
+
       cache[cacheKey] = {
         paper_id: work.id,
         title: work.title,
