@@ -20,6 +20,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Research data (moved to external data repository)
+/data-repo/
 /data/researchers/cache/
 /data/researchers/profiles/
 /data/researchers/researchers.index.json
