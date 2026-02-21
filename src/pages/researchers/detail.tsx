@@ -297,36 +297,53 @@ export default function ResearcherDetailPage(): ReactNode {
           <div className={styles.paperGrid}>
             {interestingWorks.map((work) => (
               <article className={styles.paperCard} key={work.id}>
-                <div className={styles.paperTop}>
-                  <span className={styles.paperDate}>{formatYearMonth(work.publication_date, work.publication_year)}</span>
-                </div>
-                <h3 className={styles.paperTitle} title={work.title}>
+                <span className={styles.paperDate}>{formatYearMonth(work.publication_date, work.publication_year)}</span>
+                <h3 className={styles.paperTitleScroll} title={work.title}>
                   {work.title}
                 </h3>
-                <p className={styles.paperMeta}>
-                  Venue:{' '}
-                  {work.source?.display_name || work.primary_source || work.doi || work.doi_url ? (
-                    <a
-                      href={work.links?.landing_page || work.links?.openalex || work.links?.source_openalex || work.doi_url || work.doi || '#'}
-                      rel="noreferrer"
-                      target="_blank">
-                      {getVenueLabel(work)}
-                    </a>
-                  ) : (
-                    getVenueLabel(work)
-                  )}
+
+                <p className={styles.paperRow}>
+                  Researcher: <span className={styles.paperRowValue}>{researcher.identity.name}</span>
                 </p>
-                {work.links?.openalex && (
-                  <p className={styles.paperMeta}>
-                    <a href={work.links.openalex} rel="noreferrer" target="_blank">
-                      Source(OpenAlex)
-                    </a>
-                  </p>
-                )}
-                <p className={styles.paperMeta}>Directions</p>
-                <p className={styles.paperText}>{formatList(work.analysis.research_directions)}</p>
-                <p className={styles.paperMeta}>TLDR</p>
-                <p className={styles.paperText}>{work.analysis.tldr || '-'}</p>
+
+                <p className={styles.paperRow}>
+                  Venue:{' '}
+                  <span className={styles.paperRowValue}>
+                    {work.source?.display_name || work.primary_source || work.doi || work.doi_url ? (
+                      <a
+                        href={work.links?.landing_page || work.links?.openalex || work.links?.source_openalex || work.doi_url || work.doi || '#'}
+                        rel="noreferrer"
+                        target="_blank">
+                        {getVenueLabel(work)}
+                      </a>
+                    ) : (
+                      getVenueLabel(work)
+                    )}
+                  </span>
+                </p>
+
+                <p className={styles.paperRow}>
+                  Source:{' '}
+                  <span className={styles.paperRowValue}>
+                    {work.links?.openalex ? (
+                      <a href={work.links.openalex} rel="noreferrer" target="_blank">
+                        OpenAlex
+                      </a>
+                    ) : (
+                      '-'
+                    )}
+                  </span>
+                </p>
+
+                <div className={styles.paperBlockLg}>
+                  <p className={styles.paperBlockLabel}>TLDR</p>
+                  <p className={styles.paperBlockText}>{work.analysis.tldr || '-'}</p>
+                </div>
+
+                <div className={styles.paperBlockMd}>
+                  <p className={styles.paperBlockLabel}>Directions</p>
+                  <p className={styles.paperBlockText}>{formatList(work.analysis.research_directions)}</p>
+                </div>
               </article>
             ))}
           </div>

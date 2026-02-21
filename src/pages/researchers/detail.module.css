@@ -49,49 +49,82 @@
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.4rem;
   padding: 0.9rem;
-}
-
-.paperTop {
-  display: flex;
-  justify-content: flex-start;
+  min-height: 25.2rem;
 }
 
 .paperDate {
+  align-self: flex-start;
   background: var(--ifm-color-emphasis-200);
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   padding: 0.2rem 0.55rem;
 }
 
-.paperTitle {
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  display: -webkit-box;
+.paperTitleScroll {
   font-size: 1.02rem;
-  line-height: 1.35;
+  font-weight: 700;
+  line-height: 1.4;
   margin: 0.1rem 0 0.25rem;
-  min-height: calc(1.35em * 3);
-  overflow: hidden;
+  min-height: calc(1.4em * 3);
+  max-height: calc(1.4em * 3);
+  overflow-y: auto;
   overflow-wrap: anywhere;
-  text-overflow: ellipsis;
+  scrollbar-width: thin;
   word-break: break-word;
 }
 
-.paperMeta {
+.paperRow {
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-size: 0.94rem;
+  line-height: 1.35;
   margin: 0;
+  min-height: calc(1.35em * 1);
+  max-height: calc(1.35em * 1);
+  overflow-y: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
 }
 
-.paperText {
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  display: -webkit-box;
+.paperRowValue {
+  font-weight: 500;
+}
+
+.paperBlockLg,
+.paperBlockMd {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  margin-top: 0.2rem;
+  padding-top: 0.3rem;
+}
+
+.paperBlockLg {
+  min-height: calc(1.45em * 4 + 1.5em);
+  max-height: calc(1.45em * 4 + 1.5em);
+}
+
+.paperBlockMd {
+  min-height: calc(1.45em * 3 + 1.5em);
+  max-height: calc(1.45em * 3 + 1.5em);
+}
+
+.paperBlockLabel {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.15rem;
+  text-transform: uppercase;
+}
+
+.paperBlockText {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.92rem;
+  line-height: 1.45;
   margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  min-height: 0;
+  max-height: calc(100% - 1.5em);
+  overflow-y: auto;
+  scrollbar-width: thin;
 }

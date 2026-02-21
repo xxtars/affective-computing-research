@@ -319,52 +319,65 @@ export default function PapersPage(): ReactNode {
                   <div className={styles.grid}>
                     {yearPapers.map((paper) => (
                       <article className={styles.card} key={paper.id}>
-                        <div className={styles.cardTop}>
-                          <span className={styles.yearBadge}>{formatYearMonth(paper.publication_date, paper.publication_year)}</span>
-                        </div>
+                        <span className={styles.yearBadge}>
+                          {formatYearMonth(paper.publication_date, paper.publication_year)}
+                        </span>
 
-                        <h2 className={styles.title} title={paper.title}>
+                        <h2 className={styles.titleScroll} title={paper.title}>
                           {paper.title}
                         </h2>
 
-                        <p className={styles.metaLine}>
+                        <p className={styles.rowLine}>
                           Researchers:{' '}
-                          {paper.researchers.map((item, index) => (
-                            <span key={item.id}>
-                              {index > 0 ? ', ' : ''}
-                              <Link className={styles.researcherLink} to={`/researchers/detail?id=${encodeURIComponent(item.id)}`}>
-                                {item.name}
-                              </Link>
-                            </span>
-                          ))}
+                          <span className={styles.rowLineValue}>
+                            {paper.researchers.map((item, index) => (
+                              <span key={item.id}>
+                                {index > 0 ? ', ' : ''}
+                                <Link className={styles.researcherLink} to={`/researchers/detail?id=${encodeURIComponent(item.id)}`}>
+                                  {item.name}
+                                </Link>
+                              </span>
+                            ))}
+                          </span>
                         </p>
 
-                        <p className={styles.metaLine}>
+                        <p className={styles.rowLine}>
                           Venue:{' '}
-                          {paper.links?.landing_page || paper.links?.openalex || paper.doi_url || paper.doi ? (
-                          <a
-                            href={paper.links?.landing_page || paper.links?.openalex || paper.doi_url || paper.doi || '#'}
-                            rel="noreferrer"
-                            target="_blank">
-                            {getVenueLabel(paper)}
-                          </a>
-                        ) : (
-                          getVenueLabel(paper)
-                        )}
-                      </p>
+                          <span className={styles.rowLineValue}>
+                            {paper.links?.landing_page || paper.links?.openalex || paper.doi_url || paper.doi ? (
+                              <a
+                                href={paper.links?.landing_page || paper.links?.openalex || paper.doi_url || paper.doi || '#'}
+                                rel="noreferrer"
+                                target="_blank">
+                                {getVenueLabel(paper)}
+                              </a>
+                            ) : (
+                              getVenueLabel(paper)
+                            )}
+                          </span>
+                        </p>
 
-                      <p className={styles.directionLine}>
-                        Directions: {formatPreviewList(paper.analysis?.research_directions)}
-                      </p>
+                        <p className={styles.rowLine}>
+                          Source:{' '}
+                          <span className={styles.rowLineValue}>
+                            {paper.links?.openalex ? (
+                              <a href={paper.links.openalex} rel="noreferrer" target="_blank">
+                                OpenAlex
+                              </a>
+                            ) : (
+                              '-'
+                            )}
+                          </span>
+                        </p>
 
-                      <p className={styles.keywordLine}>TLDR: {paper.analysis?.tldr || '-'}</p>
+                        <div className={styles.blockScrollLg}>
+                          <p className={styles.blockLabel}>TLDR</p>
+                          <p className={styles.blockText}>{paper.analysis?.tldr || '-'}</p>
+                        </div>
 
-                      <div className={styles.actions}>
-                          {paper.links?.openalex && (
-                            <a href={paper.links.openalex} rel="noreferrer" target="_blank">
-                              OpenAlex Source
-                            </a>
-                          )}
+                        <div className={styles.blockScrollMd}>
+                          <p className={styles.blockLabel}>Directions</p>
+                          <p className={styles.blockText}>{formatPreviewList(paper.analysis?.research_directions)}</p>
                         </div>
                       </article>
                     ))}
