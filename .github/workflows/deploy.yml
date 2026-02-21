@@ -21,8 +21,17 @@ jobs:
   build:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    env:
+      DATA_REPO: xxtars/affective-computing-research-data
     steps:
       - uses: actions/checkout@v4
+
+      - name: Checkout data repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.DATA_REPO }}
+          token: ${{ secrets.DATA_REPO_PAT }}
+          path: data-repo
 
       - uses: actions/setup-node@v4
         with:
@@ -31,6 +40,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Export public snapshot for website
+        run: |
+          node scripts/researcher-pipeline/export-public-snapshot.mjs \
+            --src "data-repo/data/researchers" \
+            --out "static/data/researchers"
 
       - name: Build website
         run: npm run build

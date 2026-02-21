@@ -38,9 +38,7 @@ const config: Config = {
   },
 
   customFields: {
-    researchDataBaseUrl:
-      process.env.RESEARCH_DATA_BASE_URL ||
-      'https://raw.githubusercontent.com/xxtars/affective-computing-research-data/main',
+    researchDataBaseUrl: process.env.RESEARCH_DATA_BASE_URL || '',
   },
 
   presets: [

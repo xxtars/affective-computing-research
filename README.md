@@ -112,11 +112,11 @@ node scripts/researcher-pipeline/run.mjs --full-refresh
 
 Production recommendation:
 
-- Keep code and generated data in separate repositories.
-- This project is configured to read researcher data from
-  `https://raw.githubusercontent.com/xxtars/affective-computing-research-data/main` by default.
-- GitHub Actions `Researcher Build` writes updated data to the external data repo using `DATA_REPO_PAT`.
-  - Add `DATA_REPO_PAT` in repository secrets with write permission to `xxtars/affective-computing-research-data`.
+- Keep full generated data in a separate private data repository.
+- GitHub Actions `Researcher Build` writes full data to the external data repo using `DATA_REPO_PAT`.
+- `Deploy to GitHub Pages` checks out the private data repo and exports a minimized public snapshot to `static/data/researchers` during CI build only.
+- The public snapshot is not committed back to this code repository.
+  - Add `DATA_REPO_PAT` in repository secrets with access to `xxtars/affective-computing-research-data`.
 
 ### Pipeline flow
 
