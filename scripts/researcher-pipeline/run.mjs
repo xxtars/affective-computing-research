@@ -14,6 +14,7 @@ function parseArgs(argv) {
     seed: "data/researchers/researcher.seed.json",
     out: "data/researchers/researchers.index.json",
     cache: "data/researchers/cache",
+    interestingOverrides: "",
     model: process.env.QWEN_MODEL || "qwen-plus",
     skipAi: false,
     maxPapers: null,
@@ -29,6 +30,7 @@ function parseArgs(argv) {
     if (token === "--seed") args.seed = argv[++i];
     else if (token === "--out") args.out = argv[++i];
     else if (token === "--cache") args.cache = argv[++i];
+    else if (token === "--interesting-overrides") args.interestingOverrides = argv[++i];
     else if (token === "--model") args.model = argv[++i];
     else if (token === "--max-papers") args.maxPapers = Number(argv[++i]);
     else if (token === "--delay-ms") args.delayMs = Number(argv[++i]);
@@ -509,6 +511,46 @@ function normalizeTitle(title) {
     .trim();
 }
 
+function buildInterestingOverrides(raw) {
+  const ids = new Set();
+  const titles = new Set();
+  if (!raw || typeof raw !== "object") return { ids, titles };
+
+  const addId = (value) => {
+    const v = String(value || "").trim();
+    if (v) ids.add(v);
+  };
+  const addTitle = (value) => {
+    const v = normalizeTitle(value);
+    if (v) titles.add(v);
+  };
+
+  if (Array.isArray(raw.paper_ids)) {
+    for (const item of raw.paper_ids) addId(item);
+  }
+  if (Array.isArray(raw.titles)) {
+    for (const item of raw.titles) addTitle(item);
+  }
+  return { ids, titles };
+}
+
+function applyInterestingOverride(work, overrides) {
+  if (!work || !work.analysis || !overrides) return work;
+  const byId = typeof work.id === "string" && overrides.ids.has(work.id);
+  const byTitle = overrides.titles.has(normalizeTitle(work.title));
+  if (!byId && !byTitle) return work;
+
+  const analysis = {
+    ...work.analysis,
+    is_interesting: true,
+    manual_override: true,
+  };
+  if (!String(analysis.reason || "").trim()) {
+    analysis.reason = "Manually marked as interesting by override.";
+  }
+  return { ...work, analysis };
+}
+
 function normalizeNameForMatch(name) {
   return String(name || "").toLowerCase().replace(/\s+/g, " ").trim();
 }
@@ -876,8 +918,13 @@ async function callQwenChat({
   temperature = 0,
   maxTokens = 420,
   enableThinking = false,
+  timeoutMs = null,
 }) {
   const url = `${baseUrl.replace(/\/$/, "")}/chat/completions`;
+  const resolvedTimeoutMs =
+    Number.isFinite(Number(timeoutMs)) && Number(timeoutMs) > 0
+      ? Number(timeoutMs)
+      : Math.max(1000, Number(process.env.QWEN_HTTP_TIMEOUT_SEC || 120) * 1000);
   const body = {
     model,
     temperature,
@@ -890,14 +937,24 @@ async function callQwenChat({
     ],
   };
 
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify(body),
-  });
+  let res;
+  try {
+    res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(resolvedTimeoutMs),
+    });
+  } catch (err) {
+    const isTimeout = err?.name === "TimeoutError" || err?.name === "AbortError";
+    if (isTimeout) {
+      throw new Error(`Qwen API timeout after ${Math.round(resolvedTimeoutMs / 1000)}s`);
+    }
+    throw err;
+  }
 
   const text = await res.text();
   if (!res.ok) {
@@ -1175,6 +1232,10 @@ async function run() {
     throw new Error("QWEN_API_KEY is required unless --skip-ai is set");
   }
   const qwenBaseUrl = process.env.QWEN_BASE_URL || DEFAULT_QWEN_BASE_URL;
+  const overridePath = args.interestingOverrides
+    ? path.resolve(args.interestingOverrides)
+    : path.join(path.dirname(path.resolve(args.out)), "interesting-overrides.json");
+  const interestingOverrides = buildInterestingOverrides((await loadJson(overridePath, {})) || {});
   const workerCount = Math.max(1, Math.floor(args.concurrency || 1));
   const fetchWorkerCount = Math.max(1, Math.floor(workerCount / 8));
   const queueTarget = Math.max(1, workerCount * 200);
@@ -1207,6 +1268,7 @@ async function run() {
       delay_ms: args.delayMs,
       concurrency: args.concurrency,
       save_every: args.saveEvery,
+      interesting_overrides: overridePath,
       researcher_names:
         args.researcherNames.length > 0 ? args.researcherNames : selectedResearchers.map((r) => r.name),
     },
@@ -1228,6 +1290,10 @@ async function run() {
   console.log(`  fetch_workers: ${fetchWorkerCount}`);
   console.log(`  save_every: ${Math.max(1, Math.floor(args.saveEvery || 1))}`);
   console.log(`  queue_target: ${queueTarget}`);
+  console.log(`  interesting_overrides: ${overridePath}`);
+  console.log(
+    `  interesting_override_counts: ids=${interestingOverrides.ids.size}, titles=${interestingOverrides.titles.size}`
+  );
   console.log(`  selected_researchers: ${selectedResearchers.length}`);
   if (args.researcherNames.length > 0) {
     console.log(`  researcher_name_filter: ${args.researcherNames.join(", ")}`);
@@ -1401,12 +1467,14 @@ async function run() {
   for (const ctx of researcherContexts) {
     const { previousResearcher, previousWorks, analyzedNewWorks } = ctx;
     const successfulAnalyzedNewWorks = analyzedNewWorks.filter((w) => w && w.id);
-    const mergedWorks = [...successfulAnalyzedNewWorks];
+    const mergedWorks = successfulAnalyzedNewWorks.map((w) =>
+      applyInterestingOverride(w, interestingOverrides)
+    );
     if (!args.fullRefresh) {
       for (const oldWork of previousWorks) {
         if (!oldWork?.id) continue;
         if (successfulAnalyzedNewWorks.some((nw) => nw.id === oldWork.id)) continue;
-        mergedWorks.push(oldWork);
+        mergedWorks.push(applyInterestingOverride(oldWork, interestingOverrides));
       }
     }
     const dedupedMergedWorks = dedupeWorksByTitle(mergedWorks);
