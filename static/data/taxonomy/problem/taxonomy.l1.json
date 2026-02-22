@@ -1,0 +1,262 @@
+[
+  {
+    "name": "Emotion Representation",
+    "definition": "Research on how emotions are formally defined and represented, including categorical models, dimensional models (e.g., valence-arousal), distributional representations, and structured affective spaces.",
+    "aliases": [
+      "emotion modeling",
+      "affective representation",
+      "emotion taxonomy"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Emotional Valence"
+    ]
+  },
+  {
+    "name": "Emotion Recognition and Prediction",
+    "definition": "The problem of automatically recognizing or predicting emotional states from observable behavioral, linguistic, or physiological signals based on a predefined emotion representation.",
+    "aliases": [
+      "affect recognition",
+      "emotion classification",
+      "emotion regression"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Affective Image Analysis",
+      "Affective Speech Processing",
+      "Affective State Classification",
+      "Affective State Prediction",
+      "Affective State Recognition",
+      "Cross-Cultural Emotion Recognition",
+      "Cross-Subject EEG Emotion Recognition",
+      "EEG Emotion Recognition",
+      "EEG-based Emotion Recognition",
+      "Emotion Classification",
+      "Emotion Distribution Learning",
+      "Emotion Recognition",
+      "Emotional Conflict Resolution",
+      "Emotional Intensity Estimation",
+      "Emotional State Understanding",
+      "Emotional Tendency Annotation",
+      "Facial Expression Recognition",
+      "Facial Processing",
+      "Feature Selection and Extraction",
+      "Image Emotion Classification",
+      "In-the-Wild Emotion Recognition",
+      "Multi-label and Multi-class Emotion Classification",
+      "Music Emotion Analysis",
+      "Negative Emotion Impact and Regulation",
+      "Personality Recognition",
+      "Physiological Emotion Recognition",
+      "Sentiment Analysis",
+      "Speech Emotion Recognition",
+      "Unseen Emotion Classification",
+      "Valence-Arousal Estimation",
+      "Visual Emotion Analysis"
+    ]
+  },
+  {
+    "name": "Emotion Dynamics",
+    "definition": "Modeling the temporal evolution, transitions, and continuity of emotional states over time.",
+    "aliases": [
+      "continuous emotion recognition",
+      "temporal emotion modeling",
+      "affective dynamics"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "4D Facial Expression Recognition",
+      "Affective Dynamics",
+      "Brain Connectivity Analysis",
+      "Continuous Dimensional Emotion Prediction",
+      "Continuous Emotion Prediction",
+      "Continuous Emotion Recognition",
+      "Dimensional Emotion Recognition",
+      "Dynamic Emotion Modeling",
+      "Dynamic Facial Expression Recognition",
+      "Emotional Dysregulation",
+      "Emotional Memory",
+      "Emotional Modulation",
+      "Neural Mechanisms of Moral and Emotional Processing",
+      "Real-time Emotion Monitoring",
+      "Semantic Logical Coherence",
+      "Temporal Dependency Modeling",
+      "Temporal Emotion Analysis"
+    ]
+  },
+  {
+    "name": "Multimodal Affect Analysis",
+    "definition": "Studying how multiple modalities jointly contribute to affect recognition and modeling.",
+    "aliases": [
+      "multimodal emotion recognition",
+      "multimodal affective computing",
+      "cross-modal affect analysis"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Affective Video Analysis",
+      "Audio-Visual Emotion Recognition",
+      "Correlation Modeling",
+      "Cross-Modal Interaction Inefficiency",
+      "Humor Detection",
+      "Missing Modality Handling",
+      "Modality Imbalance",
+      "Multimodal Affect Analysis",
+      "Multimodal Emotion Analysis",
+      "Multimodal Emotion Classification",
+      "Multimodal Emotion Recognition",
+      "Multimodal Feature Fusion",
+      "Multimodal Sentiment Analysis"
+    ]
+  },
+  {
+    "name": "Context-Aware Emotion Recognition",
+    "definition": "Understanding how conversational, situational, and social context influences emotion recognition and interpretation.",
+    "aliases": [
+      "conversational emotion recognition",
+      "contextual emotion modeling",
+      "interaction-based emotion recognition"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Contextual Emotion Modeling",
+      "Conversational Emotion Recognition",
+      "Data Scarcity",
+      "Dyadic Interaction Analysis",
+      "Emotional Ambiguity Resolution"
+    ]
+  },
+  {
+    "name": "Subtle and Fine-grained Affect Analysis",
+    "definition": "Detecting and analyzing subtle, brief, or concealed emotional signals, including micro-expressions, micro-gestures, and fine-grained affective movements.",
+    "aliases": [
+      "micro-expression recognition",
+      "micro-gesture recognition",
+      "subtle emotion recognition",
+      "fine-grained affect analysis"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Facial Action Unit Detection",
+      "Facial Expression Analysis",
+      "Fine-Grained Emotion Analysis",
+      "Genuine Emotion Detection",
+      "Hidden Emotion Analysis",
+      "Macroexpression Analysis",
+      "Micro-expression Database Construction",
+      "Micro-expression Detection",
+      "Micro-expression Recognition",
+      "Micro-expression Spotting",
+      "Microexpression Quantification",
+      "Microexpression Recognition",
+      "Multi-view Facial Expression Recognition",
+      "Multichannel EEG Analysis",
+      "Noise and Interference Reduction",
+      "Social Media Sentiment Analysis",
+      "Spontaneous Emotion Analysis",
+      "Spontaneous Micro-expression Recognition",
+      "Spontaneous Micro-expression Spotting",
+      "Spontaneous Micro-gesture Analysis",
+      "Subtle Emotion Detection",
+      "Subtle Facial Movement Analysis"
+    ]
+  },
+  {
+    "name": "Subjectivity and Personalization",
+    "definition": "Addressing individual differences and subjective variability in emotion perception and expression.",
+    "aliases": [
+      "personalized emotion recognition",
+      "subjectivity modeling",
+      "individualized affect modeling"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Individual Difference Modeling",
+      "Perception and Personality Modeling",
+      "Personalized Emotion Perception",
+      "Personalized Emotion Recognition",
+      "Subject-Independent Emotion Recognition",
+      "Subjective Emotion Modeling"
+    ]
+  },
+  {
+    "name": "Generalization and Robustness in Emotion Recognition",
+    "definition": "Ensuring emotion models remain reliable across domain shifts, dataset variations, cultural differences, and real-world noisy or uncontrolled environments.",
+    "aliases": [
+      "domain adaptation",
+      "cross-domain emotion recognition",
+      "robust affect recognition",
+      "in-the-wild emotion recognition"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Affective Gap Bridging",
+      "Annotation Quality and Ambiguity",
+      "Cross-Corpus Speech Emotion Recognition",
+      "Cross-Database Expression Recognition",
+      "Cross-Domain Emotion Recognition",
+      "Cross-Domain Generalization",
+      "Data Limitation in Deep Learning",
+      "Domain Shift in Emotion Analysis",
+      "Domain Shift Mitigation",
+      "Feature Distribution Mismatch",
+      "Modality Robustness",
+      "Noise Robustness",
+      "Noisy Label Handling",
+      "Small Sample Size",
+      "Speaker Identity Bias",
+      "Unsupervised Domain Adaptation"
+    ]
+  },
+  {
+    "name": "Explainable and Reasoning-based Emotion Recognition",
+    "definition": "Improving transparency, reasoning ability, and interpretability in emotion recognition systems.",
+    "aliases": [
+      "explainable affect recognition",
+      "emotion reasoning",
+      "emotion explainability"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Affective Image Retrieval"
+    ]
+  },
+  {
+    "name": "Affective Generation and Empathy",
+    "definition": "Generating emotionally appropriate responses and enabling empathetic human-computer interaction.",
+    "aliases": [
+      "empathetic dialogue",
+      "emotional response generation",
+      "affective text generation"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Emotional Conversation Generation",
+      "Empathetic Response Generation",
+      "Speech Emotion Recognition and Synthesis"
+    ]
+  },
+  {
+    "name": "Affective Computing for Mental Health",
+    "definition": "Applying affective computing techniques to psychological assessment, stress detection, depression analysis, and mental health monitoring.",
+    "aliases": [
+      "depression detection",
+      "stress recognition",
+      "affective health computing",
+      "mental health assessment"
+    ],
+    "l1_child_categories": [],
+    "l2_names": [
+      "Affective Computing",
+      "Affective Data Scarcity",
+      "Autism Spectrum Disorder Assessment",
+      "Automatic Depression Level Prediction",
+      "Depression Detection",
+      "Depression Severity Assessment",
+      "Major Depressive Disorder",
+      "Mental Health Assessment",
+      "Neural Basis of Well-being",
+      "Stress Detection and Recognition"
+    ]
+  }
+]

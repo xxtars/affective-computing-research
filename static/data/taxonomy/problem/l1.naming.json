@@ -1,0 +1,331 @@
+[
+  {
+    "second_cluster_id": 0,
+    "cluster_fingerprint": "4ba888d69804a35ac89f3697c6b460c70d44448c11841134e7e6272fc9646251",
+    "source": "api",
+    "l1_name": "Clinical Mental Health Assessment",
+    "definition": "The application of computational methods to evaluate, screen, and predict the severity of psychiatric disorders and psychological states.",
+    "aliases": [
+      "Computational Psychiatry",
+      "Digital Mental Health Screening",
+      "Automated Psychopathology Assessment"
+    ],
+    "l2_names": [
+      "Autism Spectrum Disorder Assessment",
+      "Automatic Depression Level Prediction",
+      "Depression Severity Assessment",
+      "Major Depressive Disorder",
+      "Mental Health Assessment"
+    ]
+  },
+  {
+    "second_cluster_id": 1,
+    "cluster_fingerprint": "7cc9fe5a63988c6a19fb88f2a623888196f5796228452639b7a60e04a0580bec",
+    "source": "api",
+    "l1_name": "Multimodal Representation Learning",
+    "definition": "The challenge of effectively modeling, aligning, fusing, and balancing diverse data modalities to capture robust statistical dependencies and semantic coherence for affective analysis.",
+    "aliases": [
+      "Multimodal Fusion and Alignment",
+      "Cross-Modal Representation Learning",
+      "Multimodal Data Integration"
+    ],
+    "l2_names": [
+      "Correlation Modeling",
+      "Cross-Modal Interaction Inefficiency",
+      "Missing Modality Handling",
+      "Modality Imbalance",
+      "Modality Robustness",
+      "Multimodal Feature Fusion",
+      "Semantic Logical Coherence",
+      "Temporal Dependency Modeling"
+    ]
+  },
+  {
+    "second_cluster_id": 2,
+    "cluster_fingerprint": "d705fa7ad91654b29a8112bd2ce6ffa184737d34d876ec1a9706a877db1adc8e",
+    "source": "api",
+    "l1_name": "Affective Signal Recognition",
+    "definition": "The computational task of detecting, classifying, and estimating human emotional states from diverse input modalities including visual, auditory, physiological, and textual signals.",
+    "aliases": [
+      "Emotion Recognition",
+      "Affective State Detection",
+      "Multimodal Emotion Analysis"
+    ],
+    "l2_names": [
+      "4D Facial Expression Recognition",
+      "Affective Image Analysis",
+      "Affective Image Retrieval",
+      "Affective Speech Processing",
+      "Affective State Classification",
+      "Affective State Prediction",
+      "Affective State Recognition",
+      "Affective Video Analysis",
+      "Audio-Visual Emotion Recognition",
+      "Contextual Emotion Modeling",
+      "Continuous Dimensional Emotion Prediction",
+      "Continuous Emotion Prediction",
+      "Continuous Emotion Recognition",
+      "Conversational Emotion Recognition",
+      "Cross-Corpus Speech Emotion Recognition",
+      "Cross-Cultural Emotion Recognition",
+      "Cross-Database Expression Recognition",
+      "Cross-Domain Emotion Recognition",
+      "Cross-Subject EEG Emotion Recognition",
+      "Depression Detection",
+      "Dimensional Emotion Recognition",
+      "Dynamic Emotion Modeling",
+      "Dynamic Facial Expression Recognition",
+      "EEG Emotion Recognition",
+      "EEG-based Emotion Recognition",
+      "Emotion Classification",
+      "Emotion Distribution Learning",
+      "Emotion Recognition",
+      "Emotional Ambiguity Resolution",
+      "Emotional Conversation Generation",
+      "Emotional Intensity Estimation",
+      "Emotional State Understanding",
+      "Emotional Tendency Annotation",
+      "Empathetic Response Generation",
+      "Facial Action Unit Detection",
+      "Facial Expression Analysis",
+      "Facial Expression Recognition",
+      "Facial Processing",
+      "Fine-Grained Emotion Analysis",
+      "Genuine Emotion Detection",
+      "Hidden Emotion Analysis",
+      "Humor Detection",
+      "Image Emotion Classification",
+      "In-the-Wild Emotion Recognition",
+      "Macroexpression Analysis",
+      "Micro-expression Detection",
+      "Micro-expression Recognition",
+      "Micro-expression Spotting",
+      "Microexpression Recognition",
+      "Multi-label and Multi-class Emotion Classification",
+      "Multi-view Facial Expression Recognition",
+      "Multimodal Affect Analysis",
+      "Multimodal Emotion Analysis",
+      "Multimodal Emotion Classification",
+      "Multimodal Emotion Recognition",
+      "Multimodal Sentiment Analysis",
+      "Music Emotion Analysis",
+      "Perception and Personality Modeling",
+      "Personality Recognition",
+      "Personalized Emotion Perception",
+      "Personalized Emotion Recognition",
+      "Physiological Emotion Recognition",
+      "Real-time Emotion Monitoring",
+      "Sentiment Analysis",
+      "Social Media Sentiment Analysis",
+      "Speech Emotion Recognition",
+      "Speech Emotion Recognition and Synthesis",
+      "Spontaneous Emotion Analysis",
+      "Spontaneous Micro-expression Recognition",
+      "Spontaneous Micro-expression Spotting",
+      "Spontaneous Micro-gesture Analysis",
+      "Stress Detection and Recognition",
+      "Subject-Independent Emotion Recognition",
+      "Subjective Emotion Modeling",
+      "Subtle Emotion Detection",
+      "Subtle Facial Movement Analysis",
+      "Temporal Emotion Analysis",
+      "Unseen Emotion Classification",
+      "Valence-Arousal Estimation",
+      "Visual Emotion Analysis"
+    ]
+  },
+  {
+    "second_cluster_id": 3,
+    "cluster_fingerprint": "970bbd29e6f772978057a39c5bd706dc5ecffc2b1409825901d734e04336c954",
+    "source": "api",
+    "l1_name": "Data Quality and Robustness",
+    "definition": "This domain addresses challenges related to noisy signals, ambiguous annotations, and environmental interference, focusing on methods to ensure reliable model performance under imperfect data conditions.",
+    "aliases": [
+      "Noise and Annotation Handling",
+      "Robustness to Data Imperfections"
+    ],
+    "l2_names": [
+      "Annotation Quality and Ambiguity",
+      "Noise and Interference Reduction",
+      "Noise Robustness",
+      "Noisy Label Handling"
+    ]
+  },
+  {
+    "second_cluster_id": 4,
+    "cluster_fingerprint": "c20ffe6600129b0609f0334b110d7976470eb9964260a3ee0538680214419bd8",
+    "source": "api",
+    "l1_name": "Emotion Regulation and Modulation",
+    "definition": "The study of mechanisms, processes, and strategies involved in monitoring, evaluating, modifying, and resolving emotional states and their impact on cognition and behavior.",
+    "aliases": [
+      "Emotional Control",
+      "Affective Regulation",
+      "Emotion Management"
+    ],
+    "l2_names": [
+      "Emotional Conflict Resolution",
+      "Emotional Dysregulation",
+      "Emotional Memory",
+      "Emotional Modulation",
+      "Emotional Valence",
+      "Negative Emotion Impact and Regulation"
+    ]
+  },
+  {
+    "second_cluster_id": 5,
+    "cluster_fingerprint": "ca2454898b6ab18e0a5e3234ab3d0bfc634710771b2438408e8444526e84c094",
+    "source": "api",
+    "l1_name": "Bias and Fairness",
+    "definition": "The study of spurious correlations and demographic biases in affective models that compromise generalization and equitable performance across different user groups.",
+    "aliases": [
+      "Fairness in Affective Computing",
+      "Algorithmic Bias",
+      "Demographic Bias"
+    ],
+    "l2_names": [
+      "Speaker Identity Bias"
+    ]
+  },
+  {
+    "second_cluster_id": 6,
+    "cluster_fingerprint": "1e3f854ee5b515d2331034fd0a3a06a7f2436876c86cb9dffb96ba5d20ca74d9",
+    "source": "api",
+    "l1_name": "Data Scarcity",
+    "definition": "The challenge of developing robust affective computing models due to insufficient, low-quality, or imbalanced training data.",
+    "aliases": [
+      "Limited Data Availability",
+      "Small Sample Size Problem",
+      "Data Insufficiency"
+    ],
+    "l2_names": [
+      "Data Limitation in Deep Learning",
+      "Data Scarcity",
+      "Small Sample Size"
+    ]
+  },
+  {
+    "second_cluster_id": 7,
+    "cluster_fingerprint": "27ac68c15982575db3b21f066277223b62694ec84793c79a933d417f5c45a660",
+    "source": "api",
+    "l1_name": "Domain Adaptation",
+    "definition": "The challenge of mitigating distribution shifts and data scarcity to ensure affective computing models generalize effectively across unseen domains, subjects, or modalities.",
+    "aliases": [
+      "Cross-Domain Adaptation",
+      "Distribution Shift Mitigation",
+      "Generalization under Domain Shift"
+    ],
+    "l2_names": [
+      "Affective Data Scarcity",
+      "Affective Gap Bridging",
+      "Cross-Domain Generalization",
+      "Domain Shift in Emotion Analysis",
+      "Domain Shift Mitigation",
+      "Feature Distribution Mismatch",
+      "Unsupervised Domain Adaptation"
+    ]
+  },
+  {
+    "second_cluster_id": 8,
+    "cluster_fingerprint": "729f7361788a337706a3b24e67d6f84bac540952a66ed9ff4c50eda3a5540366",
+    "source": "api",
+    "l1_name": "Individual Difference Modeling",
+    "definition": "The subdomain focused on accounting for and mitigating variations among individuals in the modeling, deployment, and application of affective systems.",
+    "aliases": [
+      "Personalization",
+      "User Adaptation",
+      "Inter-subject Variability"
+    ],
+    "l2_names": [
+      "Individual Difference Modeling"
+    ]
+  },
+  {
+    "second_cluster_id": 9,
+    "cluster_fingerprint": "90cc30f18a85a5ae82fa28470048956484a4a11f056d296c719842f07c4b5109",
+    "source": "api",
+    "l1_name": "Neurophysiological Signal Analysis",
+    "definition": "The computational processing and modeling of brain-derived signals, such as EEG and connectivity patterns, to characterize neural dynamics associated with affective states.",
+    "aliases": [
+      "Brain Signal Processing",
+      "Neural Data Analysis"
+    ],
+    "l2_names": [
+      "Brain Connectivity Analysis",
+      "Multichannel EEG Analysis"
+    ]
+  },
+  {
+    "second_cluster_id": 10,
+    "cluster_fingerprint": "8c45470c80d2066d25fe2ff2a22807cf7e59e007f3857147e3ba7a4fd25faed7",
+    "source": "api",
+    "l1_name": "Micro-expression Analysis",
+    "definition": "The subdomain focused on the construction of datasets and the quantitative measurement of micro-expressions to address data scarcity and characterization challenges.",
+    "aliases": [
+      "Microexpression Research",
+      "Micro-expression Characterization"
+    ],
+    "l2_names": [
+      "Micro-expression Database Construction",
+      "Microexpression Quantification"
+    ]
+  },
+  {
+    "second_cluster_id": 11,
+    "cluster_fingerprint": "b945ce0717752241c4f41da4c93907f5b84040ac53a4762505e625a544becc36",
+    "source": "api",
+    "l1_name": "Social Interaction Analysis",
+    "definition": "The computational study of emotional and behavioral dynamics occurring between two or more individuals during reciprocal exchanges.",
+    "aliases": [
+      "Interpersonal Affect Analysis",
+      "Dyadic Affect Computing"
+    ],
+    "l2_names": [
+      "Dyadic Interaction Analysis"
+    ]
+  },
+  {
+    "second_cluster_id": 12,
+    "cluster_fingerprint": "414419e3b6180ff6f6863f239019caeade60225995fafd2a30d5d72aad411eae",
+    "source": "api",
+    "l1_name": "Feature Engineering",
+    "definition": "The systematic process of identifying, generating, selecting, and transforming raw data attributes into discriminative representations to optimize model performance and mitigate dimensionality.",
+    "aliases": [
+      "Feature Selection and Extraction",
+      "Feature Representation",
+      "Attribute Engineering"
+    ],
+    "l2_names": [
+      "Feature Selection and Extraction"
+    ]
+  },
+  {
+    "second_cluster_id": 13,
+    "cluster_fingerprint": "b26170e3dcf47bbebec0f03eabbd293d8bf7a929c4907a8f8a8fe9c6a0e6a353",
+    "source": "api",
+    "l1_name": "Affective Dynamics",
+    "definition": "The study of how emotional states, processes, and content evolve, interact, and are modeled within problem-solving and learning contexts.",
+    "aliases": [
+      "Emotional Dynamics",
+      "Affective Process Modeling"
+    ],
+    "l2_names": [
+      "Affective Computing",
+      "Affective Dynamics"
+    ]
+  },
+  {
+    "second_cluster_id": 14,
+    "cluster_fingerprint": "f3f85dd11a154c00df67c39b85cf4454ab39e4a52e6fb192131132c105e6ac76",
+    "source": "api",
+    "l1_name": "Affective Neuroscience",
+    "definition": "The study of the neural mechanisms, brain structures, and physiological correlates underlying emotional processing, moral judgment, and psychological well-being.",
+    "aliases": [
+      "Neural Basis of Emotion",
+      "Neurobiology of Affect"
+    ],
+    "l2_names": [
+      "Neural Basis of Well-being",
+      "Neural Mechanisms of Moral and Emotional Processing"
+    ]
+  }
+]

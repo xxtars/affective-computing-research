@@ -1,0 +1,217 @@
+[
+  {
+    "second_cluster_id": 0,
+    "size": 5,
+    "l2_names": [
+      "Autism Spectrum Disorder Assessment",
+      "Automatic Depression Level Prediction",
+      "Depression Severity Assessment",
+      "Major Depressive Disorder",
+      "Mental Health Assessment"
+    ]
+  },
+  {
+    "second_cluster_id": 1,
+    "size": 8,
+    "l2_names": [
+      "Correlation Modeling",
+      "Cross-Modal Interaction Inefficiency",
+      "Missing Modality Handling",
+      "Modality Imbalance",
+      "Modality Robustness",
+      "Multimodal Feature Fusion",
+      "Semantic Logical Coherence",
+      "Temporal Dependency Modeling"
+    ]
+  },
+  {
+    "second_cluster_id": 2,
+    "size": 80,
+    "l2_names": [
+      "4D Facial Expression Recognition",
+      "Affective Image Analysis",
+      "Affective Image Retrieval",
+      "Affective Speech Processing",
+      "Affective State Classification",
+      "Affective State Prediction",
+      "Affective State Recognition",
+      "Affective Video Analysis",
+      "Audio-Visual Emotion Recognition",
+      "Contextual Emotion Modeling",
+      "Continuous Dimensional Emotion Prediction",
+      "Continuous Emotion Prediction",
+      "Continuous Emotion Recognition",
+      "Conversational Emotion Recognition",
+      "Cross-Corpus Speech Emotion Recognition",
+      "Cross-Cultural Emotion Recognition",
+      "Cross-Database Expression Recognition",
+      "Cross-Domain Emotion Recognition",
+      "Cross-Subject EEG Emotion Recognition",
+      "Depression Detection",
+      "Dimensional Emotion Recognition",
+      "Dynamic Emotion Modeling",
+      "Dynamic Facial Expression Recognition",
+      "EEG Emotion Recognition",
+      "EEG-based Emotion Recognition",
+      "Emotion Classification",
+      "Emotion Distribution Learning",
+      "Emotion Recognition",
+      "Emotional Ambiguity Resolution",
+      "Emotional Conversation Generation",
+      "Emotional Intensity Estimation",
+      "Emotional State Understanding",
+      "Emotional Tendency Annotation",
+      "Empathetic Response Generation",
+      "Facial Action Unit Detection",
+      "Facial Expression Analysis",
+      "Facial Expression Recognition",
+      "Facial Processing",
+      "Fine-Grained Emotion Analysis",
+      "Genuine Emotion Detection",
+      "Hidden Emotion Analysis",
+      "Humor Detection",
+      "Image Emotion Classification",
+      "In-the-Wild Emotion Recognition",
+      "Macroexpression Analysis",
+      "Micro-expression Detection",
+      "Micro-expression Recognition",
+      "Micro-expression Spotting",
+      "Microexpression Recognition",
+      "Multi-label and Multi-class Emotion Classification",
+      "Multi-view Facial Expression Recognition",
+      "Multimodal Affect Analysis",
+      "Multimodal Emotion Analysis",
+      "Multimodal Emotion Classification",
+      "Multimodal Emotion Recognition",
+      "Multimodal Sentiment Analysis",
+      "Music Emotion Analysis",
+      "Perception and Personality Modeling",
+      "Personality Recognition",
+      "Personalized Emotion Perception",
+      "Personalized Emotion Recognition",
+      "Physiological Emotion Recognition",
+      "Real-time Emotion Monitoring",
+      "Sentiment Analysis",
+      "Social Media Sentiment Analysis",
+      "Speech Emotion Recognition",
+      "Speech Emotion Recognition and Synthesis",
+      "Spontaneous Emotion Analysis",
+      "Spontaneous Micro-expression Recognition",
+      "Spontaneous Micro-expression Spotting",
+      "Spontaneous Micro-gesture Analysis",
+      "Stress Detection and Recognition",
+      "Subject-Independent Emotion Recognition",
+      "Subjective Emotion Modeling",
+      "Subtle Emotion Detection",
+      "Subtle Facial Movement Analysis",
+      "Temporal Emotion Analysis",
+      "Unseen Emotion Classification",
+      "Valence-Arousal Estimation",
+      "Visual Emotion Analysis"
+    ]
+  },
+  {
+    "second_cluster_id": 3,
+    "size": 4,
+    "l2_names": [
+      "Annotation Quality and Ambiguity",
+      "Noise and Interference Reduction",
+      "Noise Robustness",
+      "Noisy Label Handling"
+    ]
+  },
+  {
+    "second_cluster_id": 4,
+    "size": 6,
+    "l2_names": [
+      "Emotional Conflict Resolution",
+      "Emotional Dysregulation",
+      "Emotional Memory",
+      "Emotional Modulation",
+      "Emotional Valence",
+      "Negative Emotion Impact and Regulation"
+    ]
+  },
+  {
+    "second_cluster_id": 5,
+    "size": 1,
+    "l2_names": [
+      "Speaker Identity Bias"
+    ]
+  },
+  {
+    "second_cluster_id": 6,
+    "size": 3,
+    "l2_names": [
+      "Data Limitation in Deep Learning",
+      "Data Scarcity",
+      "Small Sample Size"
+    ]
+  },
+  {
+    "second_cluster_id": 7,
+    "size": 7,
+    "l2_names": [
+      "Affective Data Scarcity",
+      "Affective Gap Bridging",
+      "Cross-Domain Generalization",
+      "Domain Shift in Emotion Analysis",
+      "Domain Shift Mitigation",
+      "Feature Distribution Mismatch",
+      "Unsupervised Domain Adaptation"
+    ]
+  },
+  {
+    "second_cluster_id": 8,
+    "size": 1,
+    "l2_names": [
+      "Individual Difference Modeling"
+    ]
+  },
+  {
+    "second_cluster_id": 9,
+    "size": 2,
+    "l2_names": [
+      "Brain Connectivity Analysis",
+      "Multichannel EEG Analysis"
+    ]
+  },
+  {
+    "second_cluster_id": 10,
+    "size": 2,
+    "l2_names": [
+      "Micro-expression Database Construction",
+      "Microexpression Quantification"
+    ]
+  },
+  {
+    "second_cluster_id": 11,
+    "size": 1,
+    "l2_names": [
+      "Dyadic Interaction Analysis"
+    ]
+  },
+  {
+    "second_cluster_id": 12,
+    "size": 1,
+    "l2_names": [
+      "Feature Selection and Extraction"
+    ]
+  },
+  {
+    "second_cluster_id": 13,
+    "size": 2,
+    "l2_names": [
+      "Affective Computing",
+      "Affective Dynamics"
+    ]
+  },
+  {
+    "second_cluster_id": 14,
+    "size": 2,
+    "l2_names": [
+      "Neural Basis of Well-being",
+      "Neural Mechanisms of Moral and Emotional Processing"
+    ]
+  }
+]

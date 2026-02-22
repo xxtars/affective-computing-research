@@ -1,7 +1,8 @@
 import type {ReactNode} from 'react';
-import {useEffect, useMemo, useState} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 import {buildResearchDataUrl, useResearchDataBaseUrl} from '../lib/researchData';
 import styles from './landscape.module.css';
@@ -50,10 +51,7 @@ type HeatmapData = {
 
 const EMPTY_DATA: TaxonomyAxisData = {axis: 'problem', assignments: []};
 const COLORS = ['#2a9d8f', '#e76f51', '#457b9d', '#f4a261', '#8ab17d', '#7b6d8d', '#4d908e', '#f28482', '#6d597a', '#90be6d', '#577590', '#43aa8b'];
-
-function normalize(text: string) {
-  return String(text || '').trim().toLowerCase();
-}
+let plotlyLoader: Promise<any> | null = null;
 
 function compactDate(text: string | null | undefined) {
   if (!text) return '-';
@@ -194,11 +192,194 @@ function buildHeatmapData(
   return {rows, cols, matrix, max, methodParentByTopic, years};
 }
 
-function heatColor(value: number, max: number) {
-  if (!max || value <= 0) return 'rgba(87,117,144,0.08)';
-  const t = value / max;
-  const alpha = 0.16 + t * 0.74;
-  return `rgba(42,157,143,${alpha.toFixed(3)})`;
+function ensurePlotly() {
+  if (typeof window === 'undefined') return Promise.resolve(null);
+  const w = window as any;
+  if (w.Plotly) return Promise.resolve(w.Plotly);
+  if (plotlyLoader) return plotlyLoader;
+  plotlyLoader = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.plot.ly/plotly-2.35.2.min.js';
+    script.async = true;
+    script.onload = () => resolve((window as any).Plotly || null);
+    script.onerror = () => reject(new Error('Failed to load Plotly from CDN'));
+    document.head.appendChild(script);
+  });
+  return plotlyLoader;
+}
+
+function PlotlyAnimatedHeatmap(props: {
+  heatmap: HeatmapData;
+  problemAssignments: TaxonomyAxisData['assignments'];
+  methodAssignments: TaxonomyAxisData['assignments'];
+  problemOrder: string[];
+  methodOrder: string[];
+}) {
+  const {heatmap, problemAssignments, methodAssignments, problemOrder, methodOrder} = props;
+  const hostRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    let disposed = false;
+    async function render() {
+      const host = hostRef.current;
+      if (!host) return;
+      const Plotly = await ensurePlotly();
+      if (disposed || !Plotly) return;
+      if (heatmap.years.length === 0) {
+        host.innerHTML = '';
+        return;
+      }
+
+      const years = [...heatmap.years];
+      const yearData = years.map((y) => {
+        const d = buildHeatmapData(problemAssignments, methodAssignments, problemOrder, methodOrder, y);
+        const total = d.matrix.flat().reduce((s, v) => s + Number(v || 0), 0);
+        return {y, d, total};
+      });
+      const allNonZero = yearData
+        .flatMap((item) => item.d.matrix.flat())
+        .filter((v) => Number(v || 0) > 0)
+        .map((v) => Number(v));
+      // Use one global absolute range across all years so legend and tooltip counts are consistent.
+      const globalMax = Math.max(1, ...allNonZero);
+
+      const frames = yearData.map(({y, d, total}) => {
+        return {
+          name: String(y),
+          total,
+          data: [
+            {
+              z: d.matrix,
+              x: d.cols,
+              y: d.rows,
+              type: 'heatmap',
+              zmin: 0,
+              zmax: globalMax,
+              colorscale: [
+                [0, '#f4f6f8'],
+                [0.15, '#d8f0eb'],
+                [0.45, '#7ccfc2'],
+                [1, '#0b7d70'],
+              ],
+              hovertemplate: '%{y}<br>%{x}<br>count=%{z}<extra></extra>',
+              xgap: 1,
+              ygap: 1,
+              colorbar: {
+                title: {text: 'Co-occurrence'},
+                thickness: 12,
+                len: 0.82,
+              },
+            },
+          ],
+          layout: {
+            annotations:
+              total === 0
+                ? [
+                    {
+                      x: 0.5,
+                      y: 0.5,
+                      xref: 'paper',
+                      yref: 'paper',
+                      text: `No co-occurrence in ${y}`,
+                      showarrow: false,
+                      font: {size: 16, color: '#708090'},
+                    },
+                  ]
+                : [],
+          },
+        };
+      });
+      const totals = frames.map((f) => Number((f as any).total || 0));
+      const bestIndex = Math.max(0, totals.indexOf(Math.max(...totals)));
+
+      const layout = {
+        paper_bgcolor: '#ffffff',
+        plot_bgcolor: '#ffffff',
+        margin: {l: 320, r: 40, t: 95, b: 150},
+        hoverlabel: {bgcolor: '#1f2937', font: {color: '#ffffff', size: 12}},
+        template: 'plotly_white',
+        xaxis: {
+          side: 'top',
+          tickangle: -30,
+          tickfont: {size: 11},
+          automargin: true,
+          type: 'category',
+          categoryorder: 'array',
+          categoryarray: heatmap.cols,
+          showgrid: false,
+          zeroline: false,
+        },
+        yaxis: {
+          tickfont: {size: 12},
+          automargin: true,
+          autorange: 'reversed',
+          type: 'category',
+          categoryorder: 'array',
+          categoryarray: heatmap.rows,
+          showgrid: false,
+          zeroline: false,
+        },
+        sliders: [
+          {
+            active: bestIndex,
+            currentvalue: {prefix: 'Year: '},
+            pad: {t: 50},
+            steps: years.map((y) => ({
+              label: String(y),
+              method: 'animate',
+              args: [[String(y)], {mode: 'immediate', transition: {duration: 260}, frame: {duration: 420, redraw: true}}],
+            })),
+          },
+        ],
+        updatemenus: [
+          {
+            type: 'buttons',
+            x: 0,
+            y: 1.31,
+            xanchor: 'left',
+            yanchor: 'top',
+            direction: 'left',
+            showactive: false,
+            buttons: [
+              {
+                label: 'Play',
+                method: 'animate',
+                args: [null, {fromcurrent: true, transition: {duration: 260}, frame: {duration: 520, redraw: true}}],
+              },
+              {
+                label: 'Pause',
+                method: 'animate',
+                args: [[null], {mode: 'immediate', transition: {duration: 0}, frame: {duration: 0, redraw: false}}],
+              },
+            ],
+          },
+        ],
+      } as any;
+
+      const config = {displayModeBar: false, responsive: true};
+      const init = frames[bestIndex];
+      await Plotly.newPlot(host, (init as any).data, {...layout, ...(init as any).layout}, config);
+      await Plotly.addFrames(host, frames);
+      if (!disposed) {
+        await Plotly.animate(host, [String(years[bestIndex])], {
+          mode: 'immediate',
+          transition: {duration: 0},
+          frame: {duration: 0, redraw: true},
+        });
+      }
+    }
+    render().catch((err) => {
+      console.error(err);
+    });
+    return () => {
+      disposed = true;
+      if (hostRef.current && (window as any).Plotly) {
+        (window as any).Plotly.purge(hostRef.current);
+      }
+    };
+  }, [heatmap, problemAssignments, methodAssignments, problemOrder, methodOrder]);
+
+  return <div ref={hostRef} className={styles.plotlyHost} />;
 }
 
 export default function LandscapePage(): ReactNode {
@@ -206,8 +387,6 @@ export default function LandscapePage(): ReactNode {
   const [axis, setAxis] = useState<Axis>('problem');
   const [hoverTopic, setHoverTopic] = useState<string | null>(null);
   const [pinnedTopic, setPinnedTopic] = useState<string | null>(null);
-  const [heatYear, setHeatYear] = useState<number | null>(null);
-  const [heatPlaying, setHeatPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
   const [summary, setSummary] = useState<TaxonomySummary | null>(null);
   const [problemData, setProblemData] = useState<TaxonomyAxisData>(EMPTY_DATA);
@@ -328,34 +507,9 @@ export default function LandscapePage(): ReactNode {
     topicList.forEach((t, i) => map.set(t, COLORS[i % COLORS.length]));
     return map;
   }, [topicList]);
-  const heatYears = useMemo(
-    () => buildHeatmapData(problemData.assignments || [], methodData.assignments || [], problemOrder, methodOrder, null).years,
-    [problemData.assignments, methodData.assignments, problemOrder, methodOrder],
-  );
-  useEffect(() => {
-    if (heatYears.length === 0) {
-      setHeatYear(null);
-      setHeatPlaying(false);
-      return;
-    }
-    const maxYear = heatYears[heatYears.length - 1];
-    if (heatYear == null || !heatYears.includes(heatYear)) setHeatYear(maxYear);
-  }, [heatYears, heatYear]);
-  useEffect(() => {
-    if (!heatPlaying || heatYears.length <= 1 || heatYear == null) return;
-    const timer = window.setInterval(() => {
-      setHeatYear((prev) => {
-        if (prev == null) return heatYears[0];
-        const idx = heatYears.indexOf(prev);
-        if (idx < 0 || idx === heatYears.length - 1) return heatYears[0];
-        return heatYears[idx + 1];
-      });
-    }, 900);
-    return () => window.clearInterval(timer);
-  }, [heatPlaying, heatYears, heatYear]);
   const heatmap = useMemo(
-    () => buildHeatmapData(problemData.assignments || [], methodData.assignments || [], problemOrder, methodOrder, heatYear),
-    [problemData.assignments, methodData.assignments, problemOrder, methodOrder, heatYear],
+    () => buildHeatmapData(problemData.assignments || [], methodData.assignments || [], problemOrder, methodOrder, null),
+    [problemData.assignments, methodData.assignments, problemOrder, methodOrder],
   );
   const river = useMemo(() => buildThemeriverPaths(points, topicList, 1200, 360), [points, topicList]);
   const activeTopic = pinnedTopic || hoverTopic;
@@ -365,17 +519,12 @@ export default function LandscapePage(): ReactNode {
       <main className={styles.page}>
         <div className="container">
           <Heading as="h1">Landscape</Heading>
-          <p className={styles.muted}>Generated at: {compactDate(summary?.generated_at)} · Axis: {axis}</p>
-
-          <div className={styles.controls}>
-            <div>
-              <label className={styles.controlLabel}>Axis</label>
-              <select className={styles.controlSelect} value={axis} onChange={(e) => setAxis(e.target.value as Axis)}>
-                <option value="problem">Problem</option>
-                <option value="method">Method</option>
-              </select>
-            </div>
-          </div>
+          <p className={styles.muted}>Generated at: {compactDate(summary?.generated_at)}</p>
+          <p className={styles.disclaimer}>
+            This page is based on tracked papers only, so results represent the tracked scope rather than field-wide trends.
+            Landscape analytics may lag the latest Papers page snapshot. Analysis includes AI-generated outputs and is not guaranteed
+            to be fully accurate.
+          </p>
 
           {loading ? (
             <p>Loading landscape snapshot...</p>
@@ -384,7 +533,16 @@ export default function LandscapePage(): ReactNode {
           ) : (
             <>
               <section className={styles.panel}>
-                <Heading as="h2">Analysis 1: ThemeRiver</Heading>
+                <div className={styles.controls}>
+                  <div>
+                    <label className={styles.controlLabel}>Axis</label>
+                    <select className={styles.controlSelect} value={axis} onChange={(e) => setAxis(e.target.value as Axis)}>
+                      <option value="problem">Problem</option>
+                      <option value="method">Method</option>
+                    </select>
+                  </div>
+                </div>
+                <Heading as="h2">ThemeRiver</Heading>
                 <div className={styles.chartWrap}>
                   <svg viewBox="0 0 1200 360" className={styles.chartSvg}>
                     <rect x="0" y="0" width="1200" height="360" className={styles.chartBg} />
@@ -487,72 +645,24 @@ export default function LandscapePage(): ReactNode {
               </section>
 
               <section className={styles.panel}>
-                <Heading as="h2">Analysis 2: Animated Problem x Method Heatmap</Heading>
+                <Heading as="h2">Animated Problem x Method Heatmap</Heading>
                 <p className={styles.muted}>
                   Yearly co-occurrence by paper (same paper contributes to one problem topic and one method topic).
                 </p>
-                {heatYears.length > 0 ? (
-                  <div className={styles.heatControls}>
-                    <button
-                      type="button"
-                      className={styles.playBtn}
-                      onClick={() => setHeatPlaying((v) => !v)}
-                    >
-                      {heatPlaying ? 'Pause' : 'Play'}
-                    </button>
-                    <div className={styles.yearSliderWrap}>
-                      <label className={styles.controlLabel}>Year: {heatYear ?? '-'}</label>
-                      <input
-                        type="range"
-                        min={0}
-                        max={Math.max(0, heatYears.length - 1)}
-                        step={1}
-                        value={Math.max(0, heatYears.indexOf(heatYear ?? heatYears[0]))}
-                        onChange={(e) => {
-                          const idx = Number(e.target.value || 0);
-                          setHeatYear(heatYears[Math.max(0, Math.min(heatYears.length - 1, idx))]);
-                          setHeatPlaying(false);
-                        }}
-                      />
-                    </div>
-                  </div>
-                ) : null}
                 {heatmap.rows.length === 0 || heatmap.cols.length === 0 ? (
                   <p className={styles.muted}>No axis definition yet. Add problem/method manual categories first.</p>
                 ) : (
-                  <div className={styles.heatWrap}>
-                    <table className={styles.heatTable}>
-                      <thead>
-                        <tr>
-                          <th className={styles.heatCorner}>Problem \\ Method</th>
-                          {heatmap.cols.map((col) => (
-                            <th key={`h-col-${col}`} title={heatmap.methodParentByTopic[col] ? `${col} (${heatmap.methodParentByTopic[col]})` : col}>
-                              {col}
-                            </th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {heatmap.rows.map((row, ri) => (
-                          <tr key={`h-row-${row}`}>
-                            <th className={styles.heatRow}>{row}</th>
-                            {heatmap.cols.map((col, ci) => {
-                              const v = heatmap.matrix[ri][ci];
-                              return (
-                                <td
-                                  key={`h-cell-${row}-${col}`}
-                                  style={{background: heatColor(v, heatmap.max)}}
-                                  title={`${row} x ${col}: ${v}`}
-                                >
-                                  {v > 0 ? v : ''}
-                                </td>
-                              );
-                            })}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                  <BrowserOnly fallback={<p>Loading animated heatmap...</p>}>
+                    {() => (
+                      <PlotlyAnimatedHeatmap
+                        heatmap={heatmap}
+                        problemAssignments={problemData.assignments || []}
+                        methodAssignments={methodData.assignments || []}
+                        problemOrder={problemOrder}
+                        methodOrder={methodOrder}
+                      />
+                    )}
+                  </BrowserOnly>
                 )}
               </section>
             </>

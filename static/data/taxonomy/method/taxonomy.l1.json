@@ -1,0 +1,562 @@
+[
+  {
+    "name": "Modeling Paradigm",
+    "definition": "Model architecture and structural paradigms used to computationally model affective data.",
+    "aliases": [
+      "model architecture",
+      "model structure"
+    ],
+    "l1_child_categories": [
+      {
+        "name": "Traditional Machine Learning",
+        "definition": "Classical machine learning methods relying on handcrafted features and shallow models.",
+        "aliases": [
+          "support vector machine",
+          "gaussian mixture model",
+          "adaboost",
+          "kernel methods"
+        ],
+        "l2_names": [
+          "AdaBoost",
+          "Adversarial Learning",
+          "Discriminative Modeling",
+          "Distance and Similarity Measurement",
+          "Gaussian Mixture Model",
+          "Hybrid Deep Learning",
+          "Label Distribution Learning",
+          "Linear Regression Modeling",
+          "Machine Learning Classification",
+          "Maximum Mean Discrepancy",
+          "Multi-label Learning",
+          "Multiple Kernel Learning",
+          "Shared Sparse Learning",
+          "Statistical Correlation Analysis",
+          "Support Vector Machine",
+          "Transfer Learning"
+        ]
+      },
+      {
+        "name": "Deep Neural Networks",
+        "definition": "Supervised or end-to-end deep neural architectures for affect representation learning.",
+        "aliases": [
+          "cnn",
+          "rnn",
+          "lstm",
+          "transformer architecture",
+          "deep neural networks"
+        ],
+        "l2_names": [
+          "3D Convolutional Networks",
+          "Broad Learning System",
+          "Capsule Network",
+          "Convolutional Neural Networks",
+          "Deep Feature Extraction",
+          "Deep Learning",
+          "Deep Learning Architecture",
+          "Deep Neural Networks",
+          "End-to-End Deep Learning Framework",
+          "End-to-End Learning",
+          "Hierarchical Architecture",
+          "Long Short-Term Memory",
+          "Network Architecture",
+          "Recurrent Neural Networks",
+          "Transformer Architecture"
+        ]
+      },
+      {
+        "name": "Graph-based Models",
+        "definition": "Graph neural networks and structured models capturing relational dependencies in affective data.",
+        "aliases": [
+          "gcn",
+          "gat",
+          "graph neural networks",
+          "conditional random fields",
+          "hypergraph learning"
+        ],
+        "l2_names": [
+          "Bayesian Graph Inference",
+          "Causal Graph Neural Networks",
+          "Conditional Random Fields",
+          "Dynamic Graph Convolutional Networks",
+          "Graph Attention Networks",
+          "Graph Convolutional Networks",
+          "Hypergraph Learning",
+          "Self-Attention GRU"
+        ]
+      },
+      {
+        "name": "Generative Models",
+        "definition": "Models that learn to generate or simulate affective data distributions.",
+        "aliases": [
+          "gan",
+          "diffusion models",
+          "autoencoder",
+          "variational autoencoder"
+        ],
+        "l2_names": [
+          "Autoencoder",
+          "Diffusion Models",
+          "Generative Adversarial Networks"
+        ]
+      },
+      {
+        "name": "Vision and Multimodal Foundation Models",
+        "definition": "Large-scale pre-trained visual or vision-language models used for representation alignment and zero-shot affect analysis.",
+        "aliases": [
+          "clip",
+          "vision-language models",
+          "blip",
+          "image-text pretraining",
+          "vlm"
+        ],
+        "l2_names": [
+          "Computer Vision"
+        ]
+      },
+      {
+        "name": "Large Language Model-based Approaches",
+        "definition": "Large pre-trained language models applied to affect reasoning, explanation, or generation through prompting or fine-tuning.",
+        "aliases": [
+          "llm",
+          "gpt",
+          "prompting",
+          "instruction tuning",
+          "open-vocabulary emotion analysis"
+        ],
+        "l2_names": [
+          "Affective Computing Frameworks",
+          "Attention Mechanism",
+          "Cognitive Analysis",
+          "Comparative Analysis",
+          "Context Interaction",
+          "Dimensional Emotion Modeling",
+          "Emotion Induction",
+          "Fuzzy Logic",
+          "Large Language Models",
+          "Magnetic Resonance Imaging",
+          "Mediation Analysis",
+          "Natural Language Processing Techniques",
+          "Open-Vocabulary Emotion Analysis",
+          "Principle-Based Modeling",
+          "Prompting",
+          "Semantic Analysis",
+          "Sentiment Analysis",
+          "Systematic Review and Meta-Analysis"
+        ]
+      }
+    ],
+    "l2_names": [
+      "3D Convolutional Networks",
+      "AdaBoost",
+      "Adversarial Learning",
+      "Affective Computing Frameworks",
+      "Attention Mechanism",
+      "Autoencoder",
+      "Bayesian Graph Inference",
+      "Broad Learning System",
+      "Capsule Network",
+      "Causal Graph Neural Networks",
+      "Cognitive Analysis",
+      "Comparative Analysis",
+      "Computer Vision",
+      "Conditional Random Fields",
+      "Context Interaction",
+      "Convolutional Neural Networks",
+      "Deep Feature Extraction",
+      "Deep Learning",
+      "Deep Learning Architecture",
+      "Deep Neural Networks",
+      "Diffusion Models",
+      "Dimensional Emotion Modeling",
+      "Discriminative Modeling",
+      "Distance and Similarity Measurement",
+      "Dynamic Graph Convolutional Networks",
+      "Emotion Induction",
+      "End-to-End Deep Learning Framework",
+      "End-to-End Learning",
+      "Fuzzy Logic",
+      "Gaussian Mixture Model",
+      "Generative Adversarial Networks",
+      "Graph Attention Networks",
+      "Graph Convolutional Networks",
+      "Hierarchical Architecture",
+      "Hybrid Deep Learning",
+      "Hypergraph Learning",
+      "Label Distribution Learning",
+      "Large Language Models",
+      "Linear Regression Modeling",
+      "Long Short-Term Memory",
+      "Machine Learning Classification",
+      "Magnetic Resonance Imaging",
+      "Maximum Mean Discrepancy",
+      "Mediation Analysis",
+      "Multi-label Learning",
+      "Multiple Kernel Learning",
+      "Natural Language Processing Techniques",
+      "Network Architecture",
+      "Open-Vocabulary Emotion Analysis",
+      "Principle-Based Modeling",
+      "Prompting",
+      "Recurrent Neural Networks",
+      "Self-Attention GRU",
+      "Semantic Analysis",
+      "Sentiment Analysis",
+      "Shared Sparse Learning",
+      "Statistical Correlation Analysis",
+      "Support Vector Machine",
+      "Systematic Review and Meta-Analysis",
+      "Transfer Learning",
+      "Transformer Architecture"
+    ]
+  },
+  {
+    "name": "Learning Paradigm",
+    "definition": "Learning frameworks defining how affective models are trained from data.",
+    "aliases": [
+      "learning framework",
+      "training paradigm"
+    ],
+    "l1_child_categories": [
+      {
+        "name": "Supervised Learning",
+        "definition": "Training models using explicitly labeled affective data.",
+        "aliases": [
+          "fully supervised learning"
+        ],
+        "l2_names": [
+          "Annotation Methodology"
+        ]
+      },
+      {
+        "name": "Self-Supervised and Contrastive Learning",
+        "definition": "Learning affective representations without explicit emotion labels using self-supervision or contrastive objectives.",
+        "aliases": [
+          "self-supervised pretraining",
+          "contrastive learning",
+          "unsupervised representation learning"
+        ],
+        "l2_names": [
+          "Contrastive Learning",
+          "Enhanced Lipschitz Embedding",
+          "Self-Supervised Pretraining",
+          "Unsupervised Representation Learning"
+        ]
+      },
+      {
+        "name": "Semi-supervised Learning",
+        "definition": "Combining labeled and unlabeled data for affect model training.",
+        "aliases": [
+          "semi-supervised training"
+        ],
+        "l2_names": [
+          "Multi-view LSTM Training",
+          "Semi-supervised Learning",
+          "Syntactic Constraint Modeling"
+        ]
+      },
+      {
+        "name": "Transfer and Domain Adaptation",
+        "definition": "Adapting models across domains, datasets, or distributions.",
+        "aliases": [
+          "domain adaptation",
+          "transfer learning",
+          "domain adversarial training",
+          "subspace transfer learning"
+        ],
+        "l2_names": [
+          "Domain Adaptation",
+          "Domain Adversarial Training",
+          "Joint Distribution Adaptation",
+          "Subspace Transfer Learning",
+          "Target-Specific Model Adaptation"
+        ]
+      },
+      {
+        "name": "Multi-task and Auxiliary Learning",
+        "definition": "Jointly learning multiple related tasks to improve affect modeling.",
+        "aliases": [
+          "multi-task learning",
+          "auxiliary supervision",
+          "knowledge distillation",
+          "label distribution learning"
+        ],
+        "l2_names": [
+          "Auxiliary Supervision",
+          "Disentanglement",
+          "Joint Learning",
+          "Knowledge Distillation",
+          "Multi-task Learning Framework"
+        ]
+      },
+      {
+        "name": "Reinforcement Learning",
+        "definition": "Learning affect-related policies or generation strategies through reward-driven optimization.",
+        "aliases": [
+          "rl",
+          "policy optimization"
+        ],
+        "l2_names": [
+          "Evolutionary Algorithm",
+          "Reinforcement Learning"
+        ]
+      }
+    ],
+    "l2_names": [
+      "Annotation Methodology",
+      "Auxiliary Supervision",
+      "Contrastive Learning",
+      "Disentanglement",
+      "Domain Adaptation",
+      "Domain Adversarial Training",
+      "Enhanced Lipschitz Embedding",
+      "Evolutionary Algorithm",
+      "Joint Distribution Adaptation",
+      "Joint Learning",
+      "Knowledge Distillation",
+      "Multi-task Learning Framework",
+      "Multi-view LSTM Training",
+      "Reinforcement Learning",
+      "Self-Supervised Pretraining",
+      "Semi-supervised Learning",
+      "Subspace Transfer Learning",
+      "Syntactic Constraint Modeling",
+      "Target-Specific Model Adaptation",
+      "Unsupervised Representation Learning"
+    ]
+  },
+  {
+    "name": "Optimization and Training Strategy",
+    "definition": "Techniques used to optimize, stabilize, and improve model training.",
+    "aliases": [
+      "training strategy",
+      "optimization methods"
+    ],
+    "l1_child_categories": [
+      {
+        "name": "Loss Function Design",
+        "definition": "Designing objective functions tailored for affect recognition or modeling.",
+        "aliases": [
+          "loss optimization",
+          "custom loss",
+          "affective loss functions"
+        ],
+        "l2_names": [
+          "Experimental Design",
+          "Loss Function Optimization"
+        ]
+      },
+      {
+        "name": "Fine-tuning and Parameter Adaptation",
+        "definition": "Adapting pre-trained models to affective tasks through partial or full parameter updates.",
+        "aliases": [
+          "fine-tuning",
+          "parameter-efficient tuning"
+        ],
+        "l2_names": [
+          "Fine-tuning"
+        ]
+      },
+      {
+        "name": "Regularization and Weighting Strategies",
+        "definition": "Techniques to improve generalization through regularization or adaptive weighting.",
+        "aliases": [
+          "adaptive weighting",
+          "smoothing regularization",
+          "sparsity regularization"
+        ],
+        "l2_names": [
+          "Adaptive Weighting",
+          "Smoothing Regularization",
+          "Sparsity-Aware Deep Learning"
+        ]
+      },
+      {
+        "name": "Neural Architecture Search",
+        "definition": "Automated search for optimal model architectures for affect modeling.",
+        "aliases": [
+          "nas",
+          "architecture optimization"
+        ],
+        "l2_names": [
+          "Neural Architecture Search"
+        ]
+      },
+      {
+        "name": "Two-stage and Curriculum Training",
+        "definition": "Training procedures involving staged optimization or curriculum-based learning.",
+        "aliases": [
+          "two-stage training",
+          "curriculum learning"
+        ],
+        "l2_names": [
+          "Benchmarking and Evaluation",
+          "Cycle-Consistent Adversarial Networks",
+          "Immersive Technology and Neuromodulation Therapy",
+          "Survey Design",
+          "Two-Stage Training Framework"
+        ]
+      }
+    ],
+    "l2_names": [
+      "Adaptive Weighting",
+      "Benchmarking and Evaluation",
+      "Cycle-Consistent Adversarial Networks",
+      "Experimental Design",
+      "Fine-tuning",
+      "Immersive Technology and Neuromodulation Therapy",
+      "Loss Function Optimization",
+      "Neural Architecture Search",
+      "Smoothing Regularization",
+      "Sparsity-Aware Deep Learning",
+      "Survey Design",
+      "Two-Stage Training Framework"
+    ]
+  },
+  {
+    "name": "Data and Signal Strategy",
+    "definition": "Strategies for handling data preprocessing, augmentation, and multimodal signal integration.",
+    "aliases": [
+      "data strategy",
+      "signal processing methods"
+    ],
+    "l1_child_categories": [
+      {
+        "name": "Feature Engineering and Signal Processing",
+        "definition": "Designing or extracting features from affective signals prior to modeling.",
+        "aliases": [
+          "feature extraction",
+          "optical flow",
+          "physiological signal processing",
+          "lbp"
+        ],
+        "l2_names": [
+          "Data Collection",
+          "Dynamic Texture Analysis",
+          "EEG Signal Analysis",
+          "Emotion Feature Extraction",
+          "Event-Related Potential Analysis",
+          "Experimental Paradigm",
+          "Feature Extraction",
+          "Feature Fusion Strategy",
+          "Feature Node Mapping",
+          "Feature Selection",
+          "Functional Connectivity Analysis",
+          "LBP-TOP Feature Extraction",
+          "Local Binary Patterns",
+          "Microexpression Recognition and Analysis",
+          "Multilevel Feature Extraction",
+          "Multimodal Signal Processing",
+          "Online Gesture Recognition",
+          "Optical Flow",
+          "Pattern Recognition",
+          "Physiological Signal Processing",
+          "Response Time Measurement",
+          "Resting-state fMRI",
+          "Sparse Approximation",
+          "Spatiotemporal Descriptors",
+          "Spatiotemporal Local Binary Patterns",
+          "Speech Feature Extraction and Synthesis",
+          "Voxel-Based Morphometry"
+        ]
+      },
+      {
+        "name": "Multimodal Fusion and Cross-modal Alignment",
+        "definition": "Integrating and aligning multiple modalities for affect analysis.",
+        "aliases": [
+          "multimodal fusion",
+          "cross-modal alignment",
+          "decision level fusion",
+          "multimodal attention"
+        ],
+        "l2_names": [
+          "Cross-Modal Alignment",
+          "Decision Level Fusion",
+          "Information Integration",
+          "Multimodal Attention",
+          "Multimodal Data Fusion",
+          "Multimodal Feature Extraction",
+          "Multimodal Feature Fusion",
+          "Multimodal Fusion",
+          "Multimodal Interaction Modeling",
+          "Temporal Modeling"
+        ]
+      },
+      {
+        "name": "Data Augmentation and Synthesis",
+        "definition": "Expanding or generating data to improve model robustness and generalization.",
+        "aliases": [
+          "data augmentation",
+          "data synthesis"
+        ],
+        "l2_names": [
+          "Data Augmentation",
+          "Dataset Construction"
+        ]
+      },
+      {
+        "name": "Knowledge Integration and Psychological Priors",
+        "definition": "Incorporating psychological theories or affective priors into computational models.",
+        "aliases": [
+          "facial action coding",
+          "psychometric scaling",
+          "emotion psychology knowledge integration"
+        ],
+        "l2_names": [
+          "Computational and Clinical Psychology Methods",
+          "Emotion Psychology Knowledge Integration",
+          "Facial Action Coding",
+          "Facial Expression Analysis",
+          "Facial Prior Integration",
+          "Psychometric Scaling"
+        ]
+      }
+    ],
+    "l2_names": [
+      "Computational and Clinical Psychology Methods",
+      "Cross-Modal Alignment",
+      "Data Augmentation",
+      "Data Collection",
+      "Dataset Construction",
+      "Decision Level Fusion",
+      "Dynamic Texture Analysis",
+      "EEG Signal Analysis",
+      "Emotion Feature Extraction",
+      "Emotion Psychology Knowledge Integration",
+      "Event-Related Potential Analysis",
+      "Experimental Paradigm",
+      "Facial Action Coding",
+      "Facial Expression Analysis",
+      "Facial Prior Integration",
+      "Feature Extraction",
+      "Feature Fusion Strategy",
+      "Feature Node Mapping",
+      "Feature Selection",
+      "Functional Connectivity Analysis",
+      "Information Integration",
+      "LBP-TOP Feature Extraction",
+      "Local Binary Patterns",
+      "Microexpression Recognition and Analysis",
+      "Multilevel Feature Extraction",
+      "Multimodal Attention",
+      "Multimodal Data Fusion",
+      "Multimodal Feature Extraction",
+      "Multimodal Feature Fusion",
+      "Multimodal Fusion",
+      "Multimodal Interaction Modeling",
+      "Multimodal Signal Processing",
+      "Online Gesture Recognition",
+      "Optical Flow",
+      "Pattern Recognition",
+      "Physiological Signal Processing",
+      "Psychometric Scaling",
+      "Response Time Measurement",
+      "Resting-state fMRI",
+      "Sparse Approximation",
+      "Spatiotemporal Descriptors",
+      "Spatiotemporal Local Binary Patterns",
+      "Speech Feature Extraction and Synthesis",
+      "Temporal Modeling",
+      "Voxel-Based Morphometry"
+    ]
+  }
+]

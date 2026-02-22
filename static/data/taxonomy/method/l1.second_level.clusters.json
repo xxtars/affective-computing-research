@@ -1,0 +1,230 @@
+[
+  {
+    "second_cluster_id": 0,
+    "size": 6,
+    "l2_names": [
+      "Conditional Random Fields",
+      "Diffusion Models",
+      "Discriminative Modeling",
+      "Distance and Similarity Measurement",
+      "Gaussian Mixture Model",
+      "Maximum Mean Discrepancy"
+    ]
+  },
+  {
+    "second_cluster_id": 1,
+    "size": 7,
+    "l2_names": [
+      "Dynamic Texture Analysis",
+      "LBP-TOP Feature Extraction",
+      "Local Binary Patterns",
+      "Online Gesture Recognition",
+      "Pattern Recognition",
+      "Spatiotemporal Descriptors",
+      "Spatiotemporal Local Binary Patterns"
+    ]
+  },
+  {
+    "second_cluster_id": 2,
+    "size": 7,
+    "l2_names": [
+      "Cognitive Analysis",
+      "Comparative Analysis",
+      "Computational and Clinical Psychology Methods",
+      "Linear Regression Modeling",
+      "Mediation Analysis",
+      "Statistical Correlation Analysis",
+      "Systematic Review and Meta-Analysis"
+    ]
+  },
+  {
+    "second_cluster_id": 3,
+    "size": 15,
+    "l2_names": [
+      "Affective Computing Frameworks",
+      "Dimensional Emotion Modeling",
+      "Emotion Feature Extraction",
+      "Emotion Induction",
+      "Emotion Psychology Knowledge Integration",
+      "Facial Action Coding",
+      "Facial Expression Analysis",
+      "Facial Prior Integration",
+      "Feature Extraction",
+      "Feature Selection",
+      "Microexpression Recognition and Analysis",
+      "Open-Vocabulary Emotion Analysis",
+      "Semantic Analysis",
+      "Sentiment Analysis",
+      "Speech Feature Extraction and Synthesis"
+    ]
+  },
+  {
+    "second_cluster_id": 4,
+    "size": 4,
+    "l2_names": [
+      "Shared Sparse Learning",
+      "Smoothing Regularization",
+      "Sparse Approximation",
+      "Sparsity-Aware Deep Learning"
+    ]
+  },
+  {
+    "second_cluster_id": 5,
+    "size": 8,
+    "l2_names": [
+      "Annotation Methodology",
+      "Benchmarking and Evaluation",
+      "Data Collection",
+      "Dataset Construction",
+      "Experimental Design",
+      "Experimental Paradigm",
+      "Psychometric Scaling",
+      "Survey Design"
+    ]
+  },
+  {
+    "second_cluster_id": 6,
+    "size": 6,
+    "l2_names": [
+      "EEG Signal Analysis",
+      "Event-Related Potential Analysis",
+      "Functional Connectivity Analysis",
+      "Physiological Signal Processing",
+      "Response Time Measurement",
+      "Resting-state fMRI"
+    ]
+  },
+  {
+    "second_cluster_id": 7,
+    "size": 1,
+    "l2_names": [
+      "Evolutionary Algorithm"
+    ]
+  },
+  {
+    "second_cluster_id": 8,
+    "size": 2,
+    "l2_names": [
+      "Immersive Technology and Neuromodulation Therapy",
+      "Magnetic Resonance Imaging"
+    ]
+  },
+  {
+    "second_cluster_id": 9,
+    "size": 63,
+    "l2_names": [
+      "3D Convolutional Networks",
+      "Attention Mechanism",
+      "Autoencoder",
+      "Auxiliary Supervision",
+      "Bayesian Graph Inference",
+      "Broad Learning System",
+      "Capsule Network",
+      "Causal Graph Neural Networks",
+      "Context Interaction",
+      "Contrastive Learning",
+      "Convolutional Neural Networks",
+      "Cross-Modal Alignment",
+      "Data Augmentation",
+      "Decision Level Fusion",
+      "Deep Feature Extraction",
+      "Deep Learning",
+      "Deep Learning Architecture",
+      "Deep Neural Networks",
+      "Disentanglement",
+      "Dynamic Graph Convolutional Networks",
+      "End-to-End Deep Learning Framework",
+      "End-to-End Learning",
+      "Enhanced Lipschitz Embedding",
+      "Feature Fusion Strategy",
+      "Feature Node Mapping",
+      "Graph Attention Networks",
+      "Graph Convolutional Networks",
+      "Hierarchical Architecture",
+      "Hybrid Deep Learning",
+      "Hypergraph Learning",
+      "Information Integration",
+      "Joint Learning",
+      "Knowledge Distillation",
+      "Label Distribution Learning",
+      "Long Short-Term Memory",
+      "Machine Learning Classification",
+      "Multi-label Learning",
+      "Multi-task Learning Framework",
+      "Multi-view LSTM Training",
+      "Multilevel Feature Extraction",
+      "Multimodal Attention",
+      "Multimodal Data Fusion",
+      "Multimodal Feature Extraction",
+      "Multimodal Feature Fusion",
+      "Multimodal Fusion",
+      "Multimodal Interaction Modeling",
+      "Multimodal Signal Processing",
+      "Multiple Kernel Learning",
+      "Network Architecture",
+      "Neural Architecture Search",
+      "Recurrent Neural Networks",
+      "Reinforcement Learning",
+      "Self-Attention GRU",
+      "Self-Supervised Pretraining",
+      "Semi-supervised Learning",
+      "Subspace Transfer Learning",
+      "Support Vector Machine",
+      "Syntactic Constraint Modeling",
+      "Temporal Modeling",
+      "Transfer Learning",
+      "Transformer Architecture",
+      "Two-Stage Training Framework",
+      "Unsupervised Representation Learning"
+    ]
+  },
+  {
+    "second_cluster_id": 10,
+    "size": 2,
+    "l2_names": [
+      "Computer Vision",
+      "Optical Flow"
+    ]
+  },
+  {
+    "second_cluster_id": 11,
+    "size": 1,
+    "l2_names": [
+      "Fuzzy Logic"
+    ]
+  },
+  {
+    "second_cluster_id": 12,
+    "size": 4,
+    "l2_names": [
+      "Large Language Models",
+      "Natural Language Processing Techniques",
+      "Principle-Based Modeling",
+      "Prompting"
+    ]
+  },
+  {
+    "second_cluster_id": 13,
+    "size": 1,
+    "l2_names": [
+      "Voxel-Based Morphometry"
+    ]
+  },
+  {
+    "second_cluster_id": 14,
+    "size": 11,
+    "l2_names": [
+      "AdaBoost",
+      "Adaptive Weighting",
+      "Adversarial Learning",
+      "Cycle-Consistent Adversarial Networks",
+      "Domain Adaptation",
+      "Domain Adversarial Training",
+      "Fine-tuning",
+      "Generative Adversarial Networks",
+      "Joint Distribution Adaptation",
+      "Loss Function Optimization",
+      "Target-Specific Model Adaptation"
+    ]
+  }
+]

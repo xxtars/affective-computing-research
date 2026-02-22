@@ -1,0 +1,2305 @@
+[
+  {
+    "l2_name": "3D Convolutional Networks",
+    "definition": "Deep learning architectures that utilize three-dimensional convolutional operations to extract spatiotemporal features from volumetric data or video sequences.",
+    "aliases": [
+      "3D CNN",
+      "3D convolutional neural networks",
+      "three-dimensional convolutional networks",
+      "3D convnets",
+      "3DShift",
+      "Three-stream convolutional networks",
+      "3D-inception-resnet",
+      "deep spatial-convolutional networks"
+    ],
+    "topic_ids": [
+      71
+    ]
+  },
+  {
+    "l2_name": "AdaBoost",
+    "definition": "AdaBoost is an ensemble learning method that combines multiple weak classifiers, typically decision trees, into a strong classifier through iterative boosting.",
+    "aliases": [
+      "Adaptive Boosting",
+      "AdaBoost Classifier",
+      "AdaBoost Learning",
+      "Boosting Machine",
+      "AdaBoost Ensemble",
+      "Improved AdaBoost"
+    ],
+    "topic_ids": [
+      80
+    ]
+  },
+  {
+    "l2_name": "Adaptive Weighting",
+    "definition": "A method that dynamically adjusts the importance or influence of data elements, features, or regions based on local context or optimization criteria.",
+    "aliases": [
+      "dynamic weighting",
+      "weight optimization",
+      "adaptive reweighting",
+      "balance factor adjustment",
+      "feature weighting",
+      "region weighting",
+      "patch reweighting"
+    ],
+    "topic_ids": [
+      7
+    ]
+  },
+  {
+    "l2_name": "Adversarial Learning",
+    "definition": "A machine learning methodology that employs adversarial networks or constraints to improve model robustness, generate data, or solve specific tasks such as binary question answering.",
+    "aliases": [
+      "adversarial networks",
+      "adversarial training",
+      "adversarial framework",
+      "GANs",
+      "generative adversarial networks",
+      "adversarial constraint learning",
+      "modal-adversarial learning"
+    ],
+    "topic_ids": [
+      109
+    ]
+  },
+  {
+    "l2_name": "Affective Computing Frameworks",
+    "definition": "Methodological approaches and structural systems designed to recognize, interpret, simulate, and influence human emotions through computational models and multimodal data integration.",
+    "aliases": [
+      "affective computing",
+      "computing frameworks",
+      "multimodal affective frameworks",
+      "affective modeling",
+      "affective representation",
+      "structural embedding",
+      "embedding affective",
+      "affective state evaluation",
+      "linguistic affect interpretation",
+      "ubiquitous computing frameworks",
+      "affective concept incorporation"
+    ],
+    "topic_ids": [
+      47
+    ]
+  },
+  {
+    "l2_name": "Annotation Methodology",
+    "definition": "The systematic design, implementation, and evaluation of manual or semi-automatic schemes for labeling linguistic data, including the analysis of annotator agreement.",
+    "aliases": [
+      "annotation scheme",
+      "manual annotation",
+      "annotator agreement analysis",
+      "data annotation strategies",
+      "corpus annotation",
+      "labeling methodology",
+      "annotation protocol"
+    ],
+    "topic_ids": [
+      89
+    ]
+  },
+  {
+    "l2_name": "Attention Mechanism",
+    "definition": "A computational method that dynamically assigns varying levels of importance to different parts of the input data to improve model focus and performance on specific tasks.",
+    "aliases": [
+      "attention mechanism",
+      "mechanism attention",
+      "task-specific attention",
+      "roi-based attention",
+      "region-attention",
+      "soft attention",
+      "self-attention integration",
+      "motion attention",
+      "scene-based attention",
+      "frame attention",
+      "sync attention",
+      "mechanism integration"
+    ],
+    "topic_ids": [
+      52
+    ]
+  },
+  {
+    "l2_name": "Autoencoder",
+    "definition": "A neural network architecture that learns efficient data encodings by training to reconstruct its input from a compressed latent representation, often enhanced with variational inference or masking strategies for self-supervised pretraining.",
+    "aliases": [
+      "AE",
+      "Variational Autoencoder",
+      "VAE",
+      "Masked Autoencoder",
+      "MAE",
+      "Denoising Autoencoder",
+      "Convolutional Autoencoder",
+      "Sparse Autoencoder",
+      "Hierarchical Autoencoder",
+      "Twin-Cycle Autoencoder",
+      "Autoencoders"
+    ],
+    "topic_ids": [
+      30
+    ]
+  },
+  {
+    "l2_name": "Auxiliary Supervision",
+    "definition": "A method that leverages auxiliary information, sets, or modalities to construct unsupervised cost functions or supervision modules for guiding model training.",
+    "aliases": [
+      "auxiliary unsupervised cost function",
+      "auxiliary set selection model",
+      "auxiliary distribution supervision",
+      "data-dependent auxiliary information module",
+      "main-auxiliary modality selection",
+      "auxiliary supervision module",
+      "unsupervised cost with auxiliary info",
+      "modality selection with auxiliary supervision"
+    ],
+    "topic_ids": [
+      103
+    ]
+  },
+  {
+    "l2_name": "Bayesian Graph Inference",
+    "definition": "A methodological approach that combines probabilistic graphical models with graph construction techniques to infer network structures and perform statistical inference.",
+    "aliases": [
+      "Bayesian network inference",
+      "graph-based Bayesian modeling",
+      "probabilistic graph structure learning",
+      "Bayesian graph representation",
+      "inference on constructed graphs"
+    ],
+    "topic_ids": [
+      22
+    ]
+  },
+  {
+    "l2_name": "Benchmarking and Evaluation",
+    "definition": "The systematic assessment of system performance against established baselines, standardized datasets, and defined protocols.",
+    "aliases": [
+      "performance evaluation",
+      "benchmarking",
+      "baseline evaluation",
+      "benchmark dataset analysis",
+      "evaluation protocols",
+      "gold standard comparison",
+      "comprehensive benchmarking"
+    ],
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "l2_name": "Broad Learning System",
+    "definition": "A flat neural network architecture that constructs feature and enhancement nodes mapped directly to output weights without deep hierarchical stacking.",
+    "aliases": [
+      "BLS",
+      "broad learning",
+      "broad learning system integration",
+      "stacked broad learning",
+      "completeness-induced broad learning",
+      "adaptive broad learning"
+    ],
+    "topic_ids": [
+      74
+    ]
+  },
+  {
+    "l2_name": "Capsule Network",
+    "definition": "A neural network architecture that uses capsules to preserve spatial hierarchies and pose information through dynamic routing mechanisms.",
+    "aliases": [
+      "CapsNet",
+      "capsule network architecture",
+      "bi-channel capsule network",
+      "transformer capsule network",
+      "binary capsule networks",
+      "cascade perspective network",
+      "network feature extraction"
+    ],
+    "topic_ids": [
+      129
+    ]
+  },
+  {
+    "l2_name": "Causal Graph Neural Networks",
+    "definition": "A methodological approach that integrates causal inference principles with graph neural network architectures to learn robust representations and identify causal relationships within graph-structured data.",
+    "aliases": [
+      "causal GNN",
+      "causal-aware graph neural networks",
+      "deep node-graph learning",
+      "causal directed acyclic graph networks",
+      "genetic causal inference with GNNs",
+      "causal interaction networks"
+    ],
+    "topic_ids": [
+      101
+    ]
+  },
+  {
+    "l2_name": "Cognitive Analysis",
+    "definition": "The systematic examination of mental processes such as reasoning, memory, and perception using psychological and neuroscientific methods.",
+    "aliases": [
+      "cognitive psychology analysis",
+      "cognitive task analysis",
+      "cognitive mechanism analysis",
+      "cognitive bias experimental analysis",
+      "cognitive science integration",
+      "cognitive load measurement",
+      "brain-cognitive driven mechanisms",
+      "brain cognition-driven mechanisms",
+      "psychology analysis",
+      "reasoning analysis"
+    ],
+    "topic_ids": [
+      106
+    ]
+  },
+  {
+    "l2_name": "Comparative Analysis",
+    "definition": "A methodological approach that systematically evaluates differences and similarities between two or more groups, conditions, or datasets to derive meaningful insights.",
+    "aliases": [
+      "comparative study",
+      "group comparison",
+      "subgroup analysis",
+      "comparative assessment",
+      "cross-group analysis",
+      "stratified comparison",
+      "comparative evaluation",
+      "two-group analysis",
+      "comparative result analysis"
+    ],
+    "topic_ids": [
+      122
+    ]
+  },
+  {
+    "l2_name": "Computational and Clinical Psychology Methods",
+    "definition": "This methodological axis encompasses computational modeling frameworks, cognitive architectures, and clinical interventions including psychotherapy and pharmacological treatments.",
+    "aliases": [
+      "computational psychology",
+      "clinical psychology methods",
+      "psychotherapeutic interventions",
+      "pharmacological interventions",
+      "cognitive modeling",
+      "psychological orientation modeling",
+      "computational cognition",
+      "clinical frameworks"
+    ],
+    "topic_ids": [
+      124
+    ]
+  },
+  {
+    "l2_name": "Computer Vision",
+    "definition": "Computer vision is a field of artificial intelligence that enables computers to derive meaningful information from digital images, videos, and other visual inputs.",
+    "aliases": [
+      "CV",
+      "machine vision",
+      "computer vision analysis",
+      "computer vision algorithms",
+      "computer vision techniques",
+      "vision algorithms",
+      "image analysis",
+      "visual computing"
+    ],
+    "topic_ids": [
+      69
+    ]
+  },
+  {
+    "l2_name": "Conditional Random Fields",
+    "definition": "Conditional Random Fields are discriminative probabilistic models used for labeling and segmenting sequential data by modeling the conditional probability of label sequences given input observations.",
+    "aliases": [
+      "CRF",
+      "conditional random field",
+      "hidden conditional random fields",
+      "HCRF",
+      "hidden semi-CRF",
+      "dynamic conditional random fields",
+      "field modeling"
+    ],
+    "topic_ids": [
+      72
+    ]
+  },
+  {
+    "l2_name": "Context Interaction",
+    "definition": "A method that models the dynamic exchange of information between internal and external contexts or between local and global scopes to enhance representation learning.",
+    "aliases": [
+      "interaction transformer",
+      "local-global interaction",
+      "global-local interaction",
+      "context interaction",
+      "grammar interaction",
+      "internal context interaction",
+      "external grammar interaction",
+      "efficient local-global interaction transformer"
+    ],
+    "topic_ids": [
+      120
+    ]
+  },
+  {
+    "l2_name": "Contrastive Learning",
+    "definition": "A self-supervised or supervised method that learns representations by maximizing agreement between similar data pairs and minimizing agreement between dissimilar pairs using contrastive loss functions.",
+    "aliases": [
+      "contrastive adaptation",
+      "supervised contrastive learning",
+      "contrastive loss optimization",
+      "inter-contrastive learning",
+      "intra-contrastive learning",
+      "margin-based temporal contrastive learning",
+      "joint cross-entropy and contrastive loss"
+    ],
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "l2_name": "Convolutional Neural Networks",
+    "definition": "A class of deep neural networks that apply convolution operations to process grid-like topology data such as images.",
+    "aliases": [
+      "CNN",
+      "ConvNets",
+      "convolutional neural network",
+      "neural networks convolutional",
+      "coupled convolutional networks",
+      "regression networks"
+    ],
+    "topic_ids": [
+      25
+    ]
+  },
+  {
+    "l2_name": "Cross-Modal Alignment",
+    "definition": "A method that establishes correspondence and semantic consistency between features from different modalities using attention mechanisms, fusion modules, or distribution matching.",
+    "aliases": [
+      "crossmodal alignment",
+      "cross-modal feature association",
+      "cross-modal distribution matching",
+      "cross-modal attention fusion",
+      "modality alignment",
+      "cross-modal feature learning"
+    ],
+    "topic_ids": [
+      45
+    ]
+  },
+  {
+    "l2_name": "Cycle-Consistent Adversarial Networks",
+    "definition": "A deep learning method that integrates adversarial training with cycle-consistency constraints and multi-scale or residual architectures to enable structured trajectory learning and unpaired data translation.",
+    "aliases": [
+      "CycleGAN",
+      "cycle-consistent adversarial learning",
+      "multi-scale structured cycle-consistency",
+      "residual cycle-consistent networks",
+      "multiscale adversarial networks",
+      "cycle consistent GANs"
+    ],
+    "topic_ids": [
+      16
+    ]
+  },
+  {
+    "l2_name": "Data Augmentation",
+    "definition": "A method that artificially expands training datasets by applying transformations such as overlapping, temporal shifts, or dimension-specific modifications to improve model generalization.",
+    "aliases": [
+      "augmentation",
+      "data augmentation techniques",
+      "augmentation strategies",
+      "multi-granularity data augmentation",
+      "4d data augmentation",
+      "temporal data augmentation",
+      "flipping-based data enhancement",
+      "overlapping sample data augmentation"
+    ],
+    "topic_ids": [
+      68
+    ]
+  },
+  {
+    "l2_name": "Data Collection",
+    "definition": "The systematic process of gathering and measuring information on variables of interest, often utilizing specific modalities such as high-speed cameras or multimodal sensors to capture macro-expressions and other targeted data.",
+    "aliases": [
+      "data gathering",
+      "information collection",
+      "multimodal data collection",
+      "high-speed camera data collection",
+      "macro-expression data collection",
+      "audio-visual data collection",
+      "dataset creation",
+      "data acquisition"
+    ],
+    "topic_ids": [
+      94
+    ]
+  },
+  {
+    "l2_name": "Dataset Construction",
+    "definition": "The process of collecting, curating, labeling, and organizing data to create structured datasets for research or application purposes.",
+    "aliases": [
+      "dataset creation",
+      "database construction",
+      "dataset collection",
+      "dataset building",
+      "dataset curation",
+      "large-scale dataset construction",
+      "multimodal dataset construction",
+      "dataset release"
+    ],
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "l2_name": "Decision Level Fusion",
+    "definition": "A method that combines the final outputs or decisions of multiple classifiers or models to produce a unified result.",
+    "aliases": [
+      "decision fusion",
+      "decision-level fusion",
+      "decision level classifier fusion",
+      "fusion at decision level",
+      "late fusion"
+    ],
+    "topic_ids": [
+      90
+    ]
+  },
+  {
+    "l2_name": "Deep Feature Extraction",
+    "definition": "The method of automatically learning and extracting hierarchical representations from raw data using deep neural networks for pattern recognition and metric learning tasks.",
+    "aliases": [
+      "deep feature learning",
+      "deep representation learning",
+      "deep CNN feature extraction",
+      "deep semantic feature extraction",
+      "deep pattern recognition",
+      "deep metric learning",
+      "feature enhancement via deep learning",
+      "adaptive deep feature extraction"
+    ],
+    "topic_ids": [
+      46
+    ]
+  },
+  {
+    "l2_name": "Deep Learning",
+    "definition": "A subset of machine learning based on artificial neural networks with multiple layers to learn hierarchical data representations.",
+    "aliases": [
+      "deep learning techniques",
+      "deep learning systems",
+      "deep representation learning",
+      "DL",
+      "deep learning technology",
+      "deep learning based methods"
+    ],
+    "topic_ids": [
+      123
+    ]
+  },
+  {
+    "l2_name": "Deep Learning Architecture",
+    "definition": "The structural design and configuration of deep neural networks used for machine learning tasks.",
+    "aliases": [
+      "deep learning architectures",
+      "deep neural architectures",
+      "neural architectures",
+      "deep neural network architectures",
+      "learning architectures",
+      "architecture deep",
+      "architectures deep",
+      "deep learning architecture",
+      "learning architecture",
+      "mixed model architecture",
+      "two-layer modeling architecture",
+      "small-footprint model architecture",
+      "distributed training architecture"
+    ],
+    "topic_ids": [
+      91
+    ]
+  },
+  {
+    "l2_name": "Deep Neural Networks",
+    "definition": "A class of machine learning models utilizing multiple hidden layers of artificial neurons to learn hierarchical representations from data.",
+    "aliases": [
+      "DNN",
+      "deep learning models",
+      "deep neural network",
+      "deep convolutional neural networks",
+      "CNN",
+      "convolutional neural networks",
+      "deep networks"
+    ],
+    "topic_ids": [
+      13
+    ]
+  },
+  {
+    "l2_name": "Diffusion Models",
+    "definition": "Generative modeling techniques that synthesize data by iteratively denoising samples from a Gaussian distribution, often conditioned on text or other modalities.",
+    "aliases": [
+      "diffusion model",
+      "denoising diffusion probabilistic models",
+      "DDPM",
+      "text-conditioned generation",
+      "conditional diffusion",
+      "intermediate model generation",
+      "semantic-constrained bidirectional generation",
+      "au-conditioned diffusion modeling"
+    ],
+    "topic_ids": [
+      107
+    ]
+  },
+  {
+    "l2_name": "Dimensional Emotion Modeling",
+    "definition": "A methodological approach that represents and analyzes human emotions using continuous multi-dimensional spaces, such as valence and arousal, often incorporating user-centric contexts or facial action unit mappings.",
+    "aliases": [
+      "dimensional emotion modeling",
+      "emotion modeling",
+      "user-centric emotion modeling",
+      "au-emotion mapping",
+      "dimensional emotion analysis",
+      "emotion regression analysis",
+      "context-dependent emotion labeling",
+      "fake emotion identification",
+      "emotion-activity mapping",
+      "interactive emotion space visualization"
+    ],
+    "topic_ids": [
+      84
+    ]
+  },
+  {
+    "l2_name": "Discriminative Modeling",
+    "definition": "A methodological approach that directly models the decision boundary or conditional probability between inputs and labels to optimize classification performance.",
+    "aliases": [
+      "discriminative model",
+      "discriminative learning",
+      "discriminant modeling",
+      "discriminative feature learning",
+      "discriminative dictionary learning",
+      "discriminative embedding"
+    ],
+    "topic_ids": [
+      8
+    ]
+  },
+  {
+    "l2_name": "Disentanglement",
+    "definition": "A method for learning latent representations that separate distinct underlying factors of variation in data, often utilizing information bottleneck principles to enforce independence.",
+    "aliases": [
+      "representation disentanglement",
+      "feature disentanglement",
+      "disentanglement network",
+      "information bottleneck disentanglement",
+      "disentangled representation learning",
+      "factor disentanglement"
+    ],
+    "topic_ids": [
+      133
+    ]
+  },
+  {
+    "l2_name": "Distance and Similarity Measurement",
+    "definition": "Methods for quantifying the resemblance or separation between data points, structures, or distributions using metrics such as Euclidean, geodesic, or kernel-based distances.",
+    "aliases": [
+      "similarity analysis",
+      "distance estimation",
+      "geodesic distance",
+      "similarity metric",
+      "distance alignment",
+      "relative distance",
+      "distance-based alignment"
+    ],
+    "topic_ids": [
+      40
+    ]
+  },
+  {
+    "l2_name": "Domain Adaptation",
+    "definition": "Domain adaptation refers to machine learning techniques that enable a model trained on a source domain to perform effectively on a different but related target domain.",
+    "aliases": [
+      "domain adaptive learning",
+      "domain adaptation methods",
+      "domain adaptation techniques",
+      "domain regenerator learning",
+      "domain regeneration framework",
+      "adaptation methods",
+      "DA"
+    ],
+    "topic_ids": [
+      39
+    ]
+  },
+  {
+    "l2_name": "Domain Adversarial Training",
+    "definition": "A method that employs adversarial learning to train feature extractors to generate domain-invariant representations for unsupervised domain adaptation.",
+    "aliases": [
+      "Domain Adversarial Neural Networks",
+      "DANN",
+      "Adversarial Domain Adaptation",
+      "Unsupervised Domain Adaptation via Adversarial Training",
+      "Adversarial Domain Discrimination",
+      "Bi-hemisphere Domain Adversarial Training",
+      "Adversarial Dual Discriminator Network"
+    ],
+    "topic_ids": [
+      49
+    ]
+  },
+  {
+    "l2_name": "Dynamic Graph Convolutional Networks",
+    "definition": "A method that applies convolutional operations on graph structures where the topology or node features evolve over time.",
+    "aliases": [
+      "DGCN",
+      "dynamical graph convolutional neural networks",
+      "dynamic graph CNN",
+      "sparse dynamic graph convolutional networks",
+      "hierarchical dynamic graph convolutional networks",
+      "adaptive hierarchical graph convolution",
+      "dynamic graph filtering",
+      "deep graph convolution network"
+    ],
+    "topic_ids": [
+      116
+    ]
+  },
+  {
+    "l2_name": "Dynamic Texture Analysis",
+    "definition": "A method for analyzing and characterizing textures in image sequences that exhibit temporal motion or variation using statistical descriptors such as histograms.",
+    "aliases": [
+      "dynamic texture histograms",
+      "dynamic edge and texture integration",
+      "dynamic image analysis",
+      "texture analysis dynamic",
+      "histograms dynamic texture"
+    ],
+    "topic_ids": [
+      137
+    ]
+  },
+  {
+    "l2_name": "EEG Signal Analysis",
+    "definition": "The computational processing and interpretation of electroencephalogram data to extract neural features such as frequency, amplitude, and oscillatory patterns.",
+    "aliases": [
+      "EEG analysis",
+      "electroencephalogram signal analysis",
+      "neural signal analysis",
+      "electrophysiological data analysis",
+      "quantitative EEG",
+      "QEEG",
+      "EEG-assisted annotation",
+      "monogenic signal analysis",
+      "alpha oscillation analysis",
+      "amplitude of low-frequency oscillations analysis"
+    ],
+    "topic_ids": [
+      31
+    ]
+  },
+  {
+    "l2_name": "Emotion Feature Extraction",
+    "definition": "The methodological process of identifying, isolating, and representing emotional signals from data sources such as text, images, or context for computational analysis.",
+    "aliases": [
+      "emotion feature extraction",
+      "extraction emotion",
+      "learning emotion",
+      "emotion representation",
+      "emotional patches feature extraction",
+      "emotion distribution learning",
+      "emotion-aware feature learning"
+    ],
+    "topic_ids": [
+      5
+    ]
+  },
+  {
+    "l2_name": "Emotion Induction",
+    "definition": "The systematic application of laboratory procedures or stimuli to elicit specific emotional states in participants for research purposes.",
+    "aliases": [
+      "emotion elicitation",
+      "emotional state induction",
+      "laboratory emotion induction",
+      "emotion elicitation procedure",
+      "emotional sampling",
+      "induction of emotion"
+    ],
+    "topic_ids": [
+      131
+    ]
+  },
+  {
+    "l2_name": "Emotion Psychology Knowledge Integration",
+    "definition": "The methodological process of synthesizing emotional factors, vocabulary, states, and theoretical models into a unified psychological knowledge framework.",
+    "aliases": [
+      "emotion factor integration",
+      "emotional vocabulary integration",
+      "emotional dictionary expansion",
+      "emotional state integration",
+      "psychological emotion model integration",
+      "emotional psychology theory integration",
+      "emotional synergy",
+      "emotion psychology knowledge integration",
+      "integration of emotional psychology",
+      "knowledge integration in emotion psychology"
+    ],
+    "topic_ids": [
+      138
+    ]
+  },
+  {
+    "l2_name": "End-to-End Deep Learning Framework",
+    "definition": "A computational architecture that utilizes deep neural networks to learn a direct mapping from raw input data to final output predictions without requiring manual feature engineering or intermediate processing stages.",
+    "aliases": [
+      "end-to-end learning framework",
+      "deep learning framework",
+      "end-to-end deep learning",
+      "end-to-end regression framework",
+      "novel deep-learning based framework",
+      "landmark-assisted collaborative deep framework",
+      "consolidated eulerian framework",
+      "framework deep",
+      "framework endtoend",
+      "learning framework",
+      "endtoend learning",
+      "deep learning",
+      "endtoend deep",
+      "endtoend regression"
+    ],
+    "topic_ids": [
+      113
+    ]
+  },
+  {
+    "l2_name": "End-to-End Learning",
+    "definition": "A method where deep neural networks are trained to map raw inputs directly to desired outputs without manual feature engineering or intermediate task-specific modules.",
+    "aliases": [
+      "end-to-end deep learning",
+      "end-to-end optimization",
+      "end-to-end architecture",
+      "end-to-end CNN",
+      "end-to-end deep network",
+      "data-driven end-to-end learning",
+      "end-to-end design"
+    ],
+    "topic_ids": [
+      92
+    ]
+  },
+  {
+    "l2_name": "Enhanced Lipschitz Embedding",
+    "definition": "A method for learning latent representation spaces that integrate commonsense knowledge through Lipschitz-constrained embedding techniques.",
+    "aliases": [
+      "enhanced lipschitz embedding",
+      "lipschitz embedding",
+      "latent common feature space learning",
+      "commonsense knowledge integration",
+      "stochastic word embedding",
+      "asynchronous keyword injection",
+      "emotion embedding vectors"
+    ],
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "l2_name": "Event-Related Potential Analysis",
+    "definition": "A method involving the recording and statistical analysis of brain electrical activity time-locked to specific sensory, cognitive, or motor events.",
+    "aliases": [
+      "ERP recording",
+      "event-related potential recording",
+      "potential analysis",
+      "latent profile analysis",
+      "event-related analysis",
+      "ERP analysis"
+    ],
+    "topic_ids": [
+      86
+    ]
+  },
+  {
+    "l2_name": "Evolutionary Algorithm",
+    "definition": "A population-based metaheuristic optimization method inspired by biological evolution that uses mechanisms such as selection, mutation, and recombination to solve complex problems like dynamic routing and gene expression programming.",
+    "aliases": [
+      "EA",
+      "evolutionary computation",
+      "genetic algorithm",
+      "gene expression programming",
+      "multiobjective evolution algorithm",
+      "ant lion optimization",
+      "evolutionary optimization"
+    ],
+    "topic_ids": [
+      112
+    ]
+  },
+  {
+    "l2_name": "Experimental Design",
+    "definition": "The structured methodology for planning and conducting controlled or randomized experiments to test hypotheses and measure causal effects.",
+    "aliases": [
+      "experimental design",
+      "controlled experimental design",
+      "randomized experimental design",
+      "experimentation",
+      "controlled trial",
+      "randomized controlled trial",
+      "perception experiment design",
+      "cross-cultural experimental design",
+      "within-subject design",
+      "behavioral experiment design"
+    ],
+    "topic_ids": [
+      76
+    ]
+  },
+  {
+    "l2_name": "Experimental Paradigm",
+    "definition": "A standardized experimental procedure or task design used to investigate specific cognitive processes such as attention, recognition, or learning.",
+    "aliases": [
+      "task paradigm",
+      "experimental task",
+      "behavioral paradigm",
+      "cognitive task",
+      "test paradigm",
+      "procedure"
+    ],
+    "topic_ids": [
+      14
+    ]
+  },
+  {
+    "l2_name": "Facial Action Coding",
+    "definition": "A method for systematically categorizing and labeling facial movements based on the activation of specific action units.",
+    "aliases": [
+      "Action Unit Coding",
+      "FACS",
+      "Facial Action Coding System",
+      "AU Coding",
+      "Action Unit Labeling",
+      "Facial Expression Coding"
+    ],
+    "topic_ids": [
+      43
+    ]
+  },
+  {
+    "l2_name": "Facial Expression Analysis",
+    "definition": "The computational processing, recognition, and manipulation of human facial movements to interpret emotions or generate animations.",
+    "aliases": [
+      "facial expression recognition",
+      "facial analysis",
+      "expression processing",
+      "facial expression processing",
+      "emotion recognition from face",
+      "facial animation",
+      "facial expression pattern recognition"
+    ],
+    "topic_ids": [
+      29
+    ]
+  },
+  {
+    "l2_name": "Facial Prior Integration",
+    "definition": "The method of incorporating pre-existing facial knowledge, such as landmarks, shapes, or feature distributions, into models to guide generation, reconstruction, or analysis tasks.",
+    "aliases": [
+      "facial prior",
+      "prior integration",
+      "facial prior knowledge fusion",
+      "facial prior integration",
+      "aesthetic prior model",
+      "3d face shape features",
+      "facial feature decoupling",
+      "facial landmark calibration"
+    ],
+    "topic_ids": [
+      104
+    ]
+  },
+  {
+    "l2_name": "Feature Extraction",
+    "definition": "The process of transforming raw data into a reduced set of informative features that capture the essential characteristics of the input for analysis or classification.",
+    "aliases": [
+      "feature extraction techniques",
+      "multidimensional feature extraction",
+      "nonlinear feature extraction",
+      "extraction methods",
+      "feature detection",
+      "feature analysis",
+      "principles-of-art feature extraction"
+    ],
+    "topic_ids": [
+      3
+    ]
+  },
+  {
+    "l2_name": "Feature Fusion Strategy",
+    "definition": "A methodological approach that combines multiple features, classifiers, or data sources to enhance model performance through techniques such as feature-level integration, orthogonal purification, or weighted aggregation.",
+    "aliases": [
+      "fusion strategy",
+      "multifeature fusion",
+      "feature-level fusion",
+      "multi-classifier fusion",
+      "multiclassifier fusion strategy",
+      "feature fusion strategies",
+      "orthogonal purification",
+      "weight-based feature fusion",
+      "kernel-level feature fusion",
+      "multi-source feature fusion"
+    ],
+    "topic_ids": [
+      65
+    ]
+  },
+  {
+    "l2_name": "Feature Node Mapping",
+    "definition": "A method for establishing conditional independence between attribute views through explicit node mapping and feature aggregation mechanisms.",
+    "aliases": [
+      "attribute enhancement",
+      "feature node mapping",
+      "conditionally independent feature views",
+      "automatic feature sharing",
+      "explicit attribute controller injection",
+      "node feature aggregation"
+    ],
+    "topic_ids": [
+      121
+    ]
+  },
+  {
+    "l2_name": "Feature Selection",
+    "definition": "The process of identifying and selecting a subset of relevant features for use in model construction to improve performance and reduce complexity.",
+    "aliases": [
+      "feature selection methods",
+      "feature selection techniques",
+      "feature ranking",
+      "variable selection",
+      "attribute selection",
+      "selection methods",
+      "ranking methods",
+      "pairwise feature selection"
+    ],
+    "topic_ids": [
+      32
+    ]
+  },
+  {
+    "l2_name": "Fine-tuning",
+    "definition": "The process of adapting a pre-trained model to a specific task or domain by further training on targeted data, often involving parameter adjustments, instruction alignment, or curriculum strategies.",
+    "aliases": [
+      "tuning",
+      "instruction tuning",
+      "model fine-tuning",
+      "parameter tuning",
+      "network fine-tuning",
+      "curriculum learning",
+      "parameter efficient training",
+      "multigranularity tuning"
+    ],
+    "topic_ids": [
+      19
+    ]
+  },
+  {
+    "l2_name": "Functional Connectivity Analysis",
+    "definition": "A method for assessing statistical dependencies and temporal correlations between spatially distinct neurophysiological signals to characterize brain network organization.",
+    "aliases": [
+      "functional connectivity assessment",
+      "brain functional connectivity analysis",
+      "functional network analysis",
+      "connectivity analysis",
+      "neural connectivity mapping",
+      "brain network analysis",
+      "FC analysis"
+    ],
+    "topic_ids": [
+      33
+    ]
+  },
+  {
+    "l2_name": "Fuzzy Logic",
+    "definition": "A form of many-valued logic that handles reasoning with approximate rather than fixed and exact values to model uncertainty in control systems and soft computing applications.",
+    "aliases": [
+      "fuzzy logic",
+      "fuzzy control",
+      "soft computing",
+      "fuzzy systems",
+      "fuzzy computing",
+      "approximate reasoning"
+    ],
+    "topic_ids": [
+      127
+    ]
+  },
+  {
+    "l2_name": "Gaussian Mixture Model",
+    "definition": "A probabilistic model that assumes all data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters.",
+    "aliases": [
+      "GMM",
+      "Gaussian mixture",
+      "mixture of Gaussians",
+      "Gaussian mixture models",
+      "Gaussian mixture model estimation",
+      "GMM estimation"
+    ],
+    "topic_ids": [
+      110
+    ]
+  },
+  {
+    "l2_name": "Generative Adversarial Networks",
+    "definition": "A deep learning framework that trains two neural networks, a generator and a discriminator, in an adversarial process to generate synthetic data indistinguishable from real data.",
+    "aliases": [
+      "GANs",
+      "Generative Adversarial Network",
+      "Adversarial Networks",
+      "Generative Adversarial Framework",
+      "Wasserstein GANs",
+      "StarGAN",
+      "Sequence GANs"
+    ],
+    "topic_ids": [
+      130
+    ]
+  },
+  {
+    "l2_name": "Graph Attention Networks",
+    "definition": "A method that employs attention mechanisms to dynamically learn and weight adjacency relationships within graph neural networks.",
+    "aliases": [
+      "GAT",
+      "graph attention network",
+      "graph attention mechanisms",
+      "dynamic adjacency matrix learning",
+      "adjacency-explainable graph neural networks",
+      "layerwise adjacency matrix utilization"
+    ],
+    "topic_ids": [
+      93
+    ]
+  },
+  {
+    "l2_name": "Graph Convolutional Networks",
+    "definition": "A class of deep learning methods designed to perform convolution operations directly on graph-structured data by aggregating information from neighboring nodes.",
+    "aliases": [
+      "GCN",
+      "graph convolutional network",
+      "graph-based convolutional neural networks",
+      "graph-embedded convolutional neural networks",
+      "residual graph convolutional networks",
+      "probabilistic graph convolution",
+      "graph convolution"
+    ],
+    "topic_ids": [
+      51
+    ]
+  },
+  {
+    "l2_name": "Hierarchical Architecture",
+    "definition": "A methodological approach that organizes neural networks, spatial divisions, or classification structures into multiple levels of abstraction to capture features at varying scales.",
+    "aliases": [
+      "hierarchical networks",
+      "hierarchical spatial division",
+      "hierarchical discriminators",
+      "hierarchical swintransformer",
+      "hierarchical neural networks",
+      "multi-level architecture",
+      "hierarchical classification",
+      "hierarchical domain adaptation",
+      "hierarchical recurrent networks",
+      "hierarchical spatial-temporal networks"
+    ],
+    "topic_ids": [
+      26
+    ]
+  },
+  {
+    "l2_name": "Hybrid Deep Learning",
+    "definition": "A methodological approach that integrates deep learning architectures with other machine learning techniques or shallow models to leverage complementary strengths for improved performance.",
+    "aliases": [
+      "hybrid deep learning models",
+      "hybrid deep learning architecture",
+      "deep shallow fusion",
+      "hybrid neural architecture",
+      "fusion neural network",
+      "hybrid machine learning models",
+      "hybrid AI systems",
+      "regularized deep fusion",
+      "hybrid DBN-SVM",
+      "zero-initialized hybrid models"
+    ],
+    "topic_ids": [
+      77
+    ]
+  },
+  {
+    "l2_name": "Hypergraph Learning",
+    "definition": "A machine learning methodology that utilizes hypergraphs to model and learn from complex high-order relationships among data points beyond pairwise connections.",
+    "aliases": [
+      "hypergraph learning framework",
+      "multitask hypergraph learning",
+      "rolling multitask hypergraph learning",
+      "multimodal hypergraph learning",
+      "multi-hypergraph learning",
+      "multigraph learning",
+      "hypergraph-based learning"
+    ],
+    "topic_ids": [
+      20
+    ]
+  },
+  {
+    "l2_name": "Immersive Technology and Neuromodulation Therapy",
+    "definition": "Therapeutic methods utilizing immersive virtual reality environments or transcutaneous nerve stimulation techniques to treat medical conditions.",
+    "aliases": [
+      "VR therapy",
+      "virtual reality intervention",
+      "transcutaneous nerve stimulation",
+      "immersive therapy",
+      "tVNS",
+      "virtual exposure therapy",
+      "robot-assisted therapy",
+      "immersive simulation"
+    ],
+    "topic_ids": [
+      125
+    ]
+  },
+  {
+    "l2_name": "Information Integration",
+    "definition": "The process of combining data, knowledge, or perspectives from multiple sources, domains, or disciplines to create a unified and coherent view.",
+    "aliases": [
+      "data integration",
+      "cross-domain integration",
+      "multidisciplinary integration",
+      "interdisciplinary integration",
+      "information fusion",
+      "side information integration",
+      "opinion integration",
+      "privileged information integration",
+      "full information integration"
+    ],
+    "topic_ids": [
+      78
+    ]
+  },
+  {
+    "l2_name": "Joint Distribution Adaptation",
+    "definition": "A method that simultaneously aligns both marginal and conditional distributions between source and target domains to reduce domain shift.",
+    "aliases": [
+      "JDA",
+      "joint distribution adaptive regression",
+      "dynamic joint distribution adaptation",
+      "marginal and conditional adaptation",
+      "joint factor optimization",
+      "joint optimization framework"
+    ],
+    "topic_ids": [
+      100
+    ]
+  },
+  {
+    "l2_name": "Joint Learning",
+    "definition": "A methodological approach that simultaneously optimizes multiple related tasks, representations, or data modalities within a unified framework to leverage shared information and improve overall performance.",
+    "aliases": [
+      "joint representation learning",
+      "joint regression",
+      "joint modeling",
+      "shared representation learning",
+      "multi-task joint learning",
+      "end-to-end joint learning",
+      "joint optimization"
+    ],
+    "topic_ids": [
+      57
+    ]
+  },
+  {
+    "l2_name": "Knowledge Distillation",
+    "definition": "A method for transferring knowledge from a large teacher model to a smaller student model or within the same model to improve efficiency and performance.",
+    "aliases": [
+      "distillation",
+      "knowledge learning",
+      "self-distillation",
+      "self-knowledge distillation",
+      "personalized knowledge distillation",
+      "data distillation",
+      "KD"
+    ],
+    "topic_ids": [
+      81
+    ]
+  },
+  {
+    "l2_name": "Label Distribution Learning",
+    "definition": "A machine learning paradigm that models the probability distribution of labels for each instance rather than predicting a single discrete class label.",
+    "aliases": [
+      "LDL",
+      "label distribution adaptation",
+      "progressive label revision",
+      "distribution learning",
+      "learning label distribution"
+    ],
+    "topic_ids": [
+      139
+    ]
+  },
+  {
+    "l2_name": "Large Language Models",
+    "definition": "The study and application of neural network-based language models with massive parameter counts, including their pre-training, adaptation, evaluation, and extension to multimodal contexts.",
+    "aliases": [
+      "LLM",
+      "large language model",
+      "language models",
+      "pre-trained language models",
+      "foundation models",
+      "multimodal large language models",
+      "vision-language models"
+    ],
+    "topic_ids": [
+      9
+    ]
+  },
+  {
+    "l2_name": "LBP-TOP Feature Extraction",
+    "definition": "A method for extracting texture features from video sequences by applying Local Binary Patterns on three orthogonal planes within a tensor independent color space.",
+    "aliases": [
+      "LBP-TOP",
+      "Local Binary Patterns on Three Orthogonal Planes",
+      "LBPTOP feature representation",
+      "tensor independent color space LBP-TOP",
+      "LBP-TOP feature extraction"
+    ],
+    "topic_ids": [
+      79
+    ]
+  },
+  {
+    "l2_name": "Linear Regression Modeling",
+    "definition": "A statistical method for modeling the linear relationship between a dependent variable and one or more independent variables, including extensions like logistic regression and linear combinations of distributions.",
+    "aliases": [
+      "linear regression",
+      "regression modeling",
+      "modeling linear",
+      "linear relationship modeling",
+      "linear regression analysis",
+      "logistic regression",
+      "logistic regression modeling",
+      "multivariate logistic regression",
+      "linear combination of distributions",
+      "piecewise linear transformation",
+      "time-series regression modeling",
+      "time-continuous regression modeling"
+    ],
+    "topic_ids": [
+      111
+    ]
+  },
+  {
+    "l2_name": "Local Binary Patterns",
+    "definition": "A texture analysis method that encodes local image structures by comparing the intensity of a central pixel with its surrounding neighbors to generate a binary pattern.",
+    "aliases": [
+      "LBP",
+      "local binary pattern",
+      "local binary patterns extraction",
+      "local binary pattern features",
+      "binary patterns",
+      "local binary patterns on three orthogonal planes",
+      "LBP features"
+    ],
+    "topic_ids": [
+      126
+    ]
+  },
+  {
+    "l2_name": "Long Short-Term Memory",
+    "definition": "A recurrent neural network architecture designed to learn long-term dependencies by utilizing memory cells and gating mechanisms.",
+    "aliases": [
+      "LSTM",
+      "long short term memory",
+      "long short-term memory networks",
+      "LSTM networks",
+      "memory networks",
+      "attention-long short-term memory",
+      "graph long short-term memory",
+      "long short-term memory modeling"
+    ],
+    "topic_ids": [
+      98
+    ]
+  },
+  {
+    "l2_name": "Loss Function Optimization",
+    "definition": "The design, adaptation, and mathematical refinement of objective functions to improve model training performance, convergence, or specific metric outcomes.",
+    "aliases": [
+      "loss optimization",
+      "objective function optimization",
+      "loss function design",
+      "adaptive loss",
+      "focal loss",
+      "epsilon-insensitive loss",
+      "minimum class confusion loss",
+      "kl divergence optimization",
+      "compact variation loss"
+    ],
+    "topic_ids": [
+      66
+    ]
+  },
+  {
+    "l2_name": "Machine Learning Classification",
+    "definition": "The application of machine learning algorithms to categorize data into predefined classes or labels.",
+    "aliases": [
+      "ML classification",
+      "classification machine learning",
+      "machine learning classifier",
+      "learning classification",
+      "classification algorithm",
+      "supervised classification"
+    ],
+    "topic_ids": [
+      83
+    ]
+  },
+  {
+    "l2_name": "Magnetic Resonance Imaging",
+    "definition": "A non-invasive medical imaging technique that uses strong magnetic fields and radio waves to generate detailed images of the body's internal structures or functional activity.",
+    "aliases": [
+      "MRI",
+      "functional magnetic resonance imaging",
+      "fMRI",
+      "structural magnetic resonance imaging",
+      "sMRI",
+      "magnetic resonance",
+      "resonance imaging"
+    ],
+    "topic_ids": [
+      128
+    ]
+  },
+  {
+    "l2_name": "Maximum Mean Discrepancy",
+    "definition": "A statistical test that quantifies the difference between two probability distributions by computing the maximum difference in expectations over a unit ball in a reproducing kernel Hilbert space.",
+    "aliases": [
+      "MMD",
+      "maximum mean discrepancy measurement",
+      "maximum mean discrepancy minimization",
+      "maximum mean discrepancy alignment",
+      "maximum mean discrepancy loss",
+      "main directional maximal difference",
+      "main directional maximal difference analysis",
+      "maximal difference",
+      "directional maximal"
+    ],
+    "topic_ids": [
+      95
+    ]
+  },
+  {
+    "l2_name": "Mediation Analysis",
+    "definition": "A statistical method used to examine the mechanism or process by which an independent variable influences a dependent variable through an intervening mediator variable.",
+    "aliases": [
+      "mediation",
+      "mediation modeling",
+      "mediated effect analysis",
+      "moderated mediation",
+      "mediation effect testing",
+      "mediation mechanism modeling",
+      "analysis of mediation",
+      "statistical mediation"
+    ],
+    "topic_ids": [
+      42
+    ]
+  },
+  {
+    "l2_name": "Microexpression Recognition and Analysis",
+    "definition": "The computational and experimental methodology for detecting, generating, synthesizing, and evaluating brief involuntary facial expressions through automated processing and recognition tests.",
+    "aliases": [
+      "microexpression recognition",
+      "microexpression analysis",
+      "automatic microexpression processing",
+      "computational microexpression analysis",
+      "microexpression generation",
+      "synthesized microexpressions",
+      "microexpression recognition test",
+      "brief expression recognition",
+      "ME recognition",
+      "ME analysis"
+    ],
+    "topic_ids": [
+      99
+    ]
+  },
+  {
+    "l2_name": "Multi-label Learning",
+    "definition": "A machine learning paradigm where each instance is associated with multiple labels simultaneously rather than a single class.",
+    "aliases": [
+      "multilabel learning",
+      "multi-label classification",
+      "multilabel classification",
+      "label-efficient learning",
+      "multi-label co-regularization",
+      "multi-label residual learning",
+      "multi-label label propagation"
+    ],
+    "topic_ids": [
+      62
+    ]
+  },
+  {
+    "l2_name": "Multi-task Learning Framework",
+    "definition": "A computational architecture designed to jointly optimize multiple related tasks by sharing representations and parameters within a unified model structure.",
+    "aliases": [
+      "multitask learning",
+      "multi-task framework",
+      "joint optimization framework",
+      "multitask transformer",
+      "shared task evaluation framework",
+      "end-to-end multi-task learning",
+      "multimodal multitask framework"
+    ],
+    "topic_ids": [
+      4
+    ]
+  },
+  {
+    "l2_name": "Multi-view LSTM Training",
+    "definition": "A method for training Long Short-Term Memory networks to process and integrate features from multiple distinct views or representations of sequential data.",
+    "aliases": [
+      "multiview lstm training",
+      "multi-view lstm",
+      "mv-lstm training",
+      "training multiview lstm",
+      "multi-view recurrent learning",
+      "gradient-friendly multiview lstm",
+      "multiview transformer lstm"
+    ],
+    "topic_ids": [
+      61
+    ]
+  },
+  {
+    "l2_name": "Multilevel Feature Extraction",
+    "definition": "A method that extracts, fuses, or restores features from multiple hierarchical levels or scales to enhance representation capability.",
+    "aliases": [
+      "multilevel feature extraction",
+      "multi-level feature extraction",
+      "multiscale feature extraction",
+      "dual-level feature extraction",
+      "higher-level feature extraction",
+      "low-to-high level feature fusion",
+      "multilevel feature fusion",
+      "feature restoration",
+      "multilevel representation"
+    ],
+    "topic_ids": [
+      41
+    ]
+  },
+  {
+    "l2_name": "Multimodal Attention",
+    "definition": "A method that employs attention mechanisms to dynamically align, fuse, and interact between features from different modalities.",
+    "aliases": [
+      "multimodal attention mechanisms",
+      "attention fusion",
+      "interactive attention",
+      "adaptive interactive attention",
+      "dual attention",
+      "multi-attention",
+      "cross-modal attention"
+    ],
+    "topic_ids": [
+      27
+    ]
+  },
+  {
+    "l2_name": "Multimodal Data Fusion",
+    "definition": "The method of integrating and processing data from multiple distinct sources or sensor modalities to create a unified representation.",
+    "aliases": [
+      "multimodal information fusion",
+      "multi-modal sensor fusion",
+      "multimodal data integration",
+      "sensor fusion",
+      "data fusion",
+      "multimodal information processing",
+      "multi-channel data fusion",
+      "multimodal metadata integration"
+    ],
+    "topic_ids": [
+      53
+    ]
+  },
+  {
+    "l2_name": "Multimodal Feature Extraction",
+    "definition": "The process of deriving and integrating representative features from multiple distinct data modalities to support downstream learning or explanation tasks.",
+    "aliases": [
+      "multi-modality feature extraction",
+      "multimodal deep feature extraction",
+      "multi-channel feature extraction",
+      "multimodal feature relevance learning",
+      "extraction multimodal",
+      "multimodal feature learning"
+    ],
+    "topic_ids": [
+      23
+    ]
+  },
+  {
+    "l2_name": "Multimodal Feature Fusion",
+    "definition": "A method that integrates complementary information from multiple data modalities by combining their feature representations to enhance model performance.",
+    "aliases": [
+      "architecture aligned fusion",
+      "bi-modality feature fusion",
+      "feature fusion",
+      "fusion multimodal",
+      "joint multimodal fusion",
+      "multi-modal feature fusion",
+      "multimodal depth integration",
+      "multimodal feature aggregation",
+      "multimodal feature fusion",
+      "multimodal feature fusion framework",
+      "multimodal feature fusion strategies",
+      "multimodal fusion",
+      "multimodal video fusion",
+      "set integration",
+      "space fusion",
+      "video fusion"
+    ],
+    "topic_ids": [
+      37,
+      88
+    ]
+  },
+  {
+    "l2_name": "Multimodal Fusion",
+    "definition": "The process of integrating information from multiple distinct data modalities to improve system performance or robustness.",
+    "aliases": [
+      "multimodal prefusion",
+      "fusion strategies",
+      "multi-cue fusion",
+      "hybrid multimodal fusion",
+      "multi-modal amalgamation",
+      "modality reconstruction",
+      "multimodal factorization"
+    ],
+    "topic_ids": [
+      48
+    ]
+  },
+  {
+    "l2_name": "Multimodal Interaction Modeling",
+    "definition": "The methodological approach of analyzing and computationally representing the dynamic interplay, fusion, and gating mechanisms between different modalities such as text, audio, and vision.",
+    "aliases": [
+      "multimodal interaction analysis",
+      "cross-modal interaction",
+      "intra-modal interaction",
+      "adaptive cross-modal gating",
+      "interaction modeling",
+      "multimodal behavior analysis",
+      "crossmodal gating"
+    ],
+    "topic_ids": [
+      15
+    ]
+  },
+  {
+    "l2_name": "Multimodal Signal Processing",
+    "definition": "The computational analysis, integration, and fusion of diverse signal types to extract intelligent insights or generate control outputs.",
+    "aliases": [
+      "signal processing",
+      "multimodal signal fusion",
+      "signal integration",
+      "intelligent signal processing",
+      "processing multimodal signals",
+      "multi-channel signal processing",
+      "social signal processing",
+      "time-series signal processing",
+      "frequency-dependent signal processing",
+      "multi-grained control signals"
+    ],
+    "topic_ids": [
+      59
+    ]
+  },
+  {
+    "l2_name": "Multiple Kernel Learning",
+    "definition": "A machine learning method that optimizes the combination of multiple kernel functions to improve performance in tasks such as classification, regression, and density estimation.",
+    "aliases": [
+      "MKL",
+      "multiple kernel learning fusion",
+      "two-layer multiple kernel learning",
+      "kernel learning",
+      "kernel optimization",
+      "multiple kernel discriminant analysis",
+      "kernel Fisher discriminant analysis"
+    ],
+    "topic_ids": [
+      34
+    ]
+  },
+  {
+    "l2_name": "Natural Language Processing Techniques",
+    "definition": "Methods and algorithms used to enable computers to understand, interpret, and generate human language within the field of artificial intelligence.",
+    "aliases": [
+      "NLP techniques",
+      "natural language processing methods",
+      "language processing techniques",
+      "AI language techniques",
+      "natural language methods",
+      "computational linguistics techniques"
+    ],
+    "topic_ids": [
+      134
+    ]
+  },
+  {
+    "l2_name": "Network Architecture",
+    "definition": "The structural design and organization of layers, nodes, and connections within a neural network that determines how data is processed and transformed.",
+    "aliases": [
+      "neural network architecture",
+      "network architectures",
+      "architecture design",
+      "model architecture",
+      "deep learning architecture",
+      "NN architecture"
+    ],
+    "topic_ids": [
+      114
+    ]
+  },
+  {
+    "l2_name": "Neural Architecture Search",
+    "definition": "A method for automatically designing optimal neural network architectures using search strategies, often applied to specialized structures like siamese or two-stream networks.",
+    "aliases": [
+      "NAS",
+      "neural architecture search strategy",
+      "architecture search",
+      "search neural",
+      "two-stream neural architecture search",
+      "siamese neural architecture search"
+    ],
+    "topic_ids": [
+      64
+    ]
+  },
+  {
+    "l2_name": "Online Gesture Recognition",
+    "definition": "The real-time detection, classification, and sequence integration of micro-gestures and gaze patterns using automated algorithms.",
+    "aliases": [
+      "online gesture",
+      "microgesture recognition",
+      "automatic gesture classification",
+      "real-time gesture analysis",
+      "gaze-based gesture recognition",
+      "micro-gesture sequence integration"
+    ],
+    "topic_ids": [
+      60
+    ]
+  },
+  {
+    "l2_name": "Open-Vocabulary Emotion Analysis",
+    "definition": "A methodological approach for detecting, recognizing, extracting, or generating emotions using flexible, non-fixed label sets rather than predefined categorical taxonomies.",
+    "aliases": [
+      "open-vocabulary emotion recognition",
+      "open-vocabulary emotion extraction",
+      "open-vocabulary emotion modeling",
+      "open-vocabulary emotion generation",
+      "open-vocabulary annotation",
+      "open-vocabulary multimodal recognition",
+      "modeling open-vocabulary emotion",
+      "extraction open-vocabulary emotion"
+    ],
+    "topic_ids": [
+      117
+    ]
+  },
+  {
+    "l2_name": "Optical Flow",
+    "definition": "A computer vision technique that estimates the motion of objects between consecutive video frames by analyzing pixel intensity changes.",
+    "aliases": [
+      "opticalflowdriven",
+      "flow feature",
+      "mean optical flow",
+      "directional mean optical flow",
+      "optical flow vector integration",
+      "optical-flow-driven frame alignment",
+      "optical flow sequence input",
+      "optical flow disentanglement",
+      "optical flow feature extraction",
+      "rgb-d flow algorithm",
+      "optical flow based representation"
+    ],
+    "topic_ids": [
+      87
+    ]
+  },
+  {
+    "l2_name": "Pattern Recognition",
+    "definition": "The automated identification of patterns and regularities in data through the application of algorithms and statistical techniques.",
+    "aliases": [
+      "pattern recognition techniques",
+      "pattern recognition algorithms",
+      "pattern recognition systems",
+      "recognition techniques",
+      "pattern analysis",
+      "sensitivity analysis techniques",
+      "analysis of variance techniques"
+    ],
+    "topic_ids": [
+      119
+    ]
+  },
+  {
+    "l2_name": "Physiological Signal Processing",
+    "definition": "The acquisition, creation of databases, and computational analysis of biological signals using both contact and non-contact methods.",
+    "aliases": [
+      "physiological signal analysis",
+      "bio-signal processing",
+      "non-contact physiological sensing",
+      "physiological signal acquisition",
+      "biological signal recording",
+      "physiological feature extraction"
+    ],
+    "topic_ids": [
+      67
+    ]
+  },
+  {
+    "l2_name": "Principle-Based Modeling",
+    "definition": "A methodology that constructs artificial or artistic systems by adhering to foundational theoretical principles rather than purely data-driven patterns.",
+    "aliases": [
+      "principle based modeling",
+      "artistic principle based modeling",
+      "modeling based on principles",
+      "principle-driven modeling",
+      "foundational principle modeling"
+    ],
+    "topic_ids": [
+      70
+    ]
+  },
+  {
+    "l2_name": "Prompting",
+    "definition": "A method involving the design and optimization of input instructions to guide large language models in generating desired outputs for tasks such as dialogue modeling and reasoning.",
+    "aliases": [
+      "prompt engineering",
+      "foundation model prompting",
+      "adaptive prompting",
+      "few-shot prompting",
+      "prompt masking",
+      "LLM-driven prompting",
+      "instruction tuning"
+    ],
+    "topic_ids": [
+      24
+    ]
+  },
+  {
+    "l2_name": "Psychometric Scaling",
+    "definition": "The methodological process of developing, validating, and applying standardized instruments to measure psychological constructs.",
+    "aliases": [
+      "psychometric assessment",
+      "scale measurement",
+      "psychological scaling",
+      "standardized psychometric testing",
+      "scale development",
+      "psychometric evaluation"
+    ],
+    "topic_ids": [
+      38
+    ]
+  },
+  {
+    "l2_name": "Recurrent Neural Networks",
+    "definition": "A class of artificial neural networks designed to recognize patterns in sequences of data by utilizing internal memory states and recurrent connections.",
+    "aliases": [
+      "RNN",
+      "recurrent neural network",
+      "gated recurrent unit",
+      "GRU",
+      "LSTM",
+      "long short-term memory",
+      "bidirectional recurrent neural networks",
+      "multidirectional recurrent neural networks"
+    ],
+    "topic_ids": [
+      11
+    ]
+  },
+  {
+    "l2_name": "Reinforcement Learning",
+    "definition": "A machine learning paradigm where an agent learns to make decisions by interacting with an environment to maximize cumulative rewards through policy optimization.",
+    "aliases": [
+      "RL",
+      "reinforcement learning framework",
+      "policy optimization",
+      "reinforcement learning optimization",
+      "on-policy learning",
+      "Q-learning",
+      "proximal policy optimization",
+      "PPO",
+      "policy gradient methods"
+    ],
+    "topic_ids": [
+      115
+    ]
+  },
+  {
+    "l2_name": "Response Time Measurement",
+    "definition": "The methodological quantification of the temporal interval between a stimulus presentation and the corresponding behavioral or physiological response.",
+    "aliases": [
+      "reaction time measurement",
+      "response measurement",
+      "time measurement",
+      "sign-based measurement",
+      "sensor-based measurement",
+      "real-time response measurement",
+      "behavioral response measurement",
+      "pupillary response analysis",
+      "analysis of time processing stages"
+    ],
+    "topic_ids": [
+      55
+    ]
+  },
+  {
+    "l2_name": "Resting-state fMRI",
+    "definition": "A neuroimaging method that measures spontaneous brain activity and functional connectivity while the subject is not performing an explicit task.",
+    "aliases": [
+      "resting state fmri",
+      "rs-fmri",
+      "resting-state functional magnetic resonance imaging",
+      "resting-state functional mri",
+      "resting state functional connectivity",
+      "resting-state brain activity measurement",
+      "functional mri resting state"
+    ],
+    "topic_ids": [
+      85
+    ]
+  },
+  {
+    "l2_name": "Self-Attention GRU",
+    "definition": "A hybrid neural network architecture that integrates self-attention mechanisms with Gated Recurrent Units to enhance sequence modeling by dynamically weighting input features.",
+    "aliases": [
+      "self-attention based GRU",
+      "GRU with self-attention",
+      "self-attention mechanism application in GRU",
+      "bi-directional GRU with attention",
+      "self-attention GRU mechanism"
+    ],
+    "topic_ids": [
+      108
+    ]
+  },
+  {
+    "l2_name": "Self-Supervised Pretraining",
+    "definition": "A method that learns data representations by solving pretext tasks on unlabeled data before fine-tuning for downstream applications.",
+    "aliases": [
+      "self-supervised learning",
+      "SSL",
+      "self-supervised representation learning",
+      "pretraining",
+      "self-supervised pre-training",
+      "unlabeled pretraining"
+    ],
+    "topic_ids": [
+      96
+    ]
+  },
+  {
+    "l2_name": "Semantic Analysis",
+    "definition": "A method for extracting and interpreting meaning from text by modeling semantic features, contextual relationships, and lexical structures such as adjective-noun pairs.",
+    "aliases": [
+      "semantic analysis",
+      "contextual semantic analysis",
+      "semantic feature extraction",
+      "interpretable semantic analysis",
+      "lexical semantic clustering",
+      "semantic differential method",
+      "semantic evaluation",
+      "semantic modeling"
+    ],
+    "topic_ids": [
+      56
+    ]
+  },
+  {
+    "l2_name": "Semi-supervised Learning",
+    "definition": "A machine learning paradigm that leverages both labeled and unlabeled data to improve model performance and generalization.",
+    "aliases": [
+      "semi-supervised learning",
+      "semisupervised learning",
+      "SSL",
+      "semi-supervised machine learning",
+      "weakly supervised deep learning",
+      "co-training",
+      "semi-supervised ladder networks",
+      "semisupervised transfer learning"
+    ],
+    "topic_ids": [
+      18
+    ]
+  },
+  {
+    "l2_name": "Sentiment Analysis",
+    "definition": "The computational method of identifying, extracting, and classifying subjective opinions, emotions, and attitudes from text data, particularly within social media contexts.",
+    "aliases": [
+      "Opinion Mining",
+      "Sentiment Classification",
+      "Emotion Analysis",
+      "Polarity Detection",
+      "Sentiment Extraction",
+      "Affect Analysis"
+    ],
+    "topic_ids": [
+      58
+    ]
+  },
+  {
+    "l2_name": "Shared Sparse Learning",
+    "definition": "A machine learning methodology that simultaneously enforces sparsity constraints and shares structural information or parameters across multiple related tasks or data segments.",
+    "aliases": [
+      "shared sparse learning optimization",
+      "double sparse learning model",
+      "bilateral sparse learning",
+      "sparse learning with shared structure",
+      "shared sparse regression",
+      "incomplete sparse least square regression",
+      "dynamic segmented sparse learning"
+    ],
+    "topic_ids": [
+      97
+    ]
+  },
+  {
+    "l2_name": "Smoothing Regularization",
+    "definition": "A method that applies smoothing constraints, such as temporal or spatial continuity and label distribution softening, to regularize models and reduce noise or overfitting.",
+    "aliases": [
+      "smoothing",
+      "temporal smoothing",
+      "composite temporal smoothing",
+      "label smoothing",
+      "smoothing regularization",
+      "regularization laplace",
+      "laplace smoothing",
+      "spatial smoothness regularization",
+      "post-smoothing strategy",
+      "multi-scale spatial regularization"
+    ],
+    "topic_ids": [
+      132
+    ]
+  },
+  {
+    "l2_name": "Sparse Approximation",
+    "definition": "A methodological approach that seeks to represent data or signals using a minimal number of non-zero coefficients from an overcomplete dictionary or basis set.",
+    "aliases": [
+      "sparse representation",
+      "sparse coding",
+      "sparse approximation techniques",
+      "optimization sparse",
+      "representation sparse",
+      "sparse feature subset generation",
+      "sparse projection regularization"
+    ],
+    "topic_ids": [
+      54
+    ]
+  },
+  {
+    "l2_name": "Sparsity-Aware Deep Learning",
+    "definition": "A methodological approach in deep learning that explicitly incorporates, exploits, or enforces sparsity constraints within network architectures or across data modalities to improve efficiency and performance.",
+    "aliases": [
+      "sparsity-aware deep network",
+      "sparsity-aware learning",
+      "deep network sparsity",
+      "intermodal sparsity",
+      "intramodal sparsity",
+      "sparsity-aware modeling"
+    ],
+    "topic_ids": [
+      136
+    ]
+  },
+  {
+    "l2_name": "Spatiotemporal Descriptors",
+    "definition": "Methods that extract and encode local features from video data by jointly analyzing spatial appearance and temporal motion information within spatiotemporal volumes.",
+    "aliases": [
+      "spatiotemporal descriptor",
+      "local spatiotemporal descriptors",
+      "spatiotemporal operators",
+      "local spatiotemporal operators",
+      "cuboids spatio-temporal descriptor",
+      "spatiotemporal feature descriptors",
+      "descriptors spatiotemporal"
+    ],
+    "topic_ids": [
+      135
+    ]
+  },
+  {
+    "l2_name": "Spatiotemporal Local Binary Patterns",
+    "definition": "A texture descriptor method that extends local binary patterns to three dimensions to capture spatiotemporal features in video data.",
+    "aliases": [
+      "STLBP",
+      "spatiotemporal local binary pattern",
+      "3D local binary patterns",
+      "volume local binary patterns",
+      "spatiotemporal local texture descriptors",
+      "spatiotemporal local monogenic binary pattern",
+      "spatiotemporal completed local quantized patterns"
+    ],
+    "topic_ids": [
+      63
+    ]
+  },
+  {
+    "l2_name": "Speech Feature Extraction and Synthesis",
+    "definition": "This method involves the computational analysis, modeling, and generation of acoustic, prosodic, and audiovisual characteristics of human speech.",
+    "aliases": [
+      "acoustic feature extraction",
+      "prosody modeling",
+      "speech synthesis",
+      "audiovisual speech analysis",
+      "prosodic feature extraction",
+      "low-level speech feature extraction",
+      "emotional speech synthesis",
+      "audio-visual modality fusion",
+      "cepstral feature extraction",
+      "prosody transformation"
+    ],
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "l2_name": "Statistical Correlation Analysis",
+    "definition": "A methodological approach for quantifying the strength and direction of relationships between variables using statistical techniques such as correlation coefficients, reliability estimation, and confusion matrices.",
+    "aliases": [
+      "correlational analysis",
+      "statistical correlation",
+      "correlation analysis",
+      "statistical reliability analysis",
+      "confusion matrix analysis",
+      "contingency relationship analysis",
+      "statistical anomaly detection",
+      "correlation testing"
+    ],
+    "topic_ids": [
+      44
+    ]
+  },
+  {
+    "l2_name": "Subspace Transfer Learning",
+    "definition": "A method that learns a shared or aligned low-dimensional subspace to facilitate knowledge transfer between domains, often incorporating transductive inference and topological constraints.",
+    "aliases": [
+      "Transfer Subspace Learning",
+      "Transductive Transfer Subspace Learning",
+      "Subspace Topology Learning",
+      "Grassmannian Manifold Transfer",
+      "Selective Transfer Subspace",
+      "Transductive Subspace Inference",
+      "Feature Subspace Projection for Transfer",
+      "Region Selective Transfer"
+    ],
+    "topic_ids": [
+      12
+    ]
+  },
+  {
+    "l2_name": "Support Vector Machine",
+    "definition": "A supervised learning model that analyzes data for classification and regression by constructing hyperplanes in a high-dimensional space.",
+    "aliases": [
+      "Kernel Support Vector Machine",
+      "SVM",
+      "SVR",
+      "Support Vector Machines",
+      "Support Vector Regression",
+      "Vector Machine",
+      "classification support",
+      "machine classification",
+      "support vector machine classification",
+      "support vector machine classifier",
+      "voting-based classification"
+    ],
+    "topic_ids": [
+      21,
+      28
+    ]
+  },
+  {
+    "l2_name": "Survey Design",
+    "definition": "The methodological framework for planning and structuring surveys, including questionnaire development, sampling strategies, and data collection procedures.",
+    "aliases": [
+      "survey methodology",
+      "questionnaire design",
+      "cross-sectional survey",
+      "study design",
+      "survey research design",
+      "questionnaire survey",
+      "design of surveys",
+      "survey instrument design"
+    ],
+    "topic_ids": [
+      82
+    ]
+  },
+  {
+    "l2_name": "Syntactic Constraint Modeling",
+    "definition": "A method that integrates syntactic structures and domain-specific constraints into local models to guide representation learning or pattern construction.",
+    "aliases": [
+      "syntactic constraint integration",
+      "local constraint modeling",
+      "syntactic dependency tree modeling",
+      "constraint local model",
+      "syntactic pattern construction",
+      "nodewise constraint modeling",
+      "domain constraint integration"
+    ],
+    "topic_ids": [
+      73
+    ]
+  },
+  {
+    "l2_name": "Systematic Review and Meta-Analysis",
+    "definition": "A rigorous research method that systematically identifies, selects, appraises, and synthesizes all relevant empirical evidence to answer a specific research question, often incorporating statistical meta-analysis.",
+    "aliases": [
+      "systematic literature review",
+      "meta-analysis",
+      "systematic review",
+      "literature synthesis",
+      "quantitative meta-analysis",
+      "systematic literature search",
+      "review synthesis",
+      "comprehensive literature survey",
+      "meta-analysis synthesis",
+      "systematic review protocol"
+    ],
+    "topic_ids": [
+      75
+    ]
+  },
+  {
+    "l2_name": "Target-Specific Model Adaptation",
+    "definition": "A method that adapts a static source model to a specific target domain or sample using techniques such as adapter modules, expert mixtures, or sample regeneration.",
+    "aliases": [
+      "target sample adaptation",
+      "static-to-dynamic adaptation",
+      "mixture of adapter experts",
+      "target sample re-generation",
+      "pretrained model adaptation",
+      "adapter-based adaptation",
+      "sample-specific model tuning"
+    ],
+    "topic_ids": [
+      105
+    ]
+  },
+  {
+    "l2_name": "Temporal Modeling",
+    "definition": "Methods designed to capture, extract, and fuse temporal or spatiotemporal dependencies in sequential data using techniques such as attention mechanisms, recurrent networks, pooling, and interpolation.",
+    "aliases": [
+      "temporal analysis",
+      "spatiotemporal modeling",
+      "sequence modeling",
+      "temporal feature extraction",
+      "temporal fusion",
+      "implicit sequence learning",
+      "temporal interpolation",
+      "spatiotemporal feature learning"
+    ],
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "l2_name": "Transfer Learning",
+    "definition": "A machine learning method where a model developed for a task is reused as the starting point for a model on a second task.",
+    "aliases": [
+      "transfer learning approach",
+      "knowledge transfer",
+      "learning transfer",
+      "feature transfer learning",
+      "transfer of learning",
+      "application transfer",
+      "transfer learning strategy",
+      "transfer learning techniques"
+    ],
+    "topic_ids": [
+      35
+    ]
+  },
+  {
+    "l2_name": "Transformer Architecture",
+    "definition": "A neural network design based on the self-attention mechanism, widely adapted for vision and encoding tasks.",
+    "aliases": [
+      "Vision Transformer",
+      "ViT",
+      "Transformer Encoder",
+      "Transformer-based Architecture",
+      "Encoder-only Transformer",
+      "Image Transformer"
+    ],
+    "topic_ids": [
+      17
+    ]
+  },
+  {
+    "l2_name": "Two-Stage Training Framework",
+    "definition": "A methodological approach that divides the model training or classification process into two distinct sequential phases to improve performance or efficiency.",
+    "aliases": [
+      "two-stage classification method",
+      "two-stage classification approach",
+      "two-stage sampling framework",
+      "two-stage training process",
+      "two-stage framework",
+      "image-based classification techniques",
+      "image-based classification approaches",
+      "multi-stage neural network",
+      "two-stage fusion decomposition",
+      "two-stage training framework",
+      "twostage training",
+      "framework twostage",
+      "training framework",
+      "twostage classification",
+      "imagebased classification"
+    ],
+    "topic_ids": [
+      118
+    ]
+  },
+  {
+    "l2_name": "Unsupervised Representation Learning",
+    "definition": "A machine learning method that automatically discovers meaningful patterns, latent structures, or feature representations from unlabeled data without explicit supervision.",
+    "aliases": [
+      "unsupervised learning",
+      "unsupervised feature learning",
+      "unsupervised latent representation learning",
+      "deep unsupervised representation learning",
+      "representation learning",
+      "latent representation learning",
+      "unsupervised emotion learning",
+      "unsupervised image reconstruction"
+    ],
+    "topic_ids": [
+      102
+    ]
+  },
+  {
+    "l2_name": "Voxel-Based Morphometry",
+    "definition": "A neuroimaging analysis technique that investigates focal differences in brain anatomy using voxel-wise statistical comparison of local concentrations of gray or white matter.",
+    "aliases": [
+      "VBM",
+      "voxelbased morphometry",
+      "voxel-based morphometry analysis",
+      "voxelwise morphometry",
+      "gray matter volumetry",
+      "regional gray matter volume measurement",
+      "matter volume analysis"
+    ],
+    "topic_ids": [
+      50
+    ]
+  }
+]

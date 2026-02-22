@@ -1,0 +1,339 @@
+[
+  {
+    "second_cluster_id": 0,
+    "cluster_fingerprint": "ef64839809017e85a2819833183b89c76aea2e8b8c311a1472f858eb4dce5a66",
+    "source": "api",
+    "l1_name": "Probabilistic Modeling and Statistical Metrics",
+    "definition": "This category encompasses methods that utilize probabilistic distributions, generative processes, and statistical distance measures to model, synthesize, or compare affective data.",
+    "aliases": [
+      "Statistical and Probabilistic Methods",
+      "Distributional Modeling and Distance Metrics"
+    ],
+    "l2_names": [
+      "Conditional Random Fields",
+      "Diffusion Models",
+      "Discriminative Modeling",
+      "Distance and Similarity Measurement",
+      "Gaussian Mixture Model",
+      "Maximum Mean Discrepancy"
+    ]
+  },
+  {
+    "second_cluster_id": 1,
+    "cluster_fingerprint": "6b8ef4abc5dee71e21bff395b7bc133ede19ef55f1ca193e91aa7f278bb72982",
+    "source": "api",
+    "l1_name": "Spatiotemporal Texture Analysis",
+    "definition": "A methodological approach that extracts and encodes local structural patterns from video sequences by jointly analyzing spatial appearance and temporal motion variations.",
+    "aliases": [
+      "Video Texture Descriptors",
+      "Dynamic Texture Feature Extraction"
+    ],
+    "l2_names": [
+      "Dynamic Texture Analysis",
+      "LBP-TOP Feature Extraction",
+      "Local Binary Patterns",
+      "Online Gesture Recognition",
+      "Pattern Recognition",
+      "Spatiotemporal Descriptors",
+      "Spatiotemporal Local Binary Patterns"
+    ]
+  },
+  {
+    "second_cluster_id": 2,
+    "cluster_fingerprint": "fd360d9ce78ed0b18afef6b3c0521dd1b87240d1631ca4a949544ca8bbc70054",
+    "source": "api",
+    "l1_name": "Statistical and Clinical Methodologies",
+    "definition": "This category encompasses quantitative statistical techniques, comparative frameworks, and clinical or cognitive analysis methods used to evaluate affective phenomena.",
+    "aliases": [
+      "Quantitative and Clinical Methods",
+      "Statistical and Psychological Analysis"
+    ],
+    "l2_names": [
+      "Cognitive Analysis",
+      "Comparative Analysis",
+      "Computational and Clinical Psychology Methods",
+      "Linear Regression Modeling",
+      "Mediation Analysis",
+      "Statistical Correlation Analysis",
+      "Systematic Review and Meta-Analysis"
+    ]
+  },
+  {
+    "second_cluster_id": 3,
+    "cluster_fingerprint": "5da751a101ceaa5d3415a02b47d62f5389e2802a30b2da4046cea8fb06a593bd",
+    "source": "api",
+    "l1_name": "Affective Signal Processing",
+    "definition": "Methodological approaches focused on the extraction, selection, coding, and semantic interpretation of emotional features from multimodal data sources such as facial expressions, speech, and text.",
+    "aliases": [
+      "Emotional Feature Engineering",
+      "Affective Data Analysis",
+      "Multimodal Emotion Processing"
+    ],
+    "l2_names": [
+      "Affective Computing Frameworks",
+      "Dimensional Emotion Modeling",
+      "Emotion Feature Extraction",
+      "Emotion Induction",
+      "Emotion Psychology Knowledge Integration",
+      "Facial Action Coding",
+      "Facial Expression Analysis",
+      "Facial Prior Integration",
+      "Feature Extraction",
+      "Feature Selection",
+      "Microexpression Recognition and Analysis",
+      "Open-Vocabulary Emotion Analysis",
+      "Semantic Analysis",
+      "Sentiment Analysis",
+      "Speech Feature Extraction and Synthesis"
+    ]
+  },
+  {
+    "second_cluster_id": 4,
+    "cluster_fingerprint": "dc65878d0995ebb9cde29d2c291074ca19bf0de2621b316564cd425a0c276540",
+    "source": "api",
+    "l1_name": "Sparsity-Based Learning",
+    "definition": "A methodological approach that leverages sparsity constraints, sparse representations, or shared sparse structures to regularize models and enhance feature selection in affective computing tasks.",
+    "aliases": [
+      "Sparse Modeling",
+      "Sparsity-Regularized Learning"
+    ],
+    "l2_names": [
+      "Shared Sparse Learning",
+      "Smoothing Regularization",
+      "Sparse Approximation",
+      "Sparsity-Aware Deep Learning"
+    ]
+  },
+  {
+    "second_cluster_id": 5,
+    "cluster_fingerprint": "ae2087bf969369c5eb994d1f7f83ee561fadd372f6389e59a836a3756d1c08aa",
+    "source": "api",
+    "l1_name": "Research Methodology",
+    "definition": "The systematic framework encompassing experimental design, data collection strategies, annotation protocols, and evaluation standards used to conduct empirical studies in affective computing.",
+    "aliases": [
+      "Experimental Methodology",
+      "Study Design",
+      "Methodological Framework"
+    ],
+    "l2_names": [
+      "Annotation Methodology",
+      "Benchmarking and Evaluation",
+      "Data Collection",
+      "Dataset Construction",
+      "Experimental Design",
+      "Experimental Paradigm",
+      "Psychometric Scaling",
+      "Survey Design"
+    ]
+  },
+  {
+    "second_cluster_id": 6,
+    "cluster_fingerprint": "76564bf8eea21887a12b0ff90d629b0dbd039ff83eff9281316cf8e21492fc65",
+    "source": "api",
+    "l1_name": "Neurophysiological Signal Analysis",
+    "definition": "The computational processing and statistical interpretation of brain activity and physiological signals to extract features related to affective states.",
+    "aliases": [
+      "Neural Signal Processing",
+      "Psychophysiological Measurement",
+      "Brain Signal Analysis"
+    ],
+    "l2_names": [
+      "EEG Signal Analysis",
+      "Event-Related Potential Analysis",
+      "Functional Connectivity Analysis",
+      "Physiological Signal Processing",
+      "Response Time Measurement",
+      "Resting-state fMRI"
+    ]
+  },
+  {
+    "second_cluster_id": 7,
+    "cluster_fingerprint": "6dee74c32a453404d21a586b4706705735b8a6ff2cd6d9aa35b6ecf4ae5cd1c3",
+    "source": "api",
+    "l1_name": "Evolutionary Computation",
+    "definition": "A subdomain of affective computing that employs population-based metaheuristic optimization algorithms inspired by biological evolution to solve complex modeling and parameter tuning problems.",
+    "aliases": [
+      "Evolutionary Algorithms",
+      "Bio-inspired Optimization"
+    ],
+    "l2_names": [
+      "Evolutionary Algorithm"
+    ]
+  },
+  {
+    "second_cluster_id": 8,
+    "cluster_fingerprint": "5d2839f905dd3df57d1f66301a70ba1cd6058a62840477430b58cd2f0be88b3f",
+    "source": "api",
+    "l1_name": "Physiological Intervention and Imaging",
+    "definition": "Methods utilizing medical imaging technologies or neuromodulation techniques to observe, measure, or directly alter physiological states relevant to affective processes.",
+    "aliases": [
+      "Neuroimaging and Neuromodulation",
+      "Biomedical Sensing and Stimulation"
+    ],
+    "l2_names": [
+      "Immersive Technology and Neuromodulation Therapy",
+      "Magnetic Resonance Imaging"
+    ]
+  },
+  {
+    "second_cluster_id": 9,
+    "cluster_fingerprint": "0ee0009205553de47881a578b18a0d8336c4f938175c17ae3896c8a739c95210",
+    "source": "api",
+    "l1_name": "Deep Learning Architectures",
+    "definition": "The design, configuration, and application of neural network structures and training methodologies to learn hierarchical representations from affective data.",
+    "aliases": [
+      "Neural Network Models",
+      "Deep Model Structures"
+    ],
+    "l2_names": [
+      "3D Convolutional Networks",
+      "Attention Mechanism",
+      "Autoencoder",
+      "Auxiliary Supervision",
+      "Bayesian Graph Inference",
+      "Broad Learning System",
+      "Capsule Network",
+      "Causal Graph Neural Networks",
+      "Context Interaction",
+      "Contrastive Learning",
+      "Convolutional Neural Networks",
+      "Cross-Modal Alignment",
+      "Data Augmentation",
+      "Decision Level Fusion",
+      "Deep Feature Extraction",
+      "Deep Learning",
+      "Deep Learning Architecture",
+      "Deep Neural Networks",
+      "Disentanglement",
+      "Dynamic Graph Convolutional Networks",
+      "End-to-End Deep Learning Framework",
+      "End-to-End Learning",
+      "Enhanced Lipschitz Embedding",
+      "Feature Fusion Strategy",
+      "Feature Node Mapping",
+      "Graph Attention Networks",
+      "Graph Convolutional Networks",
+      "Hierarchical Architecture",
+      "Hybrid Deep Learning",
+      "Hypergraph Learning",
+      "Information Integration",
+      "Joint Learning",
+      "Knowledge Distillation",
+      "Label Distribution Learning",
+      "Long Short-Term Memory",
+      "Machine Learning Classification",
+      "Multi-label Learning",
+      "Multi-task Learning Framework",
+      "Multi-view LSTM Training",
+      "Multilevel Feature Extraction",
+      "Multimodal Attention",
+      "Multimodal Data Fusion",
+      "Multimodal Feature Extraction",
+      "Multimodal Feature Fusion",
+      "Multimodal Fusion",
+      "Multimodal Interaction Modeling",
+      "Multimodal Signal Processing",
+      "Multiple Kernel Learning",
+      "Network Architecture",
+      "Neural Architecture Search",
+      "Recurrent Neural Networks",
+      "Reinforcement Learning",
+      "Self-Attention GRU",
+      "Self-Supervised Pretraining",
+      "Semi-supervised Learning",
+      "Subspace Transfer Learning",
+      "Support Vector Machine",
+      "Syntactic Constraint Modeling",
+      "Temporal Modeling",
+      "Transfer Learning",
+      "Transformer Architecture",
+      "Two-Stage Training Framework",
+      "Unsupervised Representation Learning"
+    ]
+  },
+  {
+    "second_cluster_id": 10,
+    "cluster_fingerprint": "05c61519d89b1ade2cba690f085c4bb8789535448f8da1f15e1c0c92daf7e9da",
+    "source": "api",
+    "l1_name": "Visual Signal Processing",
+    "definition": "The computational analysis of visual data streams, such as images and videos, to extract motion patterns and spatial features relevant to affective states.",
+    "aliases": [
+      "Visual Feature Extraction",
+      "Image and Video Analysis"
+    ],
+    "l2_names": [
+      "Computer Vision",
+      "Optical Flow"
+    ]
+  },
+  {
+    "second_cluster_id": 11,
+    "cluster_fingerprint": "b034bae29bc82049d0ecc8829d00270d6eb204b8f93c695ac119e64234b9a1fc",
+    "source": "api",
+    "l1_name": "Fuzzy Logic",
+    "definition": "A many-valued logic approach used in affective computing to model uncertainty and handle approximate reasoning in emotional data and control systems.",
+    "aliases": [
+      "Fuzzy Set Theory",
+      "Approximate Reasoning"
+    ],
+    "l2_names": [
+      "Fuzzy Logic"
+    ]
+  },
+  {
+    "second_cluster_id": 12,
+    "cluster_fingerprint": "36c2ecbca7466d8935cb81d0f3218d187a0aaacaff74d95a2228f030d2c19306",
+    "source": "api",
+    "l1_name": "Language-Based Modeling",
+    "definition": "The application of natural language processing techniques, large language models, and prompt engineering to represent, infer, or generate affective states.",
+    "aliases": [
+      "Text-Centric Affective Methods",
+      "Linguistic Affective Modeling"
+    ],
+    "l2_names": [
+      "Large Language Models",
+      "Natural Language Processing Techniques",
+      "Principle-Based Modeling",
+      "Prompting"
+    ]
+  },
+  {
+    "second_cluster_id": 13,
+    "cluster_fingerprint": "538a82a55c673d0cb1ccecc9a600d96b262e4c2b6345facd674ef456f8e16e22",
+    "source": "api",
+    "l1_name": "Neuroimaging Analysis",
+    "definition": "The application of computational techniques to analyze structural and functional brain imaging data for understanding the neural correlates of affect.",
+    "aliases": [
+      "Brain Imaging Analysis",
+      "Neuroimage Processing"
+    ],
+    "l2_names": [
+      "Voxel-Based Morphometry"
+    ]
+  },
+  {
+    "second_cluster_id": 14,
+    "cluster_fingerprint": "6af6a6b0d2fe38cf953b4b805a41f232f64f9075735b58dd91e3ff3c75dbe90f",
+    "source": "api",
+    "l1_name": "Model Adaptation and Optimization",
+    "definition": "This category encompasses methods that refine, adjust, or transfer machine learning models through techniques such as domain adaptation, adversarial training, fine-tuning, and loss function optimization to improve performance across varying data distributions or tasks.",
+    "aliases": [
+      "Adaptive Learning Strategies",
+      "Model Transfer and Refinement",
+      "Domain Adaptation and Fine-tuning"
+    ],
+    "l2_names": [
+      "AdaBoost",
+      "Adaptive Weighting",
+      "Adversarial Learning",
+      "Cycle-Consistent Adversarial Networks",
+      "Domain Adaptation",
+      "Domain Adversarial Training",
+      "Fine-tuning",
+      "Generative Adversarial Networks",
+      "Joint Distribution Adaptation",
+      "Loss Function Optimization",
+      "Target-Specific Model Adaptation"
+    ]
+  }
+]
