@@ -111,7 +111,7 @@ node scripts/researcher-pipeline/run.mjs --full-refresh
 - `data/researchers/cache/<name>__<scholarUserId>__<openalexAuthorId>/paper-analysis-cache.json`: per-researcher AI cache
   - cache entries include `paper_id`, `title`, `researcher_name`, and `researcher_openalex_author_id` for manual checks
 
-### Taxonomy pipeline (problem/method -> L2/L1)
+### Taxonomy pipeline (problem/method -> L2 + manual L1)
 
 This repo also supports offline taxonomy analysis using paper-level
 `problem_directions` and `method_directions`:
@@ -119,8 +119,8 @@ This repo also supports offline taxonomy analysis using paper-level
 1. direction-only text -> Qwen embedding (`text-embedding-v4` by default)
 2. BERTopic clustering on embeddings
 3. Qwen labels each cluster as L2
-4. Qwen directly outputs L1 categories from all L2 items
-5. Local embedding-based mapping assigns each L2 to one L1
+4. You manually maintain L1 categories in `l1.manual.json`
+5. Local embedding-based mapping assigns each L2 to one manual L1
 
 Install Python deps:
 
@@ -140,11 +140,12 @@ Defaults:
 
 - input: `data-repo/data/researchers`
 - output: `data-repo/data/taxonomy`
+- manual L1 root: `data-repo/data/taxonomy` (`{axis}/l1.manual.json`)
 - axes: `problem` + `method` (when `--axis both`)
 - chat model: `qwen3.5-plus`
 - embedding batch size: `10`
 - embedding concurrency: `4` (`--embedding-concurrency`)
-- chat concurrency: `4` (`--chat-concurrency`, for L2 labeling)
+- chat concurrency: `4` (`--chat-concurrency`, for L2 labeling only)
 - random seed: `42` (`--random-seed`, for deterministic first-stage clustering)
 
 Thinking mode for taxonomy labeling:
@@ -163,8 +164,9 @@ Main outputs:
 - `data-repo/data/taxonomy/problem/taxonomy.json`
 - `data-repo/data/taxonomy/method/taxonomy.json`
 - `data-repo/data/taxonomy/taxonomy.summary.json`
-- `data-repo/data/taxonomy/<axis>/l1.input.items.json` (unique L2 items for direct L1 grouping)
-- `data-repo/data/taxonomy/<axis>/l1.direct.grouping.json` (LLM raw and normalized L1 output)
+- `data-repo/data/taxonomy/<axis>/l1.manual.json` (manual L1 categories, source of truth)
+- `data-repo/data/taxonomy/<axis>/l1.input.items.json` (unique L2 items to be mapped)
+- `data-repo/data/taxonomy/<axis>/l1.direct.grouping.json` (manual L1 + normalized mapping payload)
 - `data-repo/data/taxonomy/<axis>/l1.direct.assignments.json` (local embedding-based L2 -> L1 mapping)
 
 Resume/incremental cache files (per axis):
@@ -172,7 +174,33 @@ Resume/incremental cache files (per axis):
 - `cache.embedding.json`: record-level embedding cache (resume from interruption; only embed misses)
 - `cache.bertopic.json`: first-stage BERTopic assignments/candidates cache (reused when fingerprint matches)
 - `cache.l2.json`: topic-label cache (reuse prior L2 labels by topic fingerprint)
-- `cache.l1.json`: L1 direct-grouping cache (reuse prior L1 raw output by fingerprint)
+
+Minimal `l1.manual.json` structure:
+
+```json
+{
+  "version": 1,
+  "axis": "method",
+  "l1_categories": [
+    {
+      "name": "Multimodal Representation Learning",
+      "definition": "Methods that learn and align shared representations across modalities.",
+      "aliases": ["multimodal representation", "cross-modal representation learning"]
+    },
+    {
+      "name": "Affective Signal Modeling",
+      "definition": "Methods for modeling physiological or behavioral affective signals.",
+      "aliases": []
+    }
+  ]
+}
+```
+
+Notes:
+
+- Only `l1_categories` is required.
+- Each item can be either an object (`name`/`definition`/`aliases`) or a plain string name.
+- If `l1.manual.json` is missing, the script auto-initializes it from existing `taxonomy.l1.json` (if available).
 
 Production recommendation:
 

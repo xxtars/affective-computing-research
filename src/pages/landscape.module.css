@@ -8,7 +8,7 @@
 
 .controls {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 280px));
   gap: 0.75rem;
   margin: 1rem 0 1.2rem;
 }
@@ -72,6 +72,23 @@
   gap: 0.5rem;
 }
 
+.legendGroup {
+  width: 100%;
+}
+
+.legendGroupTitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0.2rem 0 0.3rem;
+}
+
+.legendGroupItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
 .legendItem {
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 999px;
@@ -99,4 +116,137 @@
   height: 0.62rem;
   border-radius: 50%;
   display: inline-block;
+}
+
+.definitionNote {
+  margin-top: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+}
+
+.definitionGrid {
+  margin-top: 0.55rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.55rem;
+}
+
+.definitionCard {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  background: var(--ifm-background-color);
+}
+
+.definitionCard h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.definitionCard p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.childList {
+  margin-top: 0.55rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.childItem {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-top: 0.4rem;
+}
+
+.childTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.87rem;
+  margin-bottom: 0.2rem;
+}
+
+.childItem p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.83rem;
+  line-height: 1.35;
+}
+
+.heatWrap {
+  margin-top: 0.6rem;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-250);
+  border-radius: 10px;
+  background: var(--ifm-background-color);
+}
+
+.heatControls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: end;
+  margin: 0.45rem 0 0.3rem;
+}
+
+.playBtn {
+  border: 1px solid var(--ifm-color-emphasis-400);
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-900);
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.yearSliderWrap {
+  min-width: 260px;
+  flex: 1 1 360px;
+}
+
+.yearSliderWrap input[type='range'] {
+  width: 100%;
+}
+
+.heatTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: 0.72rem;
+}
+
+.heatTable th,
+.heatTable td {
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.22rem 0.28rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.heatTable thead th {
+  background: var(--ifm-background-color);
+  font-weight: 700;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+.heatCorner {
+  width: 14%;
+  min-width: 120px;
+  background: var(--ifm-background-color);
+  text-align: left !important;
+}
+
+.heatRow {
+  text-align: left !important;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.2;
 }

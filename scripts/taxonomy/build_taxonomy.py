@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Build problem/method taxonomy from paper-level directions:
-directions -> embeddings (Qwen) -> BERTopic -> Qwen L2 labels -> Qwen L1 merge.
+directions -> embeddings (Qwen) -> BERTopic -> Qwen L2 labels -> manual L1 mapping.
 
 Outputs are written to data-repo by default:
   data-repo/data/taxonomy/{problem|method}/...
@@ -15,7 +15,6 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import hashlib
 import json
-import math
 import os
 import re
 import time
@@ -147,19 +146,6 @@ def make_topic_fingerprint(axis: str, keywords: List[str], examples: List[str]) 
         "examples": sorted([str(x).strip().lower() for x in examples if str(x).strip()]),
     }
     return stable_hash(json.dumps(normalized, ensure_ascii=False, sort_keys=True))
-
-
-def make_l1_fingerprint(axis: str, items: List[Dict[str, Any]], l1_target: int) -> str:
-    payload = [
-        {
-            "l2_name": str(m.get("l2_name", "")).strip().lower(),
-            "definition": str(m.get("definition", "")).strip().lower(),
-        }
-        for m in items
-    ]
-    payload = sorted(payload, key=lambda x: x["l2_name"])
-    base = {"axis": axis, "target": int(l1_target), "items": payload}
-    return stable_hash(json.dumps(base, ensure_ascii=False, sort_keys=True))
 
 
 def log_api(
@@ -495,16 +481,6 @@ def build_l2_prompt(axis: str, topic_id: int, keywords: List[str], examples: Lis
     )
 
 
-def suggest_l1_count_range(l2_count: int) -> Tuple[int, int, int]:
-    if l2_count <= 0:
-        return (6, 8, 10)
-    target = int(round(math.sqrt(l2_count) * 1.3))
-    target = max(8, min(24, target))
-    min_count = max(6, min(24, target - 3))
-    max_count = max(min_count, min(24, target + 3))
-    return (min_count, target, max_count)
-
-
 def build_l2_canonical_items(l2_entries: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     by_name: Dict[str, Dict[str, Any]] = {}
     for e in l2_entries:
@@ -534,50 +510,156 @@ def build_l2_canonical_items(l2_entries: List[Dict[str, Any]]) -> List[Dict[str,
     return sorted(by_name.values(), key=lambda x: x["l2_name"].lower())
 
 
-def build_l1_direct_prompt(axis: str, items: List[Dict[str, Any]], l1_min: int, l1_target: int, l1_max: int) -> str:
-    payload = [
-        {
-            "l2_name": str(m.get("l2_name", "")).strip(),
-            "definition": str(m.get("definition", "")).strip(),
+def load_manual_l1_categories(path: Path, axis: str) -> Dict[str, Any]:
+    if not path.exists():
+        legacy_path = path.parent / "taxonomy.l1.json"
+        seed_categories: List[Dict[str, Any]] = []
+        if legacy_path.exists():
+            legacy = load_json_if_exists(legacy_path, [])
+            if isinstance(legacy, list):
+                for item in legacy:
+                    if not isinstance(item, dict):
+                        continue
+                    name = str(item.get("name", "")).strip()
+                    if not name:
+                        continue
+                    seed_categories.append(
+                        {
+                            "name": name,
+                            "definition": str(item.get("definition", "")).strip(),
+                            "aliases": [str(x).strip() for x in (item.get("aliases") or []) if str(x).strip()],
+                        }
+                    )
+        if not seed_categories:
+            seed_categories = [
+                {"name": f"{axis.title()} Theme A", "definition": "", "aliases": []},
+                {"name": f"{axis.title()} Theme B", "definition": "", "aliases": []},
+            ]
+        template = {
+            "version": 1,
+            "axis": axis,
+            "l1_categories": seed_categories,
         }
-        for m in items
-    ]
-    axis_rule = (
-        "- This is the problem axis: L1 names must describe problem domains/challenges/questions, "
-        "not methods, models, or technical solutions.\n"
-        if axis == "problem"
-        else "- This is the method axis: L1 names must describe methodological families/technical approaches, "
-        "not application problems or clinical/task domains.\n"
+        dump_json(path, template)
+        print(f"[taxonomy] axis={axis} initialized manual L1 template: {path}")
+    raw = load_json(path)
+    categories_raw = raw.get("l1_categories", []) if isinstance(raw, dict) else []
+    if not isinstance(categories_raw, list):
+        raise RuntimeError(f"Invalid manual L1 config: l1_categories must be a list ({path})")
+
+    out: List[Dict[str, Any]] = []
+    seen = set()
+    has_children = False
+    for item in categories_raw:
+        if isinstance(item, str):
+            name = item.strip()
+            definition = ""
+            aliases: List[str] = []
+            children_raw: List[Any] = []
+        elif isinstance(item, dict):
+            name = str(item.get("name", "")).strip()
+            definition = str(item.get("definition", "")).strip()
+            aliases = [str(x).strip() for x in (item.get("aliases") or []) if str(x).strip()]
+            children_raw = item.get("l1_child_categories")
+            if children_raw is None:
+                # Backward compatibility for older manual files.
+                children_raw = item.get("l2_categories")
+            children_raw = children_raw or []
+            if not isinstance(children_raw, list):
+                children_raw = []
+        else:
+            continue
+        if not name:
+            continue
+        key = name.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+
+        children_out: List[Dict[str, Any]] = []
+        child_seen = set()
+        for child in children_raw:
+            if isinstance(child, str):
+                child_name = child.strip()
+                child_definition = ""
+                child_aliases: List[str] = []
+            elif isinstance(child, dict):
+                child_name = str(child.get("name", "")).strip()
+                child_definition = str(child.get("definition", "")).strip()
+                child_aliases = [str(x).strip() for x in (child.get("aliases") or []) if str(x).strip()]
+            else:
+                continue
+            if not child_name:
+                continue
+            ckey = child_name.lower()
+            if ckey in child_seen:
+                continue
+            child_seen.add(ckey)
+            children_out.append(
+                {
+                    "name": child_name,
+                    "definition": child_definition,
+                    "aliases": child_aliases,
+                    "l2_names": [],
+                }
+            )
+        if children_out:
+            has_children = True
+        out.append(
+            {
+                "name": name,
+                "definition": definition,
+                "aliases": aliases,
+                "l1_child_categories": children_out,
+                "l2_names": [],
+            }
+        )
+
+    if not out:
+        raise RuntimeError(f"Manual L1 config has no valid categories: {path}")
+    targets: List[Dict[str, Any]] = []
+    if has_children:
+        for parent in out:
+            parent_name = str(parent["name"])
+            children = parent.get("l1_child_categories") or []
+            if children:
+                for child in children:
+                    targets.append(
+                        {
+                            "label": str(child.get("name", "")).strip(),
+                            "definition": str(child.get("definition", "")).strip(),
+                            "aliases": [str(x).strip() for x in (child.get("aliases") or []) if str(x).strip()],
+                            "l1_name": parent_name,
+                            "l1_child_name": str(child.get("name", "")).strip(),
+                        }
+                    )
+            else:
+                targets.append(
+                    {
+                        "label": parent_name,
+                        "definition": str(parent.get("definition", "")).strip(),
+                        "aliases": [str(x).strip() for x in (parent.get("aliases") or []) if str(x).strip()],
+                        "l1_name": parent_name,
+                        "l1_child_name": None,
+                    }
+                )
+    else:
+        for parent in out:
+            parent_name = str(parent["name"])
+            targets.append(
+                {
+                    "label": parent_name,
+                    "definition": str(parent.get("definition", "")).strip(),
+                    "aliases": [str(x).strip() for x in (parent.get("aliases") or []) if str(x).strip()],
+                    "l1_name": parent_name,
+                    "l1_child_name": None,
+                }
+            )
+    print(
+        f"[taxonomy] axis={axis} manual L1 loaded categories={len(out)} "
+        f"targets={len(targets)} hierarchical={has_children} path={path}"
     )
-    return (
-        "Context: This project surveys trends *within* Affective Computing.\n"
-        "Therefore, L1 labels must be subdomains inside Affective Computing, "
-        "not Affective Computing itself and not any higher-level umbrella.\n"
-        f"Axis: {axis}\n"
-        "Group the following L2 categories into L1 categories and return full mapping.\n"
-        f"L2 items JSON:\n{json.dumps(payload, ensure_ascii=False)}\n\n"
-        "Return strict JSON:\n"
-        "{\n"
-        '  "l1_categories": [\n'
-        '    {\n'
-        '      "name": string,\n'
-        '      "definition": string,\n'
-        '      "aliases": string[]\n'
-        "    }\n"
-        "  ]\n"
-        "}\n\n"
-        "Rules:\n"
-        f"- Target around {l1_target} L1 categories (acceptable range: {l1_min}-{l1_max}).\n"
-        "- L1 names should be broad, stable, and concise.\n"
-        "- L1 names must be discriminative and stay below the field level.\n"
-        "- Do NOT use Affective Computing itself, any parent-level umbrella, or sibling-global labels.\n"
-        "- Forbidden examples: 'Affective Computing', 'Emotion Recognition', 'Emotion Analysis', "
-        "'Artificial Intelligence', 'Machine Learning', 'Deep Learning'.\n"
-        "- Prefer a scope that distinguishes categories from each other.\n"
-        f"{axis_rule}"
-        "- definition should be one sentence.\n"
-        "- Keep output factual and concise."
-    )
+    return {"l1_categories": out, "targets": targets, "hierarchical": has_children}
 
 
 def embed_text_list(
@@ -635,6 +717,7 @@ def run_axis(
     axis_started = time.time()
     researchers_root = Path(args.researchers_root)
     out_axis_dir = Path(args.out_dir) / axis
+    l1_manual_path = Path(args.l1_manual_root) / axis / "l1.manual.json"
     log_dir = Path(args.out_dir) / "api_logs" / axis
     ensure_dir(out_axis_dir)
     ensure_dir(log_dir)
@@ -747,7 +830,7 @@ def run_axis(
         make_topic_fingerprint(axis, c["keywords"], c["examples"]) for c in topic_candidates
     ]
     l2_miss_count = sum(1 for fp in topic_fingerprints if not isinstance(l2_cache_items.get(fp), dict))
-    planned_chat_calls = l2_miss_count + (1 if len(topic_candidates) > 0 else 0)
+    planned_chat_calls = l2_miss_count
     thinking_override = parse_bool_env(os.getenv("QWEN_ENABLE_THINKING"))
     enable_thinking = bool(thinking_override) if thinking_override is not None else False
     print(
@@ -834,65 +917,31 @@ def run_axis(
 
     dump_json(out_axis_dir / "taxonomy.l2.json", l2_entries)
 
-    l1_min, l1_target, l1_max = suggest_l1_count_range(len(l2_entries))
     l2_items = build_l2_canonical_items(l2_entries)
     dump_json(out_axis_dir / "l1.input.items.json", l2_items)
-    print(f"[taxonomy] axis={axis} L1 direct grouping start l2_items={len(l2_items)} target={l1_target}")
+    print(f"[taxonomy] axis={axis} manual L1 mapping start l2_items={len(l2_items)}")
 
-    l1_cache_path = out_axis_dir / "cache.l1.json"
-    l1_cache = load_json_if_exists(l1_cache_path, {"version": 3, "items": {}})
-    l1_cache_items = l1_cache.get("items", {}) if isinstance(l1_cache, dict) else {}
-    if not isinstance(l1_cache_items, dict):
-        l1_cache_items = {}
-    l1_fingerprint = make_l1_fingerprint(axis, l2_items, l1_target)
-    l1_raw = l1_cache_items.get(l1_fingerprint)
-    if isinstance(l1_raw, dict):
-        print(f"[taxonomy] axis={axis} L1 direct grouping cache hit")
-    else:
-        l1_raw = call_chat_json(
-            api_key=api_key,
-            base_url=base_url,
-            model=chat_model,
-            prompt=build_l1_direct_prompt(axis, l2_items, l1_min, l1_target, l1_max),
-            log_dir=log_dir,
-            log_name="l1_grouping_direct",
-            max_tokens=1800,
-            enable_thinking=True,
-        )
-        l1_cache_items[l1_fingerprint] = l1_raw
-        dump_json(
-            l1_cache_path,
-            {"version": 3, "updated_at": utc_now(), "items": l1_cache_items},
-        )
-
-    raw_categories = l1_raw.get("l1_categories", []) if isinstance(l1_raw, dict) else []
-    raw_categories = raw_categories if isinstance(raw_categories, list) else []
-    l1_clean = []
-    l2_name_set = {str(item.get("l2_name", "")).strip() for item in l2_items if str(item.get("l2_name", "")).strip()}
+    manual_l1 = load_manual_l1_categories(l1_manual_path, axis)
+    l1_clean = manual_l1["l1_categories"]
+    l1_targets = manual_l1["targets"]
+    l1_hierarchical = bool(manual_l1["hierarchical"])
     l2_to_l1: Dict[str, str] = {}
-    l1_by_name: Dict[str, Dict[str, Any]] = {}
-
-    for item in raw_categories:
-        if not isinstance(item, dict):
-            continue
-        name = str(item.get("name", "")).strip()
-        if not name:
-            continue
-        definition = str(item.get("definition", "")).strip()
-        if name not in l1_by_name:
-            l1_by_name[name] = {"name": name, "definition": definition, "l2_names": []}
-    l1_clean = list(l1_by_name.values())
+    l2_to_l1_child: Dict[str, str | None] = {}
 
     # Build deterministic L2->L1 mapping by embedding similarity (LLM output stays simple).
-    if l1_clean:
+    if l1_targets:
         l2_texts = [
             f"{axis} L2: {str(item.get('l2_name', '')).strip()}. {str(item.get('definition', '')).strip()}"
             for item in l2_items
         ]
-        l1_texts = [
-            f"{axis} L1: {str(item.get('name', '')).strip()}. {str(item.get('definition', '')).strip()}"
-            for item in l1_clean
-        ]
+        l1_texts = []
+        for item in l1_targets:
+            aliases = ", ".join([str(x).strip() for x in (item.get("aliases") or []) if str(x).strip()])
+            alias_part = f" aliases: {aliases}." if aliases else ""
+            l1_texts.append(
+                f"{axis} category: {str(item.get('label', '')).strip()}. "
+                f"{str(item.get('definition', '')).strip()}.{alias_part}"
+            )
         l2_vec = embed_text_list(
             texts=l2_texts,
             api_key=api_key,
@@ -915,49 +964,44 @@ def run_axis(
         l1n = unit_normalize_rows(l1_vec)
         sim = l2n @ l1n.T
         mapping_rows = []
+        parent_index = {str(item.get("name", "")).strip(): item for item in l1_clean}
         for i, item in enumerate(l2_items):
             l2_name = str(item.get("l2_name", "")).strip()
             if not l2_name:
                 continue
             best_idx = int(np.argmax(sim[i]))
             score = float(sim[i, best_idx])
-            l1_name = str(l1_clean[best_idx]["name"])
+            target = l1_targets[best_idx]
+            l1_name = str(target.get("l1_name", "")).strip()
+            l1_child_name = target.get("l1_child_name")
+            l1_child_name = str(l1_child_name).strip() if isinstance(l1_child_name, str) and l1_child_name.strip() else None
             l2_to_l1[l2_name] = l1_name
-            l1_clean[best_idx]["l2_names"].append(l2_name)
+            l2_to_l1_child[l2_name] = l1_child_name
+            parent = parent_index.get(l1_name)
+            if parent is not None:
+                parent["l2_names"].append(l2_name)
+                if l1_child_name:
+                    for child in parent.get("l1_child_categories") or []:
+                        if str(child.get("name", "")).strip() == l1_child_name:
+                            child["l2_names"].append(l2_name)
+                            break
             mapping_rows.append(
                 {
                     "l2_name": l2_name,
                     "l1_name": l1_name,
+                    "l1_child_name": l1_child_name,
                     "similarity": score,
                 }
             )
         dump_json(out_axis_dir / "l1.direct.assignments.json", mapping_rows)
-    else:
-        # If LLM returns no L1, create a fallback bucket.
-        fallback_name = "Unassigned Specific Subdomain"
-        l1_clean = [
-            {
-                "name": fallback_name,
-                "definition": "Fallback bucket because LLM returned no valid L1 categories.",
-                "l2_names": sorted(list(l2_name_set)),
-            }
-        ]
-        for l2n in l2_name_set:
-            l2_to_l1[l2n] = fallback_name
-        dump_json(
-            out_axis_dir / "l1.direct.assignments.json",
-            [{"l2_name": x, "l1_name": fallback_name, "similarity": None} for x in sorted(list(l2_name_set))],
-        )
 
     dump_json(
         out_axis_dir / "l1.direct.grouping.json",
         {
-            "fingerprint": l1_fingerprint,
-            "l1_target_min": l1_min,
-            "l1_target": l1_target,
-            "l1_target_max": l1_max,
-            "raw": l1_raw,
+            "manual_l1_path": str(l1_manual_path),
+            "raw": {"l1_categories": l1_clean},
             "normalized": l1_clean,
+            "hierarchical": l1_hierarchical,
             "mapping_method": "embedding_cosine",
         },
     )
@@ -984,6 +1028,7 @@ def run_axis(
                 "l2_name": l2_name,
                 "second_cluster_id": None,
                 "l1_name": l2_to_l1.get(l2_name) if l2_name else None,
+                "l1_child_name": l2_to_l1_child.get(l2_name) if l2_name else None,
             }
         )
 
@@ -996,9 +1041,9 @@ def run_axis(
             "chat_model": chat_model,
             "enable_thinking": enable_thinking,
             "planned_chat_calls": planned_chat_calls,
-            "l1_target_min": l1_min,
-            "l1_target": l1_target,
-            "l1_target_max": l1_max,
+            "l1_manual_path": str(l1_manual_path),
+            "l1_source": "manual",
+            "l1_hierarchical": l1_hierarchical,
             "min_topic_size": args.min_topic_size,
             "records": len(records),
             "clusters": len(topic_candidates),
@@ -1029,6 +1074,11 @@ def parse_args() -> argparse.Namespace:
         "--out-dir",
         default="data-repo/data/taxonomy",
         help="Output root for taxonomy files and api logs.",
+    )
+    parser.add_argument(
+        "--l1-manual-root",
+        default="data-repo/data/taxonomy",
+        help="Root containing per-axis manual L1 files: {root}/{axis}/l1.manual.json",
     )
     parser.add_argument(
         "--axis",
