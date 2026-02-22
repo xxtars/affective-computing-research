@@ -301,7 +301,8 @@ export default function PapersPage(): ReactNode {
           <p>Main affective-related papers from tracked researchers (deduplicated by title).</p>
           <p className={styles.note}>
             Disclaimer: author order and venue are resolved from OpenAlex/DOI metadata; problem/method directions and TLDR are
-            AI-generated and may contain errors.
+            AI-generated and may contain errors. TLDR (Too Long, Didn&apos;t Read) means an automatically generated
+            short summary of a paper, and this concept is from Semantic Scholar.
           </p>
           <section className={styles.searchSection}>
             <label>
