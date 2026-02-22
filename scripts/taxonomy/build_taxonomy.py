@@ -254,6 +254,102 @@ def call_embedding_api(
     return [d.get("embedding", []) for d in data]
 
 
+def _emb_meta_path(cache_path: Path) -> Path:
+    """Return the .meta.json sidecar path for an embedding cache."""
+    return cache_path.with_suffix("").with_suffix(".meta.json")
+
+
+def _load_emb_cache(cache_path: Path, model: str) -> Tuple[Dict[str, Any], np.ndarray | None]:
+    """Load embedding cache from npz + meta.json format.
+
+    Returns (meta_items, matrix_or_None).
+    meta_items maps record_key -> {context_hash, row_index, updated_at}.
+    matrix rows correspond to row_index values in meta_items.
+
+    Also handles transparent migration from the legacy all-in-one JSON format:
+    if cache_path (the .json file) exists and the npz does not, the old vectors
+    are extracted, written to the new format, and the old file is removed.
+    """
+    meta_path = _emb_meta_path(cache_path)
+    npz_path = cache_path.with_suffix(".npz")
+
+    # --- legacy migration: old cache.embedding.json with inline vectors ---
+    if cache_path.exists() and not npz_path.exists():
+        print(f"[taxonomy] migrating legacy embedding cache {cache_path} -> npz format")
+        try:
+            old = load_json(cache_path)
+            old_model = str(old.get("model", "")).strip() if isinstance(old, dict) else ""
+            old_items = old.get("items", {}) if isinstance(old, dict) else {}
+            if not isinstance(old_items, dict):
+                old_items = {}
+            if old_model and old_model != model:
+                print(f"[taxonomy] legacy cache model mismatch ({old_model} != {model}), discarding")
+                old_items = {}
+            if old_items:
+                keys_ordered = list(old_items.keys())
+                rows = []
+                new_meta: Dict[str, Any] = {}
+                for idx, key in enumerate(keys_ordered):
+                    entry = old_items[key]
+                    vec = entry.get("vector")
+                    if not isinstance(vec, list) or not vec:
+                        continue
+                    rows.append(vec)
+                    new_meta[key] = {
+                        "context_hash": entry.get("context_hash", ""),
+                        "row_index": len(new_meta),
+                        "updated_at": entry.get("updated_at", utc_now()),
+                    }
+                if rows:
+                    matrix = np.asarray(rows, dtype=np.float32)
+                    np.savez_compressed(str(npz_path), embeddings=matrix)
+                    dump_json(meta_path, {"version": 2, "model": model, "updated_at": utc_now(), "items": new_meta})
+                    cache_path.unlink()
+                    print(f"[taxonomy] migrated {len(new_meta)} vectors ({matrix.nbytes // 1024} KB binary)")
+                    return new_meta, matrix
+        except Exception as e:
+            print(f"[taxonomy] legacy migration failed ({e}), starting fresh")
+        return {}, None
+
+    # --- normal load ---
+    if not meta_path.exists() or not npz_path.exists():
+        return {}, None
+    try:
+        meta = load_json(meta_path)
+        cached_model = str(meta.get("model", "")).strip() if isinstance(meta, dict) else ""
+        if cached_model and cached_model != model:
+            print(f"[taxonomy] embedding cache model changed: {cached_model} -> {model}, discarding")
+            return {}, None
+        items = meta.get("items", {}) if isinstance(meta, dict) else {}
+        if not isinstance(items, dict):
+            items = {}
+        data = np.load(str(npz_path))
+        matrix = data["embeddings"].astype(np.float32)
+        return items, matrix
+    except Exception as e:
+        print(f"[taxonomy] embedding cache load failed ({e}), starting fresh")
+        return {}, None
+
+
+def _save_emb_cache(
+    cache_path: Path,
+    model: str,
+    meta_items: Dict[str, Any],
+    rows: List[np.ndarray],
+) -> None:
+    """Persist embedding cache as npz + meta.json sidecar.
+
+    rows must be ordered so that rows[i] corresponds to the entry whose
+    row_index == i in meta_items.
+    """
+    meta_path = _emb_meta_path(cache_path)
+    npz_path = cache_path.with_suffix(".npz")
+    ensure_dir(npz_path.parent)
+    matrix = np.asarray(rows, dtype=np.float32)
+    np.savez_compressed(str(npz_path), embeddings=matrix)
+    dump_json(meta_path, {"version": 2, "model": model, "updated_at": utc_now(), "items": meta_items})
+
+
 def embed_records(
     records: List[DirectionRecord],
     api_key: str,
@@ -268,29 +364,24 @@ def embed_records(
     keys = [make_record_key(r) for r in records]
     context_hashes = [stable_hash(t) for t in texts]
 
-    cache_payload = load_json_if_exists(
-        cache_path,
-        {"version": 1, "model": model, "items": {}},
-    )
-    cache_items = cache_payload.get("items", {}) if isinstance(cache_payload, dict) else {}
-    if not isinstance(cache_items, dict):
-        cache_items = {}
-    cache_model = str(cache_payload.get("model", "")).strip() if isinstance(cache_payload, dict) else ""
-    if cache_model and cache_model != model:
-        print(f"[taxonomy] embedding cache model changed: {cache_model} -> {model}, cache will be ignored")
-        cache_items = {}
+    meta_items, cached_matrix = _load_emb_cache(cache_path, model)
+    # Build an in-memory list of rows that mirrors the npz matrix.
+    # New rows are appended; row_index is the position in this list.
+    rows: List[np.ndarray] = []
+    if cached_matrix is not None and len(cached_matrix) > 0:
+        rows = [cached_matrix[i] for i in range(len(cached_matrix))]
 
-    vectors: List[List[float] | None] = [None] * len(records)
+    vectors: List[np.ndarray | None] = [None] * len(records)
     missing_indexes: List[int] = []
     for i, key in enumerate(keys):
-        hit = cache_items.get(key)
+        entry = meta_items.get(key)
         if (
-            isinstance(hit, dict)
-            and hit.get("context_hash") == context_hashes[i]
-            and isinstance(hit.get("vector"), list)
-            and len(hit.get("vector")) > 0
+            isinstance(entry, dict)
+            and entry.get("context_hash") == context_hashes[i]
+            and isinstance(entry.get("row_index"), int)
+            and 0 <= entry["row_index"] < len(rows)
         ):
-            vectors[i] = hit["vector"]
+            vectors[i] = rows[entry["row_index"]]
         else:
             missing_indexes.append(i)
 
@@ -347,23 +438,20 @@ def embed_records(
             )
             for local_idx, vec in enumerate(batch_vec):
                 record_idx = batch_indexes[local_idx]
-                vectors[record_idx] = vec
+                row_idx = len(rows)
+                arr = np.asarray(vec, dtype=np.float32)
+                rows.append(arr)
+                vectors[record_idx] = arr
                 key = keys[record_idx]
-                cache_items[key] = {
+                meta_items[key] = {
                     "context_hash": context_hashes[record_idx],
-                    "vector": vec,
+                    "row_index": row_idx,
                     "updated_at": utc_now(),
                 }
-            dump_json(
-                cache_path,
-                {
-                    "version": 1,
-                    "model": model,
-                    "updated_at": utc_now(),
-                    "items": cache_items,
-                },
-            )
+            # Persist after each batch so partial progress survives crashes.
+            _save_emb_cache(cache_path, model, meta_items, rows)
             time.sleep(0.05)
+
     if any(v is None for v in vectors):
         raise RuntimeError("embedding resume failed: some vectors are still missing")
     return np.asarray(vectors, dtype=np.float32)
@@ -461,12 +549,18 @@ def call_chat_json(
     raise last_err
 
 
-def build_l2_prompt(axis: str, topic_id: int, keywords: List[str], examples: List[str]) -> str:
+def build_l2_prompt(axis: str, topic_id: int, keywords: List[str], examples: List[str], size: int = 0) -> str:
+    axis_guidance = (
+        "This is the PROBLEM axis: labels should describe affective/emotional tasks, challenges, or research goals."
+        if axis == "problem"
+        else "This is the METHOD axis: labels should describe technical approaches, algorithms, or computational techniques."
+    )
     return (
-        f"Axis: {axis}\n"
-        f"Topic id: {topic_id}\n"
+        "You are labeling a research cluster in the affective computing domain.\n"
+        f"{axis_guidance}\n\n"
+        f"Cluster id: {topic_id} | Size: {size} directions\n"
         f"Top keywords: {', '.join(keywords) or 'none'}\n"
-        f"Example directions:\n- " + "\n- ".join(examples[:12]) + "\n\n"
+        f"Sample directions:\n- " + "\n- ".join(examples[:12]) + "\n\n"
         "Return strict JSON:\n"
         "{\n"
         '  "l2_name": string,\n'
@@ -474,9 +568,10 @@ def build_l2_prompt(axis: str, topic_id: int, keywords: List[str], examples: Lis
         '  "aliases": string[]\n'
         "}\n\n"
         "Rules:\n"
-        "- l2_name should be short, stable, and canonical.\n"
-        "- definition should be one sentence.\n"
-        "- aliases can include paraphrases, abbreviations, and close variants.\n"
+        "- l2_name: 3-6 words, title case, specific to affective computing (not generic ML terms).\n"
+        "- l2_name must be distinct from broad labels like 'Emotion Recognition' or 'Deep Learning'; capture what makes this cluster unique.\n"
+        "- definition: one sentence describing the scope of this cluster.\n"
+        "- aliases: paraphrases, abbreviations, and close variants of l2_name.\n"
         "- Do not output markdown."
     )
 
@@ -670,26 +765,70 @@ def embed_text_list(
     batch_size: int,
     log_dir: Path,
     name_prefix: str,
+    cache_path: Path | None = None,
 ) -> np.ndarray:
+    """Embed a list of texts, with optional npz+meta cache to avoid re-embedding
+    identical texts (e.g. L1 category names that rarely change)."""
     if not texts:
         return np.zeros((0, 1), dtype=np.float32)
-    embedding_max_batch = int(os.getenv("QWEN_EMBEDDING_MAX_BATCH", str(DEFAULT_EMBEDDING_MAX_BATCH)))
-    effective_batch_size = max(1, min(batch_size, embedding_max_batch))
-    vectors: List[List[float]] = []
-    total_batches = (len(texts) + effective_batch_size - 1) // effective_batch_size
-    for i in range(0, len(texts), effective_batch_size):
-        batch = texts[i : i + effective_batch_size]
-        batch_idx = i // effective_batch_size + 1
-        print(f"[taxonomy] {name_prefix} embedding progress: {batch_idx}/{total_batches}")
-        batch_vec = call_embedding_api(
-            api_key=api_key,
-            base_url=base_url,
-            model=model,
-            texts=batch,
-            log_dir=log_dir,
-            batch_name=f"{name_prefix}_batch_{i//effective_batch_size:04d}",
-        )
-        vectors.extend(batch_vec)
+
+    text_hashes = [stable_hash(t) for t in texts]
+
+    # Load cache if provided.
+    meta_items: Dict[str, Any] = {}
+    rows: List[np.ndarray] = []
+    if cache_path is not None:
+        loaded_meta, cached_matrix = _load_emb_cache(cache_path, model)
+        meta_items = loaded_meta
+        if cached_matrix is not None and len(cached_matrix) > 0:
+            rows = [cached_matrix[i] for i in range(len(cached_matrix))]
+
+    vectors: List[np.ndarray | None] = [None] * len(texts)
+    missing_indexes: List[int] = []
+    for i, h in enumerate(text_hashes):
+        entry = meta_items.get(h)
+        if (
+            isinstance(entry, dict)
+            and isinstance(entry.get("row_index"), int)
+            and 0 <= entry["row_index"] < len(rows)
+        ):
+            vectors[i] = rows[entry["row_index"]]
+        else:
+            missing_indexes.append(i)
+
+    if cache_path is not None:
+        hits = len(texts) - len(missing_indexes)
+        print(f"[taxonomy] {name_prefix} embedding cache: hits={hits} misses={len(missing_indexes)}")
+
+    if missing_indexes:
+        embedding_max_batch = int(os.getenv("QWEN_EMBEDDING_MAX_BATCH", str(DEFAULT_EMBEDDING_MAX_BATCH)))
+        effective_batch_size = max(1, min(batch_size, embedding_max_batch))
+        total_batches = (len(missing_indexes) + effective_batch_size - 1) // effective_batch_size
+        for b in range(0, len(missing_indexes), effective_batch_size):
+            batch_idxs = missing_indexes[b : b + effective_batch_size]
+            batch = [texts[j] for j in batch_idxs]
+            batch_num = b // effective_batch_size + 1
+            print(f"[taxonomy] {name_prefix} embedding progress: {batch_num}/{total_batches}")
+            batch_vec = call_embedding_api(
+                api_key=api_key,
+                base_url=base_url,
+                model=model,
+                texts=batch,
+                log_dir=log_dir,
+                batch_name=f"{name_prefix}_batch_{b//effective_batch_size:04d}",
+            )
+            for local_idx, vec in enumerate(batch_vec):
+                record_idx = batch_idxs[local_idx]
+                row_idx = len(rows)
+                arr = np.asarray(vec, dtype=np.float32)
+                rows.append(arr)
+                vectors[record_idx] = arr
+                if cache_path is not None:
+                    h = text_hashes[record_idx]
+                    meta_items[h] = {"row_index": row_idx, "updated_at": utc_now()}
+        if cache_path is not None and rows:
+            _save_emb_cache(cache_path, model, meta_items, rows)
+
     return np.asarray(vectors, dtype=np.float32)
 
 
@@ -878,7 +1017,7 @@ def run_axis(
         with ThreadPoolExecutor(max_workers=chat_workers) as ex:
             futures = {}
             for idx0, c, topic_fingerprint in pending:
-                prompt = build_l2_prompt(axis, c["topic_id"], c["keywords"], c["examples"])
+                prompt = build_l2_prompt(axis, c["topic_id"], c["keywords"], c["examples"], size=c.get("size", 0))
                 fut = ex.submit(
                     call_chat_json,
                     api_key=api_key,
@@ -950,6 +1089,7 @@ def run_axis(
             batch_size=args.embedding_batch_size,
             log_dir=log_dir,
             name_prefix="l1_map_l2",
+            cache_path=out_axis_dir / "cache.l1map_l2.embedding",
         )
         l1_vec = embed_text_list(
             texts=l1_texts,
@@ -959,6 +1099,7 @@ def run_axis(
             batch_size=args.embedding_batch_size,
             log_dir=log_dir,
             name_prefix="l1_map_l1",
+            cache_path=out_axis_dir / "cache.l1map_l1.embedding",
         )
         l2n = unit_normalize_rows(l2_vec)
         l1n = unit_normalize_rows(l1_vec)
@@ -994,6 +1135,36 @@ def run_axis(
                 }
             )
         dump_json(out_axis_dir / "l1.direct.assignments.json", mapping_rows)
+
+        # Orphan report: L2 clusters whose best-matching L1 similarity is low.
+        # These are candidates for new L1 categories or L1 definition refinement.
+        ORPHAN_THRESHOLD = 0.65
+        l2_size_by_name = {e["l2_name"]: e["size"] for e in l2_entries if e}
+        orphan_l2s = sorted(
+            [
+                {
+                    "l2_name": row["l2_name"],
+                    "best_l1": row["l1_name"],
+                    "similarity": round(row["similarity"], 4),
+                    "size": l2_size_by_name.get(row["l2_name"], 0),
+                }
+                for row in mapping_rows
+                if row["similarity"] < ORPHAN_THRESHOLD
+            ],
+            key=lambda x: x["size"],
+            reverse=True,
+        )
+        dump_json(out_axis_dir / "l2.orphans.json", {
+            "threshold": ORPHAN_THRESHOLD,
+            "count": len(orphan_l2s),
+            "note": "L2 clusters with low similarity to any L1. Large entries are candidates for new L1 categories.",
+            "orphans": orphan_l2s,
+        })
+        if orphan_l2s:
+            print(
+                f"[taxonomy] axis={axis} orphan L2s (similarity<{ORPHAN_THRESHOLD}): "
+                f"{len(orphan_l2s)} clusters -> see l2.orphans.json"
+            )
 
     dump_json(
         out_axis_dir / "l1.direct.grouping.json",
