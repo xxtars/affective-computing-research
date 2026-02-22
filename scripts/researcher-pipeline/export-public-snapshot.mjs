@@ -137,7 +137,22 @@ function toPublicWork(work) {
   };
 }
 
+function buildYearlyCounts(works) {
+  const counts = new Map();
+  for (const work of Array.isArray(works) ? works : []) {
+    const year = Number(work?.publication_year);
+    if (!Number.isFinite(year)) continue;
+    const key = String(year);
+    if (!counts.has(key)) counts.set(key, {year, analyzed: 0, interesting: 0});
+    const item = counts.get(key);
+    item.analyzed += 1;
+    if (work?.analysis?.is_interesting) item.interesting += 1;
+  }
+  return Array.from(counts.values()).sort((a, b) => b.year - a.year);
+}
+
 function toPublicProfile(profile) {
+  const yearlyCounts = buildYearlyCounts(profile?.works);
   const interestingWorks = Array.isArray(profile?.works)
     ? profile.works.filter((work) => work?.analysis?.is_interesting).map(toPublicWork)
     : [];
@@ -177,6 +192,7 @@ function toPublicProfile(profile) {
     stats: {
       analyzed_works_count: Number(profile?.stats?.analyzed_works_count || 0),
       interesting_works_count: Number(profile?.stats?.interesting_works_count || 0),
+      yearly_counts: yearlyCounts,
     },
     works: interestingWorks,
   };

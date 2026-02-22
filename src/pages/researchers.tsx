@@ -30,6 +30,11 @@ type ResearcherProfile = {
   stats: {
     analyzed_works_count: number;
     interesting_works_count: number;
+    yearly_counts?: Array<{
+      year: number;
+      analyzed: number;
+      interesting: number;
+    }>;
   };
   works?: Array<{
     publication_year?: number | null;
@@ -155,6 +160,17 @@ function getWindowStats(
   currentYear: number,
 ) {
   const minYear = getWindowMinYear(windowType, currentYear);
+  const yearly = Array.isArray(researcher.stats?.yearly_counts)
+    ? researcher.stats.yearly_counts
+    : [];
+
+  if (yearly.length > 0) {
+    const scoped = yearly.filter((item) => minYear == null || Number(item.year) >= minYear);
+    const analyzed = scoped.reduce((sum, item) => sum + Number(item.analyzed || 0), 0);
+    const interesting = scoped.reduce((sum, item) => sum + Number(item.interesting || 0), 0);
+    return {analyzed, interesting, ratio: analyzed > 0 ? interesting / analyzed : 0};
+  }
+
   const works = Array.isArray(researcher.works) ? researcher.works : [];
 
   if (works.length === 0) {
