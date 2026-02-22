@@ -31,6 +31,12 @@ type ResearcherProfile = {
     analyzed_works_count: number;
     interesting_works_count: number;
   };
+  works?: Array<{
+    publication_year?: number | null;
+    analysis?: {
+      is_interesting?: boolean | null;
+    };
+  }>;
 };
 
 type IndexFile = {
@@ -142,9 +148,8 @@ export default function ResearchersPage(): ReactNode {
   const [universityFilter, setUniversityFilter] = useState('All');
   const [initialAxis, setInitialAxis] = useState<'family' | 'given'>('family');
   const [nameInitialFilter, setNameInitialFilter] = useState('All');
-  const [sortBy, setSortBy] = useState<'family_initial' | 'given_initial' | 'affective_count' | 'affective_ratio'>(
-    'family_initial',
-  );
+  const [sortMetric, setSortMetric] = useState<'affective_count' | 'affective_ratio'>('affective_count');
+  const [sortWindow, setSortWindow] = useState<'all' | 'recent_5y' | 'recent_3y'>('all');
   const [query, setQuery] = useState('');
 
   useEffect(() => {
@@ -216,7 +221,8 @@ export default function ResearchersPage(): ReactNode {
     setUniversityFilter('All');
     setInitialAxis('family');
     setNameInitialFilter('All');
-    setSortBy('family_initial');
+    setSortMetric('affective_count');
+    setSortWindow('all');
     setQuery('');
   };
 
@@ -243,36 +249,56 @@ export default function ResearchersPage(): ReactNode {
       return countryMatch && universityMatch && initialMatch && keywordMatch;
     });
 
+    const currentYear = new Date().getFullYear();
+    const getWindowBounds = () => {
+      if (sortWindow === 'recent_3y') return currentYear - 2;
+      if (sortWindow === 'recent_5y') return currentYear - 4;
+      return null;
+    };
+    const minYear = getWindowBounds();
+    const inWindow = (year: number | null | undefined) =>
+      Number.isFinite(year) && (minYear == null || Number(year) >= minYear);
+
+    const getWindowStats = (researcher: ResearcherProfile) => {
+      const works = Array.isArray(researcher.works) ? researcher.works : [];
+      if (works.length === 0) {
+        const analyzed = Number(researcher.stats?.analyzed_works_count || 0);
+        const interesting = Number(researcher.stats?.interesting_works_count || 0);
+        return {analyzed, interesting, ratio: analyzed > 0 ? interesting / analyzed : 0};
+      }
+      const scoped = works.filter((w) => inWindow(w.publication_year));
+      if (scoped.length === 0) return {analyzed: 0, interesting: 0, ratio: 0};
+      const analyzed = scoped.length;
+      const interesting = scoped.filter((w) => Boolean(w.analysis?.is_interesting)).length;
+      const ratio = analyzed > 0 ? interesting / analyzed : 0;
+      return {analyzed, interesting, ratio};
+    };
+
     return matched.sort((a, b) => {
-      const aAnalyzed = Number(a.stats?.analyzed_works_count || 0);
-      const bAnalyzed = Number(b.stats?.analyzed_works_count || 0);
-      const aInteresting = Number(a.stats?.interesting_works_count || 0);
-      const bInteresting = Number(b.stats?.interesting_works_count || 0);
-      const aRatio = aAnalyzed > 0 ? aInteresting / aAnalyzed : 0;
-      const bRatio = bAnalyzed > 0 ? bInteresting / bAnalyzed : 0;
+      const aWindow = getWindowStats(a);
+      const bWindow = getWindowStats(b);
       const aName = splitNameParts(a.identity.name);
       const bName = splitNameParts(b.identity.name);
       const familyCmp = aName.familyName.localeCompare(bName.familyName, 'en', { sensitivity: 'base' });
       const givenCmp = aName.givenName.localeCompare(bName.givenName, 'en', { sensitivity: 'base' });
 
-      if (sortBy === 'affective_count') {
-        if (bInteresting !== aInteresting) return bInteresting - aInteresting;
-      } else if (sortBy === 'affective_ratio') {
-        if (bRatio !== aRatio) return bRatio - aRatio;
-        if (bInteresting !== aInteresting) return bInteresting - aInteresting;
-      } else if (sortBy === 'given_initial') {
-        if (givenCmp !== 0) return givenCmp;
-        if (familyCmp !== 0) return familyCmp;
+      if (sortMetric === 'affective_ratio') {
+        if (bWindow.ratio !== aWindow.ratio) return bWindow.ratio - aWindow.ratio;
+        if (bWindow.interesting !== aWindow.interesting) return bWindow.interesting - aWindow.interesting;
       } else {
-        if (familyCmp !== 0) return familyCmp;
-        if (givenCmp !== 0) return givenCmp;
+        if (bWindow.interesting !== aWindow.interesting) return bWindow.interesting - aWindow.interesting;
+        if (bWindow.ratio !== aWindow.ratio) return bWindow.ratio - aWindow.ratio;
       }
 
-      if (familyCmp !== 0) return familyCmp;
+      // Stable fallback by name.
+      if (familyCmp !== 0) {
+        if (familyCmp !== 0) return familyCmp;
+      }
       if (givenCmp !== 0) return givenCmp;
+
       return a.identity.name.localeCompare(b.identity.name, 'en', {sensitivity: 'base'});
     });
-  }, [countryFilter, initialAxis, nameInitialFilter, query, researchers, sortBy, universityFilter]);
+  }, [countryFilter, initialAxis, nameInitialFilter, query, researchers, sortMetric, sortWindow, universityFilter]);
 
   return (
     <Layout title="Researchers">
@@ -331,12 +357,19 @@ export default function ResearchersPage(): ReactNode {
                 </label>
 
                 <label>
-                  Sort By
-                  <select value={sortBy} onChange={(event) => setSortBy(event.target.value as typeof sortBy)}>
-                    <option value="family_initial">Family initial (A-Z)</option>
-                    <option value="given_initial">Given initial (A-Z)</option>
+                  Sort Metric
+                  <select value={sortMetric} onChange={(event) => setSortMetric(event.target.value as typeof sortMetric)}>
                     <option value="affective_count">Affective-related count (high to low)</option>
                     <option value="affective_ratio">Affective-related ratio (high to low)</option>
+                  </select>
+                </label>
+
+                <label>
+                  Time Window
+                  <select value={sortWindow} onChange={(event) => setSortWindow(event.target.value as typeof sortWindow)}>
+                    <option value="all">All time</option>
+                    <option value="recent_5y">Recent 5 years</option>
+                    <option value="recent_3y">Recent 3 years</option>
                   </select>
                 </label>
 
