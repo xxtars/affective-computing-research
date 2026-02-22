@@ -864,7 +864,6 @@ Rules:
 - Do not invent institutions not grounded in input.
 - institutions length must equal institution_countries length.
 - Use English full country/region names in institution_countries.
-- If country_hint is provided for a candidate, treat it as high-priority evidence.
 - If no reliable evidence for country, output null instead of guessing.
 - Output valid JSON only.`;
 }
@@ -1595,19 +1594,9 @@ async function run() {
       }
     }
 
-    const candidateCountryHintByInstitutionKey = new Map();
-    for (const candidate of institutionCandidates) {
-      const key = normalizeInstitutionKey(candidate.name);
-      if (!key) continue;
-      if (!candidateCountryHintByInstitutionKey.has(key) && candidate.countryHint) {
-        candidateCountryHintByInstitutionKey.set(key, candidate.countryHint);
-      }
-    }
-
     if (institutions.length === 0) {
       for (const candidate of institutionCandidates) {
         const finalCountry =
-          candidate.countryHint ||
           (isLikelyInstitutionAbbreviation(candidate.name)
             ? null
             : normalizeCountryNameToEnglish(
@@ -1624,12 +1613,6 @@ async function run() {
     } else {
       for (let i = 0; i < institutions.length; i += 1) {
         if (institutionCountries[i]) continue;
-        const key = normalizeInstitutionKey(institutions[i]);
-        const hint = key ? candidateCountryHintByInstitutionKey.get(key) : null;
-        if (hint) {
-          institutionCountries[i] = hint;
-          continue;
-        }
         if (isLikelyInstitutionAbbreviation(institutions[i])) {
           institutionCountries[i] = null;
           continue;
