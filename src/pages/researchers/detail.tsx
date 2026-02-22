@@ -273,20 +273,28 @@ export default function ResearcherDetailPage(): ReactNode {
     <Layout title={`${researcher.identity.name} - Detail`}>
       <main className={styles.page}>
         <div className="container">
-          <p>
-            <Link to="/researchers">Researchers</Link> / {researcher.identity.name}
+          <p style={{marginBottom: '1rem'}}>
+            <Link to="/researchers">← Researchers</Link>
           </p>
 
-          <Heading as="h1">{researcher.identity.name}</Heading>
-          <p>
-            <a href={researcher.identity.google_scholar} rel="noreferrer" target="_blank">
-              Google Scholar
-            </a>{' '}
-            |{' '}
-            <a href={researcher.identity.openalex_author_url} rel="noreferrer" target="_blank">
-              OpenAlex
-            </a>
-          </p>
+          <div className={styles.profileHeader}>
+            <h1 className={styles.profileHeaderName}>{researcher.identity.name}</h1>
+            {institutionCountries.length > 0 && (
+              <p className={styles.profileHeaderMeta}>{institutionCountries.join(' · ')}</p>
+            )}
+            <div className={styles.profileHeaderLinks}>
+              {researcher.identity.google_scholar && (
+                <a className={styles.profileHeaderLink} href={researcher.identity.google_scholar} rel="noreferrer" target="_blank">
+                  Google Scholar ↗
+                </a>
+              )}
+              {researcher.identity.openalex_author_url && (
+                <a className={styles.profileHeaderLink} href={researcher.identity.openalex_author_url} rel="noreferrer" target="_blank">
+                  OpenAlex ↗
+                </a>
+              )}
+            </div>
+          </div>
 
           <div className={styles.metaGrid}>
             <div className={styles.metaCard}>

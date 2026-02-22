@@ -15,6 +15,19 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Design system tokens */
+  --ac-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --ac-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+  --ac-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.06);
+  --ac-shadow-hover: 0 6px 20px rgba(46, 133, 85, 0.15), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --ac-card-radius: 14px;
+  --ac-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --ac-gradient-hero: linear-gradient(135deg, #1e6b3f 0%, #2e8555 50%, #3cad6e 100%);
+  --ac-gradient-card-hover: linear-gradient(135deg, rgba(46,133,85,0.08) 0%, rgba(60,173,110,0.04) 100%);
+  --ac-border-color: var(--ifm-color-emphasis-200);
+  --ac-surface: var(--ifm-background-color);
+  --ac-surface-raised: var(--ifm-color-emphasis-100);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,26 +40,84 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode shadows */
+  --ac-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.18);
+  --ac-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.2);
+  --ac-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.35), 0 4px 10px rgba(0, 0, 0, 0.25);
+  --ac-shadow-hover: 0 6px 20px rgba(37, 194, 160, 0.2), 0 2px 8px rgba(0, 0, 0, 0.25);
+  --ac-gradient-hero: linear-gradient(135deg, #0f3d28 0%, #1a5c3a 50%, #1fa588 100%);
+  --ac-gradient-card-hover: linear-gradient(135deg, rgba(37,194,160,0.1) 0%, rgba(79,221,191,0.05) 100%);
 }
 
+/* Smooth scrolling & base improvements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus outlines for accessibility */
+:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Global card base style */
+.ac-card {
+  background: var(--ac-surface);
+  border: 1px solid var(--ac-border-color);
+  border-radius: var(--ac-card-radius);
+  box-shadow: var(--ac-shadow-sm);
+  transition: var(--ac-transition);
+}
+
+.ac-card:hover {
+  box-shadow: var(--ac-shadow-hover);
+  border-color: var(--ifm-color-primary-lighter);
+  transform: translateY(-2px);
+}
+
+/* Better input/select styles globally */
+input, select, textarea {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--ifm-color-primary) !important;
+  box-shadow: 0 0 0 3px rgba(46, 133, 85, 0.15);
+  outline: none;
+}
+
+[data-theme='dark'] input:focus,
+[data-theme='dark'] select:focus,
+[data-theme='dark'] textarea:focus {
+  box-shadow: 0 0 0 3px rgba(37, 194, 160, 0.2);
+}
+
+/* Navbar improvements */
+.navbar {
+  box-shadow: 0 1px 0 var(--ifm-color-emphasis-200), var(--ac-shadow-sm);
+}
+
+/* Footer improvements */
 .footer .footer__links .footer__col:first-child {
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer .footer-footnote p {
   margin: 0 0 0.35rem;
-  line-height: 1.55;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer .footer-footnote p:first-child {
-  margin-bottom: 0.45rem;
-  color: #fff;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @media (min-width: 997px) {
@@ -54,4 +125,40 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
+}
+
+/* Badge/tag utility */
+.ac-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.18rem 0.55rem;
+  letter-spacing: 0.01em;
+}
+
+/* Pill button utility */
+.ac-pill-btn {
+  background: transparent;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.84rem;
+  padding: 0.35rem 0.8rem;
+  transition: var(--ac-transition);
+}
+
+.ac-pill-btn:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  background: rgba(46, 133, 85, 0.06);
+}
+
+.ac-pill-btn-active {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #fff !important;
 }

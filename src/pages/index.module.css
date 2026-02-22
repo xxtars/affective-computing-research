@@ -1,58 +1,222 @@
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0 4.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--ac-gradient-hero) !important;
+}
+
+/* Subtle animated orb behind hero */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 70% at 50% 120%, rgba(255,255,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroBanner::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.heroSubtitle {
+  font-size: 1.15rem;
+  opacity: 0.88;
+  max-width: 540px;
+  margin: 0.75rem auto 0;
+  line-height: 1.6;
+}
+
+.mainContent {
+  margin: 0;
+  padding: 3rem 0 2rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-100);
+  font-size: 1.35rem;
+}
+
+.sectionIcon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Quick Access Cards */
+.linkGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.linkCard {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ac-card-radius);
+  box-shadow: var(--ac-shadow-sm);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1.25rem 1.25rem;
+  text-decoration: none;
+  transition: var(--ac-transition);
   position: relative;
   overflow: hidden;
 }
 
-.mainContent {
-  margin: 2.5rem 0 0;
-}
-
-.section {
-  margin-bottom: 2rem;
-}
-
-.linkGrid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.linkCard {
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 12px;
-  color: inherit;
-  display: block;
-  padding: 1rem;
-  text-decoration: none;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+.linkCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ifm-color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
 }
 
 .linkCard:hover {
-  border-color: var(--ifm-color-primary);
-  transform: translateY(-2px);
+  border-color: var(--ifm-color-primary-lighter);
+  box-shadow: var(--ac-shadow-hover);
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-3px);
+  background: var(--ac-gradient-card-hover);
+}
+
+.linkCard:hover::before {
+  transform: scaleX(1);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 0.65rem;
+  line-height: 1;
 }
 
 .linkCard h3 {
-  margin-bottom: 0.4rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--ifm-color-primary);
+  transition: color 0.2s ease;
 }
 
 .linkCard p {
   margin-bottom: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ifm-color-emphasis-700);
 }
 
+.cardArrow {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.linkCard:hover .cardArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Info list */
 .list {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
 }
 
 .list li {
-  margin-bottom: 0.45rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  border-left: 3px solid var(--ifm-color-primary-lighter);
+}
+
+.list li::before {
+  content: '→';
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.05em;
+}
+
+/* Stats strip */
+.statsStrip {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.statCard {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  flex: 1;
+  min-width: 130px;
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-700);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 1.5rem 2.5rem;
+  }
+
+  .linkGrid {
+    grid-template-columns: 1fr;
   }
 }
