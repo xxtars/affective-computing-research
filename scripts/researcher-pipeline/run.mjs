@@ -18,6 +18,7 @@ function parseArgs(argv) {
     interestingOverrides: "",
     model: process.env.QWEN_MODEL || "qwen-plus",
     skipAi: false,
+    summaryOnly: false,
     useBatchEndpoint: false,
     maxPapers: null,
     delayMs: 200,
@@ -44,6 +45,7 @@ function parseArgs(argv) {
       args.researcherNames.push(...names);
     }
     else if (token === "--skip-ai") args.skipAi = true;
+    else if (token === "--summary-only") args.summaryOnly = true;
     else if (token === "--batch") args.useBatchEndpoint = true;
     else if (token === "--full-refresh") args.fullRefresh = true;
   }
@@ -1301,6 +1303,7 @@ async function run() {
   console.log(
     `  interesting_override_counts: ids=${interestingOverrides.ids.size}, titles=${interestingOverrides.titles.size}`
   );
+  console.log(`  summary_only: ${args.summaryOnly}`);
   console.log(`  selected_researchers: ${selectedResearchers.length}`);
   if (args.researcherNames.length > 0) {
     console.log(`  researcher_name_filter: ${args.researcherNames.join(", ")}`);
@@ -1342,23 +1345,30 @@ async function run() {
       orcid: effectiveOrcid,
     };
 
-    console.log(`Fetching works for ${researcher.name} (${args.fullRefresh ? "full" : "incremental"})`);
-    const newWorks = await fetchAuthorWorks(authorId, {
-      maxPapers: args.maxPapers,
-      knownWorkIds,
-      fullRefresh: args.fullRefresh,
-      resolveVenueByDoi: (doi, publicationYear = null) =>
-        resolveVenueFromDoi({
-          doiValue: doi,
-          publicationYear,
-          doiVenueCache,
-          doiVenueCachePath,
-          qwenConfig: args.skipAi
-            ? null
-            : { apiKey: qwenApiKey, baseUrl: qwenBaseUrl, model: args.model },
-        }),
-    });
-    console.log(`Fetched ${newWorks.length} uncached works`);
+    let newWorks;
+    if (args.summaryOnly) {
+      // Skip paper fetching and analysis entirely; reuse existing works from profile.
+      console.log(`Skipping works fetch for ${researcher.name} (--summary-only)`);
+      newWorks = [];
+    } else {
+      console.log(`Fetching works for ${researcher.name} (${args.fullRefresh ? "full" : "incremental"})`);
+      newWorks = await fetchAuthorWorks(authorId, {
+        maxPapers: args.maxPapers,
+        knownWorkIds,
+        fullRefresh: args.fullRefresh,
+        resolveVenueByDoi: (doi, publicationYear = null) =>
+          resolveVenueFromDoi({
+            doiValue: doi,
+            publicationYear,
+            doiVenueCache,
+            doiVenueCachePath,
+            qwenConfig: args.skipAi
+              ? null
+              : { apiKey: qwenApiKey, baseUrl: qwenBaseUrl, model: args.model },
+          }),
+      });
+      console.log(`Fetched ${newWorks.length} uncached works`);
+    }
 
     const ctx = {
       researcher,
@@ -1495,7 +1505,7 @@ async function run() {
     });
 
     const shouldRecomputeSummary =
-      args.fullRefresh || successfulAnalyzedNewWorks.length > 0 || !previousResearcher?.topic_summary;
+      args.summaryOnly || args.fullRefresh || successfulAnalyzedNewWorks.length > 0 || !previousResearcher?.topic_summary;
     ctx.dedupedMergedWorks = dedupedMergedWorks;
     ctx.interestingWorks = dedupedMergedWorks.filter((w) => w.analysis?.is_interesting);
     ctx.shouldRecomputeSummary = shouldRecomputeSummary;
@@ -1523,7 +1533,7 @@ async function run() {
             model: args.model,
             userPrompt: buildSummaryPrompt(ctx.researcher, ctx.dedupedMergedWorks),
             temperature: 0,
-            maxTokens: 1000,
+            maxTokens: 2048,
             enableThinking: true,
           });
           ctx.topicSummary = {
