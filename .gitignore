@@ -26,3 +26,7 @@ yarn-error.log*
 /data/researchers/researchers.index.json
 /static/data/researchers/
 !/data/researchers/researcher.seed.json
+
+/static/data/
+
+/static/data/
