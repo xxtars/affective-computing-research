@@ -394,9 +394,9 @@ export default function ResearchersPage(): ReactNode {
                   Time Window
                   <select value={sortWindow} onChange={(event) => setSortWindow(event.target.value as typeof sortWindow)}>
                     <option value="all">All time</option>
-                    <option value="recent_1y">Recent 1 year</option>
                     <option value="recent_5y">Recent 5 years</option>
                     <option value="recent_3y">Recent 3 years</option>
+                    <option value="recent_1y">Recent 1 year</option>
                   </select>
                 </label>
 

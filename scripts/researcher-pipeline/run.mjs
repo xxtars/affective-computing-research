@@ -1607,8 +1607,11 @@ async function run() {
     const scholarKey = getScholarUserId(researcher.google_scholar) || String(researcher.google_scholar || "").trim();
     let scholarAffiliation = null;
     if (scholarKey) {
-      if (Object.prototype.hasOwnProperty.call(scholarAffiliationCache, scholarKey)) {
-        scholarAffiliation = scholarAffiliationCache[scholarKey] || null;
+      const hasScholarCache = Object.prototype.hasOwnProperty.call(scholarAffiliationCache, scholarKey);
+      const cachedScholarAffiliation = hasScholarCache ? scholarAffiliationCache[scholarKey] : null;
+      // Null cache can be caused by transient fetch/anti-bot failure; retry fetch instead of pinning null forever.
+      if (hasScholarCache && String(cachedScholarAffiliation || "").trim()) {
+        scholarAffiliation = cachedScholarAffiliation;
       } else {
         try {
           scholarAffiliation = await fetchGoogleScholarAffiliation(researcher.google_scholar);
