@@ -1,46 +1,85 @@
 .page {
-  padding: 2rem 0 3rem;
+  padding: 2rem 0 3.5rem;
 }
 
 .muted {
-  color: var(--ifm-color-emphasis-700);
+  color: var(--ifm-color-emphasis-600);
 }
 
 .disclaimer {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-left: 3px solid var(--ifm-color-primary-lighter);
+  border-radius: 8px;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0.35rem 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0.5rem 0 1.25rem;
+  padding: 0.7rem 1rem;
 }
 
+/* Controls */
 .controls {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ac-card-radius);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 280px));
-  gap: 0.75rem;
-  margin: 1rem 0 1.2rem;
+  gap: 0.85rem;
+  margin: 1rem 0 1.4rem;
+  padding: 1rem 1.2rem;
 }
 
 .controlLabel {
   display: block;
   font-weight: 600;
-  margin-bottom: 0.28rem;
+  font-size: 0.87rem;
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0.3rem;
 }
 
 .controlInput,
 .controlSelect {
   width: 100%;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 10px;
-  padding: 0.45rem 0.65rem;
   background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
   color: var(--ifm-color-emphasis-900);
+  padding: 0.5rem 0.7rem;
+  font-size: 0.94rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
+.controlInput:focus,
+.controlSelect:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(46, 133, 85, 0.12);
+  outline: none;
+}
+
+[data-theme='dark'] .controlInput:focus,
+[data-theme='dark'] .controlSelect:focus {
+  box-shadow: 0 0 0 3px rgba(37, 194, 160, 0.18);
+}
+
+/* Visualization panel */
 .panel {
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 14px;
-  padding: 0.85rem 1rem 1rem;
-  margin-top: 1rem;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ac-card-radius);
+  box-shadow: var(--ac-shadow-sm);
+  padding: 1rem 1.1rem 1.2rem;
+  margin-top: 1.1rem;
+}
+
+.panelTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-800);
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .chartWrap {
@@ -63,17 +102,18 @@
 }
 
 .axisTick {
-  stroke: var(--ifm-color-emphasis-500);
+  stroke: var(--ifm-color-emphasis-400);
   stroke-width: 1;
 }
 
 .axisText {
-  fill: var(--ifm-color-emphasis-700);
+  fill: var(--ifm-color-emphasis-600);
   font-size: 11px;
 }
 
+/* Legend */
 .legend {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -84,78 +124,103 @@
 }
 
 .legendGroupTitle {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  color: var(--ifm-color-emphasis-700);
-  margin: 0.2rem 0 0.3rem;
+  color: var(--ifm-color-emphasis-600);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0.3rem 0 0.4rem;
 }
 
 .legendGroupItems {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.4rem;
 }
 
 .legendItem {
+  background: var(--ifm-background-color);
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 999px;
-  padding: 0.15rem 0.5rem;
-  font-size: 0.82rem;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
+  font-size: 0.81rem;
   gap: 0.38rem;
-  background: var(--ifm-background-color);
-  cursor: pointer;
+  padding: 0.15rem 0.6rem;
+  transition: var(--ac-transition);
 }
 
 .legendItem:hover {
   border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  background: rgba(46, 133, 85, 0.05);
 }
 
 .legendItemActive {
   border-color: var(--ifm-color-primary);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ifm-color-primary) 55%, transparent);
+  box-shadow: 0 0 0 1.5px color-mix(in srgb, var(--ifm-color-primary) 45%, transparent);
+  background: rgba(46, 133, 85, 0.07);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+[data-theme='dark'] .legendItemActive {
+  background: rgba(37, 194, 160, 0.1);
 }
 
 .legendDot {
-  width: 0.62rem;
-  height: 0.62rem;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 50%;
   display: inline-block;
+  flex-shrink: 0;
 }
 
+/* Definition section */
 .definitionNote {
-  margin-top: 0.85rem;
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .definitionGrid {
-  margin-top: 0.55rem;
+  margin-top: 0.6rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 0.55rem;
+  gap: 0.65rem;
 }
 
 .definitionCard {
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 10px;
-  padding: 0.6rem 0.7rem;
   background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  box-shadow: var(--ac-shadow-sm);
+  padding: 0.75rem 0.85rem;
+  transition: var(--ac-transition);
+}
+
+.definitionCard:hover {
+  border-color: var(--ifm-color-primary-lighter);
+  box-shadow: var(--ac-shadow-md);
 }
 
 .definitionCard h3 {
   margin: 0 0 0.35rem;
-  font-size: 0.95rem;
-  line-height: 1.3;
+  font-size: 0.93rem;
+  line-height: 1.35;
+  color: var(--ifm-font-color-base);
 }
 
 .definitionCard p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.86rem;
-  line-height: 1.35;
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
 .childList {
@@ -166,7 +231,7 @@
 
 .childItem {
   border-top: 1px solid var(--ifm-color-emphasis-200);
-  padding-top: 0.4rem;
+  padding-top: 0.42rem;
 }
 
 .childTitle {
@@ -174,21 +239,24 @@
   align-items: center;
   gap: 0.35rem;
   font-weight: 600;
-  font-size: 0.87rem;
+  font-size: 0.86rem;
   margin-bottom: 0.2rem;
+  color: var(--ifm-color-emphasis-800);
 }
 
 .childItem p {
   margin: 0;
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.83rem;
-  line-height: 1.35;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.82rem;
+  line-height: 1.38;
 }
 
+/* Plotly host */
 .plotlyHost {
   width: 100%;
   min-height: 620px;
-  border: 1px solid var(--ifm-color-emphasis-250);
+  border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 10px;
   background: var(--ifm-background-color);
+  box-shadow: var(--ac-shadow-sm);
 }

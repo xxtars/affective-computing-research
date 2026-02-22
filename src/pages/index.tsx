@@ -16,7 +16,9 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">AI-assisted Research Landscape Tracking</p>
+        <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
+          AI-assisted Research Landscape Tracking for Affective Computing
+        </p>
       </div>
     </header>
   );
@@ -28,38 +30,51 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <main className={styles.mainContent}>
         <div className="container">
-          <section className={styles.section}>
-            <Heading as="h2">Project Purpose</Heading>
-            <p>
-              This project is an AI-assisted research landscape tracking workspace for affective computing research. It
-              organizes researcher identities, paper-level analysis, and aggregated paper views for continuous
-              updates.
-            </p>
-          </section>
 
           <section className={styles.section}>
-            <Heading as="h2">Quick Access</Heading>
+            <Heading as="h2" className={styles.sectionHeading}>
+              <span className={styles.sectionIcon}>🔗</span> Quick Access
+            </Heading>
             <div className={styles.linkGrid}>
               <Link className={styles.linkCard} to="/researchers">
+                <span className={styles.cardIcon}>👤</span>
                 <Heading as="h3">Researchers</Heading>
                 <p>
-                  Browse tracked researchers, search by name/institution country/university, and open detailed
-                  profiles.
+                  Browse tracked researchers, filter by name, institution, or country, and open detailed
+                  profiles with publication metrics.
                 </p>
+                <span className={styles.cardArrow}>Explore researchers →</span>
               </Link>
               <Link className={styles.linkCard} to="/papers">
+                <span className={styles.cardIcon}>📄</span>
                 <Heading as="h3">Papers</Heading>
-                <p>Browse affective-related papers aggregated across tracked researchers.</p>
+                <p>Browse affective-related papers aggregated across all tracked researchers, grouped by year.</p>
+                <span className={styles.cardArrow}>Explore papers →</span>
               </Link>
               <Link className={styles.linkCard} to="/landscape">
+                <span className={styles.cardIcon}>🗺️</span>
                 <Heading as="h3">Landscape</Heading>
-                <p>Inspect L1/L2 taxonomy snapshots and stage-wise mapping from clustering to final naming.</p>
+                <p>Inspect L1/L2 taxonomy snapshots, trend visualizations, and stage-wise topic mappings.</p>
+                <span className={styles.cardArrow}>Explore landscape →</span>
               </Link>
             </div>
           </section>
 
           <section className={styles.section}>
-            <Heading as="h2">What You&apos;ll Find</Heading>
+            <Heading as="h2" className={styles.sectionHeading}>
+              <span className={styles.sectionIcon}>ℹ️</span> Project Purpose
+            </Heading>
+            <p>
+              This project is an AI-assisted research landscape tracking workspace for affective computing research.
+              It organizes researcher identities, paper-level analysis, and aggregated paper views for continuous
+              updates — powered by OpenAlex, ORCID, Google Scholar, and AI-generated summaries.
+            </p>
+          </section>
+
+          <section className={styles.section}>
+            <Heading as="h2" className={styles.sectionHeading}>
+              <span className={styles.sectionIcon}>✨</span> What You&apos;ll Find
+            </Heading>
             <ul className={styles.list}>
               <li>Identity-based researcher tracking with OpenAlex as primary ID, enriched by optional ORCID/Google Scholar.</li>
               <li>Per-paper affective-related classification and AI-generated directions/TLDR.</li>
@@ -68,9 +83,11 @@ export default function Home(): ReactNode {
           </section>
 
           <section className={styles.section}>
-            <Heading as="h2">Data Sources & Priority</Heading>
+            <Heading as="h2" className={styles.sectionHeading}>
+              <span className={styles.sectionIcon}>🗂️</span> Data Sources &amp; Priority
+            </Heading>
             <ul className={styles.list}>
-              <li>Seed fields: `name`, `openalex_author_id`, `orcid` (optional), `google_scholar` (optional).</li>
+              <li>Seed fields: <code>name</code>, <code>openalex_author_id</code>, <code>orcid</code> (optional), <code>google_scholar</code> (optional).</li>
               <li>Institution priority: Google Scholar profile affiliation → ORCID affiliation → OpenAlex first institution.</li>
               <li>Institution country/region: geocoding result from institution name, with OpenAlex country code as fallback.</li>
               <li>Directions/TLDR: AI-generated from OpenAlex metadata + abstract; may contain errors.</li>
@@ -79,16 +96,18 @@ export default function Home(): ReactNode {
           </section>
 
           <section className={styles.section}>
-            <Heading as="h2">Workflow</Heading>
+            <Heading as="h2" className={styles.sectionHeading}>
+              <span className={styles.sectionIcon}>⚙️</span> Workflow
+            </Heading>
             <ul className={styles.list}>
-              <li>Maintain seed records in `data/researchers/researcher.seed.json` with `name/openalex_author_id/orcid/google_scholar`.</li>
-              <li>Run pipeline incrementally (supports per-name runs, concurrency, and frequent checkpoint saves).</li>
+              <li>Maintain seed records in <code>data/researchers/researcher.seed.json</code> with <code>name / openalex_author_id / orcid / google_scholar</code>.</li>
+              <li>Run pipeline incrementally — supports per-name runs, concurrency, and frequent checkpoint saves.</li>
               <li>Institution resolution follows Google Scholar → ORCID → OpenAlex priority.</li>
               <li>Review outputs in Researchers/Papers pages and manually verify critical records.</li>
             </ul>
           </section>
-        </div>
 
+        </div>
       </main>
     </Layout>
   );
