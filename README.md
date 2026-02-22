@@ -110,6 +110,70 @@ node scripts/researcher-pipeline/run.mjs --full-refresh
 - `data/researchers/cache/<name>__<scholarUserId>__<openalexAuthorId>/paper-analysis-cache.json`: per-researcher AI cache
   - cache entries include `paper_id`, `title`, `researcher_name`, and `researcher_openalex_author_id` for manual checks
 
+### Taxonomy pipeline (problem/method -> L2/L1)
+
+This repo also supports offline taxonomy analysis using paper-level
+`problem_directions` and `method_directions`:
+
+1. direction-only text -> Qwen embedding (`text-embedding-v4` by default)
+2. BERTopic clustering on embeddings
+3. Qwen labels each cluster as L2
+4. Qwen groups L2 into L1
+
+Install Python deps:
+
+```bash
+python3 -m pip install -r scripts/taxonomy/requirements.txt
+```
+
+Run:
+
+```bash
+npm run taxonomy:build
+# or:
+python3 scripts/taxonomy/build_taxonomy.py --axis both
+```
+
+Defaults:
+
+- input: `data-repo/data/researchers`
+- output: `data-repo/data/taxonomy`
+- axes: `problem` + `method` (when `--axis both`)
+- chat model: `qwen3.5-plus`
+- embedding batch size: `10`
+- embedding concurrency: `4` (`--embedding-concurrency`)
+- chat concurrency: `4` (`--chat-concurrency`, for L2 labeling)
+- random seed: `42` (`--random-seed`, for deterministic first-stage clustering)
+
+Thinking mode for taxonomy labeling:
+
+- Auto by default: enable `enable_thinking=true` only when chat-call volume is small.
+- Threshold env: `QWEN_THINKING_MAX_CALLS` (default `8`).
+- Force on/off (optional): `QWEN_ENABLE_THINKING=true|false`.
+
+Raw API responses are persisted for later reuse/audit:
+
+- `data-repo/data/taxonomy/api_logs/problem/*.json`
+- `data-repo/data/taxonomy/api_logs/method/*.json`
+
+Main outputs:
+
+- `data-repo/data/taxonomy/problem/taxonomy.json`
+- `data-repo/data/taxonomy/method/taxonomy.json`
+- `data-repo/data/taxonomy/taxonomy.summary.json`
+- `data-repo/data/taxonomy/<axis>/l1.second_level.items.json` (unique L2 items)
+- `data-repo/data/taxonomy/<axis>/l1.second_level.assignments.json` (L2 -> second-level cluster mapping)
+- `data-repo/data/taxonomy/<axis>/l1.second_level.clusters.json` (second-level cluster members)
+- `data-repo/data/taxonomy/<axis>/l1.naming.json` (second-level cluster -> final L1 naming)
+
+Resume/incremental cache files (per axis):
+
+- `cache.embedding.json`: record-level embedding cache (resume from interruption; only embed misses)
+- `cache.bertopic.json`: first-stage BERTopic assignments/candidates cache (reused when fingerprint matches)
+- `cache.l2.json`: topic-label cache (reuse prior L2 labels by topic fingerprint)
+- `cache.l1.embedding.json`: second-level L2 embedding cache
+- `cache.l1.json`: L1 naming cache (reuse prior naming by second-level cluster fingerprint)
+
 Production recommendation:
 
 - Keep full generated data in a separate private data repository.
