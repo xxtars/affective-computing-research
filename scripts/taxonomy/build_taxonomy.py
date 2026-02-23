@@ -456,7 +456,23 @@ def embed_records(
 
     if any(v is None for v in vectors):
         raise RuntimeError("embedding resume failed: some vectors are still missing")
-    return np.asarray(vectors, dtype=np.float32)
+    result = np.asarray(vectors, dtype=np.float32)
+
+    # If there were no misses, the cache may still be stale/incomplete (e.g. from a
+    # previous interrupted run that wrote embeddings.npy but not the full cache).
+    # Do a final full-cache write whenever the in-memory rows don't match the full result.
+    if len(rows) != len(records) or len(missing_indexes) > 0:
+        # Rebuild meta_items and rows to match the final result exactly.
+        final_meta: Dict[str, Any] = {}
+        for i, key in enumerate(keys):
+            final_meta[key] = {
+                "context_hash": context_hashes[i],
+                "row_index": i,
+                "updated_at": meta_items.get(key, {}).get("updated_at", utc_now()),
+            }
+        _save_emb_cache(cache_path, model, final_meta, list(result))
+
+    return result
 
 
 def build_topic_model(
@@ -887,7 +903,7 @@ def run_axis(
         batch_size=args.embedding_batch_size,
         embedding_concurrency=args.embedding_concurrency,
         log_dir=log_dir,
-        cache_path=out_axis_dir / "cache.embedding.json",
+        cache_path=out_axis_dir / "cache.embedding.json",  # base name; actual files: .npz + .meta.json
     )
     np.save(out_axis_dir / "embeddings.npy", embeddings)
     print(f"[taxonomy] axis={axis} embeddings ready shape={list(embeddings.shape)}")
