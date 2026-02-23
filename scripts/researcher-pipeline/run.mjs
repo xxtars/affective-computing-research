@@ -6,6 +6,7 @@ const OPENALEX_BASE_URL = "https://api.openalex.org";
 const CROSSREF_BASE_URL = "https://api.crossref.org";
 const ORCID_BASE_URL = "https://pub.orcid.org/v3.0";
 const DEFAULT_QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1";
+const BATCH_QWEN_BASE_URL = "https://batch.dashscope.aliyuncs.com/compatible-mode/v1";
 const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org";
 const DEFAULT_INTEREST_TOPICS = ["emotion"];
 
@@ -15,8 +16,10 @@ function parseArgs(argv) {
     out: "data/researchers/researchers.index.json",
     cache: "data/researchers/cache",
     interestingOverrides: "",
-    model: process.env.QWEN_MODEL || "qwen-plus",
+    model: process.env.QWEN_MODEL || "qwen3.5-plus",
     skipAi: false,
+    summaryOnly: false,
+    useBatchEndpoint: false,
     maxPapers: null,
     delayMs: 200,
     fullRefresh: false,
@@ -42,6 +45,8 @@ function parseArgs(argv) {
       args.researcherNames.push(...names);
     }
     else if (token === "--skip-ai") args.skipAi = true;
+    else if (token === "--summary-only") args.summaryOnly = true;
+    else if (token === "--batch") args.useBatchEndpoint = true;
     else if (token === "--full-refresh") args.fullRefresh = true;
   }
 
@@ -863,12 +868,13 @@ function shortenText(text, maxChars = 1800) {
   return `${normalized.slice(0, maxChars)} ...`;
 }
 
-function buildPaperFilterPrompt(work) {
-  return `You are doing Stage-1 filtering for affective/emotion-related research.\n\nPaper title:\n${work.title}\n\nReturn strict JSON:\n{\n  "is_interesting": boolean,\n  "relevance_score": number,\n  "confidence": number,\n  "reason": string\n}\n\nRules:\n- Use title only.\n- If title is clearly affective/emotion-related, set is_interesting=true.\n- If title is clearly not related, set is_interesting=false.\n- If uncertain, lean conservative and set is_interesting=false.\n- relevance_score in [0,1].\n- confidence in [0,1].\n- reason: one short sentence (<=16 words).\n- Output valid JSON only.`;
+function buildPaperFilterPrompt(work, researcher) {
+  const topics = getInterestTopics(researcher).join(", ");
+  return `You are doing Stage-1 filtering for affective computing research.\n\nResearcher: ${researcher.name}\nResearcher's known topics: ${topics}\n\nPaper title:\n${work.title}\n\nReturn strict JSON:\n{\n  "is_interesting": boolean,\n  "relevance_score": number,\n  "confidence": number,\n  "reason": string\n}\n\nRules:\n- Use title only.\n- Mark is_interesting=true if the paper's core research target or goal involves human affect, emotion, mood, psychological states, or subjective inner experience — regardless of technical domain (signal processing, NLP, LLM, HCI, clinical, etc.).\n- Mark is_interesting=true if emotion/affect is the primary task, target variable, or evaluation criterion.\n- Mark is_interesting=false if emotion/affect is only peripheral context or a motivating example, not the main contribution.\n- Mark is_interesting=false if the title is purely technical with no affective framing and no connection to the researcher's known topics.\n- relevance_score in [0,1].\n- confidence in [0,1].\n- reason: one short sentence (<=16 words).\n- Output valid JSON only.`;
 }
 
 function buildPaperExtractionPrompt(researcher, work) {
-  return `You are doing Stage-2 extraction for an already-selected affective/emotion-related paper.\n\nResearcher: ${researcher.name}\nInterest topics: ${getInterestTopics(researcher).join(", ")}\n\nPaper metadata:\n- Title: ${work.title}\n- Year: ${work.publication_year || "unknown"}\n- Venue: ${work.primary_source || "unknown"}\n- Concepts: ${(work.concepts || []).join(", ") || "none"}\n- Abstract: ${shortenText(work.abstract || "(empty)")}\n\nReturn strict JSON:\n{\n  "reason": string,\n  "evidence": string[],\n  "tldr": string,\n  "problem_directions": string[],\n  "method_directions": string[]\n}\n\nRules:\n- reason: one concise sentence.\n- evidence: 1-3 short concrete clues from title/abstract/concepts.\n- TLDR: 1 sentence only, 25-40 words; focus on problem + method + contribution; neutral and factual.\n- problem_directions: 1-3 items; what affective/emotion problem/task is addressed.\n- method_directions: 1-3 items; what methods/technical approaches are used.\n- Total directions across both arrays should be 2-6.\n- Each direction should be noun phrase (2-6 words), lowercase.\n- Avoid redundancy: no duplicate or near-synonym items within each array.\n- Avoid cross-array overlap: one item must appear in only one array (problem OR method).\n- Prefer stable canonical wording; avoid paraphrase variants.\n- Ground everything in given metadata only; do not invent facts.\n- Output valid JSON only.`;
+  return `You are doing Stage-2 extraction for an already-selected affective computing paper.\n\nResearcher: ${researcher.name}\nInterest topics: ${getInterestTopics(researcher).join(", ")}\n\nPaper metadata:\n- Title: ${work.title}\n- Year: ${work.publication_year || "unknown"}\n- Venue: ${work.primary_source || "unknown"}\n- Concepts: ${(work.concepts || []).join(", ") || "none"}\n- Abstract: ${shortenText(work.abstract || "(empty)")}\n\nReturn strict JSON:\n{\n  "reason": string,\n  "evidence": string[],\n  "tldr": string,\n  "problem_directions": string[],\n  "method_directions": string[]\n}\n\nRules:\n- reason: one concise sentence.\n- evidence: 1-3 short concrete clues from title/abstract/concepts.\n- TLDR: 1 sentence only, 25-40 words; focus on problem + method + contribution; neutral and factual.\n- problem_directions: 1-3 items. The affective/emotion problem, task, or research challenge this paper addresses.\n  Good: "EEG-based emotion recognition", "multimodal sentiment analysis", "depression detection", "cross-subject generalization"\n  Bad: "deep learning", "transformer" (these are methods, not problems)\n- method_directions: 1-3 items. The key technical approach or algorithm proposed or central to this paper.\n  Focus on novel or central methods, not ubiquitous baselines.\n  Good: "domain adaptation", "graph neural networks", "contrastive learning", "large language model prompting"\n  Bad: "neural network", "deep learning" (too generic to be informative)\n- Total directions across both arrays: 2-6.\n- Each direction: noun phrase, 2-6 words, lowercase.\n- Prefer widely-used community terminology from ACL, IEEE, ACM venues.\n  e.g., "sentiment analysis" not "opinion polarity detection"; "domain adaptation" not "cross-distribution generalization".\n- Aim for mid-level specificity: not too broad ("emotion recognition"), not too narrow ("EEG attention-gated MAML").\n- Avoid redundancy: no duplicate or near-synonym items within each array.\n- Avoid cross-array overlap: one item must appear in only one array (problem OR method).\n- Ground everything in given metadata only; do not invent facts.\n- Output valid JSON only.`;
 }
 
 function buildSummaryPrompt(researcher, analyzedWorks) {
@@ -881,7 +887,7 @@ function buildSummaryPrompt(researcher, analyzedWorks) {
       problem_directions: w.analysis.problem_directions || [],
     }));
 
-  return `Based on interesting papers for researcher ${researcher.name}, summarize research directions and evolution.\n\nInput papers JSON:\n${JSON.stringify(interesting)}\n\nReturn strict JSON:\n{\n  "top_research_directions": [{"name": string, "weight": number}],\n  "trend_summary": string,\n  "representative_papers": [{"title": string, "why": string}]\n}\n\nRules for top_research_directions:\n- Build this list from problem_directions only (not method_directions).\n- Keep direction labels concise and stable (noun phrases).\n- max 8 directions\n- weight in [0,1], sorted desc\n- Do NOT turn directions into timeline sentences.\n\nRules for trend_summary:\n- Write 1 paragraph (120-220 words), academic and neutral tone.\n- Use adaptive evolution windows, NOT fixed 5-year bins.\n- Infer 2-4 phases from shifts in problem_directions (earliest -> latest).\n- Each phase should include an explicit year span (e.g., 2019-2021) and a concise problem-focus description.\n- If all papers cluster in a short period, still describe phase transitions by problem-focus change; do not force long windows.\n- End with the latest phase as current focus.\n- Keep the narrative integrated; do not split into separate problem/method sub-summaries.\n- Ground statements in input years/titles/problem_directions only; do not invent facts.\n- Use consistent terminology across phases; avoid synonym drift for the same direction.\n- If evidence for a phase is sparse, explicitly say evidence is limited.\n- Avoid generic praise and vague wording.\n\nRules for representative_papers:\n- max 8 items\n- why should explain representativeness for direction/evolution, not only citation count.`;
+  return `Based on interesting papers for researcher ${researcher.name}, summarize research directions and evolution.\n\nInput papers JSON:\n${JSON.stringify(interesting)}\n\nReturn strict JSON:\n{\n  "top_research_directions": [{"name": string, "weight": number}],\n  "trend_summary": string,\n  "representative_papers": [{"title": string, "why": string}]\n}\n\nRules for top_research_directions:\n- Build this list from problem_directions only (not method_directions).\n- Keep direction labels concise and stable (noun phrases).\n- max 8 directions.\n- weight in [0,1], sorted desc. Estimate weight based on proportion of papers covering this direction, with recency bias (papers from the last 2 years count 1.5x). Weights should sum to approximately 1.\n- Do NOT turn directions into timeline sentences.\n\nRules for trend_summary:\n- Write 1 paragraph (120-220 words), academic and neutral tone.\n- Use adaptive evolution windows, NOT fixed 5-year bins.\n- Infer 2-4 phases from shifts in problem_directions (earliest -> latest).\n- Each phase should include an explicit year span (e.g., 2019-2021), a concise problem-focus description, and a brief note on the dominant method approach used in that phase (1 clause is enough).\n- If all papers cluster in a short period, still describe phase transitions by problem-focus change; do not force long windows.\n- End with the latest phase as current focus.\n- Ground statements in input years/titles/problem_directions only; do not invent facts.\n- Use consistent terminology across phases; avoid synonym drift for the same direction.\n- If evidence for a phase is sparse, explicitly say evidence is limited.\n- Avoid generic praise and vague wording.\n\nRules for representative_papers:\n- max 8 items.\n- why: max 20 words; explain which research direction or phase transition this paper best represents.`;
 }
 
 function buildAffiliationNormalizationPrompt(researcher, candidates) {
@@ -1135,7 +1141,7 @@ async function analyzePaper({ researcher, work, args, cache, qwenConfig }) {
     return { analysis: skipped, fromCache: false, skipped: false };
   }
 
-  const stage1Prompt = buildPaperFilterPrompt(work);
+  const stage1Prompt = buildPaperFilterPrompt(work, researcher);
   let attempt = 0;
   let lastErr = null;
   const maxAttempts = 2;
@@ -1231,7 +1237,10 @@ async function run() {
   if (!args.skipAi && !qwenApiKey) {
     throw new Error("QWEN_API_KEY is required unless --skip-ai is set");
   }
+  // Base endpoint for non-paper calls (summary/affiliation/venue-normalization).
   const qwenBaseUrl = process.env.QWEN_BASE_URL || DEFAULT_QWEN_BASE_URL;
+  // --batch only affects paper analysis stage-1/stage-2 calls.
+  const qwenPaperBaseUrl = args.useBatchEndpoint ? BATCH_QWEN_BASE_URL : qwenBaseUrl;
   const overridePath = args.interestingOverrides
     ? path.resolve(args.interestingOverrides)
     : path.join(path.dirname(path.resolve(args.out)), "interesting-overrides.json");
@@ -1281,6 +1290,7 @@ async function run() {
   console.log(`  cache: ${args.cache}`);
   console.log(`  model: ${args.model}`);
   console.log(`  qwen_base_url: ${qwenBaseUrl}`);
+  console.log(`  qwen_paper_base_url: ${qwenPaperBaseUrl}`);
   console.log(`  qwen_api_key: ${qwenApiKey ? "set" : "missing"}`);
   console.log(`  full_refresh: ${args.fullRefresh}`);
   console.log(`  skip_ai: ${args.skipAi}`);
@@ -1294,6 +1304,7 @@ async function run() {
   console.log(
     `  interesting_override_counts: ids=${interestingOverrides.ids.size}, titles=${interestingOverrides.titles.size}`
   );
+  console.log(`  summary_only: ${args.summaryOnly}`);
   console.log(`  selected_researchers: ${selectedResearchers.length}`);
   if (args.researcherNames.length > 0) {
     console.log(`  researcher_name_filter: ${args.researcherNames.join(", ")}`);
@@ -1335,23 +1346,30 @@ async function run() {
       orcid: effectiveOrcid,
     };
 
-    console.log(`Fetching works for ${researcher.name} (${args.fullRefresh ? "full" : "incremental"})`);
-    const newWorks = await fetchAuthorWorks(authorId, {
-      maxPapers: args.maxPapers,
-      knownWorkIds,
-      fullRefresh: args.fullRefresh,
-      resolveVenueByDoi: (doi, publicationYear = null) =>
-        resolveVenueFromDoi({
-          doiValue: doi,
-          publicationYear,
-          doiVenueCache,
-          doiVenueCachePath,
-          qwenConfig: args.skipAi
-            ? null
-            : { apiKey: qwenApiKey, baseUrl: qwenBaseUrl, model: args.model },
-        }),
-    });
-    console.log(`Fetched ${newWorks.length} uncached works`);
+    let newWorks;
+    if (args.summaryOnly) {
+      // Skip paper fetching and analysis entirely; reuse existing works from profile.
+      console.log(`Skipping works fetch for ${researcher.name} (--summary-only)`);
+      newWorks = [];
+    } else {
+      console.log(`Fetching works for ${researcher.name} (${args.fullRefresh ? "full" : "incremental"})`);
+      newWorks = await fetchAuthorWorks(authorId, {
+        maxPapers: args.maxPapers,
+        knownWorkIds,
+        fullRefresh: args.fullRefresh,
+        resolveVenueByDoi: (doi, publicationYear = null) =>
+          resolveVenueFromDoi({
+            doiValue: doi,
+            publicationYear,
+            doiVenueCache,
+            doiVenueCachePath,
+            qwenConfig: args.skipAi
+              ? null
+              : { apiKey: qwenApiKey, baseUrl: qwenBaseUrl, model: args.model },
+          }),
+      });
+      console.log(`Fetched ${newWorks.length} uncached works`);
+    }
 
     const ctx = {
       researcher,
@@ -1427,7 +1445,7 @@ async function run() {
           work,
           args,
           cache: ctx.cache,
-          qwenConfig: { apiKey: qwenApiKey, baseUrl: qwenBaseUrl },
+          qwenConfig: { apiKey: qwenApiKey, baseUrl: qwenPaperBaseUrl },
         });
         if (skipped) {
           ctx.analyzedNewWorks[i] = null;
@@ -1488,7 +1506,7 @@ async function run() {
     });
 
     const shouldRecomputeSummary =
-      args.fullRefresh || successfulAnalyzedNewWorks.length > 0 || !previousResearcher?.topic_summary;
+      args.summaryOnly || args.fullRefresh || successfulAnalyzedNewWorks.length > 0 || !previousResearcher?.topic_summary;
     ctx.dedupedMergedWorks = dedupedMergedWorks;
     ctx.interestingWorks = dedupedMergedWorks.filter((w) => w.analysis?.is_interesting);
     ctx.shouldRecomputeSummary = shouldRecomputeSummary;
@@ -1516,8 +1534,9 @@ async function run() {
             model: args.model,
             userPrompt: buildSummaryPrompt(ctx.researcher, ctx.dedupedMergedWorks),
             temperature: 0,
-            maxTokens: 1000,
+            maxTokens: 2048,
             enableThinking: true,
+            timeoutMs: 20 * 60 * 1000,
           });
           ctx.topicSummary = {
             top_research_directions: Array.isArray(summaryRaw?.top_research_directions)
