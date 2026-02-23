@@ -30,3 +30,6 @@ yarn-error.log*
 /static/data/
 
 /static/data/
+
+# Local tooling metadata
+.claude/
