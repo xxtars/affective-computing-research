@@ -19,6 +19,11 @@ on:
         description: "Researcher name(s), comma-separated"
         required: false
         default: ""
+      batch:
+        description: "Use batch endpoint for paper stage-1/stage-2"
+        required: false
+        type: boolean
+        default: false
       full_refresh:
         description: "Full refresh"
         required: false
@@ -75,6 +80,10 @@ jobs:
 
           if [ "${{ inputs.full_refresh }}" = "true" ]; then
             cmd+=(--full-refresh)
+          fi
+
+          if [ "${{ inputs.batch }}" = "true" ]; then
+            cmd+=(--batch)
           fi
 
           if [ -n "${{ inputs.researcher_name }}" ]; then
