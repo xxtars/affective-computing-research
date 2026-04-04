@@ -280,8 +280,12 @@ export default function ResearchersPage(): ReactNode {
 
   const filteredResearchers = useMemo(() => {
     const keyword = query.trim().toLowerCase();
+    const currentYear = new Date().getFullYear();
 
     const matched = researchers.filter((researcher) => {
+      const windowStats = getWindowStats(researcher, sortWindow, currentYear);
+      if (windowStats.interesting <= 1) return false;
+
       const nameParts = splitNameParts(researcher.identity.name);
       const familyInitial = getNameInitial(nameParts.familyName);
       const givenInitial = getNameInitial(nameParts.givenName);
@@ -300,8 +304,6 @@ export default function ResearchersPage(): ReactNode {
 
       return countryMatch && universityMatch && initialMatch && keywordMatch;
     });
-
-    const currentYear = new Date().getFullYear();
 
     return matched.sort((a, b) => {
       const aWindow = getWindowStats(a, sortWindow, currentYear);

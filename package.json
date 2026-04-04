@@ -15,16 +15,22 @@
     "typecheck": "tsc",
     "researcher:build": "node scripts/researcher-pipeline/run.mjs",
     "researcher:export-public": "node scripts/researcher-pipeline/export-public-snapshot.mjs",
+    "researcher:discover": "node scripts/researcher-pipeline/discover-potential-authors.mjs",
     "taxonomy:build": "python3 scripts/taxonomy/build_taxonomy.py"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.2",
     "@docusaurus/preset-classic": "3.9.2",
     "@mdx-js/react": "^3.0.0",
+    "@react-sigma/core": "^5.0.2",
     "clsx": "^2.0.0",
+    "graphology": "^0.26.0",
+    "graphology-communities-louvain": "^2.0.2",
+    "graphology-layout-forceatlas2": "^0.10.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sigma": "^3.0.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",
